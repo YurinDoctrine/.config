@@ -29,14 +29,11 @@ hsetroot -solid "#2E3436" &
 ## 3. sleep - give compositor time to start
 ## 4. tint2 panel
 nitrogen --restore &
-compton --start &
+cbpp-compositor --start &
 tint2 &
 
 ## Start nm-applet for systray
 nm-applet &
-
-## Volume keys daemon
-mate-volume-control-applet &
 
 ## Enable power management
 xfce4-power-manager &
@@ -46,9 +43,6 @@ thunar --daemon &
 
 ## Start xscreensaver
 xscreensaver -no-splash &
-
-## Start Clipboard manager
-(sleep 3s && clipit) &
 
 ## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
 ## Adjust the values according to your preferances.
