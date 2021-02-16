@@ -44,12 +44,12 @@ thunar --daemon &
 ## Start xscreensaver
 xscreensaver -no-splash &
 
+## Run the conky
+conky -q &
+
 ## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
 ## Adjust the values according to your preferances.
 xset r rate 250 25 &
 
 ## Turn on/off system beep
 xset b off &
-
-## Run the conky
-conky -q &

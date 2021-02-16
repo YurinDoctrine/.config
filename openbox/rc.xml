@@ -250,12 +250,12 @@
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>xfce4-screenshooter</command>
+        <command>flameshot full -p ~/</command>
       </action>
     </keybind>
     <keybind key="A-Print">
       <action name="Execute">
-        <command>scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/ &amp; viewnior ~/images/$f'</command>
+        <command>scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures &amp; viewnior ~/Pictures/$f'</command>
       </action>
     </keybind>
 
@@ -312,7 +312,7 @@
   </keybind>
 
     <!-- Keybindings for running applications -->
-    <keybind key="A-F2">
+    <keybind key="W-r">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
@@ -321,7 +321,7 @@
         <command>gmrun</command>
       </action>
     </keybind>
-    <keybind key="A-F3">
+    <keybind key="W-d">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
@@ -372,7 +372,7 @@
           <enabled>true</enabled>
           <name>Editor</name>
         </startupnotify>
-        <command>geany</command>
+        <command>mousepad</command>
       </action>
     </keybind>
     <keybind key="W-m">
@@ -399,7 +399,7 @@
           <enabled>true</enabled>
           <name>Volume</name>
         </startupnotify>
-        <command>mate-volume-control</command>
+        <command>pavucontrol</command>
       </action>
     </keybind>
     <keybind key="W-x">
