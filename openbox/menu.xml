@@ -144,7 +144,6 @@
 					<execute>x-terminal-emulator -e irssi</execute>
 				</action>
 			</item>
-			<menu execute="cbpp-sshconfig-pipemenu" id="sshconfig" label="SSH"/>
 		</menu>
 		<menu id="office" label="Office">
 			<menu execute="cbpp-libreoffice-pipemenu" id="libreoffice" label="LibreOffice"/>
