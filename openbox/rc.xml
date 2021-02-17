@@ -250,7 +250,7 @@
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>flameshot full -p ~/</command>
+        <command>flameshot full -p ~/Pictures</command>
       </action>
     </keybind>
     <keybind key="A-Print">

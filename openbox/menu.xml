@@ -91,22 +91,22 @@
 				<separator label="scrot"/>
 				<item label="Now">
 					<action name="Execute">
-						<execute>scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/ &amp;amp; viewnior ~/images/$f'</execute>
+						<execute>scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures &amp;amp; viewnior ~/Pictures/$f'</execute>
 					</action>
 				</item>
 				<item label="In 5 Seconds...">
 					<action name="Execute">
-						<execute>scrot -d 5 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/ &amp;amp; viewnior ~/images/$f'</execute>
+						<execute>scrot -d 5 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures &amp;amp; viewnior ~/Pictures/$f'</execute>
 					</action>
 				</item>
 				<item label="In 10 Seconds...">
 					<action name="Execute">
-						<execute>scrot -d 10 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/ &amp;amp; viewnior ~/images/$f'</execute>
+						<execute>scrot -d 10 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures &amp;amp; viewnior ~/Pictures/$f'</execute>
 					</action>
 				</item>
 				<item label="Selected Area... (click &amp; drag mouse)">
 					<action name="Execute">
-						<execute>scrot -s '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/ &amp;amp; viewnior ~/images/$f'</execute>
+						<execute>scrot -s '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures &amp;amp; viewnior ~/Pictures/$f'</execute>
 					</action>
 				</item>
 			</menu>
