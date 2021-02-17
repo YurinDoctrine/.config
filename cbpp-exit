@@ -1,0 +1,12 @@
+#!/bin/bash
+
+chosen=$(echo -e "[Cancel]\nLogout\nReboot\nShutdown\nSuspend" | dmenu -i)
+if [[ $chosen = "Logout" ]]; then
+	openbox --exit
+elif [[ $chosen = "Reboot" ]]; then
+	systemctl reboot
+elif [[ $chosen = "Shutdown" ]]; then
+	systemctl poweroff
+elif [[ $chosen = "Suspend" ]]; then
+	systemctl suspend
+fi
