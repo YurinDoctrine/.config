@@ -1,12 +1,13 @@
 #!/bin/bash
 
-chosen=$(echo -e "[Cancel]\nLogout\nReboot\nShutdown\nSuspend" | dmenu -i)
-if [[ $chosen = "Logout" ]]; then
+dialog=$(echo -e "[Cancel]\nLogout\nReboot\nShutdown\nSuspend" | dmenu -i)
+if [[ $dialog = "Logout" ]]; then
 	openbox --exit
-elif [[ $chosen = "Reboot" ]]; then
+elif [[ $dialog = "Reboot" ]]; then
 	systemctl reboot
-elif [[ $chosen = "Shutdown" ]]; then
+elif [[ $dialog = "Shutdown" ]]; then
 	systemctl poweroff
-elif [[ $chosen = "Suspend" ]]; then
+elif [[ $dialog = "Suspend" ]]; then
+	xscreensaver-command -lock
 	systemctl suspend
 fi
