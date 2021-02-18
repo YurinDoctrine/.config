@@ -30,19 +30,20 @@ hsetroot -solid "#2E3436" &
 ## 4. tint2 panel
 nitrogen --restore &
 cbpp-compositor --start &
+sleep 1
 tint2 &
 
-## Start nm-applet for systray
-nm-applet &
-
 ## Enable power management
-xfce4-power-manager &
+xfce4-power-manager
 
 ## Start Thunar Daemon
 thunar --daemon &
 
 ## Start xscreensaver
 xscreensaver -no-splash &
+
+## Start nm-applet for systray
+nm-applet &
 
 ## Run the conky
 conky -q &
