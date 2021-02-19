@@ -28,18 +28,19 @@ hsetroot -solid "#2E3436" &
 ## 2. compositor - start
 ## 3. sleep - give compositor time to start
 ## 4. tint2 panel
-nitrogen --restore &
-cbpp-compositor --start &
-sleep 1
-tint2 &
+(sleep 1s && nitrogen --restore) &
+(sleep 1s && cbpp-compositor --start) &
+(sleep 1s && tint2) &
 
 ## Enable power management
-xfce4-power-manager &
+xset -dpms
+(sleep 1s && xfce4-power-manager) &
 
 ## Start Thunar Daemon
 thunar --daemon &
 
 ## Start xscreensaver
+xset -dpms
 xscreensaver -no-splash &
 
 ## Start nm-applet for systray
@@ -49,7 +50,7 @@ nm-applet &
 conky -q &
 
 ## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
-## Adjust the values according to your preferances.
+## Adjust the values according to your preferences.
 xset r rate 250 25 &
 
 ## Turn on/off system beep
