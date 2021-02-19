@@ -190,12 +190,6 @@
 						<execute>conkywonky</execute>
 					</action>
 				</item>
-				<separator label="Help?"/>
-				<item label="man page">
-					<action name="Execute">
-						<execute>x-terminal-emulator -e man conky</execute>
-					</action>
-				</item>
 				<item label="Documentation">
 					<action name="Execute">
 						<execute>x-www-browser http://conky.sourceforge.net/documentation.html</execute>
@@ -208,23 +202,11 @@
 						<execute>cbpp-gksudo x-terminal-emulator -e nano ~/.config/dmenu/dmenu-bind.sh</execute>
 					</action>
 				</item>
-				<separator label="Help?"/>
-				<item label="man page">
-					<action name="Execute">
-						<execute>x-terminal-emulator -e man dmenu</execute>
-					</action>
-				</item>
 			</menu>
 			<menu id="gmrunconfig" label="gmrun">
 				<item label="Edit config file">
 					<action name="Execute">
 						<execute>cbpp-gksudo x-terminal-emulator -e nano ~/.gmrunrc</execute>
-					</action>
-				</item>
-				<separator label="Help?"/>
-				<item label="man page">
-					<action name="Execute">
-						<execute>x-terminal-emulator -e man gmrun</execute>
 					</action>
 				</item>
 			</menu>
@@ -266,12 +248,6 @@
 				<item label="Restart tint2">
 					<action name="Execute">
 						<execute>tint2restart</execute>
-					</action>
-				</item>
-				<separator label="Help?"/>
-				<item label="man page">
-					<action name="Execute">
-						<execute>x-terminal-emulator -e man tint2</execute>
 					</action>
 				</item>
 				<item label="Online Help">
