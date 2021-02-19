@@ -239,6 +239,11 @@
 						<execute>cbpp-gksudo x-terminal-emulator -e nano ~/.config/openbox/rc.xml</execute>
 					</action>
 				</item>
+                                <item label="Edit environment">
+                                        <action name="Execute">
+                                                <execute>cbpp-gksudo x-terminal-emulator -e nano ~/.config/openbox/environment</execute>
+                                        </action>
+                                </item>
 				<item label="Edit autostart">
 					<action name="Execute">
 						<execute>cbpp-gksudo x-terminal-emulator -e nano ~/.config/openbox/autostart</execute>
