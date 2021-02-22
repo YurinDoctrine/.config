@@ -129,6 +129,11 @@
 			</item>
 		</menu>
 		<menu id="network" label="Network">
+                        <item label="PuTTY">
+                                <action name="Execute">
+                                        <execute>putty</execute>
+                                </action>
+                        </item>
 			<item label="Filezilla">
 				<action name="Execute">
 					<execute>filezilla</execute>
