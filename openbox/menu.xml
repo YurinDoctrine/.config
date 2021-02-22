@@ -119,7 +119,7 @@
 			</item>
 			<item label="Volume Control">
 				<action name="Execute">
-					<execute>pavucontrol</execute>
+					<execute>pavucontrol-qt</execute>
 				</action>
 			</item>
 			<item label="Xfburn">

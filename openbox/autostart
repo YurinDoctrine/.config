@@ -17,8 +17,8 @@
 ##
 ## Have fun & happy CrunchBangin'! :)
 
-## LX PolicyKit
-lxpolkit &
+## LXQt PolicyKit
+lxqt-policykit-agent &
 
 ## Set root window colour
 hsetroot -solid "#2E3436" &
@@ -45,6 +45,12 @@ xscreensaver -no-splash &
 
 ## Start nm-applet for systray
 nm-applet &
+
+## Start ibus-daemon for systray
+(sleep 1s && ibus-daemon) &
+
+## Run the udiskie
+udiskie &
 
 ## Run the conky
 conky -q &
