@@ -211,6 +211,11 @@
 				</item>
 			</menu>
 			<menu id="obConfig" label="Openbox">
+                                <item label="obconf">
+                                        <action name="Execute">
+                                                <execute>cbpp-gksudo obconf</ex>
+                                        </action>
+                                </item>
 				<item label="Edit menu.xml">
 					<action name="Execute">
 						<execute>cbpp-gksudo x-terminal-emulator -e nano ~/.config/openbox/menu.xml</execute>
@@ -262,12 +267,6 @@
 						<execute>arandr</execute>
 					</action>
 				</item>
-				<separator label="Help?"/>
-				<item label="man xrandr">
-					<action name="Execute">
-						<execute>x-terminal-emulator -e man xrandr</execute>
-					</action>
-				</item>
 			</menu>
 			<menu id="Notifications" label="Notifications">
 				<item label="settings">
@@ -310,7 +309,7 @@
 				</action>
 			</item>
 		</menu>
-		<!--<menu id="help" label="Help" execute="cbpp-help-pipemenu" />-->
+		<menu id="help" label="Help" execute="cbpp-help-pipemenu" />
 		<separator/>
 		<item label="Lock Screen">
 			<action name="Execute">
@@ -319,7 +318,7 @@
 		</item>
 		<item label="Exit">
 			<action name="Execute">
-				<execute>cbpp-exit</execute>
+				<execute>obsession-logout</execute>
 			</action>
 		</item>
 	</menu>
