@@ -213,7 +213,7 @@
 			<menu id="obConfig" label="Openbox">
                                 <item label="obconf">
                                         <action name="Execute">
-                                                <execute>cbpp-gksudo obconf</ex>
+                                                <execute>cbpp-gksudo obconf</execute>
                                         </action>
                                 </item>
 				<item label="Edit menu.xml">
