@@ -112,11 +112,6 @@
 			</menu>
 		</menu>
 		<menu id="multimedia" label="Multimedia">
-			<item label="VLC Media Player">
-				<action name="Execute">
-					<execute>vlc</execute>
-				</action>
-			</item>
 			<item label="Volume Control">
 				<action name="Execute">
 					<execute>pavucontrol-qt</execute>
