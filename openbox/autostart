@@ -20,8 +20,14 @@
 ## LXQt PolicyKit
 lxqt-policykit-agent &
 
+## LXQt Notificationd
+lxqt-notificationd &
+
 ## Set root window colour
 hsetroot -solid "#2E3436" &
+
+## Start Thunar Daemon
+thunar --daemon &
 
 ## Group start:
 ## 1. nitrogen - restores wallpaper
@@ -36,9 +42,6 @@ hsetroot -solid "#2E3436" &
 xset -dpms
 (sleep 1s && xfce4-power-manager) &
 
-## Start Thunar Daemon
-thunar --daemon &
-
 ## Start xscreensaver
 xset -dpms
 xscreensaver -no-splash &
@@ -47,7 +50,7 @@ xscreensaver -no-splash &
 nm-applet &
 
 ## Start ibus-daemon for systray
-(sleep 1s && ibus-daemon) &
+ibus-daemon &
 
 ## Run the udiskie
 udiskie &
