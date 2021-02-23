@@ -230,7 +230,7 @@
   <keybind key="W-F4">
     <action name="GoToDesktop"><to>4</to></action>
   </keybind>
-  <keybind key="W-d">
+  <keybind key="W-Escape">
     <action name="ToggleShowDesktop"/>
   </keybind>
 
