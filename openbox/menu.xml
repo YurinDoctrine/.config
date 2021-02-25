@@ -190,7 +190,7 @@
 						<execute>conkywonky</execute>
 					</action>
 				</item>
-				<item label="Documentation">
+				<item label="Documentation Online">
 					<action name="Execute">
 						<execute>x-www-browser http://conky.sourceforge.net/documentation.html</execute>
 					</action>
