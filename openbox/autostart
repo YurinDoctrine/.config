@@ -17,46 +17,42 @@
 ##
 ## Have fun & happy CrunchBangin'! :)
 
-## LXQt PolicyKit
-lxqt-policykit-agent &
-
 ## LXQt Notificationd
 lxqt-notificationd &
 
 ## Set root window colour
 hsetroot -solid "#2E3436" &
 
+## Run the udiskie
+udiskie &
+
 ## Start Thunar Daemon
 thunar --daemon &
 
 ## Group start:
-## 1. nitrogen - restores wallpaper
-## 2. compositor - start
-## 3. sleep - give compositor time to start
+## 1. compositor - start
+## 2. sleep - give compositor time to start
+## 3. nitrogen - restores wallpaper
 ## 4. tint2 panel
-(sleep 1s && nitrogen --restore) &
 (sleep 1s && cbpp-compositor --start) &
-(sleep 1s && tint2) &
+nitrogen --restore &
+tint2 &
+
+## Start ibus-daemon for systray
+(sleep 1s && ibus-daemon) &
 
 ## Enable power management
 xset -dpms
 (sleep 1s && xfce4-power-manager) &
 
 ## Start xscreensaver
-xset -dpms
 xscreensaver -no-splash &
-
-## Start nm-applet for systray
-nm-applet &
-
-## Start ibus-daemon for systray
-ibus-daemon &
-
-## Run the udiskie
-udiskie &
 
 ## Run the conky
 conky -q &
+
+## Start nm-applet for systray
+nm-applet &
 
 ## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
 ## Adjust the values according to your preferences.
