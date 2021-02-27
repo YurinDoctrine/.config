@@ -17,8 +17,8 @@
 ##
 ## Have fun & happy CrunchBangin'! :)
 
-## LXQt Notificationd
-lxqt-notificationd &
+## Start LXQt polkit
+lxqt-policykit-agent &
 
 ## Set root window colour
 hsetroot -solid "#2E3436" &
@@ -38,6 +38,9 @@ xscreensaver -no-splash &
 
 ## Run the conky
 conky -q &
+
+## Run the ibus daemon
+(sleep 1s && ibus-daemon) &
 
 ## Start Thunar Daemon
 thunar --daemon &
