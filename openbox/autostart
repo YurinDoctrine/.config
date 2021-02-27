@@ -33,7 +33,7 @@ tint2 &
 nitrogen --restore &
 
 ## Start xscreensaver
-xset dpms
+xset -dpms
 xscreensaver -no-splash &
 
 ## Run the conky
