@@ -17,11 +17,11 @@
 ##
 ## Have fun & happy CrunchBangin'! :)
 
-## Start LXQt polkit
-lxqt-policykit-agent &
-
 ## Set root window colour
 hsetroot -solid "#2E3436" &
+
+## Run the conky
+conky -q &
 
 ## Group start:
 ## 1. compositor - start
@@ -35,12 +35,6 @@ nitrogen --restore &
 ## Start xscreensaver
 xset -dpms
 xscreensaver -no-splash &
-
-## Run the conky
-conky -q &
-
-## Run the ibus daemon
-(sleep 1s && ibus-daemon) &
 
 ## Start Thunar Daemon
 thunar --daemon &
