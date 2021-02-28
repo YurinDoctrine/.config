@@ -17,6 +17,9 @@
 ##
 ## Have fun & happy CrunchBangin'! :)
 
+## Start LXDE PolKit
+lxpolkit &
+
 ## Set root window colour
 hsetroot -solid "#2E3436" &
 
