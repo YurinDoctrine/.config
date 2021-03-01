@@ -20,6 +20,9 @@
 ## Start LXDE PolKit
 lxpolkit &
 
+## Start udiskie
+udiskie &
+
 ## Set root window colour
 hsetroot -solid "#2E3436" &
 
@@ -38,9 +41,6 @@ nitrogen --restore &
 ## Start xscreensaver
 xset -dpms
 xscreensaver -no-splash &
-
-## Start udiskie
-udiskie &
 
 ## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
 ## Adjust the values according to your preferences.
