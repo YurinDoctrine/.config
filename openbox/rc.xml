@@ -259,6 +259,23 @@
       </action>
     </keybind>
 
+  <!-- Keybindings for toggling volume Up/Down/Mute -->
+   <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <command>amixer -D pulse sset Master 5%+</command>
+      </action>
+   </keybind>
+    <keybind key="XF86AudioLowerVolume">
+     <action name="Execute">
+        <command>amixer -D pulse sset Master 5%-</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute">
+        <command>amixer set Master toggle</command>
+      </action>
+   </keybind>
+
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
