@@ -259,7 +259,7 @@
       </action>
     </keybind>
 
-  <!-- Keybindings for toggling volume Up/Down/Mute -->
+  <!-- Keybindings for toggling Multimedia -->
    <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
         <command>amixer -D pulse sset Master 5%+</command>
@@ -273,6 +273,26 @@
     <keybind key="XF86AudioMute">
       <action name="Execute">
         <command>amixer set Master toggle</command>
+      </action>
+   </keybind>
+    <keybind key="XF86AudioPlay">
+      <action name="Execute">
+        <command>playerctl play-pause</command>
+      </action>
+   </keybind>
+    <keybind key="XF86AudioStop">
+      <action name="Execute">
+        <command>playerctl play-pause</command>
+      </action>
+   </keybind>
+    <keybind key="XF86AudioPrev">
+      <action name="Execute">
+        <command>playerctl previous</command>
+      </action>
+   </keybind>
+    <keybind key="XF86AudioNext">
+      <action name="Execute">
+        <command>playerctl next</command>
       </action>
    </keybind>
 
