@@ -302,7 +302,6 @@
 			</item>
 		</menu>
 		<menu id="system" label="System">
-			<menu execute="cbpp-printing-pipemenu" id="PrintingPipeMenu" label="Printers"/>
 			<item label="GParted">
 				<action name="Execute">
 					<execute>cbpp-gksudo gparted</execute>
