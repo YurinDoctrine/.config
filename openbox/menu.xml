@@ -315,7 +315,7 @@
 				<execute>xscreensaver-command -lock</execute>
 			</action>
 		</item>
-		<item label="Exit">
+		<item label="Logout">
 			<action name="Execute">
 				<execute>obsession-logout</execute>
 			</action>
