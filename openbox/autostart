@@ -20,9 +20,6 @@
 ## Start LXDE PolKit
 lxpolkit &
 
-## Start udiskie
-udiskie &
-
 ## Set root window colour
 hsetroot -solid "#2E3436" &
 
