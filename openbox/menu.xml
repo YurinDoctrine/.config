@@ -285,6 +285,11 @@
 					<execute>lxappearance</execute>
 				</action>
 			</item>
+                        <item label="Bluetooth Manager">
+                                <action name="Execute">
+                                        <execute>blueman-manager</execute>
+                                </action>
+                        </item>
 			<item label="Power Management">
 				<action name="Execute">
 					<execute>xfce4-power-manager-settings</execute>
