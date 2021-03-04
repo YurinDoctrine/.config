@@ -37,15 +37,6 @@
 	<directories/>
 </action>
 <action>
-	<icon>geany</icon>
-	<name>Open as root</name>
-	<unique-id>1614709488418983-5</unique-id>
-	<command>gksudo &quot;geany %f&quot;</command>
-	<description>Open text file as root</description>
-	<patterns>*</patterns>
-	<text-files/>
-</action>
-<action>
 	<icon>applications-system</icon>
 	<name>Check md5 sum</name>
 	<unique-id>1614709488418991-6</unique-id>
