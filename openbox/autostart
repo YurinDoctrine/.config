@@ -31,16 +31,16 @@ hsetroot -solid "#2E3436" &
 ## 2. sleep - give compositor time to start
 ## 3. tint2 panel
 ## 4. nitrogen - restores wallpaper
-(sleep 1s && cbpp-compositor --start) &
+cbpp-compositor --start &
 tint2 &
 nitrogen --restore &
+
+## Run the blueman-applet
+blueman-applet &
 
 ## Start xscreensaver
 xset -dpms
 xscreensaver -no-splash &
-
-## Run the blueman-applet
-blueman-applet &
 
 ## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
 ## Adjust the values according to your preferences.
