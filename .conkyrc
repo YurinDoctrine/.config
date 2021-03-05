@@ -46,7 +46,7 @@ override_utf8_locale no
 #  Output
 ##############################################
 TEXT
-S Y S T E M    I N F O
+S Y S T E M
 ${hr}
 Host:$alignr$nodename
 Uptime:$alignr$uptime
@@ -56,7 +56,7 @@ Disk usage:$alignr${fs_used /}/${fs_size /}
 CPU usage:$alignr${cpu cpu0}%
 
 
-S H O R T C U T    K E Y S
+K E Y B I N D S
 ${hr}
 Super+r$alignr Run Dialog
 Super+d$alignr Alt Menu
