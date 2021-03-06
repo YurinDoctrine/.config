@@ -8,6 +8,5 @@ elif [[ $dialog = "Reboot" ]]; then
 elif [[ $dialog = "Shutdown" ]]; then
 	systemctl poweroff
 elif [[ $dialog = "Suspend" ]]; then
-	xscreensaver-command -lock
 	systemctl suspend
 fi
