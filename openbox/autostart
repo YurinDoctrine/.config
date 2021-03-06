@@ -20,6 +20,9 @@
 ## Start LXDE PolKit
 lxpolkit &
 
+## Run the notification daemon
+xfce4-notifyd &
+
 ## Run the conky
 (sleep 1s && conky -q) &
 
