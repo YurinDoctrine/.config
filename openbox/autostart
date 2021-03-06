@@ -38,6 +38,9 @@ tint2 &
 ## Run the blueman-applet
 blueman-applet &
 
+## Start udiskie
+udiskie -qsA &
+
 ## Set root window colour
 hsetroot -solid "#2E3436" &
 
