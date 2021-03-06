@@ -20,9 +20,6 @@
 ## Start LXDE PolKit
 lxpolkit &
 
-## Set root window colour
-hsetroot -solid "#2E3436" &
-
 ## Run the conky
 (sleep 1s && conky -q) &
 
@@ -32,11 +29,14 @@ hsetroot -solid "#2E3436" &
 ## 3. tint2 panel
 ## 4. nitrogen - restores wallpaper
 cbpp-compositor --start &
-tint2 &
 nitrogen --restore &
+tint2 &
 
 ## Run the blueman-applet
 blueman-applet &
+
+## Set root window colour
+hsetroot -solid "#2E3436" &
 
 ## Start xscreensaver
 xset -dpms
