@@ -72,9 +72,9 @@
 			</item>
 		</menu>
 		<menu id="graphics" label="Graphics">
-			<item label="GIMP">
+			<item label="Pinta">
 				<action name="Execute">
-					<execute>gimp</execute>
+					<execute>pinta</execute>
 				</action>
 			</item>
 			<item label="Viewnior Image Viewer">
