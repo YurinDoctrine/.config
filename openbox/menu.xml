@@ -52,7 +52,7 @@
 			</item>
 			<item label="Task Manager (htop)">
 				<action name="Execute">
-					<execute>terminator -e htop</execute>
+					<execute>terminator -x htop</execute>
 				</action>
 			</item>
 			<item label="Terminal">
@@ -146,7 +146,7 @@
 			</item>
 			<item label="IRC Client">
 				<action name="Execute">
-					<execute>terminator -e irssi</execute>
+					<execute>terminator -x irssi</execute>
 				</action>
 			</item>
 		</menu>
@@ -187,7 +187,7 @@
 			<menu id="conkyconfig" label="Conky">
 				<item label="Edit .conkyrc">
 					<action name="Execute">
-						<execute>cbpp-gksudo terminator -e nano ~/.conkyrc</execute>
+						<execute>cbpp-gksudo terminator -x nano ~/.conkyrc</execute>
 					</action>
 				</item>
 				<item label="Restart Conky">
@@ -204,14 +204,14 @@
 			<menu id="dmenuconfig" label="dmenu">
 				<item label="Edit start-up script">
 					<action name="Execute">
-						<execute>cbpp-gksudo terminator -e nano ~/.config/dmenu/dmenu-bind.sh</execute>
+						<execute>cbpp-gksudo terminator -x nano ~/.config/dmenu/dmenu-bind.sh</execute>
 					</action>
 				</item>
 			</menu>
 			<menu id="gmrunconfig" label="gmrun">
 				<item label="Edit config file">
 					<action name="Execute">
-						<execute>cbpp-gksudo terminator -e nano ~/.gmrunrc</execute>
+						<execute>cbpp-gksudo terminator -x nano ~/.gmrunrc</execute>
 					</action>
 				</item>
 			</menu>
@@ -223,17 +223,17 @@
                                 </item>
 				<item label="Edit menu.xml">
 					<action name="Execute">
-						<execute>cbpp-gksudo terminator -e nano ~/.config/openbox/menu.xml</execute>
+						<execute>cbpp-gksudo terminator -x nano ~/.config/openbox/menu.xml</execute>
 					</action>
 				</item>
 				<item label="Edit rc.xml">
 					<action name="Execute">
-						<execute>cbpp-gksudo terminator -e nano ~/.config/openbox/rc.xml</execute>
+						<execute>cbpp-gksudo terminator -x nano ~/.config/openbox/rc.xml</execute>
 					</action>
 				</item>
 				<item label="Edit autostart">
 					<action name="Execute">
-						<execute>cbpp-gksudo terminator -e nano ~/.config/openbox/autostart</execute>
+						<execute>cbpp-gksudo terminator -x nano ~/.config/openbox/autostart</execute>
 					</action>
 				</item>
 				<separator/>
@@ -247,7 +247,7 @@
 			<menu id="tint2config" label="tint2">
 				<item label="Edit config file">
 					<action name="Execute">
-						<execute>cbpp-gksudo terminator -e nano ~/.config/tint2/tint2rc</execute>
+						<execute>cbpp-gksudo terminator -x nano ~/.config/tint2/tint2rc</execute>
 					</action>
 				</item>
 				<item label="Restart tint2">
@@ -277,7 +277,7 @@
 			</menu>
 			<item label="Edit Default Applications">
 				<action name="Execute">
-					<execute>terminator -e sudo update-alternatives --all</execute>
+					<execute>terminator -x sudo update-alternatives --all</execute>
 				</action>
 			</item>
 			<item label="User Interface Settings">
