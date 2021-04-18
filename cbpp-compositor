@@ -24,10 +24,10 @@ if [[ $1 = '--edit' ]]; then
     [[ ! -f $HOME/.config/compton.conf ]] &&
         cp '/etc/xdg/compton.conf' "$HOME/.config/compton.conf"
 
-    if [[ -x /usr/bin/geany ]]; then
-        geany "$HOME/.config/compton.conf" &
-    else
+    if [[ -x /usr/bin/terminator ]]; then
         cbpp-gksudo terminator -x nano $HOME/.config/compton.conf
+    else
+        geany "$HOME/.config/compton.conf" &
     fi
 elif [[ $1 = '--toggle' || $1 = '--start' ]]; then # Toggle compositing with compton.
     # TODO why --toggle and --start act exactly the same?
