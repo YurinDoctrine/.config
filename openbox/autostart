@@ -23,9 +23,6 @@ hsetroot -solid "#2E3436" &
 ## Start LXDE PolKit
 lxpolkit &
 
-## Run the conky
-(sleep 1s && conky -q) &
-
 ## Run the notification daemon
 xfce4-notifyd &
 
@@ -38,11 +35,14 @@ xfce4-notifyd &
 nitrogen --restore &
 tint2 &
 
-## Enable power management
-xfce4-power-manager &
+## Run the conky
+(sleep 1s && conky -q) &
 
 ## Start xscreensaver
 xscreensaver -no-splash &
+
+## Enable power management
+xfce4-power-manager &
 
 ## Enable blueman-applet
 blueman-applet &
