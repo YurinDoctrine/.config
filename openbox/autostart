@@ -17,32 +17,35 @@
 ##
 ## Have fun & happy CrunchBangin'! :)
 
+## Set root window colour
+hsetroot -solid "#2E3436" &
+
 ## Start LXDE PolKit
 lxpolkit &
 
-## Run the notification daemon
-xfce4-notifyd &
-
 ## Run the conky
 (sleep 1s && conky -q) &
+
+## Run the notification daemon
+xfce4-notifyd &
 
 ## Group start:
 ## 1. compositor - start
 ## 2. sleep - give compositor time to start
 ## 3. tint2 panel
 ## 4. nitrogen - restores wallpaper
-cbpp-compositor --start &
+(sleep 1s && cbpp-compositor --start) &
 nitrogen --restore &
 tint2 &
 
-## Run the blueman-applet
+## Enable power management
+xfce4-power-manager &
+
+## Enable blueman-applet
 blueman-applet &
 
 ## Start udiskie
 udiskie -qsA &
-
-## Set root window colour
-hsetroot -solid "#2E3436" &
 
 ## Start xscreensaver
 xset -dpms
