@@ -31,7 +31,7 @@ xfce4-notifyd &
 ## 2. sleep - give compositor time to start
 ## 3. tint2 panel
 ## 4. nitrogen - restores wallpaper
-(sleep 1s && cbpp-compositor --start) &
+cbpp-compositor --start &
 nitrogen --restore &
 tint2 &
 
@@ -42,7 +42,7 @@ tint2 &
 xscreensaver -no-splash &
 
 ## Enable power management
-xfce4-power-manager &
+(sleep 1s && xfce4-power-manager) &
 
 ## Enable blueman-applet
 blueman-applet &
