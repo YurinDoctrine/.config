@@ -42,7 +42,6 @@ tint2 &
 xfce4-power-manager &
 
 ## Start xscreensaver
-xset -dpms
 xscreensaver -no-splash &
 
 ## Enable blueman-applet
