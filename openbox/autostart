@@ -41,15 +41,15 @@ tint2 &
 ## Enable power management
 xfce4-power-manager &
 
+## Start xscreensaver
+xset -dpms
+xscreensaver -no-splash &
+
 ## Enable blueman-applet
 blueman-applet &
 
 ## Start udiskie
 udiskie -qsA &
-
-## Start xscreensaver
-xset -dpms
-xscreensaver -no-splash &
 
 ## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
 ## Adjust the values according to your preferences.
