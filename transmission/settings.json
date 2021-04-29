@@ -62,7 +62,7 @@
     "rpc-whitelist-enabled": true,
     "scrape-paused-torrents-enabled": true,
     "script-torrent-done-enabled": false,
-    "script-torrent-done-filename": "~/Downloads",
+    "script-torrent-done-filename": "~",
     "seed-queue-enabled": false,
     "seed-queue-size": 10,
     "show-backup-trackers": false,
