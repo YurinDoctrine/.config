@@ -200,8 +200,6 @@
           </action>
         </item>
       </menu>
-
-
       <menu id="obConfig" label="Openbox">
         <item label="Edit menu.xml">
           <action name="Execute">
