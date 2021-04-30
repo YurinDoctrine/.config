@@ -26,6 +26,9 @@ lxpolkit &
 ## Run the notification daemon
 xfce4-notifyd &
 
+## Start xscreensaver
+xscreensaver -no-splash &
+
 ## Group start:
 ## 1. compositor - start
 ## 2. sleep - give compositor time to start
@@ -38,11 +41,8 @@ tint2 &
 ## Run the conky
 (sleep 1s && conky -q) &
 
-## Start xscreensaver
-xscreensaver -no-splash &
-
 ## Enable power management
-(sleep 1s && xfce4-power-manager) &
+xfce4-power-manager &
 
 ## Enable blueman-applet
 blueman-applet &
