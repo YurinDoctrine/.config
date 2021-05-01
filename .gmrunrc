@@ -3,12 +3,11 @@ TabTimeout = 0
 
 Terminal = x-terminal-emulator
 TermExec = ${Terminal} -e
-AlwaysInTerm = ssh telnet ftp lynx mc vi vim cat top sudo man info
+AlwaysInTerm = ssh ftp lynx mc vi vim cat nano top sudo info
 
 History = 500
 
 URL_http = x-www-browser %u
-URL_man = ${TermExec} 'man %s'
 URL_info = ${TermExec} 'info %s'
 URL_file = exo-open %s
 URL_f = exo-open %s
