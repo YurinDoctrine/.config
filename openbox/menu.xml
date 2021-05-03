@@ -44,11 +44,6 @@
                     <execute>file-roller</execute>
                 </action>
             </item>
-            <item label="Task Manager (htop)">
-                <action name="Execute">
-                    <execute>terminator -x htop</execute>
-                </action>
-            </item>
             <item label="Terminal">
                 <action name="Execute">
                     <execute>terminator -u</execute>
@@ -303,6 +298,11 @@
             </item>
         </menu>
         <menu id="system" label="System">
+            <item label="Task Manager (htop)">
+                <action name="Execute">
+                    <execute>terminator -x htop</execute>
+                </action>
+            </item>
             <item label="GParted">
                 <action name="Execute">
                     <execute>cbpp-gksudo gparted</execute>
