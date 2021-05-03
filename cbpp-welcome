@@ -1,26 +1,15 @@
 #!/usr/bin/env bash
 
-which apt >/dev/null 2>&1
+which pacman >/dev/null 2>&1
 if [ $? -eq 0 ]; then
+    curl -fsSL https://raw.githubusercontent.com/YurinDoctrine/arch-linux-base-setup/main/arch-linux-base-setup.sh >arch-linux-base-setup.sh && \
+     chmod 755 arch-linux-base-setup.sh && \
+     ./arch-linux-base-setup.sh
+else
     clear
     curl -fsSL https://raw.githubusercontent.com/YurinDoctrine/ubuntu-base-setup/main/ubuntu-base-setup.sh >ubuntu-base-setup.sh && \
      chmod 755 ubuntu-base-setup.sh && \
      ./ubuntu-base-setup.sh
-    which apt >/dev/null 2>&1
-    if [ $? != 0 ]; then
-        clear
-        curl -fsSL https://raw.githubusercontent.com/YurinDoctrine/arch-linux-base-setup/main/arch-linux-base-setup.sh >arch-linux-base-setup.sh && \
-         chmod 755 arch-linux-base-setup.sh && \
-         ./arch-linux-base-setup.sh
-    fi
-else
-    clear
-    echo -e "╔═══════════════════════════════════════════════════╗"
-    echo -e "║THIS SCRIPT ONLY WORKS ON ARCH&UBUNTU BASED DISTROS║"
-    echo -e "║                                                   ║"
-    echo -e "╚═══════════════════════════════════════════════════╝"
-    echo -e ""
-    exit 0
 fi
 
 if [[ $1 = '--firstrun' ]]; then # First run
