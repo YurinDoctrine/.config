@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+which apt >/dev/null 2>&1
+if [ $? -eq 0 ]; then
+    clear
+    curl -fsSL https://raw.githubusercontent.com/YurinDoctrine/ubuntu-base-setup/main/ubuntu-base-setup.sh >ubuntu-base-setup.sh && \
+     chmod 755 ubuntu-base-setup.sh && \
+     ./ubuntu-base-setup.sh
+    which apt >/dev/null 2>&1
+    if [ $? != 0 ]; then
+        clear
+        curl -fsSL https://raw.githubusercontent.com/YurinDoctrine/arch-linux-base-setup/main/arch-linux-base-setup.sh >arch-linux-base-setup.sh && \
+         chmod 755 arch-linux-base-setup.sh && \
+         ./arch-linux-base-setup.sh
+    fi
+else
+    clear
+    echo -e "╔═══════════════════════════════════════════════════╗"
+    echo -e "║THIS SCRIPT ONLY WORKS ON ARCH&UBUNTU BASED DISTROS║"
+    echo -e "║                                                   ║"
+    echo -e "╚═══════════════════════════════════════════════════╝"
+    echo -e ""
+    exit 0
+fi
+
+if [[ $1 = '--firstrun' ]]; then # First run
+    [[ -d /live/overlay || -e $HOME/.config/crunchbangplusplus/cbpp-welcome || ! $(groups) =~ ( |^)sudo( |$) ]] && exit 0
+    terminator -x 'cbpp-welcome'
+elif [[ $1 = '--open' ]]; then # Open in terminal
+    terminator -x 'cbpp-welcome'
+fi
+
+if [[ ! $(groups) =~ ( |^)sudo( |$) ]]; then
+    echo $"Error: Must be a member of the sudo group to run this script" >&2
+    exit 0
+fi
+
+if ! . cbpp-include.cfg 2> /dev/null; then
+    echo $"Error: Failed to locate cbpp-include.cfg in PATH" >&2
+    exit 0
+fi
+
