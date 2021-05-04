@@ -29,3 +29,4 @@ if ! . cbpp-include.cfg 2> /dev/null; then
     exit 0
 fi
 
+sudo sed -i 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' $HOME/.config/openbox/autostart
