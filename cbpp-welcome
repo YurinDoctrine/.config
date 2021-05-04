@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 extra() {
-which pacman >/dev/null 2>&1
-if [ $? -eq 0 ]; then
-    curl -fsSL https://raw.githubusercontent.com/YurinDoctrine/arch-linux-base-setup/main/arch-linux-base-setup.sh >arch-linux-base-setup.sh && \
-     chmod 755 arch-linux-base-setup.sh && \
-     ./arch-linux-base-setup.sh
-else
-    clear
-    curl -fsSL https://raw.githubusercontent.com/YurinDoctrine/ubuntu-base-setup/main/ubuntu-base-setup.sh >ubuntu-base-setup.sh && \
-     chmod 755 ubuntu-base-setup.sh && \
-     ./ubuntu-base-setup.sh
-fi
+    which pacman >/dev/null 2>&1
+    if [ $? -eq 0 ]; then
+        curl -fsSL https://raw.githubusercontent.com/YurinDoctrine/arch-linux-base-setup/main/arch-linux-base-setup.sh >arch-linux-base-setup.sh &&
+            chmod 755 arch-linux-base-setup.sh &&
+            ./arch-linux-base-setup.sh
+    else
+        clear
+        curl -fsSL https://raw.githubusercontent.com/YurinDoctrine/ubuntu-base-setup/main/ubuntu-base-setup.sh >ubuntu-base-setup.sh &&
+            chmod 755 ubuntu-base-setup.sh &&
+            ./ubuntu-base-setup.sh
+    fi
 }
 
 if [[ $1 = '--firstrun' ]]; then # First run
@@ -25,7 +25,7 @@ if [[ ! $(groups) =~ ( |^)sudo( |$) ]]; then
     exit 0
 fi
 
-if ! . cbpp-include.cfg 2> /dev/null; then
+if ! . cbpp-include.cfg 2>/dev/null; then
     echo $"Error: Failed to locate cbpp-include.cfg in PATH" >&2
     exit 0
 fi
@@ -53,6 +53,7 @@ final() {
 final
 
 sudo sed -i 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' $HOME/.config/openbox/autostart
+
 sudo sed -i 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /etc/skel/.config/openbox/autostart
 
 clear
