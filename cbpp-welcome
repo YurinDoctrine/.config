@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+cd /tmp
+
 extra() {
     which pacman >/dev/null 2>&1
     if [ $? -eq 0 ]; then
@@ -55,5 +58,7 @@ final
 sudo sed -i 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' $HOME/.config/openbox/autostart
 
 sudo sed -i 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /etc/skel/.config/openbox/autostart
+
+cd
 
 clear
