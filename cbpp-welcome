@@ -28,8 +28,6 @@ connectiontest() {
 }
 connectiontest
 
-cd /tmp
-
 extra() {
     which pacman >/dev/null 2>&1
     if [ $? -eq 0 ]; then
@@ -55,6 +53,8 @@ if [[ ! $(groups) =~ ( |^)sudo( |$) ]]; then
     echo $"Error: Must be a member of the sudo group to run this script" >&2
     exit 0
 fi
+
+cd /tmp
 
 final() {
 
