@@ -8,7 +8,6 @@ say() {
 connectiontest() {
     local TEXT_CHECKING='Checking internet connection...'
     local TEXT_FAILED='Internet connection test failed!'
-    local TEXT_ASK_RETRY=$'\n\nThis script requires a working internet connection. Please configure your internet connection, then hit any key to continue, else hit "q" to quit.'
     local TEXT_ABORT='Script aborted.'
     local TEXT_OK='Internet connection test passed!'
 
@@ -17,15 +16,12 @@ connectiontest() {
         say "$TEXT_CHECKING"
         if wget -O - 'http://ftp.debian.org/debian/README' &> /dev/null; then
             say "$TEXT_OK" 1
-            clear
             return 0
         fi
-        say "$TEXT_FAILED"
-        if (( i == attempts - 1 )); then # if last attempt
-            return 1
-        elif prompt "$TEXT_ASK_RETRY" Q; then # if user wants to quit
-            say "$TEXT_ABORT" 2
-            (( attempts == 0 )) && exit 1 || return 1
+        say "$TEXT_FAILED" 1
+        if (( i == attempts )); then # if last attempt
+            say "$TEXT_ABORT"
+            (( attempts == 1 )) && return 1 || exit 0
         fi
     clear
     done
@@ -60,18 +56,13 @@ if [[ ! $(groups) =~ ( |^)sudo( |$) ]]; then
     exit 0
 fi
 
-if ! . cbpp-include.cfg 2>/dev/null; then
-    echo $"Error: Failed to locate cbpp-include.cfg in PATH" >&2
-    exit 0
-fi
-
 final() {
 
+    sleep 0.3 && clear
     echo -e "
 ###############################################################################
 # WELCOME! Would you like to run the author's post-installation?
-###############################################################################
-"
+###############################################################################"
 
     read -p $'yes/no >_: ' noc
     if [[ "$noc" == "yes" ]]; then
@@ -79,7 +70,7 @@ final() {
         extra
     elif [[ "$noc" == "no" ]]; then
         echo -e "LEAVING ..."
-        exit 0
+        return 0
     else
         echo -e "INVALID VALUE!"
         final
@@ -92,5 +83,3 @@ sudo sed -i 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' $HOME/.config/openb
 sudo sed -i 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /etc/skel/.config/openbox/autostart
 
 cd
-
-clear
