@@ -1,5 +1,37 @@
 #!/usr/bin/env bash
 
+say() {
+    fold -s -w 76 <<< "$1" | sed 's/^/  /' # wraps text nicely and adds two leading spaces
+    sleep "${2-0}"
+}
+
+connectiontest() {
+    local TEXT_CHECKING='Checking internet connection...'
+    local TEXT_FAILED='Internet connection test failed!'
+    local TEXT_ASK_RETRY=$'\n\nThis script requires a working internet connection. Please configure your internet connection, then hit any key to continue, else hit "q" to quit.'
+    local TEXT_ABORT='Script aborted.'
+    local TEXT_OK='Internet connection test passed!'
+
+    local -i i attempts=${1-0}
+    for (( i=0; i < attempts || attempts == 0; i++ )); do
+        say "$TEXT_CHECKING"
+        if wget -O - 'http://ftp.debian.org/debian/README' &> /dev/null; then
+            say "$TEXT_OK" 1
+            clear
+            return 0
+        fi
+        say "$TEXT_FAILED"
+        if (( i == attempts - 1 )); then # if last attempt
+            return 1
+        elif prompt "$TEXT_ASK_RETRY" Q; then # if user wants to quit
+            say "$TEXT_ABORT" 2
+            (( attempts == 0 )) && exit 1 || return 1
+        fi
+    clear
+    done
+}
+connectiontest
+
 cd /tmp
 
 extra() {
