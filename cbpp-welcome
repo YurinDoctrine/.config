@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 say() {
-    fold -s -w 76 <<< "$1" | sed 's/^/  /' # wraps text nicely and adds two leading spaces
+    fold -s -w 76 <<<"$1" | sed 's/^/  /' # wraps text nicely and adds two leading spaces
     sleep "${2-0}"
 }
 
@@ -12,18 +12,18 @@ connectiontest() {
     local TEXT_OK='Internet connection test passed!'
 
     local -i i attempts=${1-0}
-    for (( i=0; i < attempts || attempts == 0; i++ )); do
+    for ((i = 0; i < attempts || attempts == 0; i++)); do
         say "$TEXT_CHECKING"
-        if wget -O - 'http://ftp.debian.org/debian/README' &> /dev/null; then
+        if wget -O - 'http://ftp.debian.org/debian/README' &>/dev/null; then
             say "$TEXT_OK" 1
             return 0
         fi
         say "$TEXT_FAILED" 1
-        if (( i == attempts )); then # if last attempt
+        if ((i == attempts)); then # if last attempt
             say "$TEXT_ABORT"
-            (( attempts == 1 )) && return 1 || exit 0
+            ((attempts == 1)) && return 1 || exit 0
         fi
-    clear
+        clear
     done
 }
 connectiontest
