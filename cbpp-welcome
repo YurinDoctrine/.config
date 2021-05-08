@@ -21,7 +21,7 @@ connectiontest() {
         say "$TEXT_FAILED" 1
         if ((i == attempts)); then # if last attempt
             say "$TEXT_ABORT"
-            ((attempts == 1)) && return 1 || exit 0
+            ((attempts == 1)) && return 1 || exit 1
         fi
         clear
     done
@@ -43,7 +43,7 @@ extra() {
 }
 
 if [[ $1 = '--firstrun' ]]; then # First run
-    [[ -d /live/overlay || -e $HOME/.config/crunchbangplusplus/cbpp-welcome || ! $(groups) =~ ( |^)sudo( |$) ]] && exit 0
+    [[ -d /live/overlay || -e $HOME/.config/crunchbangplusplus/cbpp-welcome || ! $(groups) =~ ( |^)sudo( |$) ]] && exit 1
     terminator -x 'cbpp-welcome'
 elif [[ $1 = '--open' ]]; then # Open in terminal
     terminator -x 'cbpp-welcome'
@@ -51,7 +51,7 @@ fi
 
 if [[ ! $(groups) =~ ( |^)sudo( |$) ]]; then
     echo $"Error: Must be a member of the sudo group to run this script" >&2
-    exit 0
+    exit 1
 fi
 
 cd /tmp

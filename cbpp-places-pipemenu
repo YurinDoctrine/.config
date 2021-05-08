@@ -60,7 +60,7 @@ case $1 in
 --open)
     open_file "$2"
     echo "$0 : failed to open $2" >&2
-    exit
+    exit 1
     ;; # in case exec command fails
 # if "--recent" option is sent, incorporate "recent files" menu
 --recent)
@@ -190,4 +190,4 @@ done
 output="${output}"'</openbox_pipe_menu>
 '
 printf '%s' "$output"
-exit
+exit 0
