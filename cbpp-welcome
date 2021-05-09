@@ -85,4 +85,6 @@ sudo sed -i 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /etc/skel/.config/o
 
 cd
 
+./.cbpp-user-setup
+
 exit 0
