@@ -7,10 +7,8 @@ mkdir /home/$USER/Pictures
 mkdir /home/$USER/Music
 mkdir /home/$USER/Videos
 rpl -q 'REPLACEME' $USER /home/$USER/.gtk-bookmarks > /dev/null 2>&1
-sudo sed -i 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' $HOME/.config/openbox/autostart
-sudo sed -i 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /etc/skel/.config/openbox/autostart
 
 
-rm -rf ~/.cbpp-user-setup
+rm -f ~/.cbpp-user-setup
 
 exit 0
