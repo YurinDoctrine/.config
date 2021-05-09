@@ -1,1 +1,19 @@
 #!/usr/bin/sh
+
+mkdir /home/$USER/backup
+mkdir /home/$USER/bin
+mkdir /home/$USER/documents
+mkdir /home/$USER/downloads
+mkdir /home/$USER/images
+mkdir /home/$USER/images/wallpapers
+mkdir /home/$USER/music
+mkdir /home/$USER/tmp
+mkdir /home/$USER/videos
+rpl -q 'REPLACEME' $USER /home/$USER/.gtk-bookmarks > /dev/null 2>&1
+sudo sed -i 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' $HOME/.config/openbox/autostart
+sudo sed -i 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /etc/skel/.config/openbox/autostart
+
+
+rm -rf ~/.cbpp-user-setup
+
+exit 0
