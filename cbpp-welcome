@@ -91,7 +91,6 @@ mkdir /home/$USER/Pictures
 mkdir /home/$USER/Templates
 mkdir /home/$USER/Music
 mkdir /home/$USER/Videos
-rpl -q 'REPLACEME' $USER /home/$USER/.gtk-bookmarks > /dev/null 2>&1
 
 cd
 
