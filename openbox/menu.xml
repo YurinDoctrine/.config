@@ -79,7 +79,7 @@
             <menu id="graphicsScreenshots" label="Take Screenshot">
                 <item label="Screenshooter">
                     <action name="Execute">
-                        <execute>flameshot launcher</execute>
+                        <execute>flameshot</execute>
                     </action>
                 </item>
                 <separator label="scrot" />
