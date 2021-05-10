@@ -83,15 +83,28 @@ final
 sudo sed -i 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' $HOME/.config/openbox/autostart
 sudo sed -i 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /etc/skel/.config/openbox/autostart
 sudo sed -i 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /root/.config/openbox/autostart
-mkdir /home/$USER/Public
-mkdir /home/$USER/backup
-mkdir /home/$USER/Documents
-mkdir /home/$USER/Downloads
-mkdir /home/$USER/Pictures
-mkdir /home/$USER/Templates
-mkdir /home/$USER/Music
-mkdir /home/$USER/Videos
+ mkdir /home/$USER/Public
+ mkdir /home/$USER/backup
+ mkdir /home/$USER/Documents
+ mkdir /home/$USER/Downloads
+ mkdir /home/$USER/Pictures
+ mkdir /home/$USER/Templates
+ mkdir /home/$USER/Music
+ mkdir /home/$USER/Videos
 
 cd
+
+
+clear
+
+
+echo -e "REBOOT NOW?(recommended)"
+
+read -p $'yes/no >_: ' nock
+if [[ "$nock" == "no" ]]; then
+    return 0
+else
+    systemctl reboot
+fi
 
 exit 0
