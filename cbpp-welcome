@@ -88,10 +88,10 @@ sudo sed -i 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /root/.config/openb
  mkdir /home/$USER/Documents
  mkdir /home/$USER/Downloads
  mkdir /home/$USER/Pictures
- mkdir /home/$USER/Templates
  mkdir /home/$USER/Music
  mkdir /home/$USER/Videos
 clear
+
 askreboot() {
     echo -e "REBOOT NOW?(recommended)"
 
