@@ -207,22 +207,6 @@
                     </action>
                 </item>
                 <separator />
-                <item label="GUI Menu Editor">
-                    <action name="Execute">
-                        <execute>cbpp-gksudo obmenu</execute>
-                    </action>
-                </item>
-                <item label="GUI Applications Settings Editor">
-                    <action name="Execute">
-                        <execute>cbpp-gksudo obapps</execute>
-                    </action>
-                </item>
-                <item label="GUI Config Tool">
-                    <action name="Execute">
-                        <execute>cbpp-gksudo obconf</execute>
-                    </action>
-                </item>
-                <separator />
                 <item label="Reconfigure">
                     <action name="Reconfigure" />
                 </item>
