@@ -17,7 +17,7 @@
 ##
 ## cbpp-welcome - post-installation script, will not run in a live session and
 ## only runs once. Safe to remove.
-##
+(sleep 6s && cbpp-welcome --firstrun) &
 ## Have fun & happy CrunchBangin'! :)
 
 ## Set root window colour
