@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 say() {
-    fold -s -w 76 <<<"$1" | sed -i -e 's/^/  /' # wraps text nicely and adds two leading spaces
+    fold -s -w 76 <<<"$1" | sed -e 's/^/  /' # wraps text nicely and adds two leading spaces
     sleep "${2-0}"
 }
 
