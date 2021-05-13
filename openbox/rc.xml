@@ -387,9 +387,9 @@
             <action name="Execute">
                 <startupnotify>
                     <enabled>true</enabled>
-                    <name>thunar</name>
+                    <name>pcmanfm-qt</name>
                 </startupnotify>
-                <command>thunar</command>
+                <command>pcmanfm-qt</command>
             </action>
         </keybind>
         <keybind key="W-t">

@@ -17,7 +17,7 @@
 ##
 ## cbpp-welcome - post-installation script, will not run in a live session and
 ## only runs once. Safe to remove.
-(sleep 6s && cbpp-welcome --firstrun) &
+##
 ## Have fun & happy CrunchBangin'! :)
 
 ## Set root window colour
@@ -38,11 +38,12 @@ xscreensaver -no-splash &
 ## 3. tint2 panel
 ## 4. nitrogen - restores wallpaper
 cbpp-compositor --start &
+sleep 1s
 nitrogen --restore &
 tint2 &
 
 ## Run the conky
-(sleep 1s && conky -q) &
+conky -q &
 
 ## Enable power management
 xfce4-power-manager &

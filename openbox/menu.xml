@@ -19,12 +19,12 @@
         </item>
         <item label="File Manager">
             <action name="Execute">
-                <execute>thunar</execute>
+                <execute>pcmanfm-qt</execute>
             </action>
         </item>
         <item label="Text Editor">
             <action name="Execute">
-                <execute>mousepad</execute>
+                <execute>featherpad</execute>
             </action>
         </item>
         <item label="Media Player">
@@ -44,19 +44,14 @@
                     <execute>file-roller</execute>
                 </action>
             </item>
-            <item label="Terminal">
+            <item label="Terminal (root)">
                 <action name="Execute">
-                    <execute>terminator -u</execute>
+                    <execute>cbpp-gksudo terminator -u</execute>
                 </action>
             </item>
-            <item label="Thunar File Manager">
+            <item label="File Manager (root)">
                 <action name="Execute">
-                    <execute>thunar</execute>
-                </action>
-            </item>
-            <item label="Thunar File Manager (root)">
-                <action name="Execute">
-                    <execute>cbpp-gksudo thunar</execute>
+                    <execute>cbpp-gksudo pcmanfm-qt</execute>
                 </action>
             </item>
         </menu>
