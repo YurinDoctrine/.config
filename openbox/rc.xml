@@ -425,7 +425,7 @@
                     <enabled>true</enabled>
                     <name>Editor</name>
                 </startupnotify>
-                <command>mousepad</command>
+                <command>featherpad</command>
             </action>
         </keybind>
         <keybind key="W-m">
