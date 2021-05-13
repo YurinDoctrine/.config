@@ -73,7 +73,7 @@ Super+w$alignr Web Browser
 Super+h$alignr Task Manager
 Super+l$alignr Lock Screen
 Super+v$alignr Volume Control
-Super+Escape$alignr Show Desktop
+Super+Esc$alignr Show Desktop
 Super+x$alignr Exit Menu
 PrtSc$alignr Screenshot
 ]];
