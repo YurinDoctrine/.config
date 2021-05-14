@@ -91,7 +91,7 @@ path="$(echo "${path}"/ | tr -s '/')" # ensure one final slash
 case "$path" in # only escape if string needs it
 *\&* | *\<* | *\>* | *\"* | *\'*)
     pathe=$(
-        sed -i -e  "s/\&/\&amp;/g;s/</\&lt;/g;s/>/\&gt;/g;s/\"/\&quot;/g;s/'/\&apos;/g;" <<XXX
+        sed -i -e "s/\&/\&amp;/g;s/</\&lt;/g;s/>/\&gt;/g;s/\"/\&quot;/g;s/'/\&apos;/g;" <<XXX
 $path
 XXX
     )
@@ -102,7 +102,7 @@ esac
 case "$pathe" in
 *\&apos\;*)
     pathe_apos=$(
-        sed -i -e  's/\&apos;/\&apos;\&quot;\&apos;\&quot;\&apos;/g;' <<XXX
+        sed -i -e 's/\&apos;/\&apos;\&quot;\&apos;\&quot;\&apos;/g;' <<XXX
 $pathe
 XXX
     )
@@ -129,7 +129,7 @@ for i in "$path"* $extra_entries; do
     case $shortname in
     *\&* | *\<* | *\>* | *\"* | *\'*)
         shortnamee=$(
-            sed -i -e  "s/\&/\&amp;/g;s/</\&lt;/g;s/>/\&gt;/g;s/\"/\&quot;/g;s/'/\&apos;/g;" <<XXX
+            sed -i -e "s/\&/\&amp;/g;s/</\&lt;/g;s/>/\&gt;/g;s/\"/\&quot;/g;s/'/\&apos;/g;" <<XXX
 $shortname
 XXX
         )
@@ -139,7 +139,7 @@ XXX
     case $shortnamee in
     *\&apos\;*)
         shortnamee_apos=$(
-            sed -i -e  's/\&apos;/\&apos;\&quot;\&apos;\&quot;\&apos;/g;' <<XXX
+            sed -i -e 's/\&apos;/\&apos;\&quot;\&apos;\&quot;\&apos;/g;' <<XXX
 $shortnamee
 XXX
         )
@@ -149,7 +149,7 @@ XXX
     case $shortnamee in
     *_*)
         shortnamee_label=$(
-            sed -i -e  's/_/__/g;' <<XXX
+            sed -i -e 's/_/__/g;' <<XXX
 $shortnamee
 XXX
         )
