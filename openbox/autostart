@@ -30,6 +30,7 @@ lxpolkit &
 xfce4-notifyd &
 
 ## Start xscreensaver
+xset s noblank &
 xscreensaver -no-splash &
 
 ## Group start:
@@ -46,7 +47,7 @@ tint2 &
 conky -q &
 
 ## Enable power management
-xfce4-power-manager &
+mate-power-manager &
 
 ## Enable blueman-applet
 blueman-applet &
