@@ -89,18 +89,7 @@ sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /root/.config/op
  mkdir /home/$USER/Pictures
  mkdir /home/$USER/Music
  mkdir /home/$USER/Videos
+
 clear
 
-askreboot() {
-    echo -e "REBOOT NOW?(recommended)"
-
-    read -p $'yes/no >_: ' nock
-    if [[ "$nock" == "no" ]]; then
-        return 0
-    else
-        systemctl reboot
-    fi
-}
-askreboot
-
-exit 0
+openbox --exit
