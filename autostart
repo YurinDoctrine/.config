@@ -1,0 +1,65 @@
+## Openbox autostart.sh
+## ====================
+## When you login to your CrunchBang++ Openbox session, this autostart script
+## will be executed to set-up your environment and launch any applications
+## you want to run at startup.
+##
+## Note*: some programs, such as 'nm-applet' are run via XDG autostart.
+## Run '/usr/lib/openbox/openbox-xdg-autostart --list' to list any
+## XDG autostarted programs.
+##
+## More information about this can be found at:
+## http://openbox.org/wiki/Help:Autostart
+##
+## If you do something cool with your autostart script and you think others
+## could benefit from your hack, please consider sharing it at:
+## https://www.reddit.com/r/crunchbangplusplus
+##
+## cbpp-welcome - post-installation script, will not run in a live session and
+## only runs once. Safe to remove.
+(sleep 6s && cbpp-welcome --firstrun) &
+## Have fun & happy CrunchBangin'! :)
+
+## Set root window colour
+hsetroot -solid "#2E3436" &
+
+## Start LXDE PolKit
+lxpolkit &
+
+## Run the notification daemon
+xfce4-notifyd &
+
+## Group start:
+## 1. compositor - start
+## 2. sleep - give compositor time to start
+## 3. tint2 panel
+## 4. nitrogen - restores wallpaper
+cbpp-compositor --start &
+sleep 1s
+nitrogen --restore &
+tint2 &
+
+## Run the conky
+conky -q &
+
+## Enable power management
+mate-power-manager &
+
+## Start xscreensaver
+xscreensaver -no-splash &
+
+## Enable blueman-applet
+blueman-applet &
+
+## Start udiskie
+udiskie -qsA &
+
+## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
+## Adjust the values according to your preferences.
+xset r rate 250 25 &
+
+## Turn on/off system beep
+xset b off &
+
+## Turn on/off blank display
+(xset s noblank && xset dpms off) &
