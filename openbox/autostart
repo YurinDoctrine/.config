@@ -59,4 +59,4 @@ udiskie -qsA &
 xset r rate 250 25 &
 
 ## Turn on/off blank display
-(xset dpms off && xset s off) &
+(xset s noblank && xset dpms force off) &
