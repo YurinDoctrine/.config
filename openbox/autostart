@@ -39,11 +39,11 @@ sleep 1s
 nitrogen --restore &
 tint2 &
 
-## Run the conky
-conky -q &
-
 ## Enable power management
 mate-power-manager &
+
+## Run the conky
+conky -q &
 
 ## Start xscreensaver
 xscreensaver -no-splash &
@@ -62,4 +62,4 @@ xset r rate 250 25 &
 xset b off &
 
 ## Turn on/off blank display
-(xset s noblank && xset dpms off) &
+(xset dpms off && xset s off) &
