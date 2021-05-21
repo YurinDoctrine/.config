@@ -101,6 +101,11 @@
             </menu>
         </menu>
         <menu id="multimedia" label="Multimedia">
+            <item label="AlsaPlayer">
+                <action name="Execute">
+                    <execute>alsaplayer</execute>
+                </action>
+            </item>
             <item label="VLC Media Player">
                 <action name="Execute">
                     <execute>vlc</execute>

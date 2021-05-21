@@ -446,6 +446,15 @@
                 <command>terminator -x htop</command>
             </action>
         </keybind>
+        <keybind key="W-a">
+            <action name="Execute">
+                <startupnotify>
+                    <enabled>true</enabled>
+                    <name>Sound</name>
+                </startupnotify>
+                <command>alsaplayer</command>
+            </action>
+        </keybind>
         <keybind key="W-v">
             <action name="Execute">
                 <startupnotify>
