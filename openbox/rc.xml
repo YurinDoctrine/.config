@@ -280,17 +280,17 @@
         <!-- Keybindings for toggling Multimedia -->
         <keybind key="XF86AudioRaiseVolume">
             <action name="Execute">
-                <command>amixer -D pulse sset Master 5%+</command>
+                <command>pulsemixer --change-volume +10</command>
             </action>
         </keybind>
         <keybind key="XF86AudioLowerVolume">
             <action name="Execute">
-                <command>amixer -D pulse sset Master 5%-</command>
+                <command>pulsemixer --change-volume -10</command>
             </action>
         </keybind>
         <keybind key="XF86AudioMute">
             <action name="Execute">
-                <command>amixer set Master toggle</command>
+                <command>pulsemixer --toggle-mute</command>
             </action>
         </keybind>
         <keybind key="XF86AudioPlay">
