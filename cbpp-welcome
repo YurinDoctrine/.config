@@ -82,7 +82,8 @@ sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /root/.config/op
  mkdir /home/$USER/Pictures
  mkdir /home/$USER/Music
  mkdir /home/$USER/Videos
-
 clear
 
 openbox --exit
+
+exit 0
