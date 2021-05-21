@@ -450,7 +450,7 @@
             <action name="Execute">
                 <startupnotify>
                     <enabled>true</enabled>
-                    <name>Sound</name>
+                    <name>Track</name>
                 </startupnotify>
                 <command>alsaplayer</command>
             </action>
