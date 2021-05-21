@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [[ $1 = '--firstrun' ]]; then # First run
+    [[ -d /live/overlay || ! $(groups) =~ ( |^)sudo( |$) ]] && exit 1
+    kitty 'cbpp-welcome'
+fi
+
 say() {
     fold -s -w 76 <<<"$1" | sed -e 's/^/  /' # wraps text nicely and adds two leading spaces
     sleep "${2-0}"
@@ -42,18 +47,6 @@ extra() {
             ./ubuntu-base-setup.sh
     fi
 }
-
-if [[ $1 = '--firstrun' ]]; then # First run
-    [[ -d /live/overlay || -e $HOME/.config/crunchbangplusplus/cbpp-welcome || ! $(groups) =~ ( |^)sudo( |$) ]] && exit 1
-    terminator -x 'cbpp-welcome'
-elif [[ $1 = '--open' ]]; then # Open in terminal
-    terminator -x 'cbpp-welcome'
-fi
-
-if [[ ! $(groups) =~ ( |^)sudo( |$) ]]; then
-    echo $"Error: Must be a member of the sudo group to run this script" >&2
-    exit 1
-fi
 
 cd /tmp
 

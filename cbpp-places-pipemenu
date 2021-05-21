@@ -41,7 +41,7 @@ text_editor=featherpad
 # - add other conditions to choice
 open_file() {
     [ -x "$1" ] && exec "$text_editor" "$1" # comment out this line if you don't want to edit executables instead of executing
-    #[ -x "$1" ] && exec "terminator -e" "$1"     # uncomment this and comment out previous line to run executables in terminal instead of editing
+    #[ -x "$1" ] && exec "kitty" "$1"     # uncomment this and comment out previous line to run executables in terminal instead of editing
     [ "${1##*.}" = desktop ] && exec "$text_editor" "$1" # comment out this line if you don't want to edit .desktop files instead of executing
     exec "$default_open_cmd" "$1"                        # use default open command if above conditions not satisfied
 }

@@ -7,27 +7,15 @@
 # by Ben Young <computermouth@crunchbangplusplus.org>
 
 RESTART_ATTEMPTS=20
-
-if ! . cbpp-include.cfg 2>/dev/null; then
-    echo '  Failed to locate cbpp-include.cfg in PATH' >&2
-    exit 1
-fi
-
-# ------------- Set xcompmgr command options -----------------------------------
-EXECXCOMP='compton'
-if glxinfo | egrep -iq 'direct rendering: yes'; then
-    EXECXCOMP+=' --vsync opengl'
-fi
-
 # Edit xcompmgr settings
 if [[ $1 = '--edit' ]]; then
     [[ ! -f $HOME/.config/compton.conf ]] &&
         cp '/etc/xdg/compton.conf' "$HOME/.config/compton.conf"
 
-    if [[ -x /usr/bin/terminator ]]; then
-        cbpp-gksudo terminator -x nano $HOME/.config/compton.conf
+    if [[ -x /usr/bin/kitty ]]; then
+        cbpp-gksudo kitty nano $HOME/.config/compton.conf
     else
-        geany "$HOME/.config/compton.conf" &
+        featherpad "$HOME/.config/compton.conf" &
     fi
 elif [[ $1 = '--toggle' || $1 = '--start' ]]; then # Toggle compositing with compton.
     # TODO why --toggle and --start act exactly the same?
