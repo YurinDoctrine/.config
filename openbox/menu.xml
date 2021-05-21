@@ -7,9 +7,9 @@
             </action>
         </item>
         <separator />
-        <item label="Terminal">
+        <item label="Terminal Emulator">
             <action name="Execute">
-                <execute>terminator</execute>
+                <execute>kitty</execute>
             </action>
         </item>
         <item label="Web Browser">
@@ -44,9 +44,9 @@
                     <execute>file-roller</execute>
                 </action>
             </item>
-            <item label="Terminal (root)">
+            <item label="Terminal Emulator (root)">
                 <action name="Execute">
-                    <execute>cbpp-gksudo terminator -u</execute>
+                    <execute>cbpp-gksudo kitty</execute>
                 </action>
             </item>
             <item label="File Manager (root)">
@@ -123,11 +123,6 @@
             </item>
         </menu>
         <menu id="network" label="Network">
-            <item label="PuTTY">
-                <action name="Execute">
-                    <execute>putty</execute>
-                </action>
-            </item>
             <item label="Filezilla">
                 <action name="Execute">
                     <execute>filezilla</execute>
@@ -140,7 +135,7 @@
             </item>
             <item label="IRC Client">
                 <action name="Execute">
-                    <execute>terminator -x irssi</execute>
+                    <execute>kitty irssi</execute>
                 </action>
             </item>
         </menu>
@@ -181,7 +176,7 @@
             <menu id="conkyconfig" label="Conky">
                 <item label="Edit .conkyrc">
                     <action name="Execute">
-                        <execute>cbpp-gksudo terminator -x nano ~/.conkyrc</execute>
+                        <execute>cbpp-gksudo kitty nano ~/.conkyrc</execute>
                     </action>
                 </item>
                 <item label="Restart Conky">
@@ -198,17 +193,17 @@
             <menu id="obConfig" label="Openbox">
                 <item label="Edit menu.xml">
                     <action name="Execute">
-                        <execute>cbpp-gksudo terminator -x nano ~/.config/openbox/menu.xml</execute>
+                        <execute>cbpp-gksudo kitty nano ~/.config/openbox/menu.xml</execute>
                     </action>
                 </item>
                 <item label="Edit rc.xml">
                     <action name="Execute">
-                        <execute>cbpp-gksudo terminator -x nano ~/.config/openbox/rc.xml</execute>
+                        <execute>cbpp-gksudo kitty nano ~/.config/openbox/rc.xml</execute>
                     </action>
                 </item>
                 <item label="Edit autostart">
                     <action name="Execute">
-                        <execute>cbpp-gksudo terminator -x nano ~/.config/openbox/autostart</execute>
+                        <execute>cbpp-gksudo kitty nano ~/.config/openbox/autostart</execute>
                     </action>
                 </item>
                 <separator />
@@ -222,7 +217,7 @@
             <menu id="tint2config" label="tint2">
                 <item label="Edit config file">
                     <action name="Execute">
-                        <execute>cbpp-gksudo terminator -x nano ~/.config/tint2/tint2rc</execute>
+                        <execute>cbpp-gksudo kitty nano ~/.config/tint2/tint2rc</execute>
                     </action>
                 </item>
                 <item label="Restart tint2">
@@ -252,7 +247,7 @@
             </menu>
             <item label="Edit Default Applications">
                 <action name="Execute">
-                    <execute>terminator -x sudo update-alternatives --all</execute>
+                    <execute>kitty sudo update-alternatives --all</execute>
                 </action>
             </item>
             <item label="User Interface Settings">
@@ -289,7 +284,7 @@
             </item>
             <item label="Task Manager (htop)">
                 <action name="Execute">
-                    <execute>terminator -x htop</execute>
+                    <execute>kitty htop</execute>
                 </action>
             </item>
         </menu>

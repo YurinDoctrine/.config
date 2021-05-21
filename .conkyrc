@@ -65,7 +65,7 @@ Super+r$alignr Run Dialog
 Super+d$alignr Alt Menu
 Super+Space$alignr Main Menu
 Super+Tab$alignr Client Menu
-Super+t$alignr Terminal
+Super+t$alignr Terminal Emulator
 Super+f$alignr File Manager
 Super+e$alignr Editor
 Super+a$alignr Track Player
