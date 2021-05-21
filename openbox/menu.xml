@@ -34,11 +34,6 @@
         </item>
         <separator />
         <menu id="accessories" label="Accessories">
-            <item label="Catfish File Search">
-                <action name="Execute">
-                    <execute>catfish</execute>
-                </action>
-            </item>
             <item label="Archive Manager">
                 <action name="Execute">
                     <execute>file-roller</execute>
