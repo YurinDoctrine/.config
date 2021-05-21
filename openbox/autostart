@@ -54,9 +54,9 @@ blueman-applet &
 ## Start udiskie
 udiskie -qsA &
 
+## Turn on/off blank display
+xset s off -dpms &
+
 ## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
 ## Adjust the values according to your preferences.
 xset r rate 250 25 &
-
-## Turn on/off blank display
-(xset s noblank && xset -dpms) &
