@@ -23,11 +23,14 @@
 ## Set root window colour
 hsetroot -solid "#2E3436" &
 
-## Start LXDE PolKit
-lxpolkit &
-
 ## Run the notification daemon
 xfce4-notifyd &
+
+## Enable power management
+mate-power-manager &
+
+## Start LXDE PolKit
+lxpolkit &
 
 ## Group start:
 ## 1. compositor - start
@@ -41,20 +44,14 @@ tint2 && \
 nitrogen --restore \
 ) &
 
-## Enable power management
-mate-power-manager &
-
 ## Start xscreensaver
 xscreensaver -no-splash &
 
-## Start udiskie
-udiskie -qsA &
-
-## Enable blueman-applet
-blueman-applet &
-
 ## Run the conky
 conky -q &
+
+## Start udiskie
+udiskie -qsA &
 
 ## Turn on/off blank display
 xset s off -dpms &
