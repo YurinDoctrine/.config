@@ -48,11 +48,11 @@ conky -q &
 ## Start xscreensaver
 xscreensaver -no-splash &
 
-## Enable blueman-applet
-blueman-applet &
-
 ## Start udiskie
 udiskie -qsA &
+
+## Enable blueman-applet
+blueman-applet &
 
 ## Turn on/off blank display
 xset s off -dpms &
