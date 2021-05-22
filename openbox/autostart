@@ -34,16 +34,15 @@ xfce4-notifyd &
 ## 2. sleep - give compositor time to start
 ## 3. tint2 panel
 ## 4. nitrogen - restores wallpaper
-cbpp-compositor --start &
-sleep 1s
-nitrogen --restore &
-tint2 &
+(\
+cbpp-compositor --start && \
+sleep 1s && \
+tint2 && \
+nitrogen --restore \
+) &
 
 ## Enable power management
 mate-power-manager &
-
-## Run the conky
-conky -q &
 
 ## Start xscreensaver
 xscreensaver -no-splash &
@@ -53,6 +52,9 @@ udiskie -qsA &
 
 ## Enable blueman-applet
 blueman-applet &
+
+## Run the conky
+conky -q &
 
 ## Turn on/off blank display
 xset s off -dpms &
