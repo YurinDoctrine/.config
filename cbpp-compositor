@@ -17,7 +17,7 @@ EXECXCOMP='xcompmgr'
 if [[ $1 = '--toggle' || $1 = '--start' ]]; then # Toggle compositing with xcompmgr.
     # TODO why --toggle and --start act exactly the same?
     if ! pidof xcompmgr >/dev/null; then
-        $EXECXCOMP -CcfF -I-.015 -O-.03 -D6 -t-1 -l-3 -r4.2 -o.5 &
+        $EXECXCOMP -aC -o.5 &
     else
         killall xcompmgr
     fi
