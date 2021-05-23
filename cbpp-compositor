@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# cbpp-compton
-# Openbox Pipe Menu for use with compton compositor
+# cbpp-xcompmgr
+# Openbox Pipe Menu for use with xcompmgr compositor
 # Written for CrunchBang Linux <http://crunchbang.org/>
 # by Philip Newborough <corenominal@corenominal.org>
 # Ported to #!++ <https://crunchbangplusplus.org>
@@ -13,50 +13,35 @@ fi
 
 RESTART_ATTEMPTS=20
 # Edit xcompmgr settings
-EXECXCOMP='compton'
-if [[ $1 = '--edit' ]]; then
-    [[ ! -f $HOME/.config/compton.conf ]] &&
-        cp '/etc/xdg/compton.conf' "$HOME/.config/compton.conf"
-
-    if [[ -x /usr/bin/kitty ]]; then
-        cbpp-gksudo kitty nano $HOME/.config/compton.conf
-    else
-        featherpad "$HOME/.config/compton.conf" &
-    fi
-elif [[ $1 = '--toggle' || $1 = '--start' ]]; then # Toggle compositing with compton.
+EXECXCOMP='xcompmgr'
+if [[ $1 = '--toggle' || $1 = '--start' ]]; then # Toggle compositing with xcompmgr.
     # TODO why --toggle and --start act exactly the same?
-    if ! pidof compton >/dev/null; then
-        $EXECXCOMP &
+    if ! pidof xcompmgr >/dev/null; then
+        $EXECXCOMP -CcfF -I-.015 -O-.03 -D6 -t-1 -l-3 -r4.2 -o.5 &
     else
-        killall compton
+        killall xcompmgr
     fi
 elif [[ $1 = '--restart' ]]; then
-    killall -q compton
+    killall -q xcompmgr
     for ((i = 0; i < RESTART_ATTEMPTS; i++)); do
-        pidof compton >/dev/null || # no process found! Safe to start again
+        pidof xcompmgr >/dev/null || # no process found! Safe to start again
             break
 
         ((i == RESTART_ATTEMPTS - 1)) && # still didn't die? Probably hangs. Force it to die!
-            killall -q -S KILL compton
+            killall -q -S KILL xcompmgr
 
         sleep 0.25
     done
     cbpp-compositor --start
-elif [[ $1 = '--watch' ]]; then
-    while inotifywait -e modify "$HOME/.config/compton.conf"; do
-        cbpp-compositor --restart # TODO move this to function?
-    done
 else
     # Output Openbox menu
     menuStart
-    if ! pidof compton >/dev/null; then
+    if ! pidof xcompmgr >/dev/null; then
         menuItem 'Enable Compositing' 'cbpp-compositor --start'
     else
         menuItem 'Restart Compositing' 'cbpp-compositor --restart'
         menuItem 'Disable Compositing' 'cbpp-compositor --toggle'
-        menuSeparator
     fi
-    menuItem 'Edit Compositing Settings' 'cbpp-compositor --edit'
     menuEnd
 fi
 exit 0
