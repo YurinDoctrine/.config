@@ -72,9 +72,7 @@ final() {
 }
 final
 
-sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' $HOME/.config/openbox/autostart
-sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /etc/skel/.config/openbox/autostart
-sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /root/.config/openbox/autostart
+chown -R $USER:$USER /home/$USER
  mkdir /home/$USER/Public
  mkdir /home/$USER/backup
  mkdir /home/$USER/Documents
@@ -82,6 +80,10 @@ sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /root/.config/op
  mkdir /home/$USER/Pictures
  mkdir /home/$USER/Music
  mkdir /home/$USER/Videos
+sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' $HOME/.config/openbox/autostart
+sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /etc/skel/.config/openbox/autostart
+sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /root/.config/openbox/autostart
+
 clear
 
 openbox --exit
