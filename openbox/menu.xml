@@ -111,11 +111,6 @@
                     <execute>pavucontrol-qt</execute>
                 </action>
             </item>
-            <item label="Xfburn">
-                <action name="Execute">
-                    <execute>xfburn</execute>
-                </action>
-            </item>
         </menu>
         <menu id="network" label="Network">
             <item label="Filezilla">
@@ -135,7 +130,6 @@
             </item>
         </menu>
         <menu id="office" label="Office">
-            <menu execute="cbpp-libreoffice-pipemenu" id="libreoffice" label="LibreOffice" />
             <item label="Google Docs">
                 <action name="Execute">
                     <execute>x-www-browser https://drive.google.com/</execute>
@@ -153,7 +147,7 @@
             </item>
             <item label="Calculator">
                 <action name="Execute">
-                    <execute>galculator</execute>
+                    <execute>mate-calc</execute>
                 </action>
             </item>
             <item label="Atril PDF Viewer">
@@ -236,7 +230,7 @@
             <menu id="Notifications" label="Notifications">
                 <item label="settings">
                     <action name="Execute">
-                        <execute>xfce4-notifyd-config</execute>
+                        <execute>mate-notification-properties</execute>
                     </action>
                 </item>
             </menu>
@@ -260,6 +254,11 @@
                     <execute>mate-power-preferences</execute>
                 </action>
             </item>
+            <item label="Print Settings">
+                <action name="Execute">
+                    <execute>system-config-printer</execute>
+                </action>
+            </item
             <item label="Screensaver">
                 <action name="Execute">
                     <execute>xscreensaver-demo</execute>
