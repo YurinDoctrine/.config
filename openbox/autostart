@@ -23,12 +23,6 @@
 ## Set root window colour
 hsetroot -solid "#2E3436" &
 
-## Run the notification daemon
-xfce4-notifyd &
-
-## Enable power management
-mate-power-manager &
-
 ## Start LXDE PolKit
 lxpolkit &
 
@@ -43,6 +37,9 @@ sleep 1s && \
 tint2 && \
 nitrogen --restore \
 ) &
+
+## Enable power management
+mate-power-manager &
 
 ## Start xscreensaver
 xscreensaver -no-splash &
