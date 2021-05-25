@@ -1,7 +1,7 @@
-file:///$HOME/Public
-file:///$HOME/backup
-file:///$HOME/Documents
-file:///$HOME/Downloads
-file:///$HOME/Pictures
-file:///$HOME/Music
-file:///$HOME/Videos
+file:///home/$USER/Public
+file:///home/$USER/backup
+file:///home/$USER/Documents
+file:///home/$USER/Downloads
+file:///home/$USER/Pictures
+file:///home/$USER/Music
+file:///home/$USER/Videos
