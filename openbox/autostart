@@ -41,9 +41,6 @@ nitrogen --restore \
 ## Enable power management
 mate-power-manager &
 
-## Start xscreensaver
-xscreensaver -no-splash &
-
 ## Run the conky
 conky -q &
 
@@ -52,6 +49,9 @@ udiskie -qsA &
 
 ## Turn on/off blank display
 xset s off -dpms &
+
+## Run the unclutter
+unclutter &
 
 ## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
 ## Adjust the values according to your preferences.

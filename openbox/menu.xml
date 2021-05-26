@@ -259,11 +259,6 @@
                     <execute>system-config-printer</execute>
                 </action>
             </item
-            <item label="Screensaver">
-                <action name="Execute">
-                    <execute>xscreensaver-demo</execute>
-                </action>
-            </item>
             <item label="Choose Wallpaper">
                 <action name="Execute">
                     <execute>nitrogen /usr/share/backgrounds/</execute>
@@ -286,7 +281,7 @@
         <separator />
         <item label="Lock Screen">
             <action name="Execute">
-                <execute>xscreensaver-command -lock</execute>
+                <execute>slock</execute>
             </action>
         </item>
         <item label="Exit">
