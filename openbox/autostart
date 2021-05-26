@@ -26,16 +26,19 @@ hsetroot -solid "#2E3436" &
 ## Start LXDE PolKit
 lxpolkit &
 
+## Start notification daemon
+dunst &
+
 ## Group start:
 ## 1. compositor - start
 ## 2. sleep - give compositor time to start
 ## 3. tint2 panel
-## 4. nitrogen - restores wallpaper
+## 4. xwallpaper - restores wallpaper
 (\
 cbpp-compositor --start && \
 sleep 1s && \
 tint2 && \
-nitrogen --restore \
+xwallpaper --tile /usr/share/backgrounds/default-tile.png \
 ) &
 
 ## Run the conky

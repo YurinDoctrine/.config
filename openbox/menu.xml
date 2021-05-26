@@ -140,7 +140,7 @@
             </item>
             <item label="Calculator">
                 <action name="Execute">
-                    <execute>mate-calc</execute>
+                    <execute>kitty bc -q</execute>
                 </action>
             </item>
             <item label="Atril PDF Viewer">
@@ -220,13 +220,6 @@
                     </action>
                 </item>
             </menu>
-            <menu id="Notifications" label="Notifications">
-                <item label="settings">
-                    <action name="Execute">
-                        <execute>mate-notification-properties</execute>
-                    </action>
-                </item>
-            </menu>
             <item label="Edit Default Applications">
                 <action name="Execute">
                     <execute>kitty sudo update-alternatives --all</execute>
@@ -252,11 +245,6 @@
                     <execute>system-config-printer</execute>
                 </action>
             </item
-            <item label="Choose Wallpaper">
-                <action name="Execute">
-                    <execute>nitrogen /usr/share/backgrounds/</execute>
-                </action>
-            </item>
         </menu>
         <menu id="system" label="System">
             <item label="GParted">
