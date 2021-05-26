@@ -38,20 +38,20 @@ tint2 && \
 nitrogen --restore \
 ) &
 
-## Enable power management
-mate-power-manager &
-
 ## Run the conky
 conky -q &
+
+## Enable power management
+mate-power-manager &
 
 ## Start udiskie
 udiskie -qsA &
 
+## Start unclutter
+unclutter &
+
 ## Turn on/off blank display
 xset s off -dpms &
-
-## Run the unclutter
-unclutter &
 
 ## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
 ## Adjust the values according to your preferences.
