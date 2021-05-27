@@ -27,7 +27,7 @@ hsetroot -solid "#2E3436" &
 lxpolkit &
 
 ## Start notification daemon
-dunst &
+dunst -shrink -stack_duplicates -show_indicators &
 
 ## Group start:
 ## 1. compositor - start
