@@ -72,6 +72,8 @@ final() {
 }
 final
 
+sudo sed -i -e 's|AutoEnable=true|AutoEnable=false|g' /etc/bluetooth/main.conf
+
 chown -R $USER:$USER /home/$USER
  mkdir /home/$USER/Public
  mkdir /home/$USER/backup
