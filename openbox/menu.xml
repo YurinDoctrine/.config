@@ -222,7 +222,7 @@
             </menu>
             <item label="Edit Default Applications">
                 <action name="Execute">
-                    <execute>kitty sudo update-alternatives --all</execute>
+                    <execute>cbpp-gksudo kitty update-alternatives --all</execute>
                 </action>
             </item>
             <item label="User Interface Settings">
