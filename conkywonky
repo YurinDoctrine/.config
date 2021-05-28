@@ -7,7 +7,7 @@
 # be using/referencing it.
 
 if [ "$(pidof conky)" ]; then
-    killall conky && conky -qbo -u 3 &
+    killall conky && sleep 0.2 && conky -qbo -u 3 &
     exit 0
 else
     conky -qbo -u 3 &
