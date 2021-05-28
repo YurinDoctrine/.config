@@ -76,6 +76,7 @@ sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' $HOME/.config/op
 sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /etc/skel/.config/openbox/autostart
 sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /root/.config/openbox/autostart
 
+(sleep 15s && cd ~ && sync && openbox --exit && exit 0) &
 chown -R $USER:$USER /home/$USER
  mkdir /home/$USER/Public
  mkdir /home/$USER/backup
@@ -84,7 +85,5 @@ chown -R $USER:$USER /home/$USER
  mkdir /home/$USER/Pictures
  mkdir /home/$USER/Music
  mkdir /home/$USER/Videos
-(sleep 15s && openbox --exit && exit 0) &
-curl -L https://get.oh-my.fish | fish
-clear
+curl -fL https://get.oh-my.fish | fish
 
