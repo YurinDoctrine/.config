@@ -37,21 +37,20 @@ dunst -shrink -stack_duplicates -show_indicators &
 (\
 cbpp-compositor --start && \
 sleep 1s && \
-xwallpaper --tile /usr/share/backgrounds/default-tile.png && \
 tint2 \
 ) &
 
+## Start unclutter
+unclutter &
+
 ## Run the conky
-conky -q &
+conky -qbo -u 3 &
 
 ## Enable power management
 mate-power-manager &
 
 ## Start udiskie
 udiskie -qsA &
-
-## Start unclutter
-unclutter &
 
 ## Turn on/off blank display
 xset s off -dpms &
