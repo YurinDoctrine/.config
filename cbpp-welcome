@@ -55,7 +55,7 @@ final() {
     sleep 0.3 && clear
     echo -e "
 ###############################################################################
-# WELCOME! Would you like to run the author's post-installation?
+# WELCOME! Would you like to run the author's post-installation?(highly recommended)
 ###############################################################################"
 
     read -p $'yes/no >_: ' noc
