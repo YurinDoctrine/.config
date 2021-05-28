@@ -31,9 +31,9 @@
 recent_script=/usr/bin/cbpp-recent-files-pipemenu
 
 # Command to open folders at "Browse here..." - any file manager
-open_folder_cmd=kitty ranger
+open_folder_cmd=pcmanfm-qt
 # Default command to open files with - others might be xdg-open, gnome-open...
-default_open_cmd=exo-open # exo-open comes with ranger
+default_open_cmd=exo-open # exo-open comes with pcmanfm-qt
 # Text editor of choice
 text_editor=featherpad
 
