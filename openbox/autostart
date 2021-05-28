@@ -37,8 +37,8 @@ dunst -shrink -stack_duplicates -show_indicators &
 (\
 cbpp-compositor --start && \
 sleep 1s && \
-tint2 && \
-xwallpaper --tile /usr/share/backgrounds/default-tile.png \
+xwallpaper --tile /usr/share/backgrounds/default-tile.png && \
+tint2 \
 ) &
 
 ## Run the conky
