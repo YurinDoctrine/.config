@@ -36,14 +36,14 @@ dunst -shrink -stack_duplicates -show_indicators &
 (\
 cbpp-compositor --start && \
 sleep 1s && \
-tint2 \
+tint2restart \
 ) &
 
 ## Start unclutter
 unclutter &
 
 ## Run the conky
-conky -qbo -u 3 &
+conkywonky &
 
 ## Enable power management
 mate-power-manager &
