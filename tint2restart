@@ -3,7 +3,7 @@
 # Simple script to restart tint2
 
 if [ "$(pidof tint2)" ]; then
-    killall tint2 && sleep 0.2 && tint2 &
+    killall -HUP tint2 &
     exit 0
 else
     tint2 &
