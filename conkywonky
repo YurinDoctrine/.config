@@ -8,8 +8,8 @@
 
 if [ "$(pidof conky)" ]; then
     killall conky && conky -qbo -u 3 &
-    exit
+    exit 0
 else
     conky -qbo -u 3 &
-    exit
+    exit 0
 fi
