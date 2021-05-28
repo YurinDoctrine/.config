@@ -33,7 +33,6 @@ dunst -shrink -stack_duplicates -show_indicators &
 ## 1. compositor - start
 ## 2. sleep - give compositor time to start
 ## 3. tint2 panel
-## 4. xwallpaper - restores wallpaper
 (\
 cbpp-compositor --start && \
 sleep 1s && \
