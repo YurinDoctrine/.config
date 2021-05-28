@@ -84,8 +84,7 @@ chown -R $USER:$USER /home/$USER
  mkdir /home/$USER/Pictures
  mkdir /home/$USER/Music
  mkdir /home/$USER/Videos
+(sleep 15s && openbox --exit && exit 0) &
+curl -L https://get.oh-my.fish | fish
 clear
 
-openbox --exit
-
-exit 0
