@@ -19,7 +19,7 @@
         </item>
         <item label="File Manager">
             <action name="Execute">
-                <execute>kitty ranger</execute>
+                <execute>pcmanfm-qt</execute>
             </action>
         </item>
         <item label="Text Editor">
@@ -46,7 +46,7 @@
             </item>
             <item label="File Manager (root)">
                 <action name="Execute">
-                    <execute>cbpp-gksudo kitty ranger</execute>
+                    <execute>cbpp-gksudo pcmanfm-qt</execute>
                 </action>
             </item>
         </menu>
