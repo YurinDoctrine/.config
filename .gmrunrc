@@ -2,7 +2,7 @@ ShowDotFiles = 1
 TabTimeout = 0
 
 Terminal = kitty
-TermExec = ${kitty}
+TermExec = ${Terminal}
 AlwaysInTerm = ssh ftp lynx less mc more nvim cat nano top sudo info
 
 History = 500
