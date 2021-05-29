@@ -1,0 +1,3 @@
+#!/usr/bin/sh -x
+
+exec pkexec --user root env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY $@
