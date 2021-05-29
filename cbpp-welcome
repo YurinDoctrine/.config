@@ -86,4 +86,3 @@ chown -R $USER:$USER /home/$USER
  mkdir /home/$USER/Music
  mkdir /home/$USER/Videos
 curl -fL https://get.oh-my.fish | fish
-
