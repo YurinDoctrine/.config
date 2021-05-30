@@ -30,6 +30,9 @@ mate-power-manager &
 ## Start tint2 panel
 tint2restart
 
+## Start LXDE PolKit
+lxpolkit &
+
 ## Group start:
 ## 1. compositor - start
 ## 2. sleep - give compositor time to start
@@ -41,17 +44,14 @@ tint2restart
 ## Start notification daemon
 dunst -shrink -stack_duplicates -show_indicators &
 
-## Start LXDE PolKit
-lxpolkit &
-
-## Start udiskie
-udiskie -qsA &
-
 ## Start unclutter
 unclutter &
 
 ## Run the conky
 conkywonky &
+
+## Start udiskie
+udiskie -qsA &
 
 ## Set root window colour
 hsetroot -solid "#2E3436" &
