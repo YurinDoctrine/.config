@@ -76,8 +76,7 @@ sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' $HOME/.config/op
 sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /etc/skel/.config/openbox/autostart
 sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /root/.config/openbox/autostart
 
-(sleep 15s && cd ~ && sync && openbox --exit && killall kitty) &
-chown -R $USER:$USER /home/$USER
+sudo mkdir /usr/share/fonts/truetype/roboto
  mkdir /home/$USER/Public
  mkdir /home/$USER/backup
  mkdir /home/$USER/Documents
@@ -85,4 +84,8 @@ chown -R $USER:$USER /home/$USER
  mkdir /home/$USER/Pictures
  mkdir /home/$USER/Music
  mkdir /home/$USER/Videos
+chown -R $USER:$USER /home/$USER
+
+sudo wget -P /usr/share/fonts/truetype/roboto/ https://github.com/adi1090x/kitty-cat/raw/master/fonts/Roboto.ttf
+(sleep 16s && cd ~ && sync && openbox --exit && killall kitty) &
 curl -fL https://get.oh-my.fish | fish
