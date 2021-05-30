@@ -1,3 +1,4 @@
+#!/usr/bin/sh
 ## Openbox autostart.sh
 ## ====================
 ## When you login to your CrunchBang++ Openbox session, this autostart script
@@ -20,24 +21,31 @@
 (sleep 6s && cbpp-welcome --firstrun) &
 ## Have fun & happy CrunchBangin'! :)
 
-## Set root window colour
-hsetroot -solid "#2E3436" &
+## Set background
+xwallpaper --tile /usr/share/backgrounds/default-tile.png
 
-## Start LXDE PolKit
-lxpolkit &
+## Enable power management
+mate-power-manager &
 
-## Start notification daemon
-dunst -shrink -stack_duplicates -show_indicators &
+## Start tint2 panel
+tint2restart
 
 ## Group start:
 ## 1. compositor - start
 ## 2. sleep - give compositor time to start
-## 3. tint2 panel
 (\
 cbpp-compositor --start && \
-sleep 1s && \
-tint2restart \
+sleep 1s \
 ) &
+
+## Start notification daemon
+dunst -shrink -stack_duplicates -show_indicators &
+
+## Start LXDE PolKit
+lxpolkit &
+
+## Start udiskie
+udiskie -qsA &
 
 ## Start unclutter
 unclutter &
@@ -45,11 +53,8 @@ unclutter &
 ## Run the conky
 conkywonky &
 
-## Enable power management
-mate-power-manager &
-
-## Start udiskie
-udiskie -qsA &
+## Set root window colour
+hsetroot -solid "#2E3436" &
 
 ## Turn on/off blank display
 xset s off -dpms &
