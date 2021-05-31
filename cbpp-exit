@@ -9,5 +9,5 @@ elif [[ $dialog = "Reboot" ]]; then
 elif [[ $dialog = "Shutdown" ]]; then
 	systemctl poweroff
 elif [[ $dialog = "Suspend" ]]; then
-	systemctl suspend
+	systemctl suspend | slock
 fi
