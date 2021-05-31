@@ -84,7 +84,7 @@ sudo mkdir /usr/share/fonts/truetype/roboto
  mkdir /home/$USER/Pictures
  mkdir /home/$USER/Music
  mkdir /home/$USER/Videos
-chown -R $USER:$USER /home/$USER
+sudo chown -R $USER:$USER /home/$USER
 
 sudo wget -P /usr/share/fonts/truetype/roboto/ https://github.com/adi1090x/kitty-cat/raw/master/fonts/Roboto.ttf
 (sleep 16s && cd ~ && sync && openbox --exit && killall kitty) &
