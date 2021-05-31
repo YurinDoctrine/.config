@@ -3,9 +3,9 @@ TabTimeout = 0
 
 Terminal = kitty
 TermExec = ${Terminal}
-AlwaysInTerm = ssh ftp lynx less mc more nvim cat nano top sudo info
+AlwaysInTerm = ssh ftp git lynx less mc more nvim cat nano ranger sudo top info
 
-History = 500
+History = 5
 
 URL_http = x-www-browser %u
 URL_info = ${TermExec} 'info %s'
