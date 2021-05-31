@@ -42,7 +42,7 @@ lxpolkit &
     cbpp-compositor --start &&
         sleep 1s &&
         dunst &&
-	unclutter
+		unclutter
 ) &
 
 ## Run the conky
