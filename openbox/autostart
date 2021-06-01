@@ -18,7 +18,7 @@
 ##
 ## cbpp-welcome - post-installation script, will not run in a live session and
 ## only runs once. Safe to remove.
-(sleep 6s && exec cbpp-welcome --firstrun) &
+(sleep 6s && cbpp-welcome --firstrun) &
 ## Have fun & happy CrunchBangin'! :)
 
 ## Set background
@@ -28,10 +28,10 @@ xwallpaper --tile /usr/share/backgrounds/default-tile.png
 mate-power-manager &
 
 ## Start tint2 panel
-exec tint2restart
+tint2restart
 
 ## Start LXDE PolKit
-exec lxpolkit &
+lxpolkit &
 
 ## Group start:
 ## 1. compositor - start
@@ -39,17 +39,16 @@ exec lxpolkit &
 ## 3. dunst - start
 ## 4. unclutter - start
 (
-    exec cbpp-compositor --start &&
-        sleep 1s &&
-        exec dunst &&
-        exec unclutter
+    cbpp-compositor --start &&
+        dunst &&
+        unclutter
 ) &
 
 ## Run the conky
-exec conkywonky &
+conkywonky &
 
 ## Start udiskie
-exec udiskie -qsA &
+udiskie -qsA &
 
 ## Set root window colour
 hsetroot -solid "#2E3436" &
