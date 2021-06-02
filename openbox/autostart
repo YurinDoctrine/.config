@@ -22,16 +22,13 @@
 ## Have fun & happy CrunchBangin'! :)
 
 ## Set background
-xwallpaper --tile /usr/share/backgrounds/default-tile.png
+xwallpaper --tile /usr/share/backgrounds/default-tile.png &
 
 ## Enable network applet
 nm-applet &
 
-## Enable power management
-mate-power-manager &
-
 ## Start tint2 panel
-tint2restart
+tint2restart &
 
 ## Start LXDE PolKit
 lxpolkit &
@@ -46,6 +43,9 @@ lxpolkit &
         dunst &&
         unclutter
 ) &
+
+## Enable power management
+mate-power-manager &
 
 ## Run the conky
 conkywonky &
