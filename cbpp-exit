@@ -18,13 +18,14 @@ dialog=$(echo -e "[ Cancel ]\nLogout\nReboot\nShutdown\nSuspend" | dmenu -i -b -
 	elif [[ $dialog = "Suspend" ]]; then
 		systemctl suspend | slock
 	fi
+
 else
-# Output Openbox menu
-menuStart
-        menuItem 'Logout' 'openbox --exit'
-        menuItem 'Reboot' 'systemctl reboot'
-        menuItem 'Shutdown' 'systemctl poweroff'
-	menuItem 'Suspend' 'systemctl suspend | slock'
-menuEnd
+	# Output Openbox menu
+	menuStart
+	        menuItem 'Logout' 'openbox --exit'
+	        menuItem 'Reboot' 'systemctl reboot'
+	        menuItem 'Shutdown' 'systemctl poweroff'
+		menuItem 'Suspend' 'systemctl suspend'
+	menuEnd
 fi
 exit 0
