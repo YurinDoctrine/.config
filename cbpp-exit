@@ -1,14 +1,13 @@
 #!/usr/bin/sh
 
 if ! . cbpp-include.cfg 2>/dev/null; then
-    echo '  Failed to locate cbpp-include.cfg in PATH' >&2
-    exit 1
+	echo '  Failed to locate cbpp-include.cfg in PATH' >&2
+	exit 1
 fi
 
-if [[ $1 = '--dialog' ]]; then Show alt menu
+if [[ $1 = '--dialog' ]]; then
 
-dialog=$(echo -e "[ Cancel ]\nLogout\nReboot\nShutdown\nSuspend" | dmenu -i -b -nb '#151617' -nf '#d8d8d8' -sb '#d8d8d8' -sf '#151617')
-
+	dialog=$(echo -e "[ Cancel ]\nLogout\nReboot\nShutdown\nSuspend" | dmenu -i -b -nb '#151617' -nf '#d8d8d8' -sb '#d8d8d8' -sf '#151617')
 	if [[ $dialog = "Logout" ]]; then
 		openbox --exit
 	elif [[ $dialog = "Reboot" ]]; then
@@ -18,14 +17,13 @@ dialog=$(echo -e "[ Cancel ]\nLogout\nReboot\nShutdown\nSuspend" | dmenu -i -b -
 	elif [[ $dialog = "Suspend" ]]; then
 		systemctl suspend | slock
 	fi
-
 else
 	# Output Openbox menu
 	menuStart
-	        menuItem 'Logout' 'openbox --exit'
-	        menuItem 'Reboot' 'systemctl reboot'
-	        menuItem 'Shutdown' 'systemctl poweroff'
-		menuItem 'Suspend' 'systemctl suspend'
+	menuItem 'Logout' 'openbox --exit'
+	menuItem 'Reboot' 'systemctl reboot'
+	menuItem 'Shutdown' 'systemctl poweroff'
+	menuItem 'Suspend' 'systemctl suspend'
 	menuEnd
 fi
 exit 0

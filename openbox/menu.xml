@@ -265,6 +265,6 @@
                 <execute>slock</execute>
             </action>
         </item>
-	<menu id="ExitPipeMenu" label="Exit" execute="cbpp-exit"  />
+        <menu id="ExitPipeMenu" label="Exit" execute="cbpp-exit"  />
     </menu>
 </openbox_menu>
