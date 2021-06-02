@@ -24,6 +24,9 @@
 ## Set background
 xwallpaper --tile /usr/share/backgrounds/default-tile.png
 
+## Enable network applet
+nm-applet &
+
 ## Enable power management
 mate-power-manager &
 
@@ -46,6 +49,9 @@ lxpolkit &
 
 ## Run the conky
 conkywonky &
+
+## Start pasystray
+pasystray &
 
 ## Start udiskie
 udiskie -qsA &
