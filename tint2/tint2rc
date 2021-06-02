@@ -70,10 +70,6 @@ panel_background_id = 1
 
 # Panel Autohide
 autohide = 0
-autohide_show_timeout = 0.3
-autohide_hide_timeout = 1.5
-autohide_height = 6
-strut_policy = follow_size
 
 # Taskbar
 taskbar_mode = multi_desktop
@@ -113,18 +109,6 @@ task_urgent_font_color = #FFFFFF 100
 task_iconified_font_color = #d8d8d8 60
 font_shadow = 0
 
-# Launcher
-launcher_padding = 8 4 4
-launcher_background_id = 0
-launcher_icon_size = 24
-# Specify icon theme names with launcher_icon_theme. 
-# if you have an XSETTINGS manager running (like xfsettingsd), tint2 will follow your current theme.
-launcher_icon_theme = CBPP
-# Each launcher_item_app must be a full path to a .desktop file
-launcher_item_app = /usr/share/applications/kitty.desktop
-launcher_item_app = /usr/share/applications/pcmanfm-qt.desktop
-launcher_item_app = /usr/share/applications/featherpad.desktop
-
 # System Tray
 systray = 1
 systray_padding = 4 2 3
@@ -135,9 +119,9 @@ systray_icon_asb = 100 0 0
 
 # Clock
 time1_format = %H:%M
-time1_font = Liberation Sans 11
-#time2_format = %A %d %B
-#time2_font = Liberation Sans 6
+time1_font = Liberation Sans 10
+time2_format = %d %B
+time2_font = Liberation Sans 8
 clock_font_color = #b5b5b5 100
 clock_padding = 12 4
 clock_background_id = 0
@@ -148,7 +132,6 @@ clock_rclick_command = gsimplecal
 tooltip = 1
 tooltip_padding = 2 2
 tooltip_show_timeout = 0.0
-tooltip_hide_timeout = 0.0
 tooltip_background_id = 7
 tooltip_font_color = #d8d8d8 100
 tooltip_font = Liberation Sans normal 9.0
@@ -163,7 +146,6 @@ mouse_scroll_down = iconify
 battery = 1
 battery_low_status = 20
 battery_low_cmd = notify-send "battery low"
-battery_hide = 96
 bat1_font = Liberation Mono 8
 bat2_font = Liberation Mono 8
 battery_font_color = #b5b5b5 100
