@@ -34,11 +34,11 @@ xset r rate 250 25 &
 ## Set background
 xwallpaper --tile /usr/share/backgrounds/default-tile.png &
 
-## Enable network applet
-nm-applet &
-
 ## Start LXDE PolKit
 lxpolkit &
+
+## Enable network applet
+nm-applet &
 
 ## Group start:
 ## 1. compositor - start
