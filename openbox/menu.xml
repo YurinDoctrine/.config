@@ -140,7 +140,7 @@
             </item>
             <item label="Calculator">
                 <action name="Execute">
-                    <execute>kitty bc -q</execute>
+                    <execute>kitty bc</execute>
                 </action>
             </item>
             <item label="Atril PDF Viewer">
