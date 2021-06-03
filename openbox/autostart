@@ -62,4 +62,4 @@ pasystray &
 udiskie -qsA &
 
 ## Run unclutter
-unclutter &
+unclutter -noevents -visible &
