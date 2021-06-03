@@ -60,6 +60,3 @@ pasystray &
 
 ## Start udiskie
 udiskie -qsA &
-
-## Run unclutter
-unclutter -noevents -reset -visible &
