@@ -158,7 +158,7 @@
             <menu id="conkyconfig" label="Conky">
                 <item label="Edit .conkyrc">
                     <action name="Execute">
-                        <execute>cbpp-gksudo kitty nvim ~/.conkyrc</execute>
+                        <execute>kitty nano ~/.conkyrc</execute>
                     </action>
                 </item>
                 <item label="Restart Conky">
@@ -175,17 +175,17 @@
             <menu id="obConfig" label="Openbox">
                 <item label="Edit menu.xml">
                     <action name="Execute">
-                        <execute>cbpp-gksudo kitty nvim ~/.config/openbox/menu.xml</execute>
+                        <execute>kitty nano ~/.config/openbox/menu.xml</execute>
                     </action>
                 </item>
                 <item label="Edit rc.xml">
                     <action name="Execute">
-                        <execute>cbpp-gksudo kitty nvim ~/.config/openbox/rc.xml</execute>
+                        <execute>kitty nano ~/.config/openbox/rc.xml</execute>
                     </action>
                 </item>
                 <item label="Edit autostart">
                     <action name="Execute">
-                        <execute>cbpp-gksudo kitty nvim ~/.config/openbox/autostart</execute>
+                        <execute>kitty nano ~/.config/openbox/autostart</execute>
                     </action>
                 </item>
                 <separator />
@@ -199,7 +199,7 @@
             <menu id="tint2config" label="tint2">
                 <item label="Edit config file">
                     <action name="Execute">
-                        <execute>cbpp-gksudo kitty nvim ~/.config/tint2/tint2rc</execute>
+                        <execute>kitty nano ~/.config/tint2/tint2rc</execute>
                     </action>
                 </item>
                 <item label="Restart tint2">

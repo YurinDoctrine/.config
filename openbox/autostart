@@ -44,13 +44,11 @@ nm-applet &
 ## 1. compositor - start
 ## 2. tint2 - start
 ## 3. conky - start
-## 4. unclutter - start
-## 5. dunst - start
+## 4. dunst - start
 (
     cbpp-compositor --start &&
         tint2restart &&
         conkywonky &&
-        unclutter &&
         dunst
 ) &
 
@@ -62,3 +60,6 @@ pasystray &
 
 ## Start udiskie
 udiskie -qsA &
+
+## Run unclutter
+unclutter &
