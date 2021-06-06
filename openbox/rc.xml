@@ -441,16 +441,7 @@
                 <command>kitty htop</command>
             </action>
         </keybind>
-        <keybind key="W-v">
-            <action name="Execute">
-                <startupnotify>
-                    <enabled>true</enabled>
-                    <name>Volume</name>
-                </startupnotify>
-                <command>pavucontrol-qt</command>
-            </action>
-        </keybind>
-        <keybind key="W-x">
+       <keybind key="W-x">
             <action name="Execute">
                 <startupnotify>
                     <enabled>true</enabled>

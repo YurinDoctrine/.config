@@ -99,12 +99,7 @@
                     <execute>vlc</execute>
                 </action>
             </item>
-            <item label="Volume Control">
-                <action name="Execute">
-                    <execute>pavucontrol-qt</execute>
-                </action>
-            </item>
-        </menu>
+       </menu>
         <menu id="network" label="Network">
             <item label="Filezilla">
                 <action name="Execute">
