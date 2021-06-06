@@ -99,7 +99,7 @@
                     <execute>vlc</execute>
                 </action>
             </item>
-       </menu>
+        </menu>
         <menu id="network" label="Network">
             <item label="Filezilla">
                 <action name="Execute">
