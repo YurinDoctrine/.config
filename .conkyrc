@@ -66,7 +66,7 @@ Super+d$alignr Alt Menu
 Super+Space$alignr Main Menu
 Super+Tab$alignr Client Menu
 Super+t$alignr Terminal Emulator
-Super+f$alignr File Manager
+Super+f$alignr File Manager(ranger)
 Super+e$alignr Editor
 Super+m$alignr Media Player
 Super+w$alignr Web Browser
