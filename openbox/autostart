@@ -1,16 +1,9 @@
 #!/usr/bin/sh
 ## Openbox autostart.sh
-## ====================
+##
 ## When you login to your CrunchBang++ Openbox session, this autostart script
 ## will be executed to set-up your environment and launch any applications
 ## you want to run at startup.
-##
-## Note*: some programs, such as 'nm-applet' are run via XDG autostart.
-## Run '/usr/lib/openbox/openbox-xdg-autostart --list' to list any
-## XDG autostarted programs.
-##
-## More information about this can be found at:
-## http://openbox.org/wiki/Help:Autostart
 ##
 ## If you do something cool with your autostart script and you think others
 ## could benefit from your hack, please consider sharing it at:
@@ -31,14 +24,14 @@ xset s off -dpms &
 ## Adjust the values according to your preferences.
 xset r rate 250 25 &
 
+## Enable network applet
+nm-applet &
+
 ## Set background
 xwallpaper --tile /usr/share/backgrounds/default-tile.png &
 
 ## Start LXDE PolKit
 lxpolkit &
-
-## Enable network applet
-nm-applet &
 
 ## Group start:
 ## 1. compositor - start
@@ -49,8 +42,9 @@ nm-applet &
     cbpp-compositor --start &&
         tint2restart &&
         conkywonky &&
-        dunst
+        dunst -show_indicators -word_wrap -sort
 ) &
+sleep 1s
 
 ## Enable power management
 mate-power-manager &
