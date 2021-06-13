@@ -3,7 +3,7 @@ TabTimeout = 0
 
 Terminal = kitty
 TermExec = ${Terminal}
-AlwaysInTerm = ssh ftp git less more nvim cat nano ranger sudo tail top info xsel
+AlwaysInTerm = ssh ftp git less more nvim cat nano ranger tail top info xsel
 
 History = 5
 
