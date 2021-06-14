@@ -15,7 +15,7 @@ if [[ $1 = '--dialog' ]]; then
 	elif [[ $dialog = "Shutdown" ]]; then
 		systemctl poweroff
 	elif [[ $dialog = "Suspend" ]]; then
-		systemctl suspend | slock
+		systemctl suspend
 	fi
 else
 	# Output Openbox menu
