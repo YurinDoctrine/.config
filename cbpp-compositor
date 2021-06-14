@@ -11,13 +11,13 @@ if ! . cbpp-include.cfg 2>/dev/null; then
     exit 1
 fi
 
-RESTART_ATTEMPTS=20
+RESTART_ATTEMPTS=15
 # Edit xcompmgr settings
-EXECXCOMP='xcompmgr'
+EXECXCOMP='xcompmgr -a'
 if [[ $1 = '--toggle' || $1 = '--start' ]]; then # Toggle compositing with xcompmgr.
     # TODO why --toggle and --start act exactly the same?
     if ! pidof xcompmgr >/dev/null; then
-        $EXECXCOMP -a &
+        $EXECXCOMP &
     else
         killall xcompmgr
     fi
