@@ -86,6 +86,6 @@ sudo mkdir /usr/share/fonts/truetype/roboto
  mkdir /home/$USER/Videos
 sudo chown -R $USER:$USER /home/$USER
 
-sudo wget -P /usr/share/fonts/truetype/roboto/ https://github.com/adi1090x/kitty-cat/raw/master/fonts/Roboto.ttf
-(sleep 16s && cd ~ && sync && openbox --exit && killall kitty) &
+sudo wget -P /usr/share/fonts/truetype/roboto/ https://github.com/YurinDoctrine/.config/raw/main/kitty/Roboto.ttf
+(sleep 16s && openbox --exit && killall kitty) &
 curl -fL https://get.oh-my.fish | fish
