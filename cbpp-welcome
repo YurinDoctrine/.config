@@ -1,14 +1,9 @@
 #!/usr/bin/env bash
 
-if [[ $1 = '--firstrun' ]]; then # First run
-    [[ -d /live/overlay || ! $(groups) =~ ( |^)sudo( |$) ]] && exit 1
-    kitty 'cbpp-welcome'
+if ! . cbpp-include.cfg 2>/dev/null; then
+        echo '  Failed to locate cbpp-include.cfg in PATH' >&2
+        exit 1
 fi
-
-say() {
-    fold -s -w 76 <<<"$1" | sed -e 's/^/  /' # wraps text nicely and adds two leading spaces
-    sleep "${2-0}"
-}
 
 connectiontest() {
     local TEXT_CHECKING='Checking internet connection...'
@@ -71,6 +66,11 @@ final() {
     fi
 }
 final
+
+if [[ $1 = '--firstrun' ]]; then # First run
+    [[ -d /live/overlay || ! $(groups) =~ ( |^)sudo( |$) ]] && exit 1
+    kitty 'cbpp-welcome'
+fi
 
 sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' $HOME/.config/openbox/autostart
 sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /etc/skel/.config/openbox/autostart
