@@ -1,6 +1,4 @@
-#!/bin/sh
-## Openbox autostart.sh
-##
+#!/usr/bin/env bash
 ## When you login to your CrunchBang++ Openbox session, this autostart script
 ## will be executed to set-up your environment and launch any applications
 ## you want to run at startup.
@@ -10,9 +8,9 @@
 ## https://www.reddit.com/r/crunchbangplusplus
 ##
 ## cbpp-welcome - post-installation script, will not run in a live session and
-## only runs once. Safe to remove.
+## only runs once.
 cbpp-welcome --firstrun &
-## Have fun & happy CrunchBangin'! :)
+## Have Fun & Happy CrunchBangin'! :)
 
 ## Enable network applet
 nm-applet &
