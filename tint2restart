@@ -1,6 +1,10 @@
 #!/usr/bin/sh
+# conkywonky
 # ----------
-# Simple script to restart tint2
+# Many moons ago, Tint2 did not automatically restart when changes were
+# made to its config files. This script was used to restart it. It does not
+# really serve any purpose now, but I like the name and some people may still
+# be using/referencing it.
 
 if [ "$(pidof tint2)" ]; then
     (killall tint2 && sleep 0.1 && tint2) &
