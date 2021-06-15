@@ -44,7 +44,6 @@ lxpolkit &
         conkywonky &&
         dunst -show_indicators -word_wrap -sort
 ) &
-sleep 1s
 
 ## Enable power management
 mate-power-manager &
