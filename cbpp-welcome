@@ -12,6 +12,7 @@ connectiontest() {
     local TEXT_OK='Internet connection test passed!'
 
     local -i i attempts=${1-0}
+
     for ((i = 0; i < attempts || attempts == 0; i++)); do
         say "$TEXT_CHECKING"
         if wget -O - 'http://ftp.debian.org/debian/README' &>/dev/null; then
@@ -26,6 +27,7 @@ connectiontest() {
         clear
     done
 }
+sleep 6s
 connectiontest
 
 extra() {
@@ -78,6 +80,7 @@ sudo sed -i -e 's/^(sleep 6s && cbpp-welcome --firstrun) &/##/' /root/.config/op
 
 sudo mkdir /usr/share/fonts/truetype/roboto
  mkdir /home/$USER/Public
+ mkdir /home/$USER/Desktop
  mkdir /home/$USER/backup
  mkdir /home/$USER/Documents
  mkdir /home/$USER/Downloads

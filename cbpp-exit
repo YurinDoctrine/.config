@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/env bash
 
 if ! . cbpp-include.cfg 2>/dev/null; then
 	echo '  Failed to locate cbpp-include.cfg in PATH' >&2

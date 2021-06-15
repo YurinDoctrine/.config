@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/sh
 ## Openbox autostart.sh
 ##
 ## When you login to your CrunchBang++ Openbox session, this autostart script
@@ -11,7 +11,7 @@
 ##
 ## cbpp-welcome - post-installation script, will not run in a live session and
 ## only runs once. Safe to remove.
-(sleep 6s && cbpp-welcome --firstrun) &
+cbpp-welcome --firstrun &
 ## Have fun & happy CrunchBangin'! :)
 
 ## Enable network applet
