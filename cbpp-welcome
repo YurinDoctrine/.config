@@ -71,7 +71,7 @@ final
 
 if [[ $1 = '--firstrun' ]]; then # First run
     [[ -d /live/overlay || ! $(groups) =~ ( |^)sudo( |$) ]] && exit 1
-    kitty 'cbpp-welcome'
+    cbpp-welcome
 fi
 
 sudo sed -i -e 's/^~/.config/autostart/cbpp-welcome.desktop &/##/' $HOME/.config/openbox/autostart

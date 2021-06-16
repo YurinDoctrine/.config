@@ -17,7 +17,7 @@ conky.config = {
 --##############################################
 	background = true,
 	use_xft = true,
-	font = 'Liberation Sans:size=9',
+	font = 'Liberation Sans:size=10',
 	xftalpha = 1,
 	update_interval = 3.0,
 	total_run_times = 0,
@@ -49,16 +49,27 @@ conky.config = {
 };
 
 conky.text = [[
-S Y S T E M
-${hr}
 Host:$alignr$nodename
-Uptime:$alignr$uptime
+Distro:${alignr}$sysname ${alignr}${execi 6000 lsb_release -a | grep 'Description'|awk {'print $3, $4, $5'}}
+Kernel:${alignr}${exec uname} ${exec uname -r}${voffset 5}
+S Y S T E M$alignr$uptime
+${hr}
 RAM:$alignr$mem/$memmax
-Swap usage:$alignr$swap/$swapmax
+Swap:$alignr$swap/$swapmax
 Disk usage:$alignr${fs_used /}/${fs_size /}
 CPU usage:$alignr${cpu cpu0}%
-
-
+CPU Temp:$alignr${hwmon 1 temp 1}`C
+CPU Freq:$alignr${freq}MHz${voffset 5}
+Top Processes${voffset 1}
+  1 -  ${top name 1}${alignr}${goto 170} ${goto 222}${top cpu 1} ${goto 274}${top mem 1}
+  2 -  ${top name 2}${alignr} ${goto 222}${top cpu 2} ${goto 274}${top mem 2}
+  3 -  ${top name 3}${alignr} ${goto 222}${top cpu 3} ${goto 274}${top mem 3}
+  4 -  ${top name 4}${alignr} ${goto 222}${top cpu 4} ${goto 274}${top mem 4}
+  5 -  ${top name 5}${alignr} ${goto 222}${top cpu 5} ${goto 274}${top mem 5}${voffset 10}
+N E T W O R K
+${hr}
+Up:${offset 26$}${upspeed wlo1}${alignr}${upspeedgraph wlo1 8,100}
+Down:${offset 10$}${downspeed wlo1}${alignr}${downspeedgraph wlo1 8,100}${voffset 10}
 K E Y B I N D S
 ${hr}
 Super+r$alignr Run Dialog
