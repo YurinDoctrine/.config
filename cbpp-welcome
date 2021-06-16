@@ -97,6 +97,6 @@ fi
 
 sudo wget -P /usr/share/fonts/truetype/roboto/ https://github.com/YurinDoctrine/.config/raw/main/kitty/Roboto.ttf
 
-(sleep 16s && killall -u $USER) &
+(sleep 16s && killall openbox) &
 
 curl -fL https://get.oh-my.fish | fish
