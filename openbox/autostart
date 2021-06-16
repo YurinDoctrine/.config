@@ -39,7 +39,7 @@ lxpolkit &
     cbpp-compositor --start &&
         tint2restart &&
         conkywonky &&
-        dunst -show_indicators -word_wrap -sort
+        dunst -show_indicators -sort -word_wrap
 ) &
 
 ## Enable power management
