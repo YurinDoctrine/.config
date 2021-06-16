@@ -61,11 +61,11 @@ CPU usage:$alignr${cpu cpu0}%
 CPU Temp:$alignr${hwmon 1 temp 1}`C
 CPU Freq:$alignr${freq}MHz${voffset 5}
 Top Processes${voffset 1}
-  1 -  ${top name 1}${alignr}${goto 170} ${goto 222}${top cpu 1} ${goto 274}${top mem 1}
-  2 -  ${top name 2}${alignr} ${goto 222}${top cpu 2} ${goto 274}${top mem 2}
-  3 -  ${top name 3}${alignr} ${goto 222}${top cpu 3} ${goto 274}${top mem 3}
-  4 -  ${top name 4}${alignr} ${goto 222}${top cpu 4} ${goto 274}${top mem 4}
-  5 -  ${top name 5}${alignr} ${goto 222}${top cpu 5} ${goto 274}${top mem 5}${voffset 10}
+  1 -  ${top name 1}
+  2 -  ${top name 2}
+  3 -  ${top name 3}
+  4 -  ${top name 4}
+  5 -  ${top name 5}${voffset 10}
 N E T W O R K
 ${hr}
 Up:${offset 26$}${upspeed wlo1}${alignr}${upspeedgraph wlo1 8,100}

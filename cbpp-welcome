@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+[[ -d /live/overlay || ! $(groups) =~ ( |^)sudo( |$) ]] && exit 1
 if ! . cbpp-include.cfg 2>/dev/null; then
         echo '  Failed to locate cbpp-include.cfg in PATH' >&2
         exit 1
@@ -70,7 +71,6 @@ final() {
 final
 
 if [[ $1 = '--firstrun' ]]; then # First run
-    [[ -d /live/overlay || ! $(groups) =~ ( |^)sudo( |$) ]] && exit 1
     kitty cbpp-welcome
 fi
 
