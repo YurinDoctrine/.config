@@ -9,7 +9,7 @@
 ##
 ## cbpp-welcome - post-installation script, will not run in a live session and
 ## only runs once.
-~/.config/autostart/cbpp-welcome.desktop &
+(cbpp-welcome --firstrun) &
 ## Have Fun & Happy CrunchBangin'! :)
 
 ## Enable network applet
@@ -44,7 +44,7 @@ lxpolkit &
 ) &
 
 ## Enable power management
-~/.config/autostart/mate-power-manager.desktop &
+mate-power-manager &
 
 ## Start pasystray
 pasystray &
