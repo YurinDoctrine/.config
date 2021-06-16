@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Power Manager
+StartupNotify=false
+Comment=
+Icon=
+Exec=mate-power-manager
+Terminal=false
+Type=Application
+X-GNOME-Autostart-Delay=20

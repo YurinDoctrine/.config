@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=CBPP Welcome
+StartupNotify=false
+Comment=
+Icon=
+Exec=cbpp-welcome --firstrun
+Terminal=false
+Type=Application
+X-GNOME-Autostart-Delay=20
