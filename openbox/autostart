@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 ## When you login to your CrunchBang++ Openbox session, this autostart script
 ## will be executed to set-up your environment and launch any applications
 ## you want to run at startup.
@@ -46,8 +45,8 @@ lxpolkit &
 ## Enable power management
 mate-power-manager &
 
-## Start pasystray
-pasystray &
-
 ## Start udiskie
 udiskie -qsA &
+
+## Start pasystray
+pasystray &
