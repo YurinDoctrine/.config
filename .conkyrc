@@ -58,7 +58,7 @@ RAM:$alignr$mem/$memmax
 Swap:$alignr$swap/$swapmax
 Disk usage:$alignr${fs_used /}/${fs_size /}
 CPU usage:$alignr${cpu cpu0}%
-CPU Temp:$alignr${hwmon 1 temp 1}`C
+CPU Temp:$alignr${hwmon 0 temp 1}`C
 CPU Freq:$alignr${freq}MHz${voffset 5}
 Top Processes${voffset 1}
   1 -  ${top name 1}
