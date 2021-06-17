@@ -68,7 +68,7 @@ Top Processes${voffset 1}
   5 -  ${top name 5}${voffset 10}
 N E T W O R K
 ${hr}
-Up:${offset 26$}${upspeed wlo1}${alignr}${upspeedgraph wlo1 8,100}
+Up:${offset 27$}${upspeed wlo1}${alignr}${upspeedgraph wlo1 8,100}
 Down:${offset 10$}${downspeed wlo1}${alignr}${downspeedgraph wlo1 8,100}${voffset 10}
 K E Y B I N D S
 ${hr}
