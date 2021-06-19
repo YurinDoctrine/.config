@@ -2,8 +2,8 @@
 
 [[ -d /live/overlay || ! $(groups) =~ ( |^)sudo( |$) ]] && exit 1
 if ! . cbpp-include.cfg 2>/dev/null; then
-        echo '  Failed to locate cbpp-include.cfg in PATH' >&2
-        exit 1
+    echo '  Failed to locate cbpp-include.cfg in PATH' >&2
+    exit 1
 fi
 
 connectiontest() {
@@ -92,7 +92,7 @@ sudo chown -R $USER:$USER /home/$USER
 USER="$USER"
 
 if [ -f "/home/$USER/.gtk-bookmarks" ]; then
-	rpl -q '$USER' $USER /home/$USER/.gtk-bookmarks > /dev/null 2>&1
+    rpl -q '$USER' $USER /home/$USER/.gtk-bookmarks >/dev/null 2>&1
 fi
 
 sudo wget -P /usr/share/fonts/truetype/roboto/ https://github.com/YurinDoctrine/.config/raw/main/kitty/Roboto.ttf
