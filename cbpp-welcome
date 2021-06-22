@@ -269,14 +269,14 @@ sudo sed -i -e 's/^(cbpp-welcome --firstrun) &/##/' /etc/skel/.config/openbox/au
 sudo sed -i -e 's/^(cbpp-welcome --firstrun) &/##/' /root/.config/openbox/autostart
 
 sudo mkdir /usr/share/fonts/truetype/roboto
-mkdir /home/$USER/Public
-mkdir /home/$USER/Desktop
-mkdir /home/$USER/backup
-mkdir /home/$USER/Documents
-mkdir /home/$USER/Downloads
-mkdir /home/$USER/Pictures
-mkdir /home/$USER/Music
-mkdir /home/$USER/Videos
+ mkdir /home/$USER/Public
+ mkdir /home/$USER/Desktop
+ mkdir /home/$USER/backup
+ mkdir /home/$USER/Documents
+ mkdir /home/$USER/Downloads
+ mkdir /home/$USER/Pictures
+ mkdir /home/$USER/Music
+ mkdir /home/$USER/Videos
 sudo chown -R $USER:$USER /home/$USER
 
 USER="$USER"
