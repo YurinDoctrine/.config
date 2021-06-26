@@ -1,1 +1,1 @@
-cbpp-welcome --firstrun &
+(cbpp-welcome --firstrun) &
