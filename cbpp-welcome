@@ -256,7 +256,6 @@ final() {
 }
 final
 
-
 if [[ $1 = '--firstrun' ]]; then # First run
     kitty cbpp-welcome
 fi
