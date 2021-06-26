@@ -7,9 +7,6 @@
 ## could benefit from your hack, please consider sharing it at:
 ## https://www.reddit.com/r/crunchbangplusplus
 ##
-## cbpp-welcome - post-installation script, will not run in a live session and
-## only runs once.
-(cbpp-welcome --firstrun) &
 ## Have Fun & Happy CrunchBangin'! :)
 
 ## Enable network applet
