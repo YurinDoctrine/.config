@@ -166,7 +166,7 @@ postinstall() {
         sudo rm -rfd /usr/share/themes/CBPP
     sudo cp -R cbpp-ui-theme/cbpp-ui-theme/data/usr/share/themes/* /usr/share/themes &&
         git clone --branch 11 https://github.com/CBPP/cbpp-wallpapers.git &&
-       	sudo rm -rfd /usr/share/backgrounds
+  sudo rm -rfd /usr/share/backgrounds
     sudo mkdir /usr/share/backgrounds
     sudo cp -R cbpp-wallpapers/cbpp-wallpapers/data/usr/share/backgrounds/* /usr/share/backgrounds &&
         git clone --branch 11 https://github.com/CBPP/cbpp-lxdm-theme.git &&
@@ -174,7 +174,7 @@ postinstall() {
     sudo cp -R cbpp-lxdm-theme/cbpp-lxdm-theme/data/etc/lxdm/* /etc/lxdm
     sudo cp -R cbpp-lxdm-theme/cbpp-lxdm-theme/data/usr/share/lxdm/themes/* /usr/share/lxdm/themes
    git clone https://github.com/YurinDoctrine/.config.git &&
-         sudo rm -rfd /home/$USER/.config
+        sudo rm -rfd /home/$USER/.config
     sudo rm -rfd /etc/skel/.config
     sudo mkdir /home/$USER/.config
     sudo mkdir /etc/skel/.config
