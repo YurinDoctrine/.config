@@ -33,8 +33,8 @@ connectiontest
 
 postinstall() {
     sudo apt update &&
-        sudo apt install -y --no-install-recommends 9base curl git kitty nano network-manager procps psmisc systemd vim xorg &&
-        sudo apt install --install-recommends -y software-properties-common &&
+        sudo apt install -y 9base curl git kitty nano network-manager procps psmisc systemd vim xorg &&
+        sudo apt install -y software-properties-common &&
         sudo apt install -y --no-install-recommends kubuntu-restricted-extras kubuntu-restricted-addons
 
     PKGS=(
@@ -65,8 +65,8 @@ postinstall() {
 
         # --- Network
 
-        'filezilla'        # FTP Client
-        'irssi'            # Terminal based IRC
+        'gigolo'           # Frontend to manage connections to remote filesystems
+        'irssi'            # Text Based IRC
         'transmission-gtk' # BitTorrent client
 
         # GENERAL UTILITIES ---------------------------------------------------
@@ -82,7 +82,7 @@ postinstall() {
         # --- Audio
 
         'alsaplayer-common' # A heavily multi-threaded PCM player
-        'pasystray'         # PulseAudio system tray
+        'pasystray'         # PulseAudio System Tray
         'playerctl'         # Utility to control media players via MPRIS
         'pulsemixer'        # CLI and curses mixer for PulseAudio
 
@@ -125,7 +125,7 @@ postinstall() {
     sudo systemctl disable --now cups.service
 
     echo -e "Purge unneccasary packages"
-    sudo apt-get remove -y --purge apport mailutils clipit compton evince at avahi-daemon avahi-utils geany gigolo gimp hexchat dovecot nfs-kernel-server \
+    sudo apt-get remove -y --purge apport mailutils clipit compton evince at avahi-daemon avahi-utils geany gimp hexchat dovecot nfs-kernel-server \
         nfs-common evolution rsh-client rsh-redone-client autofs snmp talk telnetd inetutils-telnetd zeitgeist-core zeitgeist-datahub zeitgeist galculator \
         ldap-utils mate-media minetest xinetd pure-ftpd file-roller catfish obconf terminator thunar thunar-data xfce4-power-manager xfburn xfce4-notifyd \
         deja-dup ibus nis nitrogen samba-common gstreamer1.0-fluendo-mp3 geary rhythmbox rpcbind shotwell thunderbird xfce4-screenshooter xfconf mousepad \
