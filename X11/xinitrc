@@ -1,1 +1,0 @@
-(cbpp-welcome --firstrun) &
