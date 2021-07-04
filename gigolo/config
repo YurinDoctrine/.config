@@ -1,0 +1,4 @@
+[general]
+file_manager=pcmanfm-qt
+terminal=kitty
+autoconnect_interval=60
