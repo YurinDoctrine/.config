@@ -216,7 +216,6 @@ postinstall() {
     sudo find /root/.config/ | egrep '\conkywonky' | xargs sudo rm -f
     sudo find /home/$USER/.config/ | egrep '\tint2restart' | xargs sudo rm -f
     sudo find /root/.config/ | egrep '\tint2restart' | xargs sudo rm -f
-
 }
 postinstall
 
@@ -254,10 +253,9 @@ if [[ $1 = '--firstrun' ]]; then # First run
     kitty cbpp-welcome
 fi
 
+USER="$USER"
+
 chsh -s /usr/bin/fish
-sudo sed -i -e 's/^(cbpp-welcome --firstrun) &/##/' $HOME/.config/X11/xinitrc
-sudo sed -i -e 's/^(cbpp-welcome --firstrun) &/##/' /etc/skel/.config/X11/xinitrc
-sudo sed -i -e 's/^(cbpp-welcome --firstrun) &/##/' /root/.config/X11/xinitrc
 sudo sed -i -e 's/^(cbpp-welcome --firstrun) &/##/' $HOME/.config/xinitrc
 sudo sed -i -e 's/^(cbpp-welcome --firstrun) &/##/' /etc/skel/.config/xinitrc
 sudo sed -i -e 's/^(cbpp-welcome --firstrun) &/##/' /root/.config/xinitrc
@@ -273,13 +271,12 @@ sudo mkdir /usr/share/fonts/truetype/roboto
  mkdir /home/$USER/Videos
 sudo chown -R $USER:$USER /home/$USER
 
-USER="$USER"
-
 if [ -f "/home/$USER/.gtk-bookmarks" ]; then
     rpl -q '$USER' $USER /home/$USER/.gtk-bookmarks >/dev/null 2>&1
 fi
 
 sudo wget -P /usr/share/fonts/truetype/roboto/ https://github.com/YurinDoctrine/.config/raw/main/kitty/Roboto.ttf
+rm -rfd $HOME/.config/kitty/Roboto.ttf
 
 (sleep 16s && killall openbox) &
 
