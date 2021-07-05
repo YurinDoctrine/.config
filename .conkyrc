@@ -72,18 +72,18 @@ Up:${offset 27$}${upspeed wlo1}${alignr}${upspeedgraph wlo1 8,100}
 Down:${offset 10$}${downspeed wlo1}${alignr}${downspeedgraph wlo1 8,100}${voffset 10}
 K E Y B I N D S
 ${hr}
-Super +r$alignr Run Dialog
-Super +d$alignr Alt Menu
-Super +Space$alignr Main Menu
-Super +Tab$alignr Client Menu
-Super +t$alignr Terminal Emulator
-Super +f$alignr File Manager(ranger)
-Super +e$alignr Editor
-Super +m$alignr Media Player
-Super +w$alignr Web Browser
-Super +h$alignr Task Manager
-Super +l$alignr Lock Screen
-Super +Esc$alignr Show Desktop
-Super +x$alignr Exit Dialog
+Super${offset 2$}+r$alignr Run Dialog
+Super${offset 2$}+d$alignr Alt Menu
+Super${offset 2$}+Space$alignr Main Menu
+Super${offset 2$}+Tab$alignr Client Menu
+Super${offset 2$}+t$alignr Terminal Emulator
+Super${offset 2$}+f$alignr File Manager(ranger)
+Super${offset 2$}+e$alignr Editor
+Super${offset 2$}+m$alignr Media Player
+Super${offset 2$}+w$alignr Web Browser
+Super${offset 2$}+h$alignr Task Manager
+Super${offset 2$}+l$alignr Lock Screen
+Super${offset 2$}+Esc$alignr Show Desktop
+Super${offset 2$}+x$alignr Exit Dialog
 PrtSc$alignr Screenshot
 ]];
