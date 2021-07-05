@@ -51,7 +51,7 @@ conky.config = {
 conky.text = [[
 Host:$alignr$nodename
 Distro: ${alignr}$sysname ${alignr}${execi 6000 lsb_release -a | grep 'Description'|awk {'print $3, $4, $5'}}
-Kernel:${alignr}${exec uname} ${exec uname -r}${voffset 5}
+Kernel:${alignr}${exec uname} ${exec uname -r}${voffset 5$}
 S Y S T E M$alignr$uptime
 ${hr}
 RAM:$alignr$mem/$memmax
@@ -59,17 +59,17 @@ Swap:$alignr$swap/$swapmax
 Disk usage:$alignr${fs_used /}/${fs_size /}
 CPU usage:$alignr${cpu cpu0}%
 CPU temp:$alignr${hwmon 0 temp 1}`C
-CPU freq:$alignr${freq}MHz${voffset 5}
-Top Processes${voffset 1}
-  1 -  ${top name 1}
-  2 -  ${top name 2}
-  3 -  ${top name 3}
-  4 -  ${top name 4}
-  5 -  ${top name 5}${voffset 10}
+CPU freq:$alignr${freq}MHz${voffset 5$}
+Top Processes${voffset 1$}
+  1${offset 2$}-  ${top name 1}
+  2${offset 2$}-  ${top name 2}
+  3${offset 2$}-  ${top name 3}
+  4${offset 2$}-  ${top name 4}
+  5${offset 2$}-  ${top name 5}${voffset 10$}
 N E T W O R K
 ${hr}
 Up:${offset 27$}${upspeed wlo1}${alignr}${upspeedgraph wlo1 8,100}
-Down:${offset 10$}${downspeed wlo1}${alignr}${downspeedgraph wlo1 8,100}${voffset 10}
+Down:${offset 10$}${downspeed wlo1}${alignr}${downspeedgraph wlo1 8,100}${voffset 10$}
 K E Y B I N D S
 ${hr}
 Super${offset 2$}+r$alignr Run Dialog
