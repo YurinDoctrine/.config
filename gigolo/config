@@ -4,7 +4,6 @@ terminal=kitty
 autoconnect_interval=60
 
 [ui]
-geometry=0;0;650;350;0;
 save_geometry=true
 show_in_systray=true
 start_in_systray=false
