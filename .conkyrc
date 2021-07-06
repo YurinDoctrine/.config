@@ -50,7 +50,7 @@ conky.config = {
 
 conky.text = [[
 Host:$alignr$nodename
-Distro: ${alignr}$sysname ${alignr}${execi 6000 lsb_release -a | grep 'Description'|awk {'print $3, $4, $5'}}
+Distro:${offset 2$}${alignr}$sysname ${alignr}${execi 6000 lsb_release -a | grep 'Description'|awk {'print $3, $4, $5'}}
 Kernel:${alignr}${exec uname} ${exec uname -r}${voffset 5$}
 S Y S T E M$alignr$uptime
 ${hr}
