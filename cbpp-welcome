@@ -52,7 +52,6 @@ postinstall() {
         'featherpad'           # Lightweight Qt plain text editor
         'openbox'              # A lightweight, powerful, and highly configurable stacking window manager
         'scrot'                # Simple command-line screenshot utility
-        'udiskie'              # An udisks2 front-end written in python
         'pcmanfm-qt'           # The LXQt file manager
         'ranger'               # A file manager with vi key bindings written in python but with an interface that rocks
         'simplescreenrecorder' # A feature-rich screen recorder that supports X11 and OpenGL
