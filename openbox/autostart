@@ -40,8 +40,5 @@ lxpolkit &
         dunst -show_indicators -sort -word_wrap
 ) &
 
-## Enable power management
-mate-power-manager &
-
 ## Start pasystray
 pasystray &

@@ -56,6 +56,7 @@ S Y S T E M$alignr$uptime
 ${hr}
 RAM:$alignr$mem/$memmax
 Swap:$alignr$swap/$swapmax
+Battery:$alignr${battery_percent BAT1}%
 Disk usage:$alignr${fs_used /}/${fs_size /}
 CPU usage:$alignr${cpu cpu0}%
 CPU temp:$alignr${hwmon 0 temp 1}`C
