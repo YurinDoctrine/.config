@@ -228,7 +228,7 @@
                     <execute>blueman-manager</execute>
                 </action>
             </item>
-           <item label="Print Settings">
+            <item label="Print Settings">
                 <action name="Execute">
                     <execute>system-config-printer</execute>
                 </action>
