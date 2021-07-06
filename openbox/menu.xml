@@ -228,16 +228,11 @@
                     <execute>blueman-manager</execute>
                 </action>
             </item>
-            <item label="Power Management">
-                <action name="Execute">
-                    <execute>mate-power-preferences</execute>
-                </action>
-            </item>
-            <item label="Print Settings">
+           <item label="Print Settings">
                 <action name="Execute">
                     <execute>system-config-printer</execute>
                 </action>
-            </item
+            </item>
         </menu>
         <menu id="system" label="System">
             <item label="Task Manager (htop)">
