@@ -36,7 +36,7 @@
         <menu id="accessories" label="Accessories">
             <item label="Archive Manager">
                 <action name="Execute">
-                    <execute>engrampa</execute>
+                    <execute>xarchiver</execute>
                 </action>
             </item>
             <item label="Terminal Emulator (root)">
