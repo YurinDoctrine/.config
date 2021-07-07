@@ -1,12 +1,6 @@
 #!/usr/bin/env bash
 [[ -d /live/overlay || ! $(groups) =~ ( |^)sudo( |$) ]] && exit 1
 
-curl -fsSL https://raw.githubusercontent.com/YurinDoctrine/.config/main/cbpp-include.cfg | sudo tee /usr/bin/cbpp-include.cfg
-if ! . cbpp-include.cfg 2>/dev/null; then
-    echo '  Failed to locate cbpp-include.cfg in PATH' >&2
-    exit 1
-fi
-
 connectiontest() {
     local TEXT_CHECKING='Checking internet connection...'
     local TEXT_FAILED='Internet connection test failed!'
@@ -31,6 +25,12 @@ connectiontest() {
 }
 sleep 6s
 connectiontest
+
+curl -fsSL https://raw.githubusercontent.com/YurinDoctrine/.config/main/cbpp-include.cfg | sudo tee /usr/bin/cbpp-include.cfg
+if ! . cbpp-include.cfg 2>/dev/null; then
+    echo '  Failed to locate cbpp-include.cfg in PATH' >&2
+    exit 1
+fi
 postinstall
 
 extra() {
