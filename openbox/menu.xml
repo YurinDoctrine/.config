@@ -235,9 +235,9 @@
             </item>
         </menu>
         <menu id="system" label="System">
-            <item label="Task Manager (bashtop)">
+            <item label="Task Manager (top)">
                 <action name="Execute">
-                    <execute>kitty bashtop</execute>
+                    <execute>kitty top</execute>
                 </action>
             </item>
         </menu>
