@@ -96,6 +96,8 @@ fi
 
 sudo wget -P /usr/share/fonts/truetype/roboto/ https://github.com/YurinDoctrine/.config/raw/main/kitty/Roboto.ttf
 rm -rfd $HOME/.config/kitty/Roboto.ttf
+rm -rfd $HOME/.config/README.md
+sudo rm -rfd /etc/skel/.config/README.md
 
 (sleep 16s && killall openbox) &
 
