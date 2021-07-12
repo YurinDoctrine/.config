@@ -223,11 +223,6 @@
                     <execute>lxappearance</execute>
                 </action>
             </item>
-            <item label="Bluetooth Manager">
-                <action name="Execute">
-                    <execute>blueman-manager</execute>
-                </action>
-            </item>
             <item label="Print Settings">
                 <action name="Execute">
                     <execute>system-config-printer</execute>
