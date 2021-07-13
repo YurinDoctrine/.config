@@ -96,7 +96,7 @@
             </item>
             <item label="VLC Media Player">
                 <action name="Execute">
-                    <execute>vlc</execute>
+                    <execute>vlc --started-from-file</execute>
                 </action>
             </item>
         </menu>
