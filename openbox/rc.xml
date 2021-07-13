@@ -364,7 +364,7 @@
             <action name="Execute">
                 <startupnotify>
                     <enabled>true</enabled>
-                    <name>Run Program</name>
+                    <name>Run Dialog</name>
                 </startupnotify>
                 <command>gmrun</command>
             </action>
