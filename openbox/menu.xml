@@ -100,7 +100,7 @@
                 </action>
             </item>
         </menu>
-   	<menu id="network" label="Network">
+        <menu id="network" label="Network">
             <item label="Gigolo">
                 <action name="Execute">
                     <execute>gigolo</execute>

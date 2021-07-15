@@ -80,14 +80,14 @@ sudo sed -i -e 's/^(cbpp-welcome --firstrun) &/##/' /etc/skel/.config/.xinitrc
 sudo sed -i -e 's/^(cbpp-welcome --firstrun) &/##/' /root/.config/.xinitrc
 
 sudo mkdir /usr/share/fonts/truetype/roboto
- mkdir /home/$USER/Public
- mkdir /home/$USER/Desktop
- mkdir /home/$USER/backup
- mkdir /home/$USER/Documents
- mkdir /home/$USER/Downloads
- mkdir /home/$USER/Pictures
- mkdir /home/$USER/Music
- mkdir /home/$USER/Videos
+mkdir /home/$USER/Public
+mkdir /home/$USER/Desktop
+mkdir /home/$USER/backup
+mkdir /home/$USER/Documents
+mkdir /home/$USER/Downloads
+mkdir /home/$USER/Pictures
+mkdir /home/$USER/Music
+mkdir /home/$USER/Videos
 sudo chown -R $USER:$USER /home/$USER
 
 if [ -f "/home/$USER/.gtk-bookmarks" ]; then
