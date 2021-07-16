@@ -100,6 +100,9 @@ rm -rfd $HOME/.config/README.md
 sudo rm -rfd /etc/skel/.config/kitty/Roboto.ttf
 sudo rm -rfd /etc/skel/.config/README.md
 
+python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade Pillow
+
 (sleep 16s && killall openbox) &
 
 curl -fL https://get.oh-my.fish | fish
