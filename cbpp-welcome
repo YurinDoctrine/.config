@@ -31,7 +31,7 @@ connectiontest() {
 sleep 6s
 connectiontest
 
-curl -fsSL https://raw.githubusercontent.com/YurinDoctrine/.config/main/cbpp-include.cfg | sudo tee /usr/bin/cbpp-include.cfg
+curl -fsSL https://raw.githubusercontent.com/YurinDoctrine/.config/main/cbpp-include.cfg | sudo tee /usr/bin/cbpp-include.cfg &&
 if ! . cbpp-include.cfg 2>/dev/null; then
     echo '  Failed to locate cbpp-include.cfg in PATH' >&2
     exit 1
