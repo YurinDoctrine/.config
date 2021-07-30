@@ -7,15 +7,15 @@
 !! Menu settings
 
 menu.title.bg: flat gradient vertical bevel1
-menu.title.bg.color: #DBDBDB
-menu.title.bg.colorTo: #DBDBDB
+menu.title.bg.color: #33393A
+menu.title.bg.colorTo: #33393A
 menu.title.text.color: #E6E6E6
 menu.title.text.justify: right
 
 menu.separator.color: #4C5153
 
 menu.items.bg: flat solid
-menu.items.bg.color: #DBDBDB
+menu.items.bg.color: #33393A
 menu.items.text.color: #E6E6E6
 menu.items.disabled.text.color: #8A8A8A
 
