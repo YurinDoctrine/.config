@@ -1,0 +1,31 @@
+style "back"
+{
+	engine "pixmap"
+	{
+		image
+		{
+			function = FLAT_BOX
+			shadow=NONE
+			state = NORMAL
+			file="bg.png"
+			stretch=TRUE
+			detail = "base"
+		}
+	}
+}
+
+style "prompt"
+{
+	fg[NORMAL]="#646566"
+	font_name="Sans 10"
+}
+
+style "dark"
+{
+	fg[NORMAL] = "#646566"
+        bg_pixmap[NORMAL] = "shade.png"
+}
+
+widget "lxdm" style "back"
+widget "*.prompt" style "prompt"
+widget "*.eventbox1" style "dark"
