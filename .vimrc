@@ -1,16 +1,3 @@
-" -- VIM PLUG Setup and LOAD --
-call plug#begin('~/.vim/plugged')
-Plug 'itchyny/lightline.vim'
-Plug 'joshdick/onedark.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'mbbill/undotree'
-Plug 'preservim/nerdtree'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-call plug#end()
-
 " Startup Settings
 	syntax on
     let mapleader=" "
@@ -28,7 +15,6 @@ call plug#end()
 	set history=5000
 	set nocompatible
 	set number relativenumber
-	colorscheme onedark 
     set background=dark
     set termguicolors
 	filetype plugin on
