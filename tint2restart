@@ -1,5 +1,5 @@
 #!/usr/bin/sh
-# conkywonky
+# tint2restart
 # ----------
 # Many moons ago, Tint2 did not automatically restart when changes were
 # made to its config files. This script was used to restart it. It does not
