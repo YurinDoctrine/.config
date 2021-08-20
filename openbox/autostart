@@ -39,6 +39,3 @@ lxpolkit &
         conkywonky &&
         dunst -show_indicators -sort -word_wrap
 ) &
-
-## Start pasystray
-pasystray &
