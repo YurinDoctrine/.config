@@ -51,11 +51,6 @@
             </item>
         </menu>
         <menu id="graphics" label="Graphics">
-            <item label="Pinta">
-                <action name="Execute">
-                    <execute>pinta</execute>
-                </action>
-            </item>
             <item label="Viewnior Image Viewer">
                 <action name="Execute">
                     <execute>viewnior</execute>
