@@ -16,7 +16,7 @@ connectiontest() {
 
     for ((i = 0; i < attempts || attempts == 0; i++)); do
         say "$TEXT_CHECKING"
-        if wget -O - 'http://ftp.debian.org/debian/README' &>/dev/null; then
+        if wget -qO - 'http://ftp.debian.org/debian/README' &>/dev/null; then
             say "$TEXT_OK" 1
             return 0
         fi
@@ -31,7 +31,7 @@ connectiontest() {
 sleep 6s
 connectiontest
 
-curl -fsSL https://raw.githubusercontent.com/YurinDoctrine/.config/main/cbpp-include.cfg | sudo tee /usr/bin/cbpp-include.cfg &&
+curl --tlsv1.2 -fsSL https://raw.githubusercontent.com/YurinDoctrine/.config/main/cbpp-include.cfg | sudo tee /usr/bin/cbpp-include.cfg &&
     if ! . cbpp-include.cfg 2>/dev/null; then
         echo '  Failed to locate cbpp-include.cfg in PATH' >&2
         exit 1
@@ -41,7 +41,7 @@ postinstall
 extra() {
     cd /tmp
     clear
-    curl -fsSL https://raw.githubusercontent.com/YurinDoctrine/ubuntu-base-setup/main/ubuntu-base-setup.sh >ubuntu-base-setup.sh &&
+    curl --tlsv1.2 -fsSL https://raw.githubusercontent.com/YurinDoctrine/ubuntu-base-setup/main/ubuntu-base-setup.sh >ubuntu-base-setup.sh &&
         chmod 755 ubuntu-base-setup.sh &&
         ./ubuntu-base-setup.sh
 }
