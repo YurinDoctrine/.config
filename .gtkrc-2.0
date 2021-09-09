@@ -9,3 +9,4 @@ gtk-button-images=0
 gtk-menu-images=0
 gtk-enable-event-sounds=0
 gtk-enable-input-feedback-sounds=0
+gtk-menu-popup-delay=0
