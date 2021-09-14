@@ -84,11 +84,6 @@
             </item>
         </menu>
         <menu id="multimedia" label="Multimedia">
-            <item label="AlsaPlayer">
-                <action name="Execute">
-                    <execute>alsaplayer</execute>
-                </action>
-            </item>
             <item label="VLC Media Player">
                 <action name="Execute">
                     <execute>vlc --started-from-file</execute>
@@ -96,11 +91,6 @@
             </item>
         </menu>
         <menu id="network" label="Network">
-            <item label="Gigolo">
-                <action name="Execute">
-                    <execute>gigolo</execute>
-                </action>
-            </item>
             <item label="Transmission BitTorrent Client">
                 <action name="Execute">
                     <execute>transmission-gtk</execute>
