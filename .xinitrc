@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-(cbpp-welcome --firstrun) &
+(cbpp-welcome --first-run) &
