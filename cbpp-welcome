@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 [[ -d /live/overlay || ! $(groups) =~ ( |^)sudo( |$) ]] && exit 1
 
+if [[ $1 = '--firstrun' ]]; then # First run
+    kitty cbpp-welcome
+fi
+
 say() {
     fold -s -w 76 <<<"$1" | sed -e 's/^/  /' # wraps text nicely and adds two leading spaces
     sleep "${2-0}"
@@ -67,11 +71,6 @@ final() {
     fi
 }
 final
-
-if [[ $1 = '--firstrun' ]]; then # First run
-    kitty cbpp-welcome
-fi
-
 USER="$USER"
 
 chsh -s /usr/bin/fish
