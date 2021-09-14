@@ -75,9 +75,9 @@ final
 USER="$USER"
 
 chsh -s /usr/bin/fish
-sudo sed -i -e 's/^(cbpp-welcome --first-run) &/##/' $HOME/.xinitrc
-sudo sed -i -e 's/^(cbpp-welcome --first-run) &/##/' /etc/skel/.xinitrc
-sudo sed -i -e 's/^(cbpp-welcome --first-run) &/##/' /root/.xinitrc
+sudo sed -i -e 's/^(cbpp-welcome --first-run) &/#(cbpp-welcome --first-run) &/' $HOME/.xinitrc
+sudo sed -i -e 's/^(cbpp-welcome --first-run) &/#(cbpp-welcome --first-run) &/' /etc/skel/.xinitrc
+sudo sed -i -e 's/^(cbpp-welcome --first-run) &/#(cbpp-welcome --first-run) &/' /root/.xinitrc
 
 sudo mkdir /usr/share/fonts/truetype/roboto
  mkdir /home/$USER/Public
