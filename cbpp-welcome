@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 [[ -d /live/overlay || ! $(groups) =~ ( |^)sudo( |$) ]] && exit 1
 
-if [[ $1 = '--firstrun' ]]; then # First run
+if [[ $1 = '--first-run' ]]; then # First run
     kitty cbpp-welcome
     exit 0
 fi
@@ -75,9 +75,9 @@ final
 USER="$USER"
 
 chsh -s /usr/bin/fish
-sudo sed -i -e 's/^(cbpp-welcome --firstrun) &/##/' $HOME/.xinitrc
-sudo sed -i -e 's/^(cbpp-welcome --firstrun) &/##/' /etc/skel/.xinitrc
-sudo sed -i -e 's/^(cbpp-welcome --firstrun) &/##/' /root/.xinitrc
+sudo sed -i -e 's/^(cbpp-welcome --first-run) &/##/' $HOME/.xinitrc
+sudo sed -i -e 's/^(cbpp-welcome --first-run) &/##/' /etc/skel/.xinitrc
+sudo sed -i -e 's/^(cbpp-welcome --first-run) &/##/' /root/.xinitrc
 
 sudo mkdir /usr/share/fonts/truetype/roboto
  mkdir /home/$USER/Public
