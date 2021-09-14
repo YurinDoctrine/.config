@@ -3,6 +3,7 @@
 
 if [[ $1 = '--firstrun' ]]; then # First run
     kitty cbpp-welcome
+    exit 0
 fi
 
 say() {
