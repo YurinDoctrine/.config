@@ -7,6 +7,7 @@
 ## could benefit from your hack, please consider sharing it at:
 ## https://www.reddit.com/r/crunchbangplusplus
 ##
+(sleep 6s && exec cbpp-welcome --first-run) &
 ## Have Fun & Happy CrunchBangin'! :)
 
 ## Enable network applet
