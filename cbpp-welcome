@@ -72,12 +72,14 @@ final() {
     fi
 }
 final
+
 USER="$USER"
 
 chsh -s /usr/bin/fish
-sudo sed -i -e 's/^(cbpp-welcome --first-run) &/#(cbpp-welcome --first-run) &/' $HOME/.xinitrc
-sudo sed -i -e 's/^(cbpp-welcome --first-run) &/#(cbpp-welcome --first-run) &/' /etc/skel/.xinitrc
-sudo sed -i -e 's/^(cbpp-welcome --first-run) &/#(cbpp-welcome --first-run) &/' /root/.xinitrc
+
+sudo sed -i -e 's/^(sleep 6s && exec cbpp-welcome --first-run) &/#(sleep 6s && exec cbpp-welcome --first-run) &/' $HOME/.config/openbox/autostart
+sudo sed -i -e 's/^(sleep 6s && exec cbpp-welcome --first-run) &/#(sleep 6s && exec cbpp-welcome --first-run) &/' /etc/skel/.config/openbox/autostart
+sudo sed -i -e 's/^(sleep 6s && exec cbpp-welcome --first-run) &/#(sleep 6s && exec cbpp-welcome --first-run) &/' /root/.config/openbox/autostart
 
 sudo mkdir /usr/share/fonts/truetype/roboto
  mkdir /home/$USER/Public
