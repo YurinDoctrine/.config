@@ -44,8 +44,6 @@
     nnoremap <Leader>3 3gt<CR>
     nnoremap <Leader>4 4gt<CR>
     nnoremap <Leader>5 5gt<CR>
-" Replace all is aliased to S.
-    nnoremap S :%s//g<Left><Left>
 " Markdown Edits
     let g:vim_markdown_autowrite = 1
     let g:vim_markdown_no_extensions_in_markdown = 1
