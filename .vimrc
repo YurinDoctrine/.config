@@ -25,8 +25,6 @@
 	set history=25
 	set nocompatible
 	set number relativenumber
-    set background=dark
-    set termguicolors
 	filetype plugin on
 	set encoding=utf-8
 	set wildmenu
@@ -36,24 +34,6 @@
 	  set t_Co=256
 	endif
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-	set spell spelllang=en_gb
-" Key Maps
-	map <C-o> :NERDTreeToggle<CR>
-	map <C-\> :Goyo<CR>
-	map <C-h> <C-w>h
-	map <C-j> <C-w>j
-	map <C-k> <C-w>k
-	map <C-l> <C-w>l
-	vnoremap <C-c> "+y
- 	map <C-p> "+P
- 	nnoremap c "_c
-	nnoremap <silent> <C-t> :tabnew<CR>
-	map <S-Insert> <C-i>
-	inoremap <leader><leader> <Esc>/<++><Enter>"_c4l
-	vnoremap <leader><leader> <Esc>/<++><Enter>"_c4l
-	map <leader><leader> <Esc>/<++><Enter>"_c4l
-	nnoremap <F5> :UndotreeToggle<CR> :UndotreeFocus<CR>
-    nnoremap <Leader>i :w !ix<CR>
 " Persistent_undo
 	set undodir=~/.vim/undodir"
 	set undofile
