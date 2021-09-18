@@ -96,7 +96,7 @@
                     <execute>putty</execute>
                 </action>
             </item>
-            <item label="Transmission BitTorrent Client">
+            <item label="Transmission BitTorrent client">
                 <action name="Execute">
                     <execute>transmission-gtk</execute>
                 </action>
