@@ -91,6 +91,11 @@
             </item>
         </menu>
         <menu id="network" label="Network">
+            <item label="PuTTY SSH/Telnet client">
+                <action name="Execute">
+                    <execute>putty</execute>
+                </action>
+            </item>
             <item label="Transmission BitTorrent Client">
                 <action name="Execute">
                     <execute>transmission-gtk</execute>
