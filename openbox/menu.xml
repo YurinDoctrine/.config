@@ -96,11 +96,6 @@
                     <execute>putty</execute>
                 </action>
             </item>
-            <item label="xtightvncviewer">
-                <action name="Execute">
-                    <execute>xtightvncviewer</execute>
-                </action>
-            </item>
             <item label="Transmission BitTorrent client">
                 <action name="Execute">
                     <execute>transmission-gtk</execute>
@@ -109,6 +104,11 @@
             <item label="IRC Chat">
                 <action name="Execute">
                     <execute>kitty irssi</execute>
+                </action>
+            </item>
+            <item label="xtightvncviewer">
+                <action name="Execute">
+                    <execute>xtightvncviewer</execute>
                 </action>
             </item>
         </menu>
