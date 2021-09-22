@@ -40,3 +40,8 @@ lxpolkit &
         conkywonky &&
         dunst -show_indicators -sort -word_wrap
 ) &
+
+## Optional
+
+## IRC Chat
+#kitty irssi
