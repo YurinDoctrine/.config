@@ -41,7 +41,7 @@ lxpolkit &
         dunst -show_indicators -sort -word_wrap
 ) &
 
-## Optional
+## Optional (Uncomment programs you might want to run)
 
 ## IRC Chat
 #kitty irssi
