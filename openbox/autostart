@@ -16,6 +16,9 @@ nm-applet &
 ## Set root window colour
 hsetroot -solid "#2E3436" &
 
+## Merge resources
+xrdb -merge $HOME/.Xresources &
+
 ## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
 ## Adjust the values according to your preferences.
 xset r rate 250 25 &
@@ -45,3 +48,5 @@ lxpolkit &
 
 ## IRC Chat
 #kitty irssi
+
+exit
