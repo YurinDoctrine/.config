@@ -14,6 +14,7 @@ gtk-menu-popdown-delay=0
 gtk-menu-bar-popup-delay=0
 gtk-timeout-expand=0
 gtk-timeout-initial=0
+gtk-timeout-repeat=0
 gtk-enable-animations=0
 gtk-auto-mnemonics=1
 gtk-application-prefer-dark-theme=1
