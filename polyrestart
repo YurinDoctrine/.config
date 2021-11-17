@@ -1,0 +1,8 @@
+#!/usr/bin/sh
+if [ "$(pidof polybar)" ]; then
+    (killall polybar && sleep 0.1 && polybar) &
+    exit 0
+else
+    polybar &
+    exit 0
+fi
