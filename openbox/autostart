@@ -34,13 +34,11 @@ lxpolkit &
 
 ## Group start:
 ## 1. compositor - start
-## 2. tint2 - start
-## 3. conky - start
-## 4. dunst - start
+## 2. polybar - start
+## 3. dunst - start
 (
     cbpp-compositor --start &&
-        tint2restart &&
-        conkywonky &&
+        polyrestart &&
         dunst -show_indicators -sort -word_wrap
 ) &
 
