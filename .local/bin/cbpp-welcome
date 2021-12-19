@@ -104,4 +104,4 @@ python3 -m pip install --upgrade Pillow
 
 (sleep 16s && killall openbox) &
 
-curl -fL https://get.oh-my.fish | fish
+curl -fsSL https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
