@@ -1,22 +1,22 @@
 " Startup Settings
 	syntax on
-    let mapleader=" "
-  set title
-  set go=a
-  set mouse=a
-  set nohlsearch
-  set clipboard=unnamedplus
-  set tabstop=4
-  set softtabstop=4
-  set shiftwidth=4
+	let mapleader=" "
+	set title
+	set go=a
+	set mouse=a
+	set nohlsearch
+	set clipboard=unnamedplus
+	set tabstop=4
+	set softtabstop=4
+	set shiftwidth=4
 	set fileformat=unix
 	set splitbelow splitright
-  set noerrorbells
+	set noerrorbells
 	set tabstop=2 softtabstop=2
 	set shiftwidth=2
 	set expandtab
 	set smartindent
-    set nofoldenable
+	set nofoldenable
 	set nowrap
 	set smartcase
 	set noswapfile
@@ -30,31 +30,28 @@
 	set wildmenu
 	set wildmode=longest,list,full
 	set laststatus=2
+	set scrolloff=8
+	
 	if !has('gui_running')
 	  set t_Co=256
 	endif
+
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Persistent_undo
 	set undodir=~/.vim/undodir"
 	set undofile
 	let g:undotree_WindowLayout = 2
-" Tab edit keybinds
-    nnoremap <Leader>1 1gt<CR>
-    nnoremap <Leader>2 2gt<CR>
-    nnoremap <Leader>3 3gt<CR>
-    nnoremap <Leader>4 4gt<CR>
-    nnoremap <Leader>5 5gt<CR>
 " Markdown Edits
-    let g:vim_markdown_autowrite = 1
-    let g:vim_markdown_no_extensions_in_markdown = 1
-    let g:vim_markdown_conceal = 0
-    let g:vim_markdown_override_foldtext = 0
-    let g:vim_markdown_folding_disabled = 1
-" Automatically deletes all trailing whitespace on save.
+  	let g:vim_markdown_autowrite = 1
+  	let g:vim_markdown_no_extensions_in_markdown = 1
+  	let g:vim_markdown_conceal = 0
+  	let g:vim_markdown_override_foldtext = 0
+  	let g:vim_markdown_folding_disabled = 1
+" Automatically deletes all trailing whitespace on save & reset cursor position.
  	autocmd BufWritePre * let currPos = getpos(".")
 	autocmd BufWritePre * %s/\s\+$//e
     	autocmd BufWritePre * %s/\n\+\%$//e
     	autocmd BufWritePre *.[ch] %s/\%$/\r/e
   	autocmd BufWritePre * cal cursor(currPos[1], currPos[2])
 " When shortcut files are updated, renew bash and ranger configs with new material:
-      autocmd BufWritePost bm-files,bm-dirs !shortcuts
+  	autocmd BufWritePost bm-files,bm-dirs !shortcuts
