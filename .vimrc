@@ -30,8 +30,10 @@
 	set wildmenu
 	set wildmode=longest,list,full
 	set laststatus=2
-	set scrolloff=8
-	
+	set scrolloff=8	
+	set showcmd
+	set showmode
+
 	if !has('gui_running')
 	  set t_Co=256
 	endif
