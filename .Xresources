@@ -1,0 +1,5 @@
+! font settings
+
+Xft.autohint: true
+Xft.antialias: true
+Xft.hinting: true
