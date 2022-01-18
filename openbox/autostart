@@ -10,9 +10,6 @@
 (sleep 6s && exec cbpp-welcome --first-run) &
 ## Have Fun & Happy CrunchBangin'! :)
 
-## Enable network applet
-nm-applet &
-
 ## Set root window colour
 hsetroot -solid "#2E3436" &
 
