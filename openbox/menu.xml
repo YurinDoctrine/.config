@@ -12,9 +12,9 @@
                 <execute>kitty</execute>
             </action>
         </item>
-        <item label="Web Browser">
+        <item label="Web Browser(Firefox)">
             <action name="Execute">
-                <execute>x-www-browser</execute>
+                <execute>firefox --no-remote -P</execute>
             </action>
         </item>
         <item label="File Manager">
