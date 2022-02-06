@@ -400,9 +400,9 @@
             <action name="Execute">
                 <startupnotify>
                     <enabled>true</enabled>
-                    <name>Web Browser</name>
+                    <name>Web Browser(Firefox)</name>
                 </startupnotify>
-                <command>x-www-browser</command>
+                <command>firefox --no-remote -P</command>
             </action>
         </keybind>
         <keybind key="W-l">
