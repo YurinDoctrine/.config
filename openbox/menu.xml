@@ -14,7 +14,7 @@
         </item>
         <item label="Web Browser(Firefox)">
             <action name="Execute">
-                <execute>firefox-esr --no-remote -P</execute>
+                <execute>firefox-esr -purgecaches</execute>
             </action>
         </item>
         <item label="File Manager">
