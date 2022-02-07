@@ -28,11 +28,21 @@
 	filetype plugin on
 	set encoding=utf-8
 	set wildmenu
-	set wildmode=longest,list,full
+	set wildmode=list:longest
+	set wildchar=<Tab>
 	set laststatus=2
 	set scrolloff=8	
 	set showcmd
 	set showmode
+	set ttyfast
+	set lazyredraw
+	set nomodeline
+	set secure
+	set nopreserveindent
+	set ffs=unix,dos,mac
+	set completeopt=longest,menuone
+	set complete-=i
+	set spelllang=en_us,en_gb
 
 	if !has('gui_running')
 	  set t_Co=256
