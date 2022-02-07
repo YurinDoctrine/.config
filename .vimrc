@@ -43,6 +43,7 @@
 	set completeopt=longest,menuone
 	set complete-=i
 	set spelllang=en_us,en_gb
+	set esckeys
 
 	if !has('gui_running')
 	  set t_Co=256
