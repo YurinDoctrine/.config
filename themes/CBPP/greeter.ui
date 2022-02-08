@@ -251,6 +251,7 @@
                 </child>
                 <child>
                   <object class="GtkLabel" id="label_keyboard">
+                    <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="label" translatable="yes">Keyboard:</property>
                   </object>
@@ -262,6 +263,7 @@
                 </child>
                 <child>
                   <object class="GtkComboBoxEntry" id="keyboard">
+                    <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="text_column">0</property>
                     <child internal-child="entry">
