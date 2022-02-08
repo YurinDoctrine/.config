@@ -24,7 +24,7 @@ xset r rate 250 25 &
 xset s off -dpms &
 
 ## Set background
-xwallpaper --tile /usr/share/backgrounds/default-tile.png &
+xwallpaper --maximize /usr/share/backgrounds/default-tile.png &
 
 ## Start LXDE PolKit
 lxpolkit &
