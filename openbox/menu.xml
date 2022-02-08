@@ -12,7 +12,7 @@
                 <execute>kitty</execute>
             </action>
         </item>
-        <item label="Web Browser(Firefox)">
+        <item label="Web Browser">
             <action name="Execute">
                 <execute>firefox-esr -purgecaches</execute>
             </action>
