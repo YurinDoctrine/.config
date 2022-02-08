@@ -391,7 +391,7 @@
             <action name="Execute">
                 <startupnotify>
                     <enabled>true</enabled>
-                    <name>Terminal</name>
+                    <name>kitty</name>
                 </startupnotify>
                 <command>kitty</command>
             </action>
@@ -400,7 +400,7 @@
             <action name="Execute">
                 <startupnotify>
                     <enabled>true</enabled>
-                    <name>Web Browser(Firefox)</name>
+                    <name>firefox</name>
                 </startupnotify>
                 <command>firefox-esr -purgecaches</command>
             </action>
