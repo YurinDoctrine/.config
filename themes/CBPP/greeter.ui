@@ -169,6 +169,18 @@
                 <property name="border_width">6</property>
                 <property name="spacing">12</property>
                 <child>
+                  <object class="GtkLabel" id="time">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="single_line_mode">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
                   <object class="GtkHBox" id="sessions_box">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
@@ -280,18 +292,6 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkLabel" id="time">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="single_line_mode">True</property>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">0</property>
-                  </packing>
-                </child>
-                <child>
                   <object class="GtkButton" id="exit">
                     <property name="label">gtk-quit</property>
                     <property name="use_action_appearance">False</property>
@@ -305,7 +305,7 @@
                     <property name="expand">False</property>
                     <property name="fill">True</property>
                     <property name="pack_type">end</property>
-                    <property name="position">5</property>
+                    <property name="position">4</property>
                   </packing>
                 </child>
               </object>
