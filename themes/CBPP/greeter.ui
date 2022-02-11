@@ -161,6 +161,7 @@
           <object class="GtkEventBox" id="bottom_pane">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="visible_window">False</property>
             <child>
               <object class="GtkHBox" id="bottom_hbox">
                 <property name="visible">True</property>
@@ -293,6 +294,7 @@
                 <child>
                   <object class="GtkButton" id="exit">
                     <property name="label">gtk-quit</property>
+                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
