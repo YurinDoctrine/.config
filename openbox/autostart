@@ -39,4 +39,7 @@ lxpolkit &
 ## IRC Chat
 #kitty irssi
 
+## RSS Reader
+#kitty newsboat
+
 exit
