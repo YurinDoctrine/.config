@@ -37,9 +37,9 @@ lxpolkit &
 
 ## Optional (Uncomment programs you might want to run)
 ## IRC Chat
-#kitty irssi
+#kitty irssi &
 
 ## RSS Reader
-#kitty newsboat
+#kitty newsboat &
 
 exit
