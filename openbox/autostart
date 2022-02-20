@@ -40,6 +40,6 @@ lxpolkit &
 #kitty irssi &
 
 ## RSS Reader
-#kitty newsboat &
+#kitty newsboat -r &
 
 exit
