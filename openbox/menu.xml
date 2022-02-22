@@ -84,11 +84,6 @@
             </item>
         </menu>
         <menu id="multimedia" label="Multimedia">
-            <item label="Brasero CD/DVD Burner">
-                <action name="Execute">
-                    <execute>brasero</execute>
-                </action>
-            </item>
             <item label="VLC Media Player">
                 <action name="Execute">
                     <execute>vlc --started-from-file</execute>
