@@ -89,6 +89,11 @@
                     <execute>vlc --started-from-file</execute>
                 </action>
             </item>
+            <item label="Brasero CD/DVD Burner">
+                <action name="Execute">
+                    <execute>brasero</execute>
+                </action>
+            </item>
         </menu>
         <menu id="network" label="Network">
             <item label="Filezilla FTP/SFTP client">
