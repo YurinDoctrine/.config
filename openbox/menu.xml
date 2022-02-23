@@ -84,9 +84,9 @@
             </item>
         </menu>
         <menu id="multimedia" label="Multimedia">
-            <item label="Console CD Burner">
+            <item label="Console CD/DVD Burner">
                 <action name="Execute">
-                    <execute>cdw</execute>
+                    <execute>kitty cdw</execute>
                 </action>
             </item>
             <item label="VLC Media Player">
