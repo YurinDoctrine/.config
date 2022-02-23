@@ -58,7 +58,7 @@
             </item>
             <item label="SimpleScreenRecorder">
                 <action name="Execute">
-                    <execute>simplescreenrecorder --start-hidden</execute>
+                    <execute>simplescreenrecorder</execute>
                 </action>
             </item>
             <separator label="Screenshooter" />
