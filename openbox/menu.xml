@@ -125,12 +125,7 @@
         <menu id="office" label="Office">
             <item label="Google Docs">
                 <action name="Execute">
-                    <execute>x-www-browser https://drive.google.com/</execute>
-                </action>
-            </item>
-            <item label="AbiWord Word Processor">
-                <action name="Execute">
-                    <execute>abiword</execute>
+                    <execute>x-www-browser http://drive.google.com</execute>
                 </action>
             </item>
             <item label="Gnumeric Spreadsheet">
@@ -141,11 +136,6 @@
             <item label="Calculator">
                 <action name="Execute">
                     <execute>kitty bc</execute>
-                </action>
-            </item>
-            <item label="Atril PDF Viewer">
-                <action name="Execute">
-                    <execute>atril</execute>
                 </action>
             </item>
         </menu>
