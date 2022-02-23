@@ -86,7 +86,7 @@
         <menu id="multimedia" label="Multimedia">
             <item label="Console CD/DVD Burner">
                 <action name="Execute">
-                    <execute>kitty cdw</execute>
+                    <execute>kitty --start-as=fullscreen cdw</execute>
                 </action>
             </item>
             <item label="VLC Media Player">
