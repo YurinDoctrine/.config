@@ -6,6 +6,9 @@ fi
 
 menuStart
 menuSeparator 'Online Help'
+menuSubmenu 'ManpagesWWW' 'Manpages'
+menuItem 'Debian Homepage' 'x-www-browser "http://manpages.debian.org/"'
+menuSubmenuEnd
 menuSubmenu 'OpenboxWWW' 'Openbox'
 menuItem 'Openbox Homepage' 'x-www-browser "http://openbox.org/wiki/Main_Page"'
 menuItem 'Openbox Documentation' 'x-www-browser "http://openbox.org/wiki/Help:Contents"'
