@@ -84,9 +84,9 @@
             </item>
         </menu>
         <menu id="multimedia" label="Multimedia">
-            <item label="Xfburn CD/DVD Burner">
+            <item label="Console CD Burner">
                 <action name="Execute">
-                    <execute>xfburn</execute>
+                    <execute>cdw</execute>
                 </action>
             </item>
             <item label="VLC Media Player">
