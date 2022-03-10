@@ -93,6 +93,7 @@ if [ -f "/home/$USER/.gtk-bookmarks" ]; then
     USER=$USER
     rpl -q '$USER' $USER /home/$USER/.gtk-bookmarks >/dev/null 2>&1
 fi
+xdg-user-dirs-gtk-update
 xdg-user-dirs-update
 
 sudo wget -P /usr/share/fonts/truetype/roboto/ https://github.com/YurinDoctrine/.config/raw/main/kitty/Roboto.ttf
