@@ -191,6 +191,11 @@
                     <execute>kitty top</execute>
                 </action>
             </item>
+            <item label="Virtual Keyboard">
+                <action name="Execute">
+                    <execute>xvkbd</execute>
+                </action>
+            </item>
         </menu>
         <menu id="help" label="Help" execute="cbpp-help-pipemenu" />
         <separator />
