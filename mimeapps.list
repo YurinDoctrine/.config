@@ -63,6 +63,7 @@ audio/x-wavpack=vlc.desktop
 image/bmp=viewnior.desktop
 image/eps=firefox.desktop
 image/gif=viewnior.desktop
+image/svg=viewnior.desktop
 image/jpeg=viewnior.desktop
 image/jpg=viewnior.desktop
 image/pjpeg=viewnior.desktop
