@@ -16,9 +16,9 @@ hsetroot -solid "#2E3436" &
 ## Merge resources
 xrdb -merge $HOME/.Xresources &
 
-## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
+## Set keyboard settings - 500 ms delay and 10 cps (characters per second) repeat rate.
 ## Adjust the values according to your preferences.
-xset r rate 500 0 &
+xset r rate 500 10 &
 
 ## Turn on/off blank display
 xset s off -dpms &
