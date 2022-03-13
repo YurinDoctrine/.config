@@ -39,9 +39,14 @@
                     <execute>xarchiver</execute>
                 </action>
             </item>
-            <item label="Terminal Emulator (root)">
+            <item label="Calculator">
                 <action name="Execute">
-                    <execute>cbpp-gksudo kitty</execute>
+                    <execute>kitty bc</execute>
+                </action>
+            </item>
+            <item label="Virtual Keyboard">
+                <action name="Execute">
+                    <execute>xvkbd</execute>
                 </action>
             </item>
         </menu>
@@ -128,11 +133,6 @@
                     <execute>gnumeric</execute>
                 </action>
             </item>
-            <item label="Calculator">
-                <action name="Execute">
-                    <execute>kitty bc</execute>
-                </action>
-            </item>
         </menu>
         <separator />
         <menu execute="cbpp-places-pipemenu" id="pipe-placesmenu" label="Places" />
@@ -191,9 +191,9 @@
                     <execute>kitty top</execute>
                 </action>
             </item>
-            <item label="Virtual Keyboard">
+            <item label="Terminal Emulator (root)">
                 <action name="Execute">
-                    <execute>xvkbd</execute>
+                    <execute>cbpp-gksudo kitty</execute>
                 </action>
             </item>
         </menu>
