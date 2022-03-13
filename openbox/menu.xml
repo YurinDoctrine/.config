@@ -34,16 +34,6 @@
         </item>
         <separator />
         <menu id="accessories" label="Accessories">
-            <item label="Archive Manager">
-                <action name="Execute">
-                    <execute>xarchiver</execute>
-                </action>
-            </item>
-            <item label="Calculator">
-                <action name="Execute">
-                    <execute>kitty bc</execute>
-                </action>
-            </item>
             <item label="Virtual Keyboard">
                 <action name="Execute">
                     <execute>xvkbd</execute>
@@ -123,6 +113,16 @@
             </item>
         </menu>
         <menu id="office" label="Office">
+            <item label="Archive Manager">
+                <action name="Execute">
+                    <execute>xarchiver</execute>
+                </action>
+            </item>
+            <item label="Calculator">
+                <action name="Execute">
+                    <execute>kitty bc</execute>
+                </action>
+            </item>
             <item label="Google Docs">
                 <action name="Execute">
                     <execute>x-www-browser http://drive.google.com</execute>
