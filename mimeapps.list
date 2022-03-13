@@ -1,4 +1,9 @@
 [Default Applications]
+application/zip=xarchiver.desktop
+application/x-rar=xarchiver.desktop
+application/x-compressed-tar=xarchiver.desktop
+application/x-tar=xarchiver.desktop
+application/x-bzip-compressed-tar=xarchiver.desktop
 application/eps=firefox.desktop
 application/ogg=vlc.desktop
 application/pdf=firefox.desktop
@@ -64,6 +69,7 @@ image/pjpeg=viewnior.desktop
 image/png=viewnior.desktop
 image/tiff=viewnior.desktop
 image/x-bmp=viewnior.desktop
+image/x-ms-bmp=viewnior.desktop
 image/x-canon-cr2=viewnior.desktop
 image/x-dcraw=firefox.desktop
 image/x-eps=firefox.desktop
