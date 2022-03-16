@@ -460,9 +460,14 @@
                 <menu>root-menu</menu>
             </action>
         </keybind>
-        <keybind key="A-C-q">
-            <action name="ShowMenu">
-                <menu>root-menu</menu>
+        <keybind key="XF86MonBrightnessUp">
+            <action name="Execute">
+                <command>brightnessctl set 10%+</command>
+            </action>
+        </keybind>
+        <keybind key="XF86MonBrightnessDown">
+            <action name="Execute">
+                <command>brightnessctl set 10%-</command>
             </action>
         </keybind>
         <!-- Keybindings for window tiling -->
