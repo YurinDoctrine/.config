@@ -32,6 +32,9 @@ xwallpaper --maximize /usr/share/backgrounds/default-tile.png &
 ## Start LXDE PolKit
 lxpolkit &
 
+## Start Desktop
+pcmanfm-qt --desktop &
+
 ## Group start:
 ## 1. compositor - start
 ## 2. polybar - start
