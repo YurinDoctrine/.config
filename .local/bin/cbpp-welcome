@@ -78,6 +78,7 @@ sudo sed -i -e 's/^(sleep 6s && exec cbpp-welcome --first-run) &/#(sleep 6s && e
 sudo sed -i -e 's/^(sleep 6s && exec cbpp-welcome --first-run) &/#(sleep 6s && exec cbpp-welcome --first-run) &/' /etc/skel/.config/openbox/autostart
 sudo sed -i -e 's/^(sleep 6s && exec cbpp-welcome --first-run) &/#(sleep 6s && exec cbpp-welcome --first-run) &/' /root/.config/openbox/autostart
 
+sudo mkdir /usr/share/desktop-directories
 sudo mkdir /usr/share/fonts/truetype/roboto
  mkdir /home/$USER/Public
  mkdir /home/$USER/Desktop
