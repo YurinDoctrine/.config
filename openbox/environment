@@ -7,5 +7,6 @@ export MOZ_DISABLE_IMAGE_OPTIMIZE=1
 export MOZ_USE_OMTC=1
 export MOZ_GTK_TITLEBAR_DECORATION=client
 export MOZ_WEBRENDER=1
+export MOZ_ACCELERATED=1
 export vblank_mode=2
 export MALLOC_OPTIONS=2f
