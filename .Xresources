@@ -1,4 +1,4 @@
-! font settings
+Xft.dpi:	80
 
 Xft.autohint: true
 Xft.antialias: true
