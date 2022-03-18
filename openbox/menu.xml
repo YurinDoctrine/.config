@@ -135,6 +135,8 @@
             </item>
         </menu>
         <separator />
+        <menu execute="obamenu" id="all-apps" label="All Apps" />
+        <separator />
         <menu execute="cbpp-places-pipemenu" id="pipe-placesmenu" label="Places" />
         <menu execute="cbpp-recent-files-pipemenu" id="pipe-recentfilesmenu" label="Recent Files" />
         <separator />
