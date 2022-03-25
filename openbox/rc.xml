@@ -423,7 +423,6 @@
                 <command>kitty vim</command>
             </action>
         </keybind>
-        </keybind>
         <keybind key="W-v">
             <action name="Execute">
                 <startupnotify>
