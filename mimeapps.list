@@ -1,5 +1,5 @@
 [Default Applications]
-application/vnd.debian.binary-package=debpakir.desktop
+application/vnd.debian.binary-package=tr.org.daft-8.debpakir.desktop
 application/zip=xarchiver.desktop
 application/x-rar=xarchiver.desktop
 application/x-compressed-tar=xarchiver.desktop
