@@ -188,11 +188,6 @@
             </item>
         </menu>
         <menu id="system" label="System">
-            <item label="Backup &amp; Restore (timeshift)">
-                <action name="Execute">
-                    <execute>timeshift</execute>
-                </action>
-            </item>
             <item label="Task Manager (top)">
                 <action name="Execute">
                     <execute>kitty top</execute>
