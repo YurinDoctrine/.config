@@ -198,7 +198,7 @@
                     <execute>cbpp-gksudo kitty</execute>
                 </action>
             </item>
-            <item label="Backup & Restore (timeshift)">
+            <item label="Backup &amp; Restore (timeshift)">
                 <action name="Execute">
                     <execute>timeshift</execute>
                 </action>
