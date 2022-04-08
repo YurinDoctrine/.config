@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 if [ "$(pidof polybar)" ]; then
-    (killall polybar && sleep 0.1 && polybar -q main -c ~/.config/polybar/config.ini) &
+    (killall -HUP polybar && polybar -q main -c ~/.config/polybar/config.ini) &
     exit 0
 else
     polybar -q main -c ~/.config/polybar/config.ini &
