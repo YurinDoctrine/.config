@@ -109,7 +109,6 @@ python3 -m pip install --upgrade pyyaml
 
 wget https://github.com/DAFT-8/debpakir/releases/download/latest/debpakir_0.0.3_amd64.deb && sudo dpkg -i debpakir_0.0.3_amd64.deb
 wget https://github.com/DAFT-8/cbpp-exit-gui/releases/download/latest/cbpp-exit-gui_0.0.1_all.deb && sudo dpkg -i cbpp-exit-gui_0.0.1_all.deb
-sudo wget -P /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png
 
 (sleep 17s && killall openbox) &
 
