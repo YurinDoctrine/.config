@@ -138,3 +138,4 @@ x-scheme-handler/web+cardano=firefox.desktop
 
 [Added Associations]
 image/x-xcursor=featherpad.desktop;
+image/webp=firefox.desktop
