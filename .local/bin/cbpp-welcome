@@ -41,6 +41,7 @@ curl --tlsv1.2 -fsSL https://raw.githubusercontent.com/YurinDoctrine/.config/mai
         echo '  Failed to locate cbpp-include.cfg in PATH' >&2
         exit 1
     fi
+trap 'postinstall' SIGINT
 postinstall
 
 extra() {
@@ -71,6 +72,7 @@ final() {
         final
     fi
 }
+trap 'final' SIGINT
 final
 
 chsh -s /usr/bin/fish
