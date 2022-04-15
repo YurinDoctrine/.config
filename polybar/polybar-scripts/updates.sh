@@ -4,14 +4,10 @@ updates() {
 
         list_upgradeable=$(apt list --upgradeable -qq | cut -d ' ' -f 2 | wc -l)
         if [ "$list_upgradeable" -gt "0" ]; then
-            echo -e "[u]"
+            echo -e "[$list_upgradeable]"
         else
-            echo  ""
+            echo "" >/dev/null
         fi
-}
-
-update() {
-    cbpp-gksudo xterm -e 'apt-get update' >/dev/null
 }
 
 upgrade() {
@@ -19,9 +15,6 @@ upgrade() {
 }
 
 case "$1" in
-    --update)
-        update
-        ;;
     --upgrade)
         upgrade
         ;;

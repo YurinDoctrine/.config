@@ -7,10 +7,10 @@ bluetooth_print() {
 
                 echo ""
                 devices_paired=$(bluetoothctl paired-devices | grep Device | cut -d ' ' -f 2)
-                echo "$devices_paired" | while read -r line; do
+                echo -e "$devices_paired" | while read -r line; do
 
                     device_info=$(bluetoothctl info "$line")
-                    if echo "$device_info" | grep -q "Connected: yes"; then
+                    if echo -e "$device_info" | grep -q "Connected: yes"; then
                         echo ""
                     fi
                 done
@@ -29,12 +29,12 @@ bluetooth_toggle() {
         sleep 1
 
         devices_paired=$(bluetoothctl paired-devices | grep Device | cut -d ' ' -f 2)
-        echo "$devices_paired" | while read -r line; do
+        echo -e "$devices_paired" | while read -r line; do
             bluetoothctl connect "$line" >> /dev/null
         done
     else
         devices_paired=$(bluetoothctl paired-devices | grep Device | cut -d ' ' -f 2)
-        echo "$devices_paired" | while read -r line; do
+        echo -e "$devices_paired" | while read -r line; do
             bluetoothctl disconnect "$line" >> /dev/null
         done
 
