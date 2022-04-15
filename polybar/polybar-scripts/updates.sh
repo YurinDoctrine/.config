@@ -10,11 +10,18 @@ updates() {
         fi
 }
 
+update() {
+    cbpp-gksudo xterm -e 'apt-get update' >/dev/null
+}
+
 upgrade() {
-    cbpp-gksudo xterm -e "apt-get dist-upgrade -yy"
+    cbpp-gksudo xterm -e 'apt-get dist-upgrade -yy' >/dev/null
 }
 
 case "$1" in
+    --update)
+        update
+        ;;
     --upgrade)
         upgrade
         ;;
