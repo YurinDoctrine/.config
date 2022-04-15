@@ -36,10 +36,9 @@ lxpolkit &
 pcmanfm-qt --desktop &
 
 ## Group start:
-## 1. compositor - start
-## 2. polybar - start
-## 3. dunst - start
-(cbpp-compositor --start && polyrestart && dunst -show_indicators -sort -word_wrap) &
+## 1. polybar - start
+## 2. dunst - start
+(polyrestart && dunst -show_indicators -sort -word_wrap) &
 
 ## Optional (Uncomment programs you might want to run)
 ## IRC Chat
