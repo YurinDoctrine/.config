@@ -10,9 +10,6 @@
 (sleep 6s && exec cbpp-welcome --first-run) &
 ## Have Fun & Happy CrunchBangin'! :)
 
-## Set root window colour
-hsetroot -solid "#2E3436" &
-
 ## Merge resources
 xrdb -merge $HOME/.Xresources &
 
@@ -27,7 +24,7 @@ xset r rate 500 10 &
 xset s off -dpms &
 
 ## Set background
-xwallpaper --maximize /usr/share/backgrounds/default-tile.png &
+exec xwallpaper --maximize /usr/share/backgrounds/default-tile.png &
 
 ## Start LXDE PolKit
 exec lxpolkit &
