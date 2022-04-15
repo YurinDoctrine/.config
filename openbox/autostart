@@ -30,21 +30,21 @@ xset s off -dpms &
 xwallpaper --maximize /usr/share/backgrounds/default-tile.png &
 
 ## Start LXDE PolKit
-lxpolkit &
+exec lxpolkit &
 
 ## Start Desktop
-pcmanfm-qt --desktop &
+exec pcmanfm-qt --desktop &
 
 ## Group start:
 ## 1. polybar - start
 ## 2. dunst - start
-(polyrestart && dunst -show_indicators -sort -word_wrap) &
+(exec polyrestart && exec dunst -show_indicators -sort -word_wrap) &
 
 ## Optional (Uncomment programs you might want to run)
 ## IRC Chat
-#kitty irssi &
+#exec kitty irssi &
 
 ## RSS Reader
-#kitty newsboat -r &
+#exec kitty newsboat -r &
 
 exit
