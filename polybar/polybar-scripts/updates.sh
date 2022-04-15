@@ -11,7 +11,7 @@ updates() {
 }
 
 upgrade() {
-    cbpp-gksudo xterm -e 'apt-get dist-upgrade -yy' >/dev/null && echo "" >/dev/null
+    cbpp-gksudo xterm -e 'apt-get dist-upgrade -yy' && echo "" >/dev/null
 }
 
 case "$1" in
