@@ -87,7 +87,7 @@ osd.label.text.color: #1C1C1C
 
 !! font me!
 window.label.text.justify: center
-window.active.label.text.font:shadow=n:shadowtint=-60:shadowoffset=1
-window.inactive.label.text.font:shadow=n:shadowtint=-60:shadowoffset=1
+window.active.label.text.font:shadow=n:shadowtint=-60
+window.inactive.label.text.font:shadow=n:shadowtint=-60
 menu.items.font:
-menu.title.text.font:shadow=n:shadowtint=70
+menu.title.text.font:shadow=n:shadowtint=-60
