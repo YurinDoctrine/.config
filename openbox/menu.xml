@@ -141,7 +141,6 @@
         <menu execute="cbpp-recent-files-pipemenu" id="pipe-recentfilesmenu" label="Recent Files" />
         <separator />
         <menu id="settings" label="Settings">
-            <menu execute="cbpp-compositor" id="CompositingPipeMenu" label="Compositor" />
             <menu id="obConfig" label="Openbox">
                 <item label="Edit menu.xml">
                     <action name="Execute">
