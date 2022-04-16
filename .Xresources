@@ -3,3 +3,5 @@ Xft.dpi: 80
 Xft.antialias: true
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
+
+Xcursor.theme: CBPP
