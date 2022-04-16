@@ -37,8 +37,9 @@ exec pcmanfm-qt --desktop &
 ## Optional (Uncomment programs you might want to run)
 ## IRC Chat
 #exec kitty irssi &
-
 ## RSS Reader
 #exec kitty newsboat -r &
+## Katze
+exec oneko -tofocus -tora &
 
 exit
