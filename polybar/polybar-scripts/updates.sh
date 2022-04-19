@@ -11,7 +11,8 @@ updates() {
 }
 
 upgrade() {
-    DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical cbpp-gksudo xterm -e 'apt-get -yy dist-upgrade' >/dev/null 2>&1 && echo ""
+    DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical $(cbpp-gksudo xterm -e 'apt-get -yy dist-upgrade')
+    updates >/dev/null
 }
 
 case "$1" in
