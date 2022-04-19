@@ -33,7 +33,7 @@ exec pcmanfm-qt --desktop &
 ## 1. picom - start
 ## 2. polybar - start
 ## 3. dunst - start
-$(picom --backend xr_glx_hybrid --max-brightness 1.0 --use-damage && exec polyrestart && exec dunst -show_indicators -sort -word_wrap) &
+$(exec picom && exec polyrestart && exec dunst -show_indicators -sort -word_wrap) &
 
 ## Optional (Uncomment programs you might want to run)
 ## IRC Chat
