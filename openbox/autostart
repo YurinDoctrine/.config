@@ -23,17 +23,16 @@ xset r rate 500 10 &
 ## Turn off blank display
 xset s off -dpms &
 
-## Start LXDE PolKit
-exec lxpolkit &
-
 ## Start Desktop
 exec pcmanfm-qt --desktop &
 
+## Start LXDE PolKit
+exec lxpolkit &
+
 ## Group start:
-## 1. picom - start
-## 2. polybar - start
-## 3. dunst - start
-$(exec picom && exec polyrestart && exec dunst -show_indicators -sort -word_wrap) &
+## 1. polybar - start
+## 2. dunst - start
+$(exec polyrestart && exec dunst -show_indicators -sort -word_wrap) &
 
 ## Optional (Uncomment programs you might want to run)
 ## IRC Chat
