@@ -99,6 +99,8 @@ fi
 xdg-user-dirs-gtk-update
 xdg-user-dirs-update
 
+gtk-update-icon-cache
+
 sudo wget -P /usr/share/fonts/truetype/roboto/ https://github.com/YurinDoctrine/.config/raw/main/kitty/Roboto.ttf
 rm -rfd $HOME/.config/kitty/Roboto.ttf
 rm -rfd $HOME/.config/README.md
