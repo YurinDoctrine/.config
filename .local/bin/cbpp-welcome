@@ -103,13 +103,10 @@ gtk-update-icon-cache
 
 sudo wget -P /usr/share/fonts/truetype/roboto/ https://github.com/YurinDoctrine/.config/raw/main/kitty/Roboto.ttf
 sudo rm -rfd $HOME/.config/kitty/Roboto.ttf
-sudo rm -rfd $HOME/.config/README.md
 sudo rm -rfd $HOME/.config/default-tile.png
 sudo rm -rfd /etc/skel/.config/kitty/Roboto.ttf
-sudo rm -rfd /etc/skel/.config/README.md
 sudo rm -rfd /etc/skel/.config/default-tile.png
 sudo rm -rfd /root/.config/kitty/Roboto.ttf
-sudo rm -rfd /root/.config/README.md
 sudo rm -rfd /root/.config/default-tile.png
 
 python3 -m pip install --upgrade pip
