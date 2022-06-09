@@ -1,3 +1,4 @@
+export BROWSER=firefox-esr
 unset SDL_AUDIODRIVER
 export AUDIODRIVER=alsa
 export LIBGL_ALWAYS_SOFTWARE=0
