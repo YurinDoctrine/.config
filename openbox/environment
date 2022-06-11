@@ -1,7 +1,6 @@
 export BROWSER=firefox-esr
 unset SDL_AUDIODRIVER
 export AUDIODRIVER=alsa
-export WLR_RENDERER=vulkan
 export GALLIUM_DRIVER=llvmpipe
 export GBM_ALWAYS_SOFTWARE=1
 export LIBGL_ALWAYS_SOFTWARE=0
