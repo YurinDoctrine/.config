@@ -37,3 +37,4 @@ export DEFAULT_CHARSET=UTF-8
 export vblank_mode=2
 export MALLOC_OPTIONS=2f
 export _JAVA_AWT_WM_NONREPARENTING=1
+export INTEL_PRECISE_TRIG=1
