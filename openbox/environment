@@ -1,4 +1,4 @@
-export BROWSER=firefox-esr
+export TRUEBROWSER=firefox-esr
 unset SDL_AUDIODRIVER
 export AUDIODRIVER=alsa
 export GALLIUM_DRIVER=llvmpipe
