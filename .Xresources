@@ -1,3 +1,4 @@
+#define ICON_SIZE 9
 Xft.dpi: 80
 
 Xft.antialias: true
