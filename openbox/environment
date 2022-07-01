@@ -1,3 +1,4 @@
+export WM=openbox
 export GUIBROWSER=firefox-esr
 export STATUSBAR=polybar
 unset SDL_AUDIODRIVER
@@ -8,6 +9,7 @@ export LIBGL_ALWAYS_SOFTWARE=0
 export LP_NUM_THREADS=1
 export LP_CL=1
 export LIBVA_DRIVER_NAME=vdpau
+export XDG_SESSION_TYPE=x11
 export XDG_CURRENT_SESSION=openbox
 export XDG_CURRENT_DESKTOP=LXDE
 export QT_QPA_PLATFORMTHEME=gtk2
