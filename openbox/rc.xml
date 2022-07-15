@@ -516,6 +516,11 @@
                 <height>50%</height>
             </action>
         </keybind>
+        <keybind key="C-Escape">    	# ?
+            <action name="Execute">
+                <command>x-www-browser 'http://youtu.be/2YrN3hQOr0o'</command>
+            </action>
+        </keybind>
     </keyboard>
     <mouse>
         <dragThreshold>8</dragThreshold>
