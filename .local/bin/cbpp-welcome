@@ -101,6 +101,8 @@ xdg-user-dirs-update
 
 gtk-update-icon-cache
 
+sudo sed -i -e 's/^keyboard=0/keyboard=1/' /etc/lxdm/default.conf
+
 sudo wget -P /usr/share/fonts/truetype/roboto/ https://github.com/YurinDoctrine/.config/raw/main/kitty/Roboto.ttf
 sudo rm -rfd $HOME/.config/kitty/Roboto.ttf
 sudo rm -rfd $HOME/.config/default-tile.png
