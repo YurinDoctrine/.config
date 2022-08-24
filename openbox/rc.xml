@@ -131,7 +131,7 @@
             <name>3</name>
             <name>4</name>
         </names>
-        <popupTime>875</popupTime>
+        <popupTime>325</popupTime>
         <!-- The number of milliseconds to show the popup for when switching
          desktops.  Set this to 0 to disable the popup. -->
     </desktops>
@@ -898,22 +898,22 @@
     <file>/var/lib/openbox/debian-menu.xml</file>
     <file>debian-menu.xml</file> -->
         <file>menu.xml</file>
-        <hideDelay>200</hideDelay>
+        <hideDelay>100</hideDelay>
         <!-- if a press-release lasts longer than this setting (in milliseconds), the
        menu is hidden again -->
-        <middle>no</middle>
+        <middle>yes</middle>
         <!-- center submenus vertically about the parent entry -->
         <submenuShowDelay>100</submenuShowDelay>
         <!-- time to delay before showing a submenu after hovering over the parent
        entry.
        if this is a negative value, then the delay is infinite and the
        submenu will not be shown until it is clicked on -->
-        <submenuHideDelay>400</submenuHideDelay>
+        <submenuHideDelay>300</submenuHideDelay>
         <!-- time to delay before hiding a submenu when selecting another
        entry in parent menu
        if this is a negative value, then the delay is infinite and the
        submenu will not be hidden until a different submenu is opened -->
-        <applicationIcons>yes</applicationIcons>
+        <applicationIcons>no</applicationIcons>
         <!-- controls if icons appear in the client-list-(combined-)menu -->
         <manageDesktops>yes</manageDesktops>
         <!-- show the manage desktops section in the client-list-(combined-)menu -->
