@@ -93,7 +93,6 @@ sudo mkdir /usr/share/fonts/truetype/roboto
 sudo chown -R $USER:$USER /home/$USER
 
 if [ -f "/home/$USER/.gtk-bookmarks" ]; then
-    USER="$1"
     rpl -q '$USER' $USER /home/$USER/.gtk-bookmarks >/dev/null 2>&1
 fi
 xdg-user-dirs-gtk-update
