@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 get_window() {
-  xdotool windowactivate getactivewindow ;
+  xdotool windowactivate "$(xdotool getwindowfocus)" ;
 }
 xdotool getactivewindow getwindowname ;
 
