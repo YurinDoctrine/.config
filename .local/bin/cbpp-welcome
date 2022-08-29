@@ -109,6 +109,7 @@ sudo rm -rfd /etc/skel/.config/kitty/Roboto.ttf
 sudo rm -rfd /etc/skel/.config/default-tile.png
 sudo rm -rfd /root/.config/kitty/Roboto.ttf
 sudo rm -rfd /root/.config/default-tile.png
+rm -rfd /home/$USER/.cbpp-user-setup
 
 python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade Pillow
