@@ -275,12 +275,12 @@
         <!-- Keybindings for toggling Multimedia -->
         <keybind key="XF86AudioRaiseVolume">
             <action name="Execute">
-                <command>amixer set Master playback 2dB+</command>
+                <command>amixer sset Master playback 5%+</command>
             </action>
         </keybind>
         <keybind key="XF86AudioLowerVolume">
             <action name="Execute">
-                <command>amixer set Master playback 2dB-</command>
+                <command>amixer sset Master playback 5%-</command>
             </action>
         </keybind>
         <keybind key="XF86AudioMute">
