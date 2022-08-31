@@ -25,6 +25,7 @@ application/x-ogg=vlc.desktop
 application/x-shellscript=featherpad.desktop
 application/x-smil=vlc.desktop
 application/x-streamingmedia=vlc.desktop
+application/x-cd-image=flasher.desktop
 audio/aac=vlc.desktop
 audio/ac3=vlc.desktop
 audio/AMR=vlc.desktop
