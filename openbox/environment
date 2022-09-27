@@ -1,6 +1,7 @@
 export WM=openbox
 export GUIBROWSER=firefox-esr
 export STATUSBAR=polybar
+export CLICOLOR=1
 unset SDL_AUDIODRIVER
 export AUDIODRIVER=alsa
 export GALLIUM_DRIVER=llvmpipe
