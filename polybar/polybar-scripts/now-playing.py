@@ -111,8 +111,10 @@ def update_message():
             result = metadata_obj.get(field)
             if type(result) == dbus.Array:
                 result = result[0]
+                metadata_separator = "-"
             if not result:
-                result = "No "+field.split(":")[1]
+                metadata_separator = ""
+                result += ""
             metadata_string_list.append(str(result))
         metadata_string = (" "+metadata_separator+" ").join(metadata_string_list)
         if visual_len(metadata_string) > message_display_len:
