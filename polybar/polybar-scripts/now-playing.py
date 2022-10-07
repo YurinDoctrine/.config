@@ -100,7 +100,7 @@ def update_message():
         for field in metadata_fields:
             result = metadata_obj.get(field)
             if not result:
-                result += ""
+                result = ""
                 break
             if type(result) == dbus.Array:
                 result = result[0]
