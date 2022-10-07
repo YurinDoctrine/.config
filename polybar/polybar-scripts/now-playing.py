@@ -113,8 +113,8 @@ def update_message():
                 result = result[0]+" -"
                 metadata_separator = "-"
             if not result:
-                metadata_separator = ""
                 result += ""
+                metadata_separator = ""
             metadata_string_list.append(str(result))
         metadata_string = (" "+metadata_separator+" ").join(metadata_string_list)
         if visual_len(metadata_string) > message_display_len:
