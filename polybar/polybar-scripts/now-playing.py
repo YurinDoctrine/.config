@@ -87,16 +87,6 @@ def update_players():
             if get_name(player) == last_player_name:
                 current_player = index
 
-def handle_event(*args):
-    global current_player, players, last_player_name
-    update_players()
-    if len(players) == 0:
-        return
-    current_player += 1
-    current_player %= len(players)
-    last_player_name = get_name_by_index(current_player)
-#    print("SIGUSR1: updated values - current_player = %d  players len = %d"%(current_player,len(players)))
-
 def update_message():
     global players, current_player,player_names, message, display_text, message_display_len, display_suffix, last_player_name
     if len(players) == 0:
@@ -112,10 +102,10 @@ def update_message():
             if type(result) == dbus.Array:
                 result = result[0]+" -"
                 metadata_separator = "-"
+            metadata_string_list.append(str(result))
             if not result:
                 result += ""
                 metadata_separator = ""
-            metadata_string_list.append(str(result))
         metadata_string = (" "+metadata_separator+" ").join(metadata_string_list)
         if visual_len(metadata_string) > message_display_len:
             metadata_string = " " + metadata_string + ""
@@ -187,5 +177,4 @@ def main():
         print_text()
 
 if __name__ == '__main__':
-    signal.signal(signal.SIGUSR1, handle_event)
     main()
