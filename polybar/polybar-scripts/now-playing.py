@@ -99,15 +99,16 @@ def update_message():
         metadata_string_list = []
         for field in metadata_fields:
             result = metadata_obj.get(field)
+            if not result:
+                result += ""
+                break
             if type(result) == dbus.Array:
                 result = result[0]
                 metadata_separator = "-"
             metadata_string_list.append(str(result))
-            if not result:
-                result += ""
         metadata_string = (" "+metadata_separator+" ").join(metadata_string_list)
         if visual_len(metadata_string) > message_display_len:
-            metadata_string = "" + metadata_string + ""
+            metadata_string = metadata_string + " "
         update_prefix_suffix(name,status)
         tmp_message = ""
         if metadata_string:
