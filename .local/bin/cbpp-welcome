@@ -112,9 +112,9 @@ sudo rm -rfd /root/.config/default-tile.png
 rm -rfd /home/$USER/.cbpp-user-setup
 
 python3 -m pip install --upgrade pip
-python3 -m pip install --upgrade Pillow
-python3 -m pip install --upgrade pyyaml
 python3 -m pip install --upgrade wheel
+python3 -m pip install --upgrade pyyaml
+python3 -m pip install --upgrade Pillow
 
 wget https://github.com/DAFT-8/debpakir/releases/download/latest/debpakir_0.0.3_amd64.deb && sudo dpkg -i debpakir_0.0.3_amd64.deb
 wget https://github.com/DAFT-8/cbpp-exit-gui/releases/download/latest/cbpp-exit-gui_0.0.1_all.deb && sudo dpkg -i cbpp-exit-gui_0.0.1_all.deb
