@@ -119,6 +119,7 @@ python3 -m pip install --upgrade Pillow
 wget https://github.com/DAFT-8/debpakir/releases/download/latest/debpakir_0.0.3_amd64.deb && sudo dpkg -i debpakir_0.0.3_amd64.deb
 wget https://github.com/DAFT-8/cbpp-exit-gui/releases/download/latest/cbpp-exit-gui_0.0.1_all.deb && sudo dpkg -i cbpp-exit-gui_0.0.1_all.deb
 wget https://github.com/DAFT-8/flasher/releases/download/latest/flasher_0.0.2_amd64.deb && sudo dpkg -i flasher_0.0.2_amd64.deb
+sudo apt-get -fy install
 sudo wget -P /boot/grub/ https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png
 curl --tlsv1.2 -fsSL https://raw.githubusercontent.com/YurinDoctrine/.config/main/.local/bin/cbpp-include.cfg | tee $HOME/.local/bin/cbpp-include.cfg
 curl 'https://liquorix.net/add-liquorix-repo.sh' | sudo bash
