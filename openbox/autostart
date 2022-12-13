@@ -34,6 +34,9 @@ exec lxpolkit &
 ## 2. dunst - start
 $(exec polyrestart && exec dunst -show_indicators -sort -word_wrap) &
 
+## Auto Scaling
+$(for output in $(xrandr --prop | grep -E -o -i "^[A-Z\-]+-[0-9]+"); do xrandr --output "$output" --set "scaling mode" "Full aspect"; done) &
+
 ## Optional (Uncomment programs you might want to run)
 ## IRC Chat
 #exec kitty irssi &
