@@ -43,6 +43,6 @@ $(for output in $(xrandr --prop | grep -E -o -i "^[A-Z\-]+-[0-9]+"); do xrandr -
 ## RSS Reader
 #exec kitty newsboat -r &
 ## Katze
-exec oneko -tofocus -tora &
+#exec oneko -tofocus -tora &
 
 exit
