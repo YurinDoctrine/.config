@@ -74,11 +74,6 @@
             </item>
         </menu>
         <menu id="multimedia" label="Multimedia">
-            <item label="Console CD/DVD Burner">
-                <action name="Execute">
-                    <execute>xterm -max -e cdw</execute>
-                </action>
-            </item>
             <item label="VLC Media Player">
                 <action name="Execute">
                     <execute>vlc --started-from-file</execute>
@@ -126,11 +121,6 @@
             <item label="Google Docs">
                 <action name="Execute">
                     <execute>x-www-browser http://drive.google.com</execute>
-                </action>
-            </item>
-            <item label="Gnumeric Spreadsheet">
-                <action name="Execute">
-                    <execute>gnumeric</execute>
                 </action>
             </item>
         </menu>
