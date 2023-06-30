@@ -23,15 +23,15 @@ xset r rate 500 10 &
 ## Turn off blank display
 xset s off -dpms &
 
-exec pipewire &
-
-exec wireplumber &
-
 ## Start Desktop
 exec pcmanfm-qt --desktop &
 
 ## Start LXDE PolKit
 exec lxpolkit &
+
+## Start audio
+exec pipewire &
+exec wireplumber &
 
 ## Group start:
 ## 1. polybar - start
