@@ -23,20 +23,20 @@ xset r rate 500 10 &
 ## Turn off blank display
 xset s off -dpms &
 
+exec pipewire &
+
+exec wireplumber &
+
 ## Start Desktop
 exec pcmanfm-qt --desktop &
 
 ## Start LXDE PolKit
 exec lxpolkit &
 
-exec pipewire &
-
-exec wireplumber &
-
 ## Group start:
 ## 1. polybar - start
 ## 2. dunst - start
-$(sleep 1s && exec polyrestart && exec dunst -show_indicators -sort -word_wrap) &
+$(exec polyrestart && exec dunst -show_indicators -sort -word_wrap) &
 
 ## Auto Scaling
 $(for output in $(xrandr --prop | grep -E -o -i "^[A-Z\-]+-[0-9]+"); do xrandr --output "$output" --set "scaling mode" "Full aspect"; done) &
