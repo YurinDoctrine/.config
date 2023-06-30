@@ -1,7 +1,10 @@
+export PATH="$PATH:/usr/sbin:/sbin:/usr/bin:/bin:/usr/local/bin:~/.local/bin"
+export MANPATH="/usr/share/man:/usr/local/man"
 export WM=openbox
 export GUIBROWSER=firefox-esr
 export STATUSBAR=polybar
 export CLICOLOR=1
+unset MAILCHECK 
 unset SDL_AUDIODRIVER
 export AUDIODRIVER=alsa
 export GALLIUM_DRIVER=llvmpipe
@@ -10,7 +13,6 @@ export LIBGL_ALWAYS_SOFTWARE=0
 export LP_NUM_THREADS=1
 export LP_CL=1
 export LIBVA_DRIVER_NAME=vdpau
-export XDG_SESSION_TYPE=x11
 export XDG_CURRENT_SESSION=openbox
 export XDG_CURRENT_DESKTOP=LXDE
 export QT_LOGGING_RULES='*=false'
@@ -25,8 +27,6 @@ export QT_ENABLE_GLYPH_CACHE_WORKAROUND=1
 export PLASMA_INTEGRATION_USE_PORTAL=1
 export PLASMA_USE_QT_SCALING=1
 export NO_AT_BRIDGE=1
-export WINIT_UNIX_BACKEND=x11
-export WINIT_X11_SCALE_FACTOR=1
 export GTKCAIRO_BACKEND=gl
 export GDK_CORE_DEVICE_EVENTS=1
 export GDK_DPI_SCALE=1
