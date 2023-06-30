@@ -11,7 +11,7 @@
 ## Have Fun & Happy CrunchBangin'! :)
 
 ## Merge resources
-xrdb -merge $HOME/.Xresources &
+xrdb -merge ~/.Xresources &
 
 ## Turn off pointer acceleration
 xset m 0 0 &
