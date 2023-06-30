@@ -76,7 +76,7 @@ trap 'final' SIGINT
 final
 
 chsh -s /usr/bin/fish
-sudo sed -i -e 's/^(sleep 6s && exec cbpp-welcome --first-run) &/#(sleep 6s && exec cbpp-welcome --first-run) &/' $HOME/.config/openbox/autostart
+sudo sed -i -e 's/^(sleep 6s && exec cbpp-welcome --first-run) &/#(sleep 6s && exec cbpp-welcome --first-run) &/' /home/$USER/.config/openbox/autostart
 sudo sed -i -e 's/^(sleep 6s && exec cbpp-welcome --first-run) &/#(sleep 6s && exec cbpp-welcome --first-run) &/' /etc/skel/.config/openbox/autostart
 sudo sed -i -e 's/^(sleep 6s && exec cbpp-welcome --first-run) &/#(sleep 6s && exec cbpp-welcome --first-run) &/' /root/.config/openbox/autostart
 
@@ -102,15 +102,6 @@ gtk-update-icon-cache
 
 sudo sed -i -e 's/^keyboard=0/keyboard=1/' /etc/lxdm/default.conf
 
-sudo wget -P /usr/share/fonts/truetype/roboto/ https://github.com/YurinDoctrine/.config/raw/main/kitty/Roboto.ttf
-sudo rm -rfd $HOME/.config/kitty/Roboto.ttf
-sudo rm -rfd $HOME/.config/default-tile.png
-sudo rm -rfd /etc/skel/.config/kitty/Roboto.ttf
-sudo rm -rfd /etc/skel/.config/default-tile.png
-sudo rm -rfd /root/.config/kitty/Roboto.ttf
-sudo rm -rfd /root/.config/default-tile.png
-rm -rfd /home/$USER/.cbpp-user-setup
-
 python3 -m pip install --user --upgrade --break-system-packages pip
 python3 -m pip install --user --upgrade --break-system-packages wheel
 python3 -m pip install --user --upgrade --break-system-packages pyyaml
@@ -121,8 +112,9 @@ wget https://github.com/DAFT-8/debpakir/releases/download/latest/debpakir_0.0.3_
 wget https://github.com/DAFT-8/cbpp-exit-gui/releases/download/latest/cbpp-exit-gui_0.0.1_all.deb && sudo dpkg -i cbpp-exit-gui_0.0.1_all.deb
 wget https://github.com/DAFT-8/flasher/releases/download/latest/flasher_0.0.2_amd64.deb && sudo dpkg -i flasher_0.0.2_amd64.deb
 sudo apt-get install -f --assume-yes
+sudo wget -P /usr/share/fonts/truetype/roboto/ https://github.com/YurinDoctrine/.config/raw/main/kitty/Roboto.ttf
 sudo wget -P /boot/grub/ https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && sudo update-grub
-curl --tlsv1.2 -fsSL https://raw.githubusercontent.com/YurinDoctrine/.config/main/.local/bin/cbpp-include.cfg | tee $HOME/.local/bin/cbpp-include.cfg
+curl --tlsv1.2 -fsSL https://raw.githubusercontent.com/YurinDoctrine/.config/main/.local/bin/cbpp-include.cfg | tee /home/$USER/.local/bin/cbpp-include.cfg
 
 (sleep 20s && killall openbox) &
 
