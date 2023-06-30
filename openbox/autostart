@@ -29,10 +29,6 @@ exec pcmanfm-qt --desktop &
 ## Start LXDE PolKit
 exec lxpolkit &
 
-## Start audio
-exec pipewire &
-exec wireplumber &
-
 ## Group start:
 ## 1. polybar - start
 ## 2. dunst - start
