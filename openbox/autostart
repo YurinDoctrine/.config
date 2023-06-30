@@ -32,7 +32,8 @@ exec lxpolkit &
 ## Group start:
 ## 1. polybar - start
 ## 2. dunst - start
-$(exec polyrestart && exec dunst -show_indicators -sort -word_wrap) &
+## 3. pipewire & wireplumber - start
+$(exec polyrestart && exec dunst -show_indicators -sort -word_wrap && pipewire && wireplumber) &
 
 ## Auto Scaling
 $(for output in $(xrandr --prop | grep -E -o -i "^[A-Z\-]+-[0-9]+"); do xrandr --output "$output" --set "scaling mode" "Full aspect"; done) &
