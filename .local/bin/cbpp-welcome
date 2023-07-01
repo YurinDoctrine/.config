@@ -82,7 +82,6 @@ sudo sed -i -e 's/^(sleep 6s && exec cbpp-welcome --first-run) &/#(sleep 6s && e
 
 sudo mkdir /usr/share/desktop-directories
 sudo mkdir /usr/share/fonts/truetype/roboto
- mkdir /home/$USER/tmp
  mkdir /home/$USER/backup
  mkdir /home/$USER/templates
  mkdir /home/$USER/public
@@ -93,6 +92,8 @@ sudo mkdir /usr/share/fonts/truetype/roboto
  mkdir /home/$USER/music
  mkdir /home/$USER/videos
 sudo chown -hR $USER:$USER /home/$USER
+
+sudo ln -s /opt/ .
 
 if [ -f "/home/$USER/.config/user-dirs.dirs" ]; then
     rpl -fq '\$USER' $(whoami) /home/$USER/.config/user-dirs.dirs >/dev/null 2>&1
