@@ -1,6 +1,8 @@
-file:///home/$USER/Public
-file:///home/$USER/Documents
-file:///home/$USER/Downloads
-file:///home/$USER/Pictures
-file:///home/$USER/Music
-file:///home/$USER/Videos
+file:///home/$USER/backup
+file:///home/$USER/templates
+file:///home/$USER/public
+file:///home/$USER/documents
+file:///home/$USER/downloads
+file:///home/$USER/pictures
+file:///home/$USER/music
+file:///home/$USER/videos
