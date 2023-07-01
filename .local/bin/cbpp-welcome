@@ -88,7 +88,7 @@ sudo mkdir /usr/share/fonts/truetype/roboto
  mkdir /home/$USER/desktop
  mkdir /home/$USER/documents
  mkdir /home/$USER/downloads
- mkdir /home/$USER/pictures
+ mkdir /home/$USER/images
  mkdir /home/$USER/music
  mkdir /home/$USER/videos
 sudo chown -hR $USER:$USER /home/$USER
