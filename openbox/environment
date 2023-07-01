@@ -1,5 +1,6 @@
 export PATH="$PATH:/usr/sbin:/sbin:/usr/bin:/bin:/usr/local/bin:/home/$USER/.local/bin:/var/lib/flatpak/exports/bin"
 export MANPATH="/usr/share/man:/usr/local/man"
+export GSETTINGS_SCHEMA_DIR="/usr/share/glib-2.0/schemas"
 export WM=openbox
 export GUIBROWSER=firefox-esr
 export STATUSBAR=polybar
