@@ -94,6 +94,7 @@ sudo mkdir /usr/share/fonts/truetype/roboto
 sudo chown -hR $USER:$USER /home/$USER
 
 sudo ln -s /opt/ /home/$USER/
+sudo ln -s /tmp/ /home/$USER/
 
 if [ -f "/home/$USER/.config/user-dirs.dirs" ]; then
     rpl -fq '\$USER' $(whoami) /home/$USER/.config/user-dirs.dirs >/dev/null 2>&1
