@@ -3,10 +3,12 @@
 get_window() {
   xdotool windowactivate "$(xdotool getactivewindow)" ;
 }
-xdotool getwindowfocus getwindowname ;
 
 case "$1" in
     --get)
         get_window
+        ;;
+    *)
+        xdotool getwindowfocus getwindowname ;
         ;;
 esac
