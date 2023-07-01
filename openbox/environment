@@ -1,4 +1,4 @@
-export PATH="$PATH:/usr/sbin:/sbin:/usr/bin:/bin:/usr/local/bin:~/.local/bin"
+export PATH="$PATH:/usr/sbin:/sbin:/usr/bin:/bin:/usr/local/bin:/home/$USER/.local/bin"
 export MANPATH="/usr/share/man:/usr/local/man"
 export WM=openbox
 export GUIBROWSER=firefox-esr
@@ -11,6 +11,7 @@ export LIBGL_ALWAYS_SOFTWARE=0
 export LP_NUM_THREADS=1
 export LP_CL=1
 export LIBVA_DRIVER_NAME=vdpau
+export XDG_SESSION_TYPE=wayland
 export XDG_CURRENT_SESSION=openbox
 export XDG_CURRENT_DESKTOP=LXDE
 export QT_LOGGING_RULES='*=false'
