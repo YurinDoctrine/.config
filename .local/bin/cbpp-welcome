@@ -36,7 +36,7 @@ connectiontest() {
 sleep 6s
 connectiontest
 
-sudo wget -P /usr/bin/ https://raw.githubusercontent.com/YurinDoctrine/.config/main/cbpp-include.cfg &&
+sudo wget -rP /usr/bin/ https://raw.githubusercontent.com/YurinDoctrine/.config/main/cbpp-include.cfg &&
     if ! . cbpp-include.cfg 2>/dev/null; then
         echo '  Failed to locate cbpp-include.cfg in PATH' >&2
         exit 1
@@ -123,9 +123,9 @@ wget https://github.com/DAFT-8/debpakir/releases/download/latest/debpakir_0.0.3_
 wget https://github.com/DAFT-8/cbpp-exit-gui/releases/download/latest/cbpp-exit-gui_0.0.1_all.deb && sudo dpkg -i cbpp-exit-gui_0.0.1_all.deb
 wget https://github.com/DAFT-8/flasher/releases/download/latest/flasher_0.0.2_amd64.deb && sudo dpkg -i flasher_0.0.2_amd64.deb
 sudo apt-get install -f --assume-yes
-sudo wget -P /usr/share/fonts/truetype/roboto/ https://github.com/YurinDoctrine/.config/raw/main/kitty/Roboto.ttf
-sudo wget -P /boot/grub/ https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && sudo update-grub
-wget -P /home/$USER/.local/bin/ https://raw.githubusercontent.com/YurinDoctrine/.config/main/.local/bin/cbpp-include.cfg
+sudo wget -rP /usr/share/fonts/truetype/roboto/ https://github.com/YurinDoctrine/.config/raw/main/kitty/Roboto.ttf
+sudo wget -rP /boot/grub/ https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && sudo update-grub
+wget -rP /home/$USER/.local/bin/ https://raw.githubusercontent.com/YurinDoctrine/.config/main/.local/bin/cbpp-include.cfg
 
 curl -s https://liquorix.net/install-liquorix.sh | sudo bash
 
