@@ -82,15 +82,21 @@ sudo sed -i -e 's/^(sleep 6s && exec cbpp-welcome --first-run) &/#(sleep 6s && e
 
 sudo mkdir /usr/share/desktop-directories
 sudo mkdir /usr/share/fonts/truetype/roboto
- mkdir /home/$USER/Public
- mkdir /home/$USER/Desktop
+ mkdir /home/$USER/tmp
  mkdir /home/$USER/backup
- mkdir /home/$USER/Documents
- mkdir /home/$USER/Downloads
- mkdir /home/$USER/Pictures
- mkdir /home/$USER/Music
- mkdir /home/$USER/Videos
+ mkdir /home/$USER/templates
+ mkdir /home/$USER/public
+ mkdir /home/$USER/desktop
+ mkdir /home/$USER/documents
+ mkdir /home/$USER/downloads
+ mkdir /home/$USER/pictures
+ mkdir /home/$USER/music
+ mkdir /home/$USER/videos
 sudo chown -hR $USER:$USER /home/$USER
+
+if [ -f "/home/$USER/.config/user-dirs.dirs" ]; then
+    rpl -fq '\$USER' $(whoami) /home/$USER/.config/user-dirs.dirs >/dev/null 2>&1
+fi
 
 if [ -f "/home/$USER/.gtk-bookmarks" ]; then
     rpl -fq '\$USER' $(whoami) /home/$USER/.gtk-bookmarks >/dev/null 2>&1
