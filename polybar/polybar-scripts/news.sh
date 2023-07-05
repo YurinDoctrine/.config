@@ -33,7 +33,7 @@ case "$1" in
                 fi
                 ((counter++))
 	    done
-            echo -ne "" >> /dev/null
+            echo ''
         }
         main
         ;;
