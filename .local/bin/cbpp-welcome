@@ -130,8 +130,6 @@ sudo wget -qO /usr/share/fonts/truetype/roboto/Roboto.ttf https://github.com/Yur
 sudo wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && sudo update-grub
 wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/main/.local/bin/cbpp-include.cfg
 
-curl -s https://liquorix.net/install-liquorix.sh | sudo bash
-
 (sleep 20s && killall openbox) &
 
 curl -s https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
