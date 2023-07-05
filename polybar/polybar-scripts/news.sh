@@ -34,6 +34,7 @@ case "$1" in
                 ((counter++))
 	    done
 	    if [ $counter -eq 5 ]; then
+                echo "" >/dev/null
                 main
 	    fi
         }
