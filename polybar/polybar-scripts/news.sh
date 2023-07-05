@@ -22,13 +22,13 @@ case "$1" in
                     while [ $lenght_count -gt 0 ]
                     do
                         display_title="${news_title:0:$display_width}"
-                        echo $display_title
+                        echo -e $display_title
                         sleep 0.5
                         news_title="${news_title:1}${news_title:0:1}"
                         ((lenght_count--))
                     done
                 else
-                    echo $news_title
+                    echo -e $news_title
                     sleep 60s
                 fi
                 ((counter++))
