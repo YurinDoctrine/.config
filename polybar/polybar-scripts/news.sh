@@ -34,7 +34,6 @@ case "$1" in
                 ((counter++))
 	    done
             echo "" >/dev/null
-            main
         }
         main
         ;;
