@@ -6,13 +6,13 @@ updates() {
         if [ "$list_upgradeable" -gt "0" ]; then
             echo -e "[$list_upgradeable]"
         else
-            echo "" >/dev/null
+            echo -ne "" >> /dev/null
         fi
 }
 
 upgrade() {
     DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical $(cbpp-gksudo xterm -e 'apt-get dist-upgrade' && polyrestart)
-    updates >/dev/null
+    updates
 }
 
 case "$1" in

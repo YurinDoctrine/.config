@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 get_window() {
-  xdotool windowactivate "$(xdotool getactivewindow)" ;
+  xdotool windowactivate "$(xdotool getactivewindow)" >> /dev/null ;
 }
 
 case "$1" in
