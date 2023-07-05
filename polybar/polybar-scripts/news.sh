@@ -33,10 +33,8 @@ case "$1" in
                 fi
                 ((counter++))
 	    done
-	    if [ $counter -eq 5 ]; then
-                echo "" >/dev/null
-                main
-	    fi
+            echo "" >/dev/null
+            main
         }
         main
         ;;
