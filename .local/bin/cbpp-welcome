@@ -96,6 +96,10 @@ sudo chown -hR $USER:$USER /home/$USER
 sudo ln -s /opt/ /home/$USER/
 sudo ln -s /tmp/ /home/$USER/
 
+if [ -f "/home/$USER/.config/gtk-3.0/bookmarks" ]; then
+    rpl -fq '\$USER' $(whoami) /home/$USER/.config/gtk-3.0/bookmarks >/dev/null 2>&1
+fi
+
 if [ -f "/home/$USER/.config/user-dirs.dirs" ]; then
     rpl -fq '\$USER' $(whoami) /home/$USER/.config/user-dirs.dirs >/dev/null 2>&1
 fi
