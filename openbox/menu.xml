@@ -9,7 +9,7 @@
         <separator />
         <item label="Terminal Emulator">
             <action name="Execute">
-                <execute>kitty</execute>
+                <execute>kitty --single-instance</execute>
             </action>
         </item>
         <item label="Web Browser">
@@ -184,7 +184,7 @@
             </item>
             <item label="Terminal Emulator (root)">
                 <action name="Execute">
-                    <execute>cbpp-gksudo kitty</execute>
+                    <execute>cbpp-gksudo kitty --single-instance</execute>
                 </action>
             </item>
         </menu>
