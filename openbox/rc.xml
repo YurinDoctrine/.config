@@ -391,9 +391,9 @@
             <action name="Execute">
                 <startupnotify>
                     <enabled>true</enabled>
-                    <name>kitty</name>
+                    <name>kitty --single-instance</name>
                 </startupnotify>
-                <command>kitty</command>
+                <command>kitty --single-instance</command>
             </action>
         </keybind>
         <keybind key="W-w">
