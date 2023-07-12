@@ -108,6 +108,7 @@ def update_message():
             metadata_string_list.append(str(result))
         metadata_string = (" "+metadata_separator+" ").join(metadata_string_list)
         if visual_len(metadata_string) > message_display_len:
+            message_display_len = 32
             metadata_string = metadata_string + " "
         else:
             message_display_len = visual_len(metadata_string)
