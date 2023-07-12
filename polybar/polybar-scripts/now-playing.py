@@ -109,6 +109,8 @@ def update_message():
         metadata_string = (" "+metadata_separator+" ").join(metadata_string_list)
         if visual_len(metadata_string) > message_display_len:
             metadata_string = metadata_string + " "
+        else:
+            message_display_len = visual_len(metadata_string)
         update_prefix_suffix(name,status)
         tmp_message = ""
         if metadata_string:
