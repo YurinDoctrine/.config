@@ -7,7 +7,7 @@ curl --tlsv1.2 -fsSL https://raw.githubusercontent.com/YurinDoctrine/.config/mai
  ./cbpp-welcome
 
 ```
-Artix
+other distros
 ```sh
 curl --tlsv1.2 -fsSL https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-welcome >cbpp-welcome && \
  chmod 0755 cbpp-welcome && \
