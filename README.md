@@ -1,15 +1,7 @@
-# Install this config on
+# Install this config
 
-crunchbangplusplus
 ```sh
 curl --tlsv1.2 -fsSL https://raw.githubusercontent.com/YurinDoctrine/.config/main/.local/bin/cbpp-welcome >cbpp-welcome && \
- chmod 0755 cbpp-welcome && \
- ./cbpp-welcome
-
-```
-other distros
-```sh
-curl --tlsv1.2 -fsSL https://raw.githubusercontent.com/YurinDoctrine/.config/nix/.local/bin/cbpp-welcome >cbpp-welcome && \
  chmod 0755 cbpp-welcome && \
  ./cbpp-welcome
 
