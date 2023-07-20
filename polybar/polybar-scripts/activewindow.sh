@@ -16,6 +16,6 @@ case "$1" in
         kill_task
         ;;
     *)
-        xdotool getwindowfocus getwindowname ;
+        xdotool getwindowfocus getwindowname | head -c48 ;
         ;;
 esac
