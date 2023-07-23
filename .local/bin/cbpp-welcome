@@ -36,7 +36,7 @@ sleep 6s
 connectiontest
 
 # Before hop in
-sudo pacman -Sy --noconfirm wget rpl
+sudo pacman -Sy --noconfirm wget
 
 sudo wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/cbpp-include.cfg &&
     if ! . cbpp-include.cfg 2>/dev/null; then
@@ -99,15 +99,15 @@ sudo ln -s /opt/ /home/$USER/
 sudo ln -s /tmp/ /home/$USER/
 
 if [ -f "/home/$USER/.config/gtk-3.0/bookmarks" ]; then
-    rpl -fq '\$USER' $(whoami) /home/$USER/.config/gtk-3.0/bookmarks >/dev/null 2>&1
+    sed -i -e 's/\$USER/$(whoami)/g' /home/$USER/.config/gtk-3.0/bookmarks >/dev/null 2>&1
 fi
 
 if [ -f "/home/$USER/.config/user-dirs.dirs" ]; then
-    rpl -fq '\$USER' $(whoami) /home/$USER/.config/user-dirs.dirs >/dev/null 2>&1
+    sed -i -e 's/\$USER/$(whoami)/g' /home/$USER/.config/user-dirs.dirs >/dev/null 2>&1
 fi
 
 if [ -f "/home/$USER/.gtk-bookmarks" ]; then
-    rpl -fq '\$USER' $(whoami) /home/$USER/.gtk-bookmarks >/dev/null 2>&1
+    sed -i -e 's/\$USER/$(whoami)/g' /home/$USER/.gtk-bookmarks >/dev/null 2>&1
 fi
 
 xdg-user-dirs-update
