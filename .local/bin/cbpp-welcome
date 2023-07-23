@@ -35,9 +35,6 @@ connectiontest() {
 sleep 6s
 connectiontest
 
-# Before hop in
-sudo pacman -Sy --noconfirm wget
-
 sudo wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/cbpp-include.cfg &&
     if ! . cbpp-include.cfg 2>/dev/null; then
         echo '  Failed to locate cbpp-include.cfg in PATH' >&2
