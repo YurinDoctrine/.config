@@ -113,7 +113,7 @@ gtk-update-icon-cache
 
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-sudo pacman -S --noconfirm xterm python-pyudev xmlstarlet
+sudo pacman -S --noconfirm python-pyudev xmlstarlet
 
 python3 -m pip install --user --upgrade --break-system-packages pip
 python3 -m pip install --user --upgrade --break-system-packages wheel
