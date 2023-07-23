@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [[ $1 = '--first-run' ]]; then # First run
-    kitty cbpp-welcome
+    xterm cbpp-welcome
     exit 0
 fi
 
