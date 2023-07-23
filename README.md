@@ -1,7 +1,7 @@
 # Install this config
 
 ```sh
-curl --tlsv1.2 -fsSL https://raw.githubusercontent.com/YurinDoctrine/.config/main/.local/bin/cbpp-welcome >cbpp-welcome && \
+curl --tlsv1.2 -fsSL https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-welcome >cbpp-welcome && \
  chmod 0755 cbpp-welcome && \
  ./cbpp-welcome
 
