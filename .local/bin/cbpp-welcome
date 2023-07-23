@@ -116,12 +116,13 @@ sudo sed -i -e 's/^keyboard=0/keyboard=1/' /etc/lxdm/default.conf
 
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
+sudo apt-get install xterm python3-pyudev xmlstarlet -yy
+
 python3 -m pip install --user --upgrade --break-system-packages pip
 python3 -m pip install --user --upgrade --break-system-packages wheel
 python3 -m pip install --user --upgrade --break-system-packages pyyaml
 python3 -m pip install --user --upgrade --break-system-packages Pillow
 
-sudo apt-get install xterm python3-pyudev xmlstarlet -yy
 wget -q https://github.com/DAFT-8/debpakir/releases/download/latest/debpakir_0.0.3_amd64.deb && sudo dpkg -i debpakir_0.0.3_amd64.deb
 wget -q https://github.com/DAFT-8/cbpp-exit-gui/releases/download/latest/cbpp-exit-gui_0.0.1_all.deb && sudo dpkg -i cbpp-exit-gui_0.0.1_all.deb
 wget -q https://github.com/DAFT-8/flasher/releases/download/latest/flasher_0.0.2_amd64.deb && sudo dpkg -i flasher_0.0.2_amd64.deb
