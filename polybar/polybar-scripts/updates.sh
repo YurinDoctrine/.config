@@ -2,7 +2,7 @@
 
 updates() {
 
-        list_upgradeable=$(apt-get dist-upgrade -s | grep '[0-9] upgraded' | grep -o '[0-9]' | head -n1)
+        list_upgradeable=$(pacman -Qu | wc -l)
         if [ "$list_upgradeable" -gt "0" ]; then
             echo -e "[$list_upgradeable]"
         else
@@ -11,7 +11,7 @@ updates() {
 }
 
 upgrade() {
-    DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical $(cbpp-gksudo xterm -e 'apt-get dist-upgrade' && polyrestart)
+    $(cbpp-gksudo xterm -e 'pacman -Syyu' && polyrestart)
     updates
 }
 
