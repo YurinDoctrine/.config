@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [[ $1 = '--first-run' ]]; then # First run
-    xterm cbpp-welcome
+    kitty cbpp-welcome
     exit 0
 fi
 
@@ -96,15 +96,15 @@ sudo ln -s /opt/ /home/$USER/
 sudo ln -s /tmp/ /home/$USER/
 
 if [ -f "/home/$USER/.config/gtk-3.0/bookmarks" ]; then
-    sed -i -e 's/\$USER/$(whoami)/g' /home/$USER/.config/gtk-3.0/bookmarks >/dev/null 2>&1
+    sed -i -e "s/\$USER/$(whoami)/g" /home/$USER/.config/gtk-3.0/bookmarks >/dev/null 2>&1
 fi
 
 if [ -f "/home/$USER/.config/user-dirs.dirs" ]; then
-    sed -i -e 's/\$USER/$(whoami)/g' /home/$USER/.config/user-dirs.dirs >/dev/null 2>&1
+    sed -i -e "s/\$USER/$(whoami)/g" /home/$USER/.config/user-dirs.dirs >/dev/null 2>&1
 fi
 
 if [ -f "/home/$USER/.gtk-bookmarks" ]; then
-    sed -i -e 's/\$USER/$(whoami)/g' /home/$USER/.gtk-bookmarks >/dev/null 2>&1
+    sed -i -e "s/\$USER/$(whoami)/g" /home/$USER/.gtk-bookmarks >/dev/null 2>&1
 fi
 
 xdg-user-dirs-update
@@ -120,6 +120,7 @@ python3 -m pip install --user --upgrade --break-system-packages wheel
 python3 -m pip install --user --upgrade --break-system-packages pyyaml
 python3 -m pip install --user --upgrade --break-system-packages Pillow
 
+sudo mkdir -p /usr/share/fonts/truetype/roboto
 sudo wget -qO /usr/share/fonts/truetype/roboto/Roboto.ttf https://github.com/YurinDoctrine/.config/raw/artix/kitty/Roboto.ttf
 sudo wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && sudo update-grub
 wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-include.cfg
