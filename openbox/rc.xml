@@ -400,9 +400,9 @@
             <action name="Execute">
                 <startupnotify>
                     <enabled>true</enabled>
-                    <name>firefox</name>
+                    <name>firefox-esr</name>
                 </startupnotify>
-                <command>firefox -purgecaches</command>
+                <command>firefox-esr -purgecaches</command>
             </action>
         </keybind>
         <keybind key="W-l">
