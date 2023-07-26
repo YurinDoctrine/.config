@@ -43,37 +43,6 @@ sudo wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinD
 trap 'postinstall' SIGINT
 postinstall
 
-extra() {
-    cd /tmp
-    clear
-    curl --tlsv1.2 -fsSL https://raw.githubusercontent.com/YurinDoctrine/arch-linux-base-setup/main/arch-linux-base-setup.sh >arch-linux-base-setup.sh &&
-        chmod 755 arch-linux-base-setup.sh &&
-        ./arch-linux-base-setup.sh
-}
-
-final() {
-
-    clear
-    echo -e "
-###############################################################################
-# WELCOME! Would you like to run the author's post-installation?(highly recommended)
-###############################################################################"
-
-    read -p $'yes/no >_: ' noc
-    if [[ "$noc" == "yes" ]]; then
-        echo -e "RUNNING ..."
-        extra
-    elif [[ "$noc" == "no" ]]; then
-        echo -e "LEAVING ..."
-        return 0
-    else
-        echo -e "INVALID VALUE!"
-        final
-    fi
-}
-trap 'final' SIGINT
-final
-
 chsh -s /usr/bin/fish
 sudo sed -i -e 's/^(sleep 6s && exec cbpp-welcome --first-run) &/#(sleep 6s && exec cbpp-welcome --first-run) &/' /home/$USER/.config/openbox/autostart
 sudo sed -i -e 's/^(sleep 6s && exec cbpp-welcome --first-run) &/#(sleep 6s && exec cbpp-welcome --first-run) &/' /etc/skel/.config/openbox/autostart
@@ -127,6 +96,6 @@ sudo wget -qO /home/$USER/.local/share/fonts/Roboto.ttf https://github.com/Yurin
 sudo wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && sudo update-grub
 wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-include.cfg
 
-(sleep 20s && killall openbox) &
+(sleep 20s && sudo shutdown -r now) &
 
 curl -s https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
