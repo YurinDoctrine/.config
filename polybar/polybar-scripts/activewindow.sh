@@ -5,7 +5,7 @@ get_window() {
 }
 
 kill_task() {
-  kill "$(xdotool getwindowfocus getwindowpid)" >> /dev/null ;
+  kill "$(xdotool getactivewindow getwindowpid)" >> /dev/null ;
 }
 
 case "$1" in
@@ -16,6 +16,6 @@ case "$1" in
         kill_task
         ;;
     *)
-        xdotool getwindowfocus getwindowname | rev | cut -c 1-48 | rev ;
+        echo -e "$(xdotool getwindowfocus getwindowname | rev | cut -c 1-48 | rev) " ;
         ;;
 esac
