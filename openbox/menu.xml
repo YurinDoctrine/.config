@@ -33,13 +33,6 @@
             </action>
         </item>
         <separator />
-        <menu id="accessories" label="Accessories">
-            <item label="Virtual Keyboard">
-                <action name="Execute">
-                    <execute>xvkbd</execute>
-                </action>
-            </item>
-        </menu>
         <menu id="graphics" label="Graphics">
             <item label="Viewnior Image Viewer">
                 <action name="Execute">
