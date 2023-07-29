@@ -49,7 +49,6 @@ sudo sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && e
 sudo sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /root/.config/openbox/autostart
 
 sudo mkdir /usr/share/desktop-directories
-sudo mkdir /usr/share/fonts/truetype/roboto
  mkdir /home/$USER/backup
  mkdir /home/$USER/templates
  mkdir /home/$USER/public
