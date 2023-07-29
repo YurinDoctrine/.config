@@ -21,9 +21,9 @@ else
 	# Output Openbox menu
 	menuStart
 	menuItem 'Logout' 'openbox --exit'
-	menuItem 'Reboot' '$(cbpp-gksudo xterm -e "shutdown -r now")'
-	menuItem 'Shutdown' '$(cbpp-gksudo xterm -e "shutdown now")'
-	menuItem 'Suspend' '$(cbpp-gksudo xterm -e "suspend")'
+	menuItem 'Reboot' 'cbpp-gksudo xterm -e "shutdown -r now"'
+	menuItem 'Shutdown' 'cbpp-gksudo xterm -e "shutdown now"'
+	menuItem 'Suspend' 'cbpp-gksudo xterm -e "suspend"'
 	menuEnd
 fi
 exit 0
