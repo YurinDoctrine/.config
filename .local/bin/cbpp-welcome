@@ -13,7 +13,7 @@ say() {
 connectiontest() {
     local TEXT_CHECKING='Checking internet connection...'
     local TEXT_FAILED='Internet connection test failed!'
-    local TEXT_ABORT='Script aborted.'
+    local TEXT_ABORT='Please connect to an Internet first.'
     local TEXT_OK='Internet connection test passed!'
 
     local -i i attempts=${1-0}
@@ -27,13 +27,13 @@ connectiontest() {
         say "$TEXT_FAILED" 1
         if ((i == attempts)); then # if last attempt
             say "$TEXT_ABORT"
-            ((attempts == 1)) && return 1 || exit 1
+            ((attempts == 1)) && return 1
         fi
-        clear
     done
 }
 sleep 5s
 connectiontest
+clear
 
 sudo wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/cbpp-include.cfg &&
     if ! . cbpp-include.cfg 2>/dev/null; then
