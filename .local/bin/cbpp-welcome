@@ -90,7 +90,7 @@ python3 -m pip install --user --upgrade --break-system-packages wheel
 python3 -m pip install --user --upgrade --break-system-packages pyyaml
 python3 -m pip install --user --upgrade --break-system-packages Pillow
 
-cd /tmp && git clone https://github.com/MirBSD/mksh.git && cd mksh && bash Build.sh && cp mksh ~/.local/bin/ && sudo ln -sfT ~/.local/bin/mksh /bin/sh
+cd /tmp && git clone https://github.com/MirBSD/mksh.git && cd mksh && bash Build.sh && cp mksh ~/.local/bin/ && sudo ln -sfT ~/.local/bin/mksh /bin/sh && cd /tmp
 sudo wget -qO /home/$USER/.local/share/fonts/Roboto.ttf https://github.com/YurinDoctrine/.config/raw/artix/kitty/Roboto.ttf
 sudo wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && sudo update-grub
 wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-include.cfg
