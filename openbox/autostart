@@ -42,7 +42,5 @@ $(for output in $(xrandr --prop | grep -E -o -i "^[A-Z\-]+-[0-9]+"); do xrandr -
 #exec kitty irssi &
 ## RSS Reader
 #exec kitty newsboat -r &
-## Katze
-#exec oneko -tofocus -tora &
 
 exit
