@@ -1,4 +1,8 @@
-# See wiki
+# See deploy-artix
+
+> <https://github.com/YurinDoctrine/deploy-artix/>
+
+## See wiki
 
 > <https://github.com/YurinDoctrine/.config/wiki/>
 
