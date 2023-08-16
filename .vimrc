@@ -12,12 +12,12 @@
 	set shiftwidth=4
 	set fileformat=unix
 	set splitbelow splitright
+	set wrap
 	set noerrorbells
 	set smarttab
 	set smartindent
-	set nofoldenable
-	set nowrap
 	set smartcase
+	set nofoldenable
 	set noswapfile
 	set nobackup
 	set incsearch
