@@ -86,7 +86,7 @@
             </item>
             <item label="Transmission BitTorrent client">
                 <action name="Execute">
-                    <execute>transmission-gtk</execute>
+                    <execute>transmission-qt</execute>
                 </action>
             </item>
             <item label="IRC Chat">
