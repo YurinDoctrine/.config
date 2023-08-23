@@ -35,7 +35,7 @@ sleep 5s
 connectiontest
 clear
 
-sudo wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/cbpp-include.cfg &&
+doas wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/cbpp-include.cfg &&
     if ! . cbpp-include.cfg 2>/dev/null; then
         echo '  Failed to locate cbpp-include.cfg in PATH' >&2
         exit 1
@@ -44,11 +44,11 @@ trap 'postinstall' SIGINT
 postinstall
 
 chsh -s /usr/bin/fish
-sudo sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /home/$USER/.config/openbox/autostart
-sudo sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /etc/skel/.config/openbox/autostart
-sudo sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /root/.config/openbox/autostart
+doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /home/$USER/.config/openbox/autostart
+doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /etc/skel/.config/openbox/autostart
+doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /root/.config/openbox/autostart
 
-sudo mkdir /usr/share/desktop-directories
+doas mkdir /usr/share/desktop-directories
  mkdir /home/$USER/backup
  mkdir /home/$USER/templates
  mkdir /home/$USER/public
@@ -58,10 +58,10 @@ sudo mkdir /usr/share/desktop-directories
  mkdir /home/$USER/images
  mkdir /home/$USER/music
  mkdir /home/$USER/videos
-sudo chown -hR $USER:$USER /home/$USER
+doas chown -hR $USER:$USER /home/$USER
 
-sudo ln -s /opt/ /home/$USER/
-sudo ln -s /tmp/ /home/$USER/
+doas ln -s /opt/ /home/$USER/
+doas ln -s /tmp/ /home/$USER/
 
 if [ -f "/home/$USER/.config/gtk-3.0/bookmarks" ]; then
     sed -i -e "s/\$USER/$(whoami)/g" /home/$USER/.config/gtk-3.0/bookmarks >/dev/null 2>&1
@@ -75,26 +75,26 @@ if [ -f "/home/$USER/.gtk-bookmarks" ]; then
     sed -i -e "s/\$USER/$(whoami)/g" /home/$USER/.gtk-bookmarks >/dev/null 2>&1
 fi
 
-sudo sed -i -e "s/# autologin=.*/autologin=$(whoami)/g" /etc/lxdm/lxdm.conf
+doas sed -i -e "s/# autologin=.*/autologin=$(whoami)/g" /etc/lxdm/lxdm.conf
 
 xdg-user-dirs-update
 
 gtk-update-icon-cache
 
-sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+doas flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-sudo pacman -S --noconfirm python-pyudev xmlstarlet
+doas pacman -S --noconfirm python-pyudev xmlstarlet
 
 python3 -m pip install --user --upgrade --break-system-packages pip
 python3 -m pip install --user --upgrade --break-system-packages wheel
 python3 -m pip install --user --upgrade --break-system-packages pyyaml
 python3 -m pip install --user --upgrade --break-system-packages Pillow
 
-cd /tmp && git clone https://github.com/MirBSD/mksh.git && cd mksh && bash Build.sh && cp mksh ~/.local/bin/ && sudo ln -sfT ~/.local/bin/mksh /bin/sh && cd /tmp
-sudo wget -qO /home/$USER/.local/share/fonts/Roboto.ttf https://github.com/YurinDoctrine/.config/raw/artix/kitty/Roboto.ttf
-sudo wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && sudo update-grub
+cd /tmp && git clone https://github.com/MirBSD/mksh.git && cd mksh && bash Build.sh && cp mksh ~/.local/bin/ && doas ln -sfT ~/.local/bin/mksh /bin/sh && cd /tmp
+doas wget -qO /home/$USER/.local/share/fonts/Roboto.ttf https://github.com/YurinDoctrine/.config/raw/artix/kitty/Roboto.ttf
+doas wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && doas update-grub
 wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-include.cfg
 
-(sleep 20s && sudo shutdown -r now) &
+(sleep 20s && doas shutdown -r now) &
 
 curl -s https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
