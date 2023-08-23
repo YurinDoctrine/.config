@@ -96,7 +96,7 @@
                     <execute>transmission-gtk</execute>
                 </action>
             </item>
-            <item label="IRC Chat">
+            <item label="IRC client">
                 <action name="Execute">
                     <execute>kitty irssi</execute>
                 </action>
