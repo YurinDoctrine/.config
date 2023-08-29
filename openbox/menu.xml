@@ -125,17 +125,17 @@
             <menu id="obConfig" label="Openbox">
                 <item label="Edit menu.xml">
                     <action name="Execute">
-                        <execute>kitty nano ~/.config/openbox/menu.xml</execute>
+                        <execute>kitty vim ~/.config/openbox/menu.xml</execute>
                     </action>
                 </item>
                 <item label="Edit rc.xml">
                     <action name="Execute">
-                        <execute>kitty nano ~/.config/openbox/rc.xml</execute>
+                        <execute>kitty vim ~/.config/openbox/rc.xml</execute>
                     </action>
                 </item>
                 <item label="Edit autostart">
                     <action name="Execute">
-                        <execute>kitty nano ~/.config/openbox/autostart</execute>
+                        <execute>kitty vim ~/.config/openbox/autostart</execute>
                     </action>
                 </item>
                 <separator />
