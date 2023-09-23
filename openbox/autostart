@@ -10,18 +10,20 @@
 (sleep 5s && exec cbpp-welcome --first-run) &
 ## Have Fun & Happy CrunchBangin'! :)
 
-## Merge resources
-xrdb -merge ~/.Xresources &
-
-## Turn off pointer acceleration
-xset m 0 0 &
-
+## Set keyboard
+setxkbmap replaceme &
 ## Set keyboard settings - 500 ms delay and 10 cps (characters per second) repeat rate.
 ## Adjust the values according to your preferences.
 xset r rate 500 10 &
 
+## Turn off pointer acceleration
+xset m 0 0 &
+
 ## Turn off blank display
 xset s off -dpms &
+
+## Merge resources
+xrdb -merge ~/.Xresources &
 
 ## Start Desktop
 exec pcmanfm-qt --desktop &
