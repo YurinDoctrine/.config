@@ -83,6 +83,20 @@ doas flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 
 doas pacman -S --noconfirm python-pyudev which xmlstarlet
 
+doas cp -rfd /etc/pacman.conf.bak /etc/pacman.conf
+
+echo -e "
+# Arch
+#[extra]
+#Include = /etc/pacman.d/mirrorlist-arch
+
+#[community]
+#Include = /etc/pacman.d/mirrorlist-arch
+
+#[multilib]
+#Include = /etc/pacman.d/mirrorlist-arch
+" | tee -a /etc/pacman.conf
+
 python3 -m pip install --user --upgrade --break-system-packages pip
 python3 -m pip install --user --upgrade --break-system-packages wheel
 python3 -m pip install --user --upgrade --break-system-packages pyyaml
