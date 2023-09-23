@@ -1,2 +1,2 @@
 exec pipewire &
-exec openbox-session &
+exec openbox-session
