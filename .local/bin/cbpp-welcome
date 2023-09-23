@@ -107,7 +107,7 @@ doas wget -qO /home/$USER/.local/share/fonts/Roboto.ttf https://github.com/Yurin
 doas wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && doas update-grub
 wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-include.cfg
 
-doas (sleep 20s && shutdown -r now) &
+(doas shutdown -r 20) &
 
 doas rm -rfd /home/$USER/.bash_profile
 doas rm -rfd /etc/skel/.bash_profile
