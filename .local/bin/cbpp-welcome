@@ -75,8 +75,6 @@ if [ -f "/home/$USER/.gtk-bookmarks" ]; then
     sed -i -e "s/\$USER/$(whoami)/g" /home/$USER/.gtk-bookmarks >/dev/null 2>&1
 fi
 
-doas sed -i -e "s/# autologin=.*/autologin=$(whoami)/g" /etc/lxdm/lxdm.conf
-
 xdg-user-dirs-update
 
 gtk-update-icon-cache
