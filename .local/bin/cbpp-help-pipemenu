@@ -7,13 +7,13 @@ fi
 menuStart
 menuSeparator 'Online Help'
 menuSubmenu 'ManpagesWWW' 'Manpages'
-menuItem 'Debian Homepage' 'x-www-browser "http://manpages.debian.org/"'
+menuItem 'Debian Homepage' 'xdg-open "http://manpages.debian.org/"'
 menuSubmenuEnd
 menuSubmenu 'OpenboxWWW' 'Openbox'
-menuItem 'Openbox Homepage' 'x-www-browser "http://openbox.org/wiki/Main_Page"'
-menuItem 'Openbox Documentation' 'x-www-browser "http://openbox.org/wiki/Help:Contents"'
-menuItem 'Openbox FAQ' 'x-www-browser "http://openbox.org/wiki/Help:FAQ"'
-menuItem 'Openbox Getting Started' 'x-www-browser "http://openbox.org/wiki/Help:Getting_started"'
-menuItem 'Openbox Community Portal' 'x-www-browser "http://openbox.org/wiki/Openbox:Community_portal"'
+menuItem 'Openbox Homepage' 'xdg-open "http://openbox.org/wiki/Main_Page"'
+menuItem 'Openbox Documentation' 'xdg-open "http://openbox.org/wiki/Help:Contents"'
+menuItem 'Openbox FAQ' 'xdg-open "http://openbox.org/wiki/Help:FAQ"'
+menuItem 'Openbox Getting Started' 'xdg-open "http://openbox.org/wiki/Help:Getting_started"'
+menuItem 'Openbox Community Portal' 'xdg-open "http://openbox.org/wiki/Openbox:Community_portal"'
 menuSubmenuEnd
 menuEnd
