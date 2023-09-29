@@ -113,7 +113,7 @@
             </item>
             <item label="Google Docs">
                 <action name="Execute">
-                    <execute>x-www-browser http://drive.google.com</execute>
+                    <execute>xdg-open http://drive.google.com</execute>
                 </action>
             </item>
         </menu>
