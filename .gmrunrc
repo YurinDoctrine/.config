@@ -7,8 +7,8 @@ AlwaysInTerm = ssh ftp git less more vi vim cat nano ranger tail top info xsel x
 
 History = 5
 
-URL_http = x-www-browser %u
+URL_http = xdg-open %u
 URL_info = ${TermExec} 'info %s'
 URL_file = exo-open %s
 URL_f = exo-open %s
-URL_g = x-www-browser 'http://www.google.com/search?q=%s'
+URL_g = xdg-open 'http://www.google.com/search?q=%s'
