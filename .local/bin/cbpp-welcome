@@ -44,6 +44,8 @@ trap 'postinstall' SIGINT
 postinstall
 
 chsh -s /usr/bin/fish
+doas ln -sfT ~/.local/bin/mksh /bin/sh
+
 doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /home/$USER/.config/openbox/autostart
 doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /etc/skel/.config/openbox/autostart
 doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /root/.config/openbox/autostart
@@ -102,7 +104,6 @@ python3 -m pip install --user --upgrade --break-system-packages wheel
 python3 -m pip install --user --upgrade --break-system-packages pyyaml
 python3 -m pip install --user --upgrade --break-system-packages Pillow
 
-cd /tmp && git clone https://github.com/MirBSD/mksh.git && cd mksh && bash Build.sh && cp mksh ~/.local/bin/ && doas ln -sfT ~/.local/bin/mksh /bin/sh && cd /tmp
 doas wget -qO /home/$USER/.local/share/fonts/Roboto.ttf https://github.com/YurinDoctrine/.config/raw/artix/kitty/Roboto.ttf
 doas wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && doas update-grub
 wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-include.cfg
@@ -112,4 +113,5 @@ wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.c
 doas rm -rfd /home/$USER/.bash_profile
 doas rm -rfd /etc/skel/.bash_profile
 doas rm -rfd /root/.bash_profile
+
 curl -s https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
