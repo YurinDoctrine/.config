@@ -104,12 +104,14 @@ python3 -m pip install --user --upgrade --break-system-packages wheel
 python3 -m pip install --user --upgrade --break-system-packages pyyaml
 python3 -m pip install --user --upgrade --break-system-packages Pillow
 
-doas wget -qO /home/$USER/.local/share/fonts/Roboto.ttf https://github.com/YurinDoctrine/.config/raw/artix/kitty/Roboto.ttf
-doas wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && doas update-grub
 wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-include.cfg
-
-(doas bash -c "sleep 20 && shutdown -r now") &
+wget -qO /home/$USER/.local/share/fonts/Roboto.ttf https://github.com/YurinDoctrine/.config/raw/artix/kitty/Roboto.ttf
+doas wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && doas update-grub
 
 doas rm -rfd /home/$USER/.bash_profile
 doas rm -rfd /etc/skel/.bash_profile
 doas rm -rfd /root/.bash_profile
+
+firefox-esr & && sleep 10s && pkill firefox-esr && wget -qO /home/$USER/.mozilla/firefox-esr/*default-release* https://raw.githubusercontent.com/arkenfox/user.js/master/user.js && sed -i -e 's/user_pref("privacy.clearOnShutdown.cookies", true);/\/\/user_pref("privacy.clearOnShutdown.cookies", true);/' /home/$USER/.mozilla/firefox-esr/*default-release*/user.js
+
+(doas bash -c "sleep 1 && shutdown -r now") &
