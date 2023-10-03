@@ -132,7 +132,7 @@ wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.c
 wget -qO /usr/share/fonts/truetype/roboto/Roboto.ttf https://github.com/YurinDoctrine/.config/raw/main/kitty/Roboto.ttf
 sudo wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && sudo update-grub
 
-(firefox-esr & && sleep 10s && pkill firefox-esr && cd home/$USER/.mozilla/firefox-esr/*default-release*/ && wget -q https://raw.githubusercontent.com/arkenfox/user.js/master/user.js && sed -i -e 's/user_pref("privacy.clearOnShutdown.cookies", true);/user_pref("privacy.clearOnShutdown.cookies", false);/' /home/$USER/.mozilla/firefox-esr/*default-release*/user.js)
+firefox-esr & && sleep 10s && pkill firefox-esr && cd home/$USER/.mozilla/firefox-esr/*default-release*/ && wget -q https://raw.githubusercontent.com/arkenfox/user.js/master/user.js && sed -i -e 's/user_pref("privacy.clearOnShutdown.cookies", true);/user_pref("privacy.clearOnShutdown.cookies", false);/' /home/$USER/.mozilla/firefox-esr/*default-release*/user.js
 
 (sleep 20s && killall openbox) &
 
