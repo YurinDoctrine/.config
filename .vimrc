@@ -4,6 +4,7 @@
 	let mapleader=" "
 	let maplocalleader=" "
 	set title
+	set background=dark
 	set go=a
 	set mouse=a
 	set nohlsearch
