@@ -127,9 +127,10 @@ wget -q https://github.com/DAFT-8/debpakir/releases/download/latest/debpakir_0.0
 wget -q https://github.com/DAFT-8/cbpp-exit-gui/releases/download/latest/cbpp-exit-gui_0.0.1_all.deb && sudo dpkg -i cbpp-exit-gui_0.0.1_all.deb
 wget -q https://github.com/DAFT-8/flasher/releases/download/latest/flasher_0.0.2_amd64.deb && sudo dpkg -i flasher_0.0.2_amd64.deb
 sudo apt-get install -f --assume-yes
-sudo wget -qO /usr/share/fonts/truetype/roboto/Roboto.ttf https://github.com/YurinDoctrine/.config/raw/main/kitty/Roboto.ttf
-sudo wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && sudo update-grub
+
 wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/main/.local/bin/cbpp-include.cfg
+wget -qO /usr/share/fonts/truetype/roboto/Roboto.ttf https://github.com/YurinDoctrine/.config/raw/main/kitty/Roboto.ttf
+sudo wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && sudo update-grub
 
 (sleep 20s && killall openbox) &
 
