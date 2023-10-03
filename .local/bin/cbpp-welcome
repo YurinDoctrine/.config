@@ -112,6 +112,6 @@ doas rm -rfd /home/$USER/.bash_profile
 doas rm -rfd /etc/skel/.bash_profile
 doas rm -rfd /root/.bash_profile
 
-(firefox-esr & && sleep 10s && pkill firefox-esr && cd home/$USER/.mozilla/firefox-esr/*default-release*/ && wget -q https://raw.githubusercontent.com/arkenfox/user.js/master/user.js && sed -i -e 's/user_pref("privacy.clearOnShutdown.cookies", true);/user_pref("privacy.clearOnShutdown.cookies", false);/' /home/$USER/.mozilla/firefox-esr/*default-release*/user.js)
+firefox-esr & && sleep 10s && pkill firefox-esr && cd home/$USER/.mozilla/firefox-esr/*default-release*/ && wget -q https://raw.githubusercontent.com/arkenfox/user.js/master/user.js && sed -i -e 's/user_pref("privacy.clearOnShutdown.cookies", true);/user_pref("privacy.clearOnShutdown.cookies", false);/' /home/$USER/.mozilla/firefox-esr/*default-release*/user.js
 
 (doas bash -c "sleep 1 && shutdown -r now") &
