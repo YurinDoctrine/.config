@@ -73,17 +73,17 @@ class ButtonWindow(Gtk.Window):
     def on_reboot_clicked(self, button):
         self.disable_buttons()
         self.label.set_text("Rebooting, please standby...")
-        os.system("$(xterm -e 'cbpp-gksudo shutdown -r now')")
+        os.system("$(cbpp-gksudo xterm -e 'shutdown -r now')")
 
     def on_shutdown_clicked(self, button):
         self.disable_buttons()
         self.label.set_text("Shutting down, please standby...")
-        os.system("$(xterm -e 'cbpp-gksudo shutdown now')")
+        os.system("$(cbpp-gksudo xterm -e 'shutdown now')")
 
     def on_suspend_clicked(self, button):
         self.disable_buttons()
         self.label.set_text("Suspending, please standby...")
-        os.system("$(xterm -e 'cbpp-gksudo suspend')")
+        os.system("$(xterm -e 'slock | xset dpms force suspend')")
         Gtk.main_quit()
 
 
