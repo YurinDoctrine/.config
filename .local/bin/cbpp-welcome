@@ -87,7 +87,7 @@ doas pacman -S --noconfirm python-pyudev which xmlstarlet
 
 doas cp -rfd /etc/pacman.conf.bak /etc/pacman.conf
 
-doas echo -e "
+echo -e "
 # Arch
 #[extra]
 #Include = /etc/pacman.d/mirrorlist-arch
@@ -97,7 +97,7 @@ doas echo -e "
 
 #[multilib]
 #Include = /etc/pacman.d/mirrorlist-arch
-" >>/etc/pacman.conf
+" | doas tee -a /etc/pacman.conf
 
 python3 -m pip install --user --upgrade --break-system-packages pip
 python3 -m pip install --user --upgrade --break-system-packages wheel
