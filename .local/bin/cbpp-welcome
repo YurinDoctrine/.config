@@ -97,7 +97,7 @@ echo -e "
 
 #[multilib]
 #Include = /etc/pacman.d/mirrorlist-arch
-" | tee -a /etc/pacman.conf
+" | >>/etc/pacman.conf
 
 python3 -m pip install --user --upgrade --break-system-packages pip
 python3 -m pip install --user --upgrade --break-system-packages wheel
