@@ -76,6 +76,9 @@
 	inoremap <M-Backspace> <C-w>
 	inoremap <C-Backspace> <C-w>
 
+" Replace all is aliased to R.
+	nnoremap R :%s//g<Left><Left>
+
 " Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable.
 	if &diff
 	  highlight! link DiffText MatchParen
