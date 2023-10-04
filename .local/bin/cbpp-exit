@@ -11,19 +11,19 @@ if [[ $1 = '--dialog' ]]; then
 	if [[ $dialog = "Logout" ]]; then
 		openbox --exit
 	elif [[ $dialog = "Reboot" ]]; then
-		$(cbpp-gksudo xterm -e "shutdown -r now")
+		$(xterm -e "cbpp-gksudo shutdown -r now")
 	elif [[ $dialog = "Shutdown" ]]; then
-		$(cbpp-gksudo xterm -e "shutdown now")
+		$(xterm -e "cbpp-gksudo shutdown now")
 	elif [[ $dialog = "Suspend" ]]; then
-		$(cbpp-gksudo xterm -e "suspend")
+		$(xterm -e "cbpp-gksudo suspend")
 	fi
 else
 	# Output Openbox menu
 	menuStart
 	menuItem 'Logout' 'openbox --exit'
-	menuItem 'Reboot' 'cbpp-gksudo xterm -e "shutdown -r now"'
-	menuItem 'Shutdown' 'cbpp-gksudo xterm -e "shutdown now"'
-	menuItem 'Suspend' 'cbpp-gksudo xterm -e "suspend"'
+	menuItem 'Reboot' 'xterm -e "cbpp-gksudo shutdown -r now"'
+	menuItem 'Shutdown' 'xterm -e "cbpp-gksudo shutdown now"'
+	menuItem 'Suspend' 'xterm -e "cbpp-gksudo suspend"'
 	menuEnd
 fi
 exit 0
