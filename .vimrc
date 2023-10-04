@@ -102,4 +102,4 @@
   	autocmd BufWritePost bm-files,bm-dirs !shortcuts
 
 " Save file as doas on files that require root permission
-	cabbrev sw execute 'silent! write !doas tee % >/dev/null' <bar> edit!
+	cabbrev w! execute 'silent! write !doas tee % >/dev/null' <bar> edit!
