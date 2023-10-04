@@ -153,7 +153,7 @@
             </item>
             <item label="Edit Default Applications">
                 <action name="Execute">
-                    <execute>cbpp-gksudo kitty update-alternatives --all</execute>
+                    <execute>lxsession-default-apps</execute>
                 </action>
             </item>
             <item label="User Interface Settings">
