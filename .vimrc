@@ -57,8 +57,9 @@
 	  set t_Co=256
 	endif
 
-" Show the complete menu when switching to insert mode
+" Show the complete menu when switching to insert mode or pressing space key
 	autocmd InsertEnter * :call feedkeys("\<C-p>")
+	inoremap <expr> <Space> pumvisible() ? "\<C-e>\<Space>" : "\<C-p>"
 
 " Navigate the complete menu items like CTRL+n / CTRL+p would
 	inoremap <expr> <Down> pumvisible() ? "<C-n>" : "<Down>"
@@ -88,6 +89,7 @@
 	nnoremap R :%s//g<Left><Left>
 
 " Map CTRL+x in normal mode to CTRL+z
+	nnoremap <C-z> <C-x>
 	nnoremap <C-x> <C-z>
 
 " Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable
