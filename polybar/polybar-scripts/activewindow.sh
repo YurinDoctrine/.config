@@ -16,6 +16,6 @@ case "$1" in
         kill_task
         ;;
     *)
-        echo -e "$(xdotool getactivewindow getwindowname | rev | cut -c 1-48 | rev) " ;
+        echo -e "$(xprop -id $(xdotool getactivewindow) | awk -F '"' '/^_OB_APP_TITLE/ {print $2}')" ;
         ;;
 esac
