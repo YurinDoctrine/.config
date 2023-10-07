@@ -10,6 +10,8 @@
 (sleep 5s && exec cbpp-welcome --first-run) &
 ## Have Fun & Happy CrunchBangin'! :)
 
+renice -n 19 -p $(pidof openbox)
+
 ## Merge resources
 xrdb -merge ~/.Xresources &
 
@@ -25,14 +27,17 @@ xset s off -dpms &
 
 ## Start Desktop
 exec pcmanfm-qt --desktop &
+renice -n 19 -p $(pidof pcmanfm-qt)
 
 ## Start LXDE PolKit
 exec lxpolkit &
+renice -n 19 -p $(pidof lxpolkit)
 
 ## Group start:
 ## 1. polybar - start
 ## 2. dunst - start
 $(sleep 1s && exec polyrestart && exec dunst -show_indicators -sort -word_wrap) &
+renice -n 19 -p $(pidof dunst)
 
 ## Auto Scaling
 $(for output in $(xrandr --prop | grep -E -o -i "^[A-Z\-]+-[0-9]+"); do xrandr --output "$output" --set "scaling mode" "Full aspect"; done) &
