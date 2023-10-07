@@ -57,29 +57,40 @@
 	  set t_Co=256
 	endif
 
-" Show the complete menu when switching to insert mode.
+" Show the complete menu when switching to insert mode
 	autocmd InsertEnter * :call feedkeys("\<C-p>")
 
-" Navigate the complete menu items like CTRL+n / CTRL+p would.
+" Navigate the complete menu items like CTRL+n / CTRL+p would
 	inoremap <expr> <Down> pumvisible() ? "<C-n>" : "<Down>"
 	inoremap <expr> <Up> pumvisible() ? "<C-p>" : "<Up>"
 
-" Select the complete menu item like CTRL+y would.
+" Select the complete menu item like CTRL+y would
 	inoremap <expr> <Right> pumvisible() ? "<C-y>" : "<Right>"
 	inoremap <expr> <CR> pumvisible() ? "<C-y>" : "<CR>"
 	inoremap <expr> <Tab> pumvisible() ? "<C-y>" : "<Tab>"
 
-" Cancel the complete menu item like CTRL+e would.
+" Cancel the complete menu item like CTRL+e would
 	inoremap <expr> <Left> pumvisible() ? "<C-e>" : "<Left>"
 
-" Set Ctrl-Backspace or Alt-Backspace act as delete words backwards
+" Set CTRL-Backspace or ALT-Backspace act as delete words backwards
 	inoremap <M-Backspace> <C-w>
 	inoremap <C-Backspace> <C-w>
 
-" Replace all is aliased to R.
+" Undo/Redo are aliased to CTRL+z
+	inoremap <C-z> <Esc>Ui
+
+" Map CTRL+c in visual mode to copy to clipboard
+	vnoremap <C-c> <Esc>"+y
+" Map CTRL+v in insert mode to paste from clipboard
+	inoremap <C-v> <C-R-V>
+
+" Replace all is aliased to R
 	nnoremap R :%s//g<Left><Left>
 
-" Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable.
+" Map CTRL+x in normal mode to CTRL+z
+	nnoremap <C-x> <C-z>
+
+" Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable
 	if &diff
 	  highlight! link DiffText MatchParen
 	endif
@@ -87,7 +98,7 @@
 " Disables automatic commenting on newline:
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Automatically deletes all trailing whitespace and newlines at end of file on save. & reset cursor position
+" Automatically deletes all trailing whitespace and newlines at end of file on save & reset cursor position
  	autocmd BufWritePre * let currPos = getpos(".")
 	autocmd BufWritePre * %s/\s\+$//e
 	autocmd BufWritePre * %s/\n\+\%$//e
