@@ -85,7 +85,7 @@ fc-cache -rfv
 
 doas flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-doas pacman -S --noconfirm python-pyudev which xmlstarlet
+doas pacman -S --noconfirm python-pyudev which xclip xmlstarlet
 
 doas cp -rfd /etc/pacman.conf.bak /etc/pacman.conf
 
