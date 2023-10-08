@@ -19,6 +19,7 @@
 	set smarttab
 	set smartindent
 	set smartcase
+	set autoindent
 	set nofoldenable
 	set noswapfile
 	set nobackup
@@ -91,6 +92,18 @@
 " Map CTRL+x in normal mode to CTRL+z
 	nnoremap <C-z> <C-x>
 	nnoremap <C-x> <C-z>
+
+" Automatically set/unset Vim's paste mode when you paste
+	let &t_SI .= "\<Esc>[?2004h"
+	let &t_EI .= "\<Esc>[?2004l"
+
+	inoremap <special> <expr> <Esc>[200~ autopaste()
+
+	function! autopaste()
+	  set pastetoggle=<Esc>[201~
+	  set paste
+	  return ""
+	endfunction
 
 " Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable
 	if &diff
