@@ -32,6 +32,7 @@
 	set wildmode=longest,list,full
 	set wildchar=<Tab>
 	set laststatus=2
+	set statusline=%<%f%m\ \[%{&ff}:%{&fenc}:%Y]\ %{getcwd()}\ \ \[%{strftime('%Y/%b/%d\ %a\ %I:%M\ %p')}\]\ %=\ Line:%l\/%L\ Column:%c%V\ %P
 	set scrolloff=8
 	set showcmd
 	set showmode
