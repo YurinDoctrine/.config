@@ -82,9 +82,9 @@
 	inoremap <C-z> <Esc>Ui
 
 " Map CTRL+c in visual mode to copy to clipboard
-	vnoremap <C-c> <Esc>"+y
+	vnoremap <C-c> y:call system('xclip -selection clipboard', @")<CR>
 " Map CTRL+v in insert mode to paste from clipboard
-	inoremap <C-v> <C-r>+
+	inoremap <C-v> <C-r>=system("xclip -selection clipboard -o")<CR>
 
 " Replace all is aliased to R
 	nnoremap R :%s//g<Left><Left>
