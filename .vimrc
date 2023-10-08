@@ -32,7 +32,7 @@
 	set wildmode=longest,list,full
 	set wildchar=<Tab>
 	set laststatus=2
-	set statusline=%<%F%m\ %=\ \%{&filetype}\ \[%{&fileencoding}]\ L%l\/%L\,C%c%V\ \%{strftime('[%I:%M]')}
+	set statusline=%F%m\ %=\ \%{&filetype}\ \[%{&fileencoding}]\ L%l\/%L\,C%c%V\ \%{strftime('[%I:%M]')}
 	set scrolloff=8
 	set showcmd
 	set showmode
