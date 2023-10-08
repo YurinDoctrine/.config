@@ -61,7 +61,7 @@
 
 " Show the complete menu when switching to insert mode or pressing space key
 	autocmd InsertEnter * :call feedkeys("\<C-p>")
-	inoremap <expr> <Space> pumvisible() ? "\<C-e>\<Space>" : "\<C-p>"
+	inoremap <expr> <Space> pumvisible() ? "\<Space><C-e>\<Space>" : "\<Space><C-p>"
 
 " Navigate the complete menu items like CTRL+n / CTRL+p would
 	inoremap <expr> <Down> pumvisible() ? "<C-n>" : "<Down>"
