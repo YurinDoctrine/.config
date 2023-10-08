@@ -83,7 +83,7 @@
 " Map CTRL+c in visual mode to copy to clipboard
 	vnoremap <C-c> <Esc>"+y
 " Map CTRL+v in insert mode to paste from clipboard
-	inoremap <C-v> <C-R-V>
+	inoremap <C-v> <C-r>+
 
 " Replace all is aliased to R
 	nnoremap R :%s//g<Left><Left>
