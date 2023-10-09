@@ -41,7 +41,6 @@ doas wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinD
         exit 1
     fi
 trap 'postinstall' SIGINT && postinstall
-postinstall
 
 chsh -s /usr/bin/fish
 doas ln -sfT /home/$USER/.local/bin/mksh /bin/sh
