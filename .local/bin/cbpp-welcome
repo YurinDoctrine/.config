@@ -40,7 +40,7 @@ doas wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinD
         echo '  Failed to locate cbpp-include.cfg in PATH' >&2
         exit 1
     fi
-trap 'postinstall' SIGINT
+trap 'postinstall' SIGINT && postinstall
 postinstall
 
 chsh -s /usr/bin/fish
