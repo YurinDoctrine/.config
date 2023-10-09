@@ -42,7 +42,6 @@ sudo wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinD
         exit 1
     fi
 trap 'postinstall' SIGINT && postinstall
-postinstall
 
 extra() {
     cd /tmp
