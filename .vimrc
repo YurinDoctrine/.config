@@ -59,6 +59,9 @@
 	  set t_Co=256
 	endif
 
+" Center cursor when entering insert mode
+	autocmd InsertEnter * norm zz
+
 " Show the complete menu when switching to insert mode or pressing space key
 	autocmd InsertEnter * :call feedkeys("\<C-p>")
 	inoremap <expr> <Space> pumvisible() ? "\<Space><C-e>\<Space>" : "\<Space><C-p>"
@@ -93,9 +96,36 @@
 " Replace all is aliased to R
 	nnoremap R :%s//g<Left><Left>
 
-" Map CTRL+x in normal mode to CTRL+z
-	nnoremap <C-z> <C-x>
-	nnoremap <C-x> <C-z>
+" Map ALT+Enter in normal mode to open new split window vertically
+	nnoremap <M-Enter> :vsplit .<Enter>
+" Map ALT+Backspace in normal mode to open new split window horizontally
+	nnoremap <M-Backspace> :split .<Enter>
+" Map navigations
+	nnoremap <M-Left> <C-w>h
+	nnoremap <M-Right> <C-w>l
+	nnoremap <M-Up> <C-w>k
+	nnoremap <M-Down> <C-w>j
+
+" Map CTRL+t in normal mode to bring terminal
+	nnoremap <C-t> :term<Enter>
+" Map CTRL+e in normal mode to explore working directory
+	nnoremap <C-e> :e .<Enter>
+" Map CTRL+d in normal mode to change working directory
+	nnoremap <C-d> :lcd<Space>
+
+" Map CTRL+s in normal mode to write file
+	nnoremap <C-s> :w<Enter>
+" Map CTRL+q in normal mode to quit file
+	nnoremap <C-q> :q<Enter>
+	nnoremap <C-z> :q<Enter>
+	nnoremap <C-x> :q<Enter>
+" Map CTRL+c in normal mode to force quit file
+	nnoremap <C-c> :q!<Enter>
+
+" Map CTRL+Backspace to go to top
+	noremap <C-Backspace> Vgg
+" Map CTRL+a to go to bottom
+	noremap <C-a> VG
 
 " Automatically set/unset Vim's paste mode when you paste
 	let &t_SI .= "\<Esc>[?2004h"
