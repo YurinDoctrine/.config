@@ -36,7 +36,7 @@ renice -n 19 -p $(pidof lxpolkit)
 ## Group start:
 ## 1. dunst - start
 ## 2. polybar - start
-$(sleep 1s && exec dunst -show_indicators -sort -word_wrap && exec polyrestart) &
+$(sleep 1s && exec dunst -show_indicators -sort -word_wrap | exec polyrestart) &
 renice -n 19 -p $(pidof dunst)
 
 ## Auto Scaling
