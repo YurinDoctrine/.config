@@ -125,6 +125,12 @@
 " Map CTRL+c in normal mode to force quit file
 	nnoremap <C-c> :q!<Enter>
 
+" Map CTRL+F in normal mode to find in files
+	nnoremap <C-F> :vimgrep // **/*<Left><Left><Left><Left><Left><Left>
+" Map CTRL+n and CTRL+p in normal mode to navigate in files
+	nnoremap <C-n> :cn<Enter>
+	nnoremap <C-p> :cp<Enter>
+
 " Map CTRL+Backspace to go to top
 	noremap <C-Backspace> GVgg
 " Map CTRL+a to go to bottom
