@@ -75,9 +75,12 @@
 " Cancel the complete menu item like CTRL+e would
 	inoremap <expr> <Left> pumvisible() ? "<C-e>" : "<Left>"
 
+" Set CTRL-Delete or ALT-Delete act as delete words forwards
+	inoremap <C-Delete> <C-o>diw
+	inoremap <M-Delete> <C-o>diw
 " Set CTRL-Backspace or ALT-Backspace act as delete words backwards
-	inoremap <M-Backspace> <C-w>
 	inoremap <C-Backspace> <C-w>
+	inoremap <M-Backspace> <C-w>
 
 " Undo/Redo are aliased to CTRL+z
 	inoremap <C-z> <Esc>Ui
