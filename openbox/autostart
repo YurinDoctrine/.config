@@ -41,7 +41,7 @@ $(sleep 1s && renice -n 19 -p $(pidof lxpolkit)) &
 $(exec dunst -show_indicators -sort -word_wrap | exec polyrestart) &
 $(sleep 1s && renice -n 19 -p $(pidof dunst)) &
 
-## Auto Scaling
+## Fix monitor
 $(for output in $(xrandr --prop | grep -E -o -i "^[A-Z\-]+-[0-9]+"); do xrandr --output "$output" --set "scaling mode" "Full aspect"; done) &
 
 ## Optional (Uncomment programs you might want to run)
