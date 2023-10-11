@@ -32,7 +32,6 @@
 	set wildmode=longest,list,full
 	set wildchar=<Tab>
 	set laststatus=2
-	set statusline=%F%m\ %=\ \%{&filetype}\ \[%{&fileencoding}]\ L%l\/%L\,C%c%V\ \%{strftime('[%I:%M]')}
 	set scrolloff=8
 	set showcmd
 	set showmode
@@ -105,6 +104,10 @@
 	nnoremap <M-Right> <C-w>l
 	nnoremap <M-Up> <C-w>k
 	nnoremap <M-Down> <C-w>j
+	nnoremap <M-A> :bp<Enter>
+	nnoremap <M-D> :bn<Enter>
+	nnoremap <M-1> :bfirst<Enter>
+	nnoremap <M-3> :blast<Enter>
 
 " Map CTRL+t in normal mode to bring terminal
 	nnoremap <C-t> :term<Enter>
@@ -123,9 +126,31 @@
 	nnoremap <C-c> :q!<Enter>
 
 " Map CTRL+Backspace to go to top
-	noremap <C-Backspace> Vgg
+	noremap <C-Backspace> GVgg
 " Map CTRL+a to go to bottom
-	noremap <C-a> VG
+	noremap <C-a> ggVG
+
+" More navigation mappings
+	noremap <C-Up> 5k
+	noremap <C-Down> 5j
+	noremap <C-Left> b
+	noremap <C-Right> w
+	noremap <M-a> ^
+	noremap <M-d> $
+
+" Status Line
+	function! BufferList()
+	  let buf_list = []
+	  for i in range(1, bufnr('$'))
+		if buflisted(i)
+		  let buf_name = bufname(i) != '' ? fnamemodify(bufname(i), ':t') : '[No Name]'
+		  let buf_list += [buf_name]
+		endif
+	  endfor
+	  return join(buf_list, ' ')
+	endfunction
+
+	set statusline=%m\ %{getcwd()}/\%{BufferList()}\ %=\ %{&filetype}\ [%{&fileencoding}]\ L%l\/%L\,C%c%V\ %{strftime('[%I:%M]')}
 
 " Automatically set/unset Vim's paste mode when you paste
 	let &t_SI .= "\<Esc>[?2004h"
