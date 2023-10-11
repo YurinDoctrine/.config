@@ -137,6 +137,8 @@
 	noremap <C-Right> w
 	noremap <M-a> ^
 	noremap <M-d> $
+	noremap <M-Up> <C-b>
+	noremap <M-Down> <C-f>
 
 " Status Line
 	function! BufferList()
