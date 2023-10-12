@@ -92,9 +92,6 @@
 " Map CTRL+v in insert mode to paste from clipboard
 	inoremap <C-v> <C-r>=system("xclip -selection clipboard -o")<CR>
 
-" Replace all is aliased to R
-	nnoremap R :%s//g<Left><Left>
-
 " Map ALT+Enter in normal mode to open new split window vertically
 	nnoremap <M-Enter> :vsplit .<Enter>
 " Map ALT+Backspace in normal mode to open new split window horizontally
@@ -126,10 +123,15 @@
 	nnoremap <C-c> :q!<Enter>
 
 " Map CTRL+F in normal mode to find in files
-	nnoremap <C-F> :vimgrep // **/*<Left><Left><Left><Left><Left><Left>
+	nnoremap <C-F> :vimgrep //g **/*<Left><Left><Left><Left><Left><Left><Left>
 " Map CTRL+n and CTRL+p in normal mode to navigate in files
 	nnoremap <C-n> :cn<Enter>
 	nnoremap <C-p> :cp<Enter>
+" Map R in normal mode to replace in files
+	nnoremap R :cfdo %s///gc \| update<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+
+" Map ALT+r in normal mode to replace all
+	nnoremap <M-r> :%s///gc<Left><Left><Left><Left>
 
 " Map CTRL+Backspace to go to top
 	noremap <C-Backspace> GVgg
@@ -143,8 +145,8 @@
 	noremap <C-Right> w
 	noremap <M-a> ^
 	noremap <M-d> $
-	noremap <M-Up> <C-b>
-	noremap <M-Down> <C-f>
+	vnoremap <M-Up> <C-b>
+	vnoremap <M-Down> <C-f>
 
 " Status Line
 	function! BufferList()
