@@ -100,6 +100,8 @@ echo -e "
 #Include = /etc/pacman.d/mirrorlist-arch
 " | doas tee -a /etc/pacman.conf
 
+yes | doas pacman -Scc
+
 echo -e "nameserver 9.9.9.11
 nameserver 149.112.112.11
 nameserver 127.0.0.1
