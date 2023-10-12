@@ -1,0 +1,34 @@
+#!/bin/sh
+
+if [ "$(id -u)" -ne 0 ]; then
+  echo -e "This script must be run as root. Use 'sudo' or run it as root."
+  exit 1
+fi
+
+command -v openvpn > /dev/null 2>&1 || { echo >&2 "I require openvpn but it's not installed. Install it. Aborting."; exit 1; }
+
+start() {
+cd /tmp
+
+rm -rfd vpnbook*
+
+wget -O vpnbook.zip $(echo 'https://vpnbook.com/'$(curl -s https://www.vpnbook.com/freevpn | grep -oE "free-openvpn-account/vpnbook-openvpn-de[0-9]*\.zip" | sed -n '1p'))
+
+if [[ $? -eq 0 ]]; then
+	unzip vpnbook.zip -d vpnbooks
+	mv vpnbooks/* vpnbook
+	cd vpnbook
+
+	password_img=$(curl -s https://www.vpnbook.com/freevpn | grep -m1 'Password' | cut -d'"' -f2)
+	password=$(curl -s -X POST -H 'apikey: 5a64d478-9c89-43d8-88e3-c65de9999580' -F "url=https://www.vpnbook.com/$password_img" -F language=eng -F isOverlayRequired=true -F FileType=.Auto -F IsCreateSearchablePDF=false -F isSearchablePdfHideTextLayer=true -F scale=true -F detectOrientation=false -F isTable=false https://api.ocr.space/parse/image | grep -Eo '"LineText".*,' | cut -d'"' -f4 | sed "s/'//g")
+
+	printf "vpnbook\n$password" >userpass
+
+	openvpn --config *tcp443*.ovpn --auth-user-pass userpass
+
+	[[ $(ip link | grep -i 'tun' | wc -l) -gt 0 ]] || start
+else
+	start
+fi
+}
+start
