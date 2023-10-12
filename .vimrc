@@ -160,7 +160,7 @@
 	  return join(buf_list, ' ')
 	endfunction
 
-	set statusline=%m\ %{getcwd()}/\%{BufferList()}\ %=\ %{&filetype}\ [%{&fileencoding}]\ L%l\/%L\,C%c%V\ %{strftime('[%I:%M]')}
+	set statusline=%m\ %{getcwd()}/\%{BufferList()}\ %=\ %{&filetype}\ [%{&fileencoding}]\ L%l\/%L\,C%c%V\ %{strftime('[%H:%M]')}
 
 " Automatically set/unset Vim's paste mode when you paste
 	let &t_SI .= "\<Esc>[?2004h"
