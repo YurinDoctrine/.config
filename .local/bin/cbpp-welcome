@@ -108,7 +108,6 @@ options rotate timeout:1 attempts:3 edns0 trust-ad use-vc single-request-reopen 
 python3 -m pip install --user --upgrade --break-system-packages pip
 python3 -m pip install --user --upgrade --break-system-packages wheel
 python3 -m pip install --user --upgrade --break-system-packages pyyaml
-python3 -m pip install --user --upgrade --break-system-packages Pillow
 
 wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-include.cfg
 wget -qO /home/$USER/.local/share/fonts/Roboto.ttf https://github.com/YurinDoctrine/.config/raw/artix/kitty/Roboto.ttf
