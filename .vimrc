@@ -139,7 +139,8 @@
 	noremap <C-a> ggVG
 
 " More navigation mappings
-	noremap , %
+	noremap , *
+	noremap ; #
 	noremap <C-Up> 5k
 	noremap <C-Down> 5j
 	noremap <C-Left> b
