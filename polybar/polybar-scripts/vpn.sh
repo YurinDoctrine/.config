@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 connect() {
-	cbpp-gksudo xterm -e 'connectvpn --start'
+	[[ $(ip link | grep -i 'tun' | wc -l) -gt 0 ]] || cbpp-gksudo xterm -e 'connectvpn --start'
 }
 
 case "$1" in
