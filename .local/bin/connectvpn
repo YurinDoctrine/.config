@@ -15,7 +15,7 @@ cd /tmp
 
 rm -rfd vpnbook*
 
-wget -O vpnbook.zip $(echo 'https://vpnbook.com/'$(curl -s https://www.vpnbook.com/freevpn | grep -oE "free-openvpn-account/vpnbook-openvpn-de[0-9]*\.zip" | sed -n '1p'))
+wget -O vpnbook.zip $(echo 'https://www.vpnbook.com/'$(curl -s https://www.vpnbook.com/freevpn | grep -oE "free-openvpn-account/vpnbook-openvpn-de[0-9]*\.zip" | sed -n '1p'))
 
 if [[ $? -eq 0 ]]; then
 	unzip vpnbook.zip -d vpnbooks
