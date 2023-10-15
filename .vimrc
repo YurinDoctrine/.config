@@ -132,8 +132,8 @@
 " Map R in normal mode to replace in files
 	nnoremap R :cfdo %s///gc \| update<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 
-" Map ALT+r in normal mode to replace all
-	nnoremap <M-r> :%s///gc<Left><Left><Left><Left>
+" Map CTRL+r in normal mode to replace all
+	nnoremap <C-r> :%s///gc<Left><Left><Left><Left>
 
 " Map CTRL+Backspace to go to top
 	noremap <C-Backspace> GVgg
