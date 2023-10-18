@@ -11,9 +11,9 @@ if [[ $1 = '--dialog' ]]; then
 	if [[ $dialog = "Logout" ]]; then
 		openbox --exit
 	elif [[ $dialog = "Reboot" ]]; then
-		$(xterm -e "doas shutdown -r now")
+		$(xterm -e "doas reboot")
 	elif [[ $dialog = "Shutdown" ]]; then
-		$(xterm -e "doas shutdown now")
+		$(xterm -e "doas poweroff")
 	elif [[ $dialog = "Suspend" ]]; then
 		$(xterm -e "slock | xset dpms force suspend")
 	fi
@@ -21,8 +21,8 @@ else
 	# Output Openbox menu
 	menuStart
 	menuItem 'Logout' 'openbox --exit'
-	menuItem 'Reboot' 'xterm -e "doas shutdown -r now"'
-	menuItem 'Shutdown' 'xterm -e "doas shutdown now"'
+	menuItem 'Reboot' 'xterm -e "doas reboot"'
+	menuItem 'Shutdown' 'xterm -e "doas poweroff"'
 	menuItem 'Suspend' 'xterm -e "slock | xset dpms force suspend"'
 	menuEnd
 fi
