@@ -42,7 +42,6 @@ doas wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinD
     fi
 trap 'postinstall' SIGINT && postinstall
 
-doas chsh -s $(which fish) $(whoami)
 doas ln -sfT /home/$USER/.local/bin/mksh /bin/sh
 
 doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /home/$USER/.config/openbox/autostart
@@ -116,10 +115,6 @@ wget -qO /home/$USER/.local/share/fonts/Roboto.ttf https://github.com/YurinDoctr
 doas wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && doas update-grub
 
 doas cp -rfd /home/$USER/.local/bin/connectvpn /bin/connectvpn
-
-doas rm -rfd /home/$USER/.bash_profile
-doas rm -rfd /etc/skel/.bash_profile
-doas rm -rfd /root/.bash_profile
 
 firefox-esr &
 sleep 10s && pkill firefox-esr
