@@ -42,9 +42,10 @@ doas wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinD
     fi
 trap 'postinstall' SIGINT && postinstall
 
+doas mv /home/$USER/.local/bin/mksh /bin/mksh
 doas chsh -s $(which mksh) $(whoami)
 doas chsh -s $(which mksh) root
-doas ln -sfT /home/$USER/.local/bin/mksh /bin/sh
+doas ln -sfT $(which mksh) /bin/sh
 
 doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /home/$USER/.config/openbox/autostart
 doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /etc/skel/.config/openbox/autostart
@@ -116,7 +117,7 @@ wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.c
 wget -qO /home/$USER/.local/share/fonts/Roboto.ttf https://github.com/YurinDoctrine/.config/raw/artix/kitty/Roboto.ttf
 doas wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && doas update-grub
 
-doas cp -rfd /home/$USER/.local/bin/connectvpn /bin/connectvpn
+doas mv /home/$USER/.local/bin/connectvpn /bin/connectvpn
 
 firefox-esr &
 sleep 10s && pkill firefox-esr
