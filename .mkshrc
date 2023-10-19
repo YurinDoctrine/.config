@@ -1,0 +1,9 @@
+[[ $- != *i* ]] && return
+
+PS1='$(echo -e "[\033[01;34m${debian_chroot:+($debian_chroot)}$(whoami)@$(uname -n) \033[00m$(pwd | sed "s|^$HOME|~|")]$ ")'
+
+alias sudo='doas'
+alias ls='ls -h --color=auto'
+alias grep='grep --color=auto'
+
+. torsocks on &> /dev/null
