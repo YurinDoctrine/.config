@@ -75,6 +75,8 @@ trap 'final' SIGINT
 final
 
 sudo chsh -s $(which fish) $(whoami)
+sudo ln -sfT $(which mksh) /bin/sh
+
 sudo sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /home/$USER/.config/openbox/autostart
 sudo sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /etc/skel/.config/openbox/autostart
 sudo sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /root/.config/openbox/autostart
