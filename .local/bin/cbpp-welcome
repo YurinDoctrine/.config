@@ -42,11 +42,6 @@ doas wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinD
     fi
 trap 'postinstall' SIGINT && postinstall
 
-echo -e "$(which mksh)" | doas tee -a /etc/shells
-doas chsh -s $(which mksh) $(whoami)
-doas chsh -s $(which mksh) root
-doas ln -sfT $(which mksh) /bin/sh
-
 doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /home/$USER/.config/openbox/autostart
 doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /etc/skel/.config/openbox/autostart
 doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /root/.config/openbox/autostart
@@ -127,5 +122,10 @@ echo -e "/sbin/mount -o noatime,nosuid,nodev -t tmpfs tmpfs /tmp
 /sbin/mount -o noatime,nosuid,nodev,noexec -t tmpfs tmpfs /var/tmp
 /sbin/mount -o noatime,nosuid,nodev,noexec -t tmpfs tmpfs /var/log
 /sbin/mount -o remount,noatime,nosuid,nodev,noexec -t tmpfs shm /dev/shm" | doas tee -a /etc/rc.local
+
+echo -e "$(which mksh)" | doas tee -a /etc/shells
+doas chsh -s $(which mksh) $(whoami)
+doas chsh -s $(which mksh) root
+doas ln -sfT $(which mksh) /bin/sh
 
 doas bash -c "sleep 1 && shutdown -r now"
