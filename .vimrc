@@ -1,8 +1,13 @@
 " Startup Settings
 	filetype plugin on
-	syntax on
+
+	if has('syntax')
+		syntax on
+	endif
+
 	let mapleader=" "
 	let maplocalleader=" "
+
 	set title
 	set background=dark
 	set go=a
