@@ -42,7 +42,7 @@ doas wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinD
     fi
 trap 'postinstall' SIGINT && postinstall
 
-echo -e "$(which mksh)" | tee -a /etc/shells
+echo -e "$(which mksh)" | doas tee -a /etc/shells
 doas chsh -s $(which mksh) $(whoami)
 doas chsh -s $(which mksh) root
 doas ln -sfT $(which mksh) /bin/sh
