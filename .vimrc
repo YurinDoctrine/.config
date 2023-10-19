@@ -7,7 +7,7 @@
 	set background=dark
 	set go=a
 	set mouse=a
-	set nohlsearch
+	set hlsearch
 	set clipboard+=unnamedplus
 	set tabstop=4
 	set softtabstop=4
@@ -53,10 +53,15 @@
 	set nostartofline
 	set nolist
 	set backspace=indent,eol,start
+	set linebreak
+	set shm+=I
 
 	if !has('gui_running')
 	  set t_Co=256
 	endif
+
+" Set F2 to auto format
+	noremap <F2> gg=G<CR>
 
 " Center cursor when entering insert mode
 	autocmd InsertEnter * norm zz
