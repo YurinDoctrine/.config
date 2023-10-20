@@ -27,6 +27,8 @@ if [[ $? -eq 0 ]]; then
 
 	printf "vpnbook\n$password" >userpass
 
+	killall openvpn
+
 	openvpn --config *tcp443*.ovpn --auth-user-pass userpass
 
 	[[ $(ip link | grep -i 'tun' | wc -l) -gt 0 ]] || start
