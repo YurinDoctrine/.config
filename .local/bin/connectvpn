@@ -22,7 +22,7 @@ if [[ $? -eq 0 ]]; then
 
 	printf "vpnbook\n$password" >userpass
 
-	killall openvpn
+	doas killall openvpn
 
 	doas openvpn --config *tcp443*.ovpn --auth-user-pass userpass
 
