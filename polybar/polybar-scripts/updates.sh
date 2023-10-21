@@ -11,7 +11,7 @@ updates() {
 }
 
 upgrade() {
-    $(cbpp-gksudo xterm -e 'pacman -Syyu' && polyrestart)
+    $(xterm -e 'doas pacman -Syyu' && polyrestart)
     updates
 }
 
