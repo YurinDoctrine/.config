@@ -3,7 +3,7 @@
 bluetooth_print() {
     if [ "$(lsmod | grep -i Bluetooth)" ]; then
         bluetoothctl | while read -r; do
-            if [ $(pidof bluetoothd) -gt 0 ]; then
+            if [ $(pidof bluetoothd) ]; then
 
                 echo ""
                 devices_paired=$(bluetoothctl paired-devices | grep Device | cut -d ' ' -f 2)
