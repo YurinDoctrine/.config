@@ -19,7 +19,7 @@ bluetooth_print() {
             fi
         done
     else
-        exit
+        echo ""
     fi
 }
 
