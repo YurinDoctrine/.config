@@ -110,7 +110,7 @@ doas wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/
 
 doas mv /home/$USER/.local/bin/connectvpn /bin/connectvpn
 
-firefox-esr &
+firefox-esr --preferences &
 sleep 10s && pkill firefox-esr
 cd /home/$USER/.mozilla/firefox-esr/*default-release*/ && wget -q https://raw.githubusercontent.com/arkenfox/user.js/master/user.js && sed -i -e 's/user_pref("privacy.clearOnShutdown.cookies", true);/user_pref("privacy.clearOnShutdown.cookies", false);/' user.js && sed -i -e 's/user_pref("privacy.clearOnShutdown.offlineApps", true);/user_pref("privacy.clearOnShutdown.offlineApps", false);/' user.js && sed -i -e 's/user_pref("browser.download.useDownloadDir", false);/\/\/user_pref("browser.download.useDownloadDir", false);/' user.js && cd
 
