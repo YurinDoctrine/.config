@@ -81,7 +81,7 @@ fc-cache -rfv
 
 doas flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-doas pacman -S --noconfirm python-pyudev which xclip xmlstarlet
+doas pacman -S --noconfirm which xclip xmlstarlet
 
 doas cp -rfd /etc/pacman.conf.bak /etc/pacman.conf
 
@@ -103,10 +103,6 @@ echo -e "nameserver 9.9.9.11
 nameserver 149.112.112.11
 nameserver 127.0.0.1
 options rotate timeout:1 attempts:3 edns0 trust-ad use-vc single-request-reopen no-tld-query" | doas tee /etc/resolv.conf && doas chattr +i /etc/resolv.conf
-
-python3 -m pip install --user --upgrade --break-system-packages pip
-python3 -m pip install --user --upgrade --break-system-packages wheel
-python3 -m pip install --user --upgrade --break-system-packages pyyaml
 
 wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-include.cfg
 wget -qO /home/$USER/.local/share/fonts/Roboto.ttf https://github.com/YurinDoctrine/.config/raw/artix/kitty/Roboto.ttf
