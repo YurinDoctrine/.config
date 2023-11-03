@@ -107,8 +107,6 @@ wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.c
 wget -qO /home/$USER/.local/share/fonts/Roboto.ttf https://github.com/YurinDoctrine/.config/raw/artix/kitty/Roboto.ttf
 doas wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && doas update-grub
 
-doas mv /home/$USER/.local/bin/connectvpn /bin/connectvpn
-
 firefox-esr --preferences &
 sleep 10s && pkill firefox-esr
 cd /home/$USER/.mozilla/firefox-esr/*default-release*/ && wget -q https://raw.githubusercontent.com/arkenfox/user.js/master/user.js && sed -i -e 's/user_pref("privacy.clearOnShutdown.cookies", true);/user_pref("privacy.clearOnShutdown.cookies", false);/' user.js && sed -i -e 's/user_pref("privacy.clearOnShutdown.offlineApps", true);/user_pref("privacy.clearOnShutdown.offlineApps", false);/' user.js && sed -i -e 's/user_pref("browser.download.useDownloadDir", false);/\/\/user_pref("browser.download.useDownloadDir", false);/' user.js && cd
