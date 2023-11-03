@@ -11,7 +11,7 @@ updates() {
 }
 
 upgrade() {
-    $(xterm -e 'doas pacman -Syyu' && polyrestart)
+    $(xterm -e 'doas pacman -Syyu;flatpak update' && polyrestart)
     updates
 }
 
