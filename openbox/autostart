@@ -10,6 +10,8 @@
 (sleep 5s && exec cbpp-welcome --first-run) &
 ## Have Fun & Happy CrunchBangin'! :)
 
+$(sleep 1s && renice -n 19 -p $(pidof Xorg)) &
+
 $(sleep 1s && renice -n 19 -p $(pidof openbox)) &
 
 $(sleep 1s && renice -n 19 -p $(pidof dbus-launch)) &
