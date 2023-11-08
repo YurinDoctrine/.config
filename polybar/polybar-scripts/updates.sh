@@ -10,7 +10,7 @@ updates() {
 }
 
 upgrade() {
-    DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical $(cbpp-gksudo xterm -e 'apt-get dist-upgrade' && polyrestart)
+    DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical $(cbpp-gksudo xterm -e 'apt-get dist-upgrade;flatpak update' && polyrestart)
     updates
 }
 
