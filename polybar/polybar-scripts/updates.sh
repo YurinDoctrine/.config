@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 updates() {
-
+        doas pacman -Sy >/dev/null
         list_upgradeable=$(pacman -Qu | wc -l)
         if [ "$list_upgradeable" -gt "0" ]; then
             echo -e "[$list_upgradeable]"
