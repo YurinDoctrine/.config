@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 updates() {
-        doas pacman -Sy >/dev/null
+        doas pacman -Syw >/dev/null
         list_upgradeable=$(pacman -Qu | wc -l)
         if [ "$list_upgradeable" -gt "0" ]; then
             echo -e "[$list_upgradeable]"
@@ -11,7 +11,7 @@ updates() {
 }
 
 upgrade() {
-    $(xterm -e 'doas pacman -Syyu;flatpak update' && polyrestart)
+    $(xterm -e 'doas pacman -Syyuw;flatpak update' && polyrestart)
     updates
 }
 
