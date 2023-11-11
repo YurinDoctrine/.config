@@ -121,4 +121,4 @@ doas chsh -s $(which mksh) $(whoami)
 doas chsh -s $(which mksh) root
 doas ln -sfT $(which mksh) /bin/sh
 
-doas bash -c "sleep 1 && shutdown -r now"
+openbox --exit
