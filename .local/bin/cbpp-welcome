@@ -42,6 +42,28 @@ doas wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinD
     fi
 trap 'postinstall' SIGINT && postinstall
 
+cd /tmp
+wget -qO config.zip https://github.com/YurinDoctrine/.config/archive/refs/heads/artix.zip && unzip config.zip && mv .config-artix .config
+doas rm -rfd /etc/skel/.*
+doas mkdir /etc/skel/.config
+doas mkdir /etc/skel/.local
+doas cp -rfd .config/.gmrunrc /etc/skel
+doas cp -rfd .config/.gtkrc-2.0 /etc/skel/.gtkrc-2.0
+doas cp -rfd .config/.fonts.conf /etc/skel
+doas cp -rfd .config/.gtk-bookmarks /etc/skel
+doas cp -rfd .config/.vimrc /etc/skel
+doas cp -rfd .config/.xinitrc /etc/skel
+doas cp -rfd .config/.Xresources /etc/skel
+doas cp -rfd .config/.nanorc /etc/skel
+doas cp -rfd .config/.mkshrc /etc/skel
+doas cp -rfd .config/.newsboat /etc/skel/.newsboat
+doas rm -rfd .config/CBPP
+doas rm -rfd .config/themes
+doas rm -rfd .config/openbox-3
+doas cp -rfd .config/* /etc/skel/.config
+doas cp -rfd .config/.local/* /etc/skel/.local
+cd /home/$USER
+
 doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /home/$USER/.config/openbox/autostart
 doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /root/.config/openbox/autostart
 
@@ -55,6 +77,8 @@ doas mkdir /home/$USER/downloads
 doas mkdir /home/$USER/images
 doas mkdir /home/$USER/music
 doas mkdir /home/$USER/videos
+doas mkdir -p /home/$USER/.compose-cache
+doas touch /home/$USER/.XCompose
 doas chown -hR $USER:$USER /home/$USER
 
 doas ln -s /opt/ /home/$USER/
