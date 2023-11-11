@@ -47,15 +47,15 @@ doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && e
 doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /root/.config/openbox/autostart
 
 doas mkdir /usr/share/desktop-directories
- mkdir /home/$USER/backup
- mkdir /home/$USER/templates
- mkdir /home/$USER/public
- mkdir /home/$USER/desktop
- mkdir /home/$USER/documents
- mkdir /home/$USER/downloads
- mkdir /home/$USER/images
- mkdir /home/$USER/music
- mkdir /home/$USER/videos
+doas mkdir /home/$USER/backup
+doas mkdir /home/$USER/templates
+doas mkdir /home/$USER/public
+doas mkdir /home/$USER/desktop
+doas mkdir /home/$USER/documents
+doas mkdir /home/$USER/downloads
+doas mkdir /home/$USER/images
+doas mkdir /home/$USER/music
+doas mkdir /home/$USER/videos
 doas chown -hR $USER:$USER /home/$USER
 
 doas ln -s /opt/ /home/$USER/
