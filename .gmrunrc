@@ -13,7 +13,7 @@ URL_https = firefox-esr %u
 URL_file = pcmanfm-qt %s
 
 URL_s = firefox-esr 'https://search.brave.com/search?q=%s'
-URL_sh = sh -c '%s'
+URL_sh = bash -c '%s'
 
 EXT:doc,rtf = xdg-open %s
 EXT:txt,cc,cpp,h,java,html,htm,epl,tex,latex,js,css,xml,xsl,am,php,css,js,py,rb = xdg-open %s
