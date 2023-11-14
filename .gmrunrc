@@ -1,14 +1,22 @@
+ShowLast = 1
 ShowDotFiles = 1
 TabTimeout = 0
 
 Terminal = kitty
 TermExec = ${Terminal}
-AlwaysInTerm = ssh ftp git less more vi vim cat nano ranger tail top info xsel xterm
+AlwaysInTerm = ssh ftp git less more vi vim cat nano tail top info xsel xterm
 
 History = 5
 
 URL_http = x-www-browser %u
-URL_info = ${TermExec} 'info %s'
+URL_https = x-www-browser %u
 URL_file = exo-open %s
 URL_f = exo-open %s
-URL_g = x-www-browser 'http://www.google.com/search?q=%s'
+URL_sh = sh -c '%s'
+
+EXT:doc,rtf = xdg-open %s
+EXT:txt,cc,cpp,h,java,html,htm,epl,tex,latex,js,css,xml,xsl,am,php,css,js,py,rb = xdg-open %s
+EXT:mpeg,mpg,avi,mkv,flv = xdg-open %s
+EXT:mp3,ogg,m4a,wmv,wma = xdg-open %s
+EXT:ps = xdg-open %s
+EXT:pdf = xdg-open %s
