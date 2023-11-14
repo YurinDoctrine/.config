@@ -35,7 +35,7 @@ open_folder_cmd=pcmanfm-qt
 # Default command to open files with - others might be xdg-open, gnome-open...
 default_open_cmd=exo-open # exo-open comes with pcmanfm-qt
 # Text editor of choice
-text_editor=featherpad
+text_editor=xdg-open
 
 # function to open files with default open command, or alternative command for certain files
 # - add other conditions to choice
