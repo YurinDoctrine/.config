@@ -15,6 +15,7 @@ URL_file = exo-open %s
 URL_s = x-www-browser 'https://search.brave.com/search?q=%s'
 URL_sh = bash -c '%s'
 
+EXT:desktop = xdg-open %s
 EXT:doc,rtf = xdg-open %s
 EXT:txt,cc,cpp,h,java,html,htm,epl,tex,latex,js,css,xml,xsl,am,php,css,js,py,rb = xdg-open %s
 EXT:mpeg,mpg,avi,mkv,flv = xdg-open %s
