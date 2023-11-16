@@ -4,7 +4,7 @@ bluetooth_print() {
     if [ "$(lsmod | grep -i Bluetooth)" ]; then
 		if [ "$(rfkill | grep -i Bluetooth | grep -o unblocked | wc -l)" -ge 2 ]; then
 			bluetoothctl | while read -r; do
-				if [ $(pidof bluetoothd) ]; then
+				if [ "$(systemctl is-active "bluetooth.service")" = "active" ]; then
 					echo ""
 					devices_paired=$(bluetoothctl devices | grep Device | cut -d ' ' -f 2)
 					echo -e "$devices_paired" | while read -r line; do
