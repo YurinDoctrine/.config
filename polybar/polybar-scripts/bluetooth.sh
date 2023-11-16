@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 bluetooth_print() {
-    if [ "$(lsmod | grep -i Bluetooth)" ]; then
+    if [ "$(lsusb | grep Bluetooth)" ] || [ "$(lsmod | grep -i Bluetooth)" ]; then
 		if [ "$(rfkill | grep -i Bluetooth | grep -o unblocked | wc -l)" -ge 2 ]; then
 			bluetoothctl | while read -r; do
 				if [ "$(systemctl is-active "bluetooth.service")" = "active" ]; then
