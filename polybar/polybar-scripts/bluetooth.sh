@@ -1,12 +1,12 @@
 #!/usr/bin/sh
 
 bluetooth_print() {
-    if [ "$(lsusb | grep Bluetooth)" ] || [ "$(lsmod | grep -i Bluetooth)" ]; then
+    if [ "$(lsusb | grep -i Bluetooth)" ] || [ "$(lsmod | grep -i Bluetooth)" ]; then
 		if [ "$(rfkill | grep -i Bluetooth | grep -o unblocked | wc -l)" -ge 2 ]; then
 			bluetoothctl | while read -r; do
 				if [ "$(systemctl is-active "bluetooth.service")" = "active" ]; then
 					echo ""
-					devices_paired=$(bluetoothctl devices | grep Device | cut -d ' ' -f 2)
+					devices_paired=$(bluetoothctl devices | grep -i Device | cut -d ' ' -f 2)
 					echo -e "$devices_paired" | while read -r line; do
 						bluetoothctl connect "$line" >/dev/null
 						device_info=$(bluetoothctl info "$line")
@@ -30,12 +30,12 @@ bluetooth_toggle() {
     if bluetoothctl show | grep -q "Powered: no"; then
         bluetoothctl power on >/dev/null
         sleep 0.5
-        devices_paired=$(bluetoothctl devices | grep Device | cut -d ' ' -f 2)
+        devices_paired=$(bluetoothctl devices | grep -i Device | cut -d ' ' -f 2)
         echo -e "$devices_paired" | while read -r line; do
             bluetoothctl connect "$line" >/dev/null
         done
     else
-        devices_paired=$(bluetoothctl devices | grep Device | cut -d ' ' -f 2)
+        devices_paired=$(bluetoothctl devices | grep -i Device | cut -d ' ' -f 2)
         echo -e "$devices_paired" | while read -r line; do
             bluetoothctl disconnect "$line" >/dev/null
         done
