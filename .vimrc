@@ -103,6 +103,9 @@
 " Map CTRL+v in insert mode to paste from clipboard
 	inoremap <C-v> <C-r>=system("xclip -selection clipboard -o")<Enter>
 
+" Map Shift+Enter in normal mode to switch to insert mode when new line
+	nnoremap <S-Enter> o
+
 " Map ALT+Enter in normal mode to open new split window vertically
 	nnoremap <M-Enter> :vsplit .<Enter>
 " Map ALT+Backspace in normal mode to open new split window horizontally
