@@ -206,5 +206,5 @@
 " When shortcut files are updated, renew bash and ranger configs with new material:
   	autocmd BufWritePost bm-files,bm-dirs !shortcuts
 
-" Save file as doas on files that require root permission
+" Save file as root on files that require root permission
 	cabbrev w! execute 'silent! write !doas tee % >/dev/null' <bar> edit!
