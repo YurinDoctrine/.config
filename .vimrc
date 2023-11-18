@@ -66,26 +66,27 @@
 	endif
 
 " Set F2 to auto format
-	noremap <F2> gg=G<CR>
+	noremap <F2> gg=G<Enter>
+
+" Switch insert mode when cursor on blank
+	autocmd CursorMoved * if mode() == 'n' && col('.') != 1 && getline('.')[col('.') - 1] =~ '\s' | startinsert | endif
+	autocmd CursorMovedI * if col('.') != 1 && getline('.')[col('.') - 1] =~ '\s' | stopinsert | endif
 
 " Center cursor when entering insert mode
 	autocmd InsertEnter * norm zz
 
 " Show the complete menu when switching to insert mode or pressing space key
 	autocmd InsertEnter * :call feedkeys("\<C-p>\<C-p>")
-	inoremap <expr> <Space> pumvisible() ? "\<Space><C-e>\<Space>" : "\<Space><C-p><C-p>"
+	inoremap <expr> <Space> pumvisible() ? "\<Space><C-y>" : "\<Space><C-p><C-p>"
+	inoremap <expr> <Tab> pumvisible() ? "\<Tab><C-y>" : "\<Tab><C-p><C-p>"
 
 " Navigate the complete menu items like CTRL+n / CTRL+p would
 	inoremap <expr> <Down> pumvisible() ? "<C-n>" : "<Down>"
 	inoremap <expr> <Up> pumvisible() ? "<C-p>" : "<Up>"
 
 " Select the complete menu item like CTRL+y would
-	inoremap <expr> <Right> pumvisible() ? "<C-y>" : "<Right>"
 	inoremap <expr> <CR> pumvisible() ? "<C-y>" : "<CR>"
-	inoremap <expr> <Tab> pumvisible() ? "<C-y>" : "<Tab>"
-
-" Cancel the complete menu item like CTRL+e would
-	inoremap <expr> <Left> pumvisible() ? "<C-e>" : "<Left>"
+	inoremap <expr> <Enter> pumvisible() ? "<C-y>" : "<Enter>"
 
 " Set CTRL-Delete or ALT-Delete act as delete words forwards
 	inoremap <C-Delete> <C-o>diw
@@ -98,9 +99,9 @@
 	inoremap <C-z> <Esc>Ui
 
 " Map CTRL+c in visual mode to copy to clipboard
-	vnoremap <C-c> y:call system('xclip -selection clipboard', @")<CR>
+	vnoremap <C-c> y:call system('xclip -selection clipboard', @")<Enter>
 " Map CTRL+v in insert mode to paste from clipboard
-	inoremap <C-v> <C-r>=system("xclip -selection clipboard -o")<CR>
+	inoremap <C-v> <C-r>=system("xclip -selection clipboard -o")<Enter>
 
 " Map ALT+Enter in normal mode to open new split window vertically
 	nnoremap <M-Enter> :vsplit .<Enter>
