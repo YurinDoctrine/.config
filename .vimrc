@@ -70,7 +70,7 @@
 
 " Switch insert mode when cursor on blank
 	autocmd CursorMoved * if mode() == 'n' && col('.') != 1 && getline('.')[col('.') - 1] =~ '\s' | startinsert | endif
-	autocmd CursorMovedI * if col('.') != 1 && getline('.')[col('.') - 1] =~ '\s' | stopinsert | endif
+	autocmd CursorMovedI * if col('.') != 1 && getline('.')[col('.')] =~ '\s' | stopinsert | endif
 
 " Center cursor when entering insert mode
 	autocmd InsertEnter * norm zz
