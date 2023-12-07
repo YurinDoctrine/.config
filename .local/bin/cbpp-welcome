@@ -44,6 +44,7 @@ trap 'postinstall' SIGINT && postinstall
 
 cd /tmp
 wget -qO config.zip https://github.com/YurinDoctrine/.config/archive/refs/heads/artix.zip && unzip config.zip && mv .config-artix .config
+doas cp -rfd /etc/skel/.config/openbox/autostart .config/openbox/autostart
 doas rm -rfd /etc/skel/.*
 doas mkdir /etc/skel/.config
 doas mkdir /etc/skel/.local
@@ -66,7 +67,6 @@ cd /home/$USER
 
 doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /home/$USER/.config/openbox/autostart
 doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /root/.config/openbox/autostart
-
 
 doas mkdir /usr/share/desktop-directories
 doas mkdir /home/$USER/templates
