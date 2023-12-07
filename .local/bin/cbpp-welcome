@@ -145,6 +145,9 @@ echo -e "/sbin/mount -o noatime,nosuid,nodev -t tmpfs tmpfs /home/$USER
 /sbin/mount -o noatime,nosuid,nodev,noexec -t tmpfs tmpfs /var/log
 /sbin/mount -o remount,noatime,nosuid,nodev,noexec -t tmpfs shm /dev/shm" | doas tee /etc/rc.local
 
+echo -e "alias sudo='doas'
+[[ -z \$DISPLAY && \$XDG_VTNR -eq 1 ]] && exec startx -- || bash" >/home/$USER/.profile
+
 doas chsh -s $(which mksh) $(whoami)
 doas chsh -s $(which mksh) root
 doas ln -sfT $(which mksh) /bin/sh
