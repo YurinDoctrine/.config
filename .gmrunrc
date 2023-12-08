@@ -4,7 +4,7 @@ TabTimeout = 0
 
 Terminal = kitty
 TermExec = ${Terminal}
-AlwaysInTerm = ssh ftp git less more vi vim cat nano tail top info xdotool xsel
+AlwaysInTerm = bash ssh ftp git less more vi vim cat nano tail top info xdotool xsel
 
 History = 5
 
