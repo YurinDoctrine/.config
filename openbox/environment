@@ -1,7 +1,7 @@
-export PATH="$PATH:/usr/sbin:/sbin:/usr/bin:/bin:/usr/local/bin:/home/$USER/.local/bin:/var/lib/flatpak/exports/bin"
+export PATH="$PATH:/usr/sbin:/sbin:/usr/bin:/bin:/usr/local/bin:$HOME/.local/bin:/$HOME/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin"
 export GSETTINGS_SCHEMA_DIR="/usr/share/glib-2.0/schemas"
-export GTK2_RC_FILES="/home/$USER/.gtkrc-2.0"
-export GTK3_RC_FILES="/home/$USER/gtk-3.0/settings.ini"
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+export GTK3_RC_FILES="$HOME/gtk-3.0/settings.ini"
 export WM=openbox
 export GUIBROWSER=firefox-esr
 export STATUSBAR=polybar
