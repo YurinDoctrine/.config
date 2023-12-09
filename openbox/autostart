@@ -43,7 +43,7 @@ $(sleep 1s && renice -n 19 -p $(pidof dunst)) &
 $(for output in $(xrandr --prop | grep -E -o -i "^[A-Z\-]+-[0-9]+"); do xrandr --output "$output" --set "scaling mode" "Full aspect"; done) &
 
 ## Focus desktop
-$(sleep 0.75 && xdotool key Super+F2;xdotool key Super+F1) &
+$(sleep 0.5 && xdotool click 1) &
 
 ## Optional (Uncomment programs you might want to run)
 ## IRC Chat
