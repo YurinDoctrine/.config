@@ -135,8 +135,13 @@ wget -qO /home/$USER/.local/share/fonts/Roboto.ttf https://github.com/YurinDoctr
 doas wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && doas update-grub
 
 firefox-esr --preferences &
-sleep 10s && pkill firefox-esr
-cd /home/$USER/.mozilla/firefox-esr/*default-release*/ && wget -q https://raw.githubusercontent.com/arkenfox/user.js/master/user.js && sed -i -e 's/user_pref("privacy.clearOnShutdown.cookies", true);/user_pref("privacy.clearOnShutdown.cookies", false);/' user.js && sed -i -e 's/user_pref("privacy.clearOnShutdown.offlineApps", true);/user_pref("privacy.clearOnShutdown.offlineApps", false);/' user.js && sed -i -e 's/user_pref("browser.download.useDownloadDir", false);/\/\/user_pref("browser.download.useDownloadDir", false);/' user.js && cd
+sleep 5s && pkill firefox-esr
+cd /home/$USER/.mozilla/firefox-esr/*default-release*/ && wget -q https://raw.githubusercontent.com/arkenfox/user.js/master/user.js && sed -i -e 's/user_pref("privacy.clearOnShutdown.cookies", true);/user_pref("privacy.clearOnShutdown.cookies", false);/' user.js && sed -i -e 's/user_pref("privacy.clearOnShutdown.offlineApps", true);/user_pref("privacy.clearOnShutdown.offlineApps", false);/' user.js && sed -i -e 's/user_pref("browser.download.useDownloadDir", false);/\/\/user_pref("browser.download.useDownloadDir", false);/' user.js
+echo -e 'user_pref("network.proxy.type", 1);
+user_pref("network.proxy.socks", "127.0.0.1");
+user_pref("network.proxy.socks_port", 9050);
+user_pref("network.proxy.socks_version", 5);' | tee -a prefs.js
+cd
 
 echo -e "/sbin/mount -o noatime,nosuid,nodev -t tmpfs tmpfs /home/$USER
 /sbin/rsync -a --exclude='backup/' /etc/skel/ /home/$USER/
