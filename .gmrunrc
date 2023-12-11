@@ -12,7 +12,7 @@ URL_http = x-www-browser %u
 URL_https = x-www-browser %u
 URL_file = exo-open %s
 
-URL_s = x-www-browser 'https://search.brave.com/search?q=%s'
+URL_s = x-www-browser 'https://duckduckgo.com/%s'
 URL_sh = bash -c '%s'
 
 EXT:desktop = xdg-open %s
