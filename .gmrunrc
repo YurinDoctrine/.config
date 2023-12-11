@@ -12,7 +12,7 @@ URL_http = firefox-esr %u
 URL_https = firefox-esr %u
 URL_file = pcmanfm-qt %s
 
-URL_s = firefox-esr 'https://search.brave.com/search?q=%s'
+URL_s = firefox-esr 'https://duckduckgo.com/%s'
 URL_sh = bash -c '%s'
 
 EXT:desktop = xdg-open %s
