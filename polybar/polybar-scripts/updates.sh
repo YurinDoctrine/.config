@@ -11,7 +11,7 @@ updates() {
 }
 
 upgrade() {
-    $(xterm -e 'doas pacman -Syyuu;flatpak update' && polyrestart)
+    $(xterm -e 'doas pacman -Syyuu;flatpak update;doas fwupdmgr get-devices;doas fwupdmgr refresh --force;doas fwupdmgr get-updates -y;doas fwupdmgr update -y' && polyrestart)
     updates
 }
 
