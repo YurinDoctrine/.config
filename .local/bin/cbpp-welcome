@@ -112,6 +112,8 @@ xdg-user-dirs-update
 
 gtk-update-icon-cache
 
+sudo rm -rfd /usr/share/xsessions/openbox-kde.desktop
+
 sudo sed -i -e 's/^keyboard=0/keyboard=1/' /etc/lxdm/default.conf
 
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
