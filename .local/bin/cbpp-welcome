@@ -104,7 +104,7 @@ gtk-update-icon-cache
 
 fc-cache -rfv
 
-sudo rm -rfd /usr/share/xsessions/openbox-kde.desktop
+doas rm -rfd /usr/share/xsessions/openbox-kde.desktop
 
 doas flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
