@@ -121,6 +121,8 @@
 	nnoremap <C-t> :term<Enter>
 " Map CTRL+o in normal mode to open file
 	nnoremap <C-o> :edit<Space>
+" Map Shift+o in normal mode to browse last modified files
+	nnoremap <S-o> :bro ol!<Enter>
 " Map CTRL+e in normal mode to explore working directory
 	nnoremap <C-e> :e .<Enter>
 " Map CTRL+d in normal mode to change working directory
