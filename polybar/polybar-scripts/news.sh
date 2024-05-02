@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 start_newsboat() {
-  exec kitty newsboat -r
+  exec xterm -e newsboat -r
 }
 
 case "$1" in
