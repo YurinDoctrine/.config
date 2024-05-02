@@ -1,2 +1,3 @@
 alias sudo='doas'
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx -- || bash
+[[ -z $DISPLAY && $TERM != 'xterm' && $XDG_VTNR -eq 1 ]] && exec startx --
+[[ -z $DISPLAY && $TERM != 'xterm' && $XDG_VTNR -ne 1 ]] && bash
