@@ -53,8 +53,8 @@ $(sleep 0.5 && xdotool click 1) &
 
 ## Optional (Uncomment programs you might want to run)
 ## IRC Chat
-#exec kitty irssi &
+#exec xterm -e irssi &
 ## RSS Reader
-#exec kitty newsboat -r &
+#exec xterm -e newsboat -r &
 
 exit
