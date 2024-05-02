@@ -6,3 +6,45 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
 Xcursor.theme: CBPP
+
+! XTerm*font: xft:Hack\ Nerd\ Font:Regular:size=10
+XTerm*geometry: 80x30
+XTerm*internalBorder: 20
+XTerm*borderWidth: 0
+
+XTerm*locale: true
+XTerm*utf8: 1
+XTerm*utf8Title: true
+XTerm*utf8Fonts: always
+XTerm*renderFont: true
+XTerm*forceBoxChars: false
+XTerm*background: black
+XTerm*foreground: white
+XTerm*dynamicColors: true
+XTerm*boldMode: true
+XTerm*boldColors: true
+XTerm*toolBar: false
+XTerm*scrollBar: true
+XTerm*fastScroll: true
+XTerm*jumpScroll: true
+XTerm*multiScroll: true
+XTerm*marginBell: false
+XTerm*visualBell: false
+XTerm*bellIsUrgent: false
+XTerm*highlightSelection: true
+XTerm*highlightReverse: true
+XTerm*cursorBlink: true
+XTerm*cursorUnderLine: false
+XTerm*cursorColor: reverse
+
+! XTerm*loginShell: true
+! XTerm*ttyModes: erase ^?
+! XTerm*backarrowKey: false
+! XTerm*metaSendsEscape: true
+
+XTerm*selectToClipboard: true
+XTerm*translations: #override \n\
+Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
+Ctrl <Key>minus: smaller-vt-font() \n\
+Ctrl <Key>plus: larger-vt-font()
