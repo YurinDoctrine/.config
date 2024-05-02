@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [[ $1 = '--first-run' ]]; then # First run
-    kitty cbpp-welcome
+    xterm -e cbpp-welcome
     exit 0
 fi
 
@@ -133,7 +133,6 @@ nameserver 149.112.112.11
 options rotate timeout:1 attempts:3 edns0 trust-ad use-vc single-request-reopen no-tld-query bogus-priv stop-dns-rebind domain-needed" | doas tee /etc/resolv.conf && doas chattr +i /etc/resolv.conf
 
 wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-include.cfg
-wget -qO /home/$USER/.local/share/fonts/Roboto.ttf https://github.com/YurinDoctrine/.config/raw/artix/kitty/Roboto.ttf
 doas wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && doas update-grub
 
 firefox-esr --preferences &
@@ -158,4 +157,4 @@ doas chsh -s $(which mksh) $(whoami)
 doas chsh -s $(which mksh) root
 doas ln -sfT $(which mksh) /bin/sh
 
-openbox --exit
+openbox --exit && exit
