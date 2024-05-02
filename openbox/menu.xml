@@ -9,7 +9,7 @@
         <separator />
         <item label="Terminal Emulator">
             <action name="Execute">
-                <execute>kitty --single-instance</execute>
+                <execute>xterm</execute>
             </action>
         </item>
         <item label="Web Browser">
@@ -91,7 +91,7 @@
             </item>
             <item label="IRC client">
                 <action name="Execute">
-                    <execute>kitty irssi</execute>
+                    <execute>xterm -e irssi</execute>
                 </action>
             </item>
             <item label="VNC Viewer">
@@ -108,7 +108,7 @@
             </item>
             <item label="Calculator">
                 <action name="Execute">
-                    <execute>kitty bc</execute>
+                    <execute>xterm -e bc</execute>
                 </action>
             </item>
             <item label="Google Docs">
@@ -125,17 +125,17 @@
             <menu id="obConfig" label="Openbox">
                 <item label="Edit menu.xml">
                     <action name="Execute">
-                        <execute>kitty vim ~/.config/openbox/menu.xml</execute>
+                        <execute>xterm -e vim ~/.config/openbox/menu.xml</execute>
                     </action>
                 </item>
                 <item label="Edit rc.xml">
                     <action name="Execute">
-                        <execute>kitty vim ~/.config/openbox/rc.xml</execute>
+                        <execute>xterm -e vim ~/.config/openbox/rc.xml</execute>
                     </action>
                 </item>
                 <item label="Edit autostart">
                     <action name="Execute">
-                        <execute>kitty vim ~/.config/openbox/autostart</execute>
+                        <execute>xterm -e vim ~/.config/openbox/autostart</execute>
                     </action>
                 </item>
                 <separator />
@@ -170,12 +170,12 @@
         <menu id="system" label="System">
             <item label="Task Manager (top)">
                 <action name="Execute">
-                    <execute>kitty top</execute>
+                    <execute>xterm -e top</execute>
                 </action>
             </item>
             <item label="Terminal Emulator (root)">
                 <action name="Execute">
-                    <execute>cbpp-gksudo kitty --single-instance</execute>
+                    <execute>cbpp-gksudo xterm</execute>
                 </action>
             </item>
         </menu>
