@@ -384,16 +384,16 @@
                     <enabled>true</enabled>
                     <name>vim</name>
                 </startupnotify>
-                <command>kitty vim .</command>
+                <command>xterm -e vim .</command>
             </action>
         </keybind>
         <keybind key="W-t">
             <action name="Execute">
                 <startupnotify>
                     <enabled>true</enabled>
-                    <name>kitty --single-instance</name>
+                    <name>xterm</name>
                 </startupnotify>
-                <command>kitty --single-instance</command>
+                <command>xterm</command>
             </action>
         </keybind>
         <keybind key="W-w">
@@ -420,7 +420,7 @@
                     <enabled>true</enabled>
                     <name>Editor</name>
                 </startupnotify>
-                <command>kitty vim</command>
+                <command>xterm -e vim</command>
             </action>
         </keybind>
         <keybind key="W-v">
@@ -429,7 +429,7 @@
                     <enabled>true</enabled>
                     <name>Editor</name>
                 </startupnotify>
-                <command>kitty vim</command>
+                <command>xterm -e vim</command>
             </action>
         </keybind>
         <keybind key="W-m">
@@ -447,7 +447,7 @@
                     <enabled>true</enabled>
                     <name>top</name>
                 </startupnotify>
-                <command>kitty top</command>
+                <command>xterm -e top</command>
             </action>
         </keybind>
         <keybind key="W-x">
