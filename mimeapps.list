@@ -135,7 +135,7 @@ x-scheme-handler/https=firefox-esr.desktop
 x-scheme-handler/ics=google-calendar-import.desktop
 x-scheme-handler/magnet=transmission-qt.desktop
 x-scheme-handler/spotify=spotify.desktop
-x-scheme-handler/terminal=kitty.desktop
+x-scheme-handler/terminal=xterm.desktop
 x-scheme-handler/web+cardano=firefox-esr.desktop
 
 [Added Associations]
