@@ -10,7 +10,7 @@
 
 	set title
 	set background=dark
-	set go=a
+	set go=ac
 	set mouse=a
 	set hlsearch
 	set clipboard+=unnamedplus
