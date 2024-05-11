@@ -6,4 +6,4 @@ alias sudo='doas'
 alias ls='ls -h --color=auto'
 alias grep='grep --color=auto'
 
-[[ $TERM == 'xterm' ]] && . torsocks on &> /dev/null
+. torsocks on &> /dev/null
