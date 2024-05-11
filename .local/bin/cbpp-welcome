@@ -56,7 +56,7 @@ doas cp -rfd .config/.vimrc /etc/skel
 doas cp -rfd .config/.xinitrc /etc/skel
 doas cp -rfd .config/.Xresources /etc/skel
 doas cp -rfd .config/.nanorc /etc/skel
-doas cp -rfd .config/.mkshrc /etc/skel
+doas cp -rfd .config/.okshrc /etc/skel
 doas cp -rfd .config/.profile /etc/skel
 doas cp -rfd .config/.newsboat /etc/skel/.newsboat
 doas rm -rfd .config/CBPP
@@ -153,8 +153,8 @@ echo -e "/sbin/mount -o noatime,nosuid,nodev -t tmpfs tmpfs /home/$USER
 /sbin/mount -o noatime,nosuid,nodev,noexec -t tmpfs tmpfs /var/log
 /sbin/mount -o remount,noatime,nosuid,nodev,noexec -t tmpfs shm /dev/shm" | doas tee /etc/rc.local
 
-doas chsh -s $(which mksh) $(whoami)
-doas chsh -s $(which mksh) root
-doas ln -sfT $(which mksh) /bin/sh
+doas chsh -s $(which oksh) $(whoami)
+doas chsh -s $(which oksh) root
+doas ln -sfT $(which oksh) /bin/sh
 
 openbox --exit && exit
