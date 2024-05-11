@@ -19,7 +19,7 @@ case "$1" in
                 lenght_count=(${title_lenght}*3)
                 display_width=32
                 if [ $title_lenght -gt $display_width ]; then
-                    while [ $lenght_count -gt 0 ]
+                    while [[ $lenght_count -gt 0 ]]
                     do
                         display_title="${news_title:0:$display_width}"
                         echo -e $display_title
