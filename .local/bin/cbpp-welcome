@@ -133,7 +133,6 @@ nameserver 149.112.112.11
 options rotate timeout:1 attempts:3 edns0 trust-ad use-vc single-request-reopen no-tld-query bogus-priv stop-dns-rebind domain-needed" | doas tee /etc/resolv.conf && doas chattr +i /etc/resolv.conf
 
 wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-include.cfg
-doas wget -qO /boot/grub/cbpp_splash.png https://raw.githubusercontent.com/CBPP/cbpp-configs/master/cbpp-configs/data/boot/grub/cbpp_splash.png && doas update-grub
 
 firefox-esr --preferences &
 sleep 5s && pkill firefox-esr
@@ -156,5 +155,7 @@ echo -e "/sbin/mount -o noatime,nosuid,nodev -t tmpfs tmpfs /home/$USER
 doas chsh -s $(which mksh) $(whoami)
 doas chsh -s $(which mksh) root
 doas ln -sfT $(which mksh) /bin/sh
+
+doas rm -rfd /boot/grub/themes && doas update-grub
 
 openbox --exit && exit
