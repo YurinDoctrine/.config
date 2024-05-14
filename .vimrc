@@ -52,7 +52,6 @@
 	set ruler
 	set autoread
 	set shortmess+=c
-	set ttyfast
 	set showmatch
 	set noshiftround
 	set nostartofline
