@@ -32,7 +32,6 @@
 	set history=25
 	set nocompatible
 	set number relativenumber
-	set encoding=utf-8
 	set wildmenu
 	set wildmode=longest,list,full
 	set wildchar=<Tab>
@@ -52,7 +51,6 @@
 	set ruler
 	set autoread
 	set shortmess+=c
-	set ttyfast
 	set showmatch
 	set noshiftround
 	set nostartofline
