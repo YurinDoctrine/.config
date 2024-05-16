@@ -102,10 +102,10 @@
 	nnoremap <Enter> o
 	nnoremap <S-Enter> O
 
-" Map ALT+Enter in normal mode to open new split window vertically
-	nnoremap <M-Enter> :vsplit .<Enter>
-" Map ALT+Backspace in normal mode to open new split window horizontally
-	nnoremap <M-Backspace> :split .<Enter>
+" Map ALT+Backspace in normal mode to open new split window vertically
+	nnoremap <M-Backspace> :vsplit .<Enter>
+" Map ALT+Enter in normal mode to open new split window horizontally
+	nnoremap <M-Enter> :split .<Enter>
 " Map ALT +/- in normal mode to resize split window vertically
 	nnoremap <M-KPlus> :vertical resize +10<Enter>
 	nnoremap <M-KMinus> :vertical resize -10<Enter>
