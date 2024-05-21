@@ -138,6 +138,8 @@ firefox-esr --preferences &
 sleep 5s && pkill firefox-esr
 cd /home/$USER/.mozilla/firefox-esr/*default-release*/ && wget -q https://raw.githubusercontent.com/arkenfox/user.js/master/user.js && sed -i -e 's/user_pref("privacy.clearOnShutdown.cookies", true);/user_pref("privacy.clearOnShutdown.cookies", false);/' user.js && sed -i -e 's/user_pref("privacy.clearOnShutdown.offlineApps", true);/user_pref("privacy.clearOnShutdown.offlineApps", false);/' user.js && sed -i -e 's/user_pref("browser.download.useDownloadDir", false);/\/\/user_pref("browser.download.useDownloadDir", false);/' user.js && cd
 
+curl -s https://liquorix.net/install-liquorix.sh | sudo bash
+
 (sleep 20s && killall openbox) &
 
 curl -s https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
