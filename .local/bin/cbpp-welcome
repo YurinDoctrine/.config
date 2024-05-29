@@ -81,7 +81,10 @@ doas mkdir /home/$USER/videos
 doas mkdir -p /home/$USER/.compose-cache
 doas touch /home/$USER/.XCompose
 doas chown -hR $USER:$USER /home/$USER
+doas mkdir /opt/.var
+doas chown -hR $USER:$USER /opt
 
+doas ln -s /opt/.var /home/$USER/
 doas ln -s /opt/ /home/$USER/
 doas ln -s /tmp/ /home/$USER/
 doas ln -s /etc/skel/backup/ /home/$USER/
