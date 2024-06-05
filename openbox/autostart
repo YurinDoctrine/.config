@@ -16,6 +16,8 @@ $(sleep 1s && renice -n 19 -p $(pidof openbox)) &
 
 $(sleep 1s && renice -n 19 -p $(pidof dbus-launch)) &
 
+$(sleep 1s && renice -n 19 -p $(pidof pipewire)) &
+
 ## Set keyboard
 setxkbmap replaceme &
 ## Set keyboard settings - 500 ms delay and 10 cps (characters per second) repeat rate.
