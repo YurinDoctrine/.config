@@ -11,6 +11,7 @@
 ## Have Fun & Happy CrunchBangin'! :)
 
 $(sleep 1s && renice -n 19 -p $(pidof openbox)) &
+
 $(sleep 1s && renice -n 19 -p $(pidof pipewire)) &
 
 ## Merge resources
