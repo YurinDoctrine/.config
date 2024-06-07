@@ -30,8 +30,7 @@ xset r rate 500 10 &
 xset s off -dpms &
 
 ## Start Desktop
-exec pcmanfm-qt --desktop &
-$(exec nice -n 19 pcmanfm-qt) &
+$(exec nice -n 19 pcmanfm-qt --desktop) &
 
 ## Start LXDE PolKit
 $(exec nice -n 19 lxpolkit) &
