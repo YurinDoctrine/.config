@@ -17,6 +17,7 @@ $(sleep 1s && renice -n 19 -p $(pidof openbox)) &
 $(sleep 1s && renice -n 19 -p $(pidof dbus-launch)) &
 
 $(sleep 1s && renice -n 19 -p $(pidof pipewire)) &
+$(exec nice -n 19 pipewire-pulse) &
 
 ## Set keyboard
 setxkbmap replaceme &
@@ -35,17 +36,15 @@ xrdb -merge ~/.Xresources &
 
 ## Start Desktop
 exec pcmanfm-qt --desktop &
-$(sleep 1s && renice -n 19 -p $(pidof pcmanfm-qt)) &
+$(exec nice -n 19 pcmanfm-qt) &
 
 ## Start LXDE PolKit
-exec lxpolkit &
-$(sleep 1s && renice -n 19 -p $(pidof lxpolkit)) &
+$(exec nice -n 19 lxpolkit) &
 
 ## Group start:
 ## 1. dunst - start
 ## 2. polybar - start
-$(exec dunst -show_indicators -sort -word_wrap | exec polyrestart) &
-$(sleep 1s && renice -n 19 -p $(pidof dunst)) &
+$(exec nice -n 19 dunst -show_indicators -sort -word_wrap | exec polyrestart) &
 
 ## Fix monitor
 $(for output in $(xrandr --prop | grep -E -o -i "^[A-Z\-]+-[0-9]+"); do xrandr --output "$output" --set "scaling mode" "Full aspect"; done) &
