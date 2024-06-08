@@ -19,7 +19,7 @@ $(sleep 1s && renice -n 19 -p $(pidof dbus-launch)) &
 $(sleep 1s && renice -n 19 -p $(pidof pipewire)) &
 $(exec nice -n 19 pipewire-pulse) &
 
-$(sleep 1s && renice -n 19 -p $(pidof bluetoothd)) &
+$(sleep 1s && doas renice -n 19 -p $(pidof bluetoothd)) &
 
 ## Set keyboard
 setxkbmap replaceme &
