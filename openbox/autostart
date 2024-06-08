@@ -19,6 +19,8 @@ $(sleep 1s && renice -n 19 -p $(pidof dbus-launch)) &
 $(sleep 1s && renice -n 19 -p $(pidof pipewire)) &
 $(exec nice -n 19 pipewire-pulse) &
 
+$(sleep 1s && renice -n 19 -p $(pidof bluetoothd)) &
+
 ## Set keyboard
 setxkbmap replaceme &
 ## Set keyboard settings - 500 ms delay and 10 cps (characters per second) repeat rate.
