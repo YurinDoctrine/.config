@@ -80,6 +80,9 @@ sudo ln -sfT $(which mksh) /bin/sh
 sudo sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /home/$USER/.config/openbox/autostart
 sudo sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /root/.config/openbox/autostart
 
+BAT=$(ls /sys/class/power_supply/ | grep BAT)
+sudo sed -i -e "s/BAT1.*/$BAT/g" /home/$USER/.config/polybar/config.ini
+
 sudo mkdir /usr/share/desktop-directories
 sudo mkdir /usr/share/fonts/truetype/roboto
  mkdir /home/$USER/backup
