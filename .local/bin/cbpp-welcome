@@ -11,6 +11,7 @@ say() {
 }
 
 connectiontest() {
+    rfkill unblock wifi
     local TEXT_CHECKING='Checking internet connection...'
     local TEXT_FAILED='Internet connection test failed!'
     local TEXT_ABORT='Please connect to an Internet first.'
@@ -65,6 +66,9 @@ doas rm -rfd .config/openbox-3
 doas cp -rfd .config/* /etc/skel/.config
 doas cp -rfd .config/.local/* /etc/skel/.local
 cd /home/$USER
+
+BAT=$(ls /sys/class/power_supply/ | grep BAT)
+doas sed -i -e "s/BAT1.*/$BAT/g" .config/polybar/config.ini
 
 doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /home/$USER/.config/openbox/autostart
 doas sed -i -e 's/^(sleep 5s && exec cbpp-welcome --first-run) &/#(sleep 5s && exec cbpp-welcome --first-run) &/' /root/.config/openbox/autostart
