@@ -29,7 +29,7 @@
         </item>
         <item label="Media Player">
             <action name="Execute">
-                <execute>vlc --started-from-file</execute>
+                <execute>mpv</execute>
             </action>
         </item>
         <separator />
@@ -67,9 +67,9 @@
             </item>
         </menu>
         <menu id="multimedia" label="Multimedia">
-            <item label="VLC Media Player">
+            <item label="MPV Media Player">
                 <action name="Execute">
-                    <execute>vlc --started-from-file</execute>
+                    <execute>mpv</execute>
                 </action>
             </item>
         </menu>
