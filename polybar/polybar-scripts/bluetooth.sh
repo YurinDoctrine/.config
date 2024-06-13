@@ -11,7 +11,8 @@ bluetooth_print() {
 						bluetoothctl connect "$line" >/dev/null
 						device_info=$(bluetoothctl info "$line")
 						if echo -e "$device_info" | grep -q "Connected: yes"; then
-							echo ""
+      							device_output=$(echo "$device_info" | grep "Alias" | cut -d ' ' -f 2-)
+							echo "  $device_output"
 						fi
 					done
 				else
