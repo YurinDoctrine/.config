@@ -4,6 +4,7 @@ PS1='$(echo -e "[\033[01;01m${debian_chroot:+($debian_chroot)}$(whoami)\033[00m@
 
 alias sudo='doas'
 alias ls='ls -h --color=auto'
+alias dir='dir -h --color=auto'
 alias grep='grep --color=auto'
 
 . torsocks on &> /dev/null
