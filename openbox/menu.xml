@@ -29,7 +29,7 @@
         </item>
         <item label="Media Player">
             <action name="Execute">
-                <execute>mpv</execute>
+                <execute>mpv --player-operation-mode=pseudo-gui</execute>
             </action>
         </item>
         <separator />
@@ -69,7 +69,7 @@
         <menu id="multimedia" label="Multimedia">
             <item label="MPV Media Player">
                 <action name="Execute">
-                    <execute>mpv</execute>
+                    <execute>mpv --player-operation-mode=pseudo-gui</execute>
                 </action>
             </item>
         </menu>
