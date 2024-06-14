@@ -151,7 +151,8 @@ user_pref("network.proxy.socks_port", 9050);
 user_pref("network.proxy.socks_version", 5);' | tee -a prefs.js
 cd
 
-echo -e "/sbin/mount -o noatime,nosuid,nodev -t tmpfs tmpfs /home/$USER
+echo -e "/sbin/swapon /swap/swapfile
+/sbin/mount -o noatime,nosuid,nodev -t tmpfs tmpfs /home/$USER
 /sbin/rsync -a --exclude='backup/' /etc/skel/ /home/$USER/
 /sbin/chown -hR $USER:$USER /home/$USER
 /sbin/mount -o noatime,nosuid,nodev -t tmpfs tmpfs /tmp
