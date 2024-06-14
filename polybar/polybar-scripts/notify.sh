@@ -3,7 +3,7 @@
 case "$1" in
     --toggle)
         dunstctl set-paused toggle
-		dunstctl history-pop
+        dunstctl history-pop
         ;;
     *)
         if [ "$(dunstctl is-paused)" = "true" ]; then
