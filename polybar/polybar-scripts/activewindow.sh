@@ -16,6 +16,7 @@ case "$1" in
         kill_task
         ;;
     *)
-        echo -e "[$(xdotool get_desktop)]  $(xprop -id $(xdotool getactivewindow) | awk -F '"' '/^_OB_APP_TITLE/ {print $2}')" ;
+        DESKTOP=$(xdotool get_desktop)
+        echo -e "$((DESKTOP + 1)) / $(xdotool get_num_desktops)  $(xprop -id $(xdotool getactivewindow) | awk -F '"' '/^_OB_APP_TITLE/ {print $2}')" ;
         ;;
 esac
