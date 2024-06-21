@@ -87,9 +87,11 @@ doas touch /home/$USER/.XCompose
 doas chown -hR $USER:$USER /home/$USER
 doas chown -hR root:root /etc/skel/backup
 doas mkdir /opt/.var
+doas mkdir /opt/Trash
 doas chown -hR $USER:$USER /opt
 
 doas ln -s /opt/.var /home/$USER/
+doas ln -s /opt/Trash /home/$USER/.local/share/
 doas ln -s /opt/ /home/$USER/
 doas ln -s /tmp/ /home/$USER/
 doas ln -s /etc/skel/backup/ /home/$USER/
