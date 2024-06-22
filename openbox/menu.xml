@@ -74,11 +74,6 @@
             </item>
         </menu>
         <menu id="network" label="Network">
-            <item label="Filezilla FTP/SFTP client">
-                <action name="Execute">
-                    <execute>filezilla</execute>
-                </action>
-            </item>
             <item label="PuTTY SSH/Telnet client">
                 <action name="Execute">
                     <execute>putty</execute>
