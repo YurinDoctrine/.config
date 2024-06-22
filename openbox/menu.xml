@@ -173,6 +173,11 @@
                     <execute>cbpp-gksudo xterm</execute>
                 </action>
             </item>
+            <item label="File Manager (root)">
+                <action name="Execute">
+                    <execute>cbpp-gksudo pcmanfm-qt</execute>
+                </action>
+            </item>
         </menu>
         <menu id="help" label="Help" execute="cbpp-help-pipemenu" />
         <separator />
