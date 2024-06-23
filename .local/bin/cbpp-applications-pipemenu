@@ -1,12 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Output Openbox menu header
-echo "<openbox_pipe_menu>"
+echo -e "<openbox_pipe_menu>"
 
-# Define directories for Flatpak applications
 APP_DIRS=("/var/lib/flatpak/exports/share/applications" "$HOME/.local/share/flatpak/exports/share/applications")
 
-# Function to generate menu entries from .desktop files for Flatpak applications
 generate_pipe_menu_entries() {
     declare -A category_map
 
@@ -26,16 +23,14 @@ generate_pipe_menu_entries() {
         fi
     done
 
-    # Output categories and their items
     for category in "${!category_map[@]}"; do
-        echo "  <menu id=\"$category\" label=\"$category\">"
-        echo "${category_map[$category]}"
-        echo "  </menu>"
+        echo -e "  <menu id=\"$category\" label=\"$category\">"
+        echo -e "${category_map[$category]}"
+        echo -e "  </menu>"
     done
 }
 
 # Generate entries from Flatpak applications
 generate_pipe_menu_entries "${APP_DIRS[@]}"
 
-# Output Openbox menu footer
-echo "</openbox_pipe_menu>"
+echo -e "</openbox_pipe_menu>"
