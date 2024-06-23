@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Output Openbox menu header
+echo "<openbox_pipe_menu>"
+
+# Define directories for Flatpak applications
+APP_DIRS=("/var/lib/flatpak/exports/share/applications" "$HOME/.local/share/flatpak/exports/share/applications")
+
+# Function to generate menu entries from .desktop files for Flatpak applications
+generate_pipe_menu_entries() {
+    declare -A category_map
+
+    for dir in "$@"; do
+        if [ -d "$dir" ]; then
+            for desktop_file in "$dir"/*.desktop; do
+                [ -e "$desktop_file" ] || continue
+                name=$(grep -m 1 '^Name=' "$desktop_file" | cut -d= -f2)
+                exec=$(grep -m 1 '^Exec=' "$desktop_file" | cut -d= -f2- | sed 's/%.//g')
+                categories=$(grep -m 1 '^Categories=' "$desktop_file" | cut -d= -f2 | tr ';' '\n' | head -n 1)
+
+                # Default to "Other" if no categories found
+                [ -z "$categories" ] && categories="Other"
+
+                category_map["$categories"]+=$(printf "  <item label=\"%s\">\n    <action name=\"Execute\"><command>%s</command></action>\n  </item>\n" "$name" "$exec")
+            done
+        fi
+    done
+
+    # Output categories and their items
+    for category in "${!category_map[@]}"; do
+        echo "  <menu id=\"$category\" label=\"$category\">"
+        echo "${category_map[$category]}"
+        echo "  </menu>"
+    done
+}
+
+# Generate entries from Flatpak applications
+generate_pipe_menu_entries "${APP_DIRS[@]}"
+
+# Output Openbox menu footer
+echo "</openbox_pipe_menu>"
