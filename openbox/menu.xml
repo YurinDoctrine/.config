@@ -9,7 +9,7 @@
         <separator />
         <item label="Terminal Emulator">
             <action name="Execute">
-                <execute>xterm</execute>
+                <execute>xterm -e bash</execute>
             </action>
         </item>
         <item label="Web Browser">
