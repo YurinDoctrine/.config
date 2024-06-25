@@ -59,6 +59,7 @@ doas cp -rfd .config/.Xresources /etc/skel
 doas cp -rfd .config/.nanorc /etc/skel
 doas cp -rfd .config/.mkshrc /etc/skel
 doas cp -rfd .config/.profile /etc/skel
+doas cp -rfd .config/.bashrc /etc/skel
 doas cp -rfd .config/.newsboat /etc/skel/.newsboat
 doas rm -rfd .config/CBPP
 doas rm -rfd .config/themes
