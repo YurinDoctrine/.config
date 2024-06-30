@@ -28,7 +28,7 @@ setxkbmap replaceme &
 xset r rate 500 10 &
 
 ## Turn on tap to click
-#xinput set-prop $(xinput | awk '/Touchpad/{print $6}' | cut -d'=' -f2) $(xinput list-props $(xinput | awk '/Touchpad/{print $6}' | cut -d'=' -f2) | awk -F '[()]' '/Tapping Enabled (/ && !/Default/{print $2}') 1
+#xinput set-prop $(xinput | awk '/Touchpad/{print $6}' | cut -d'=' -f2) $(xinput list-props $(xinput | awk '/Touchpad/{print $6}' | cut -d'=' -f2) | awk -F '[()]' '/Tapping Enabled \(/ && !/Default/{print $2}') 1
 
 ## Turn off pointer acceleration
 xset m 0 0 &
