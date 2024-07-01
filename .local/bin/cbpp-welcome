@@ -97,6 +97,39 @@ doas ln -s /opt/ /home/$USER/
 doas ln -s /tmp/ /home/$USER/
 doas ln -s /etc/skel/backup/ /home/$USER/
 
+gsettings set org.gnome.system.location enabled false
+gsettings set org.gnome.desktop.privacy disable-camera true
+gsettings set org.gnome.desktop.privacy disable-microphone true
+gsettings set org.gnome.desktop.privacy remember-recent-files false
+gsettings set org.gnome.desktop.privacy hide-identity true
+gsettings set org.gnome.desktop.privacy report-technical-problems false
+gsettings set org.gnome.desktop.privacy send-software-usage-stats false
+gsettings set org.gnome.login-screen allowed-failures 100
+gsettings set org.gnome.desktop.screensaver user-switch-enabled false
+gsettings set org.gnome.SessionManager logout-prompt false
+gsettings set org.gnome.desktop.media-handling autorun-never true
+gsettings set org.gnome.desktop.sound event-sounds false
+gsettings set org.gnome.settings-daemon.plugins.media-keys max-screencast-length 0
+gsettings set org.gnome.desktop.session idle-delay 0
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'interactive'
+gsettings set org.gnome.desktop.interface enable-animations false
+gsettings set org.gnome.desktop.interface scaling-factor 1
+gsettings set org.gnome.desktop.interface text-scaling-factor 1.2
+gsettings set org.gnome.mutter experimental-features "['x11-randr-fractional-scaling'"', '"'scale-monitor-framebuffer']"
+gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
+gsettings set org.gnome.settings-daemon.plugins.xsettings hinting 'slight'
+gsettings set org.gnome.desktop.peripherals.keyboard delay 500
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 100
+gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
+gsettings set org.gtk.Settings.FileChooser show-hidden true
+gsettings set org.gnome.mutter attach-modal-dialogs false
+gsettings set org.gnome.shell.overrides attach-modal-dialogs false
+gsettings set org.gnome.shell.overrides edge-tiling true
+gsettings set org.gnome.mutter edge-tiling true
+gsettings set org.gnome.desktop.background color-shading-type vertical
+
 if [ -f "/home/$USER/.config/gtk-3.0/bookmarks" ]; then
     sed -i -e "s/\$USER/$(whoami)/g" /home/$USER/.config/gtk-3.0/bookmarks >/dev/null 2>&1
 fi
