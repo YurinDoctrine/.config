@@ -163,7 +163,7 @@ echo -e "/sbin/swapon /swap/swapfile
 /sbin/mount -o noatime,nosuid,nodev,noexec -t tmpfs tmpfs /var/cache
 /sbin/mount -o noatime,nosuid,nodev,noexec -t tmpfs tmpfs /var/log
 /sbin/mount -o remount,noatime,nosuid,nodev,noexec -t tmpfs shm /dev/shm
-/sbin/preload" | doas tee /etc/rc.local
+/sbin/preload -c /etc/preload.conf -s '' -l '' -n19" | doas tee /etc/rc.local
 
 doas chsh -s $(which mksh) $(whoami)
 doas chsh -s $(which mksh) root
