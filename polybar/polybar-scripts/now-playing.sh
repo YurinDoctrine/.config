@@ -6,11 +6,11 @@ players=$(dbus-send --session --dest=org.freedesktop.DBus --type=method_call --p
 if [ -z "$players" ]; then
     echo ""
 else
-	player=$(echo -e "$players" | head -n1)
-	metadata=$(dbus-send --print-reply --dest="$player" \
-		/org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get \
-		string:'org.mpris.MediaPlayer2.Player' string:'Metadata')
-	artist=$(echo -e "$metadata" | awk -F '"' '/xesam:artist/{getline; getline; print $2}')
+    player=$(echo -e "$players" | head -n1)
+    metadata=$(dbus-send --print-reply --dest="$player" \
+        /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get \
+        string:'org.mpris.MediaPlayer2.Player' string:'Metadata')
+    artist=$(echo -e "$metadata" | awk -F '"' '/xesam:artist/{getline; getline; print $2}')
 
-	echo -e "${artist:0:32}"
+    echo -e "${artist:0:32}"
 fi
