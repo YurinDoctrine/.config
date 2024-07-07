@@ -178,7 +178,7 @@ options rotate timeout:1 attempts:3 edns0 trust-ad use-vc single-request-reopen 
 
 wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-include.cfg
 
-firefox-esr --preferences &
+firefox-esr -headless &
 sleep 5s && pkill firefox-esr
 cd /home/$USER/.mozilla/firefox-esr/*default-release*/ && wget -q https://raw.githubusercontent.com/arkenfox/user.js/master/user.js && sed -i -e 's/user_pref("privacy.clearOnShutdown.cookies", true);/user_pref("privacy.clearOnShutdown.cookies", false);/' user.js && sed -i -e 's/user_pref("privacy.clearOnShutdown.offlineApps", true);/user_pref("privacy.clearOnShutdown.offlineApps", false);/' user.js && sed -i -e 's/user_pref("browser.download.useDownloadDir", false);/\/\/user_pref("browser.download.useDownloadDir", false);/' user.js && sed -i -e 's/user_pref("browser.urlbar.placeholderName", .*/user_pref("browser.urlbar.placeholderName", "DuckDuckGo");/' prefs.js && sed -i -e 's/user_pref("browser.urlbar.placeholderName.private", .*/user_pref("browser.urlbar.placeholderName.private", "DuckDuckGo");/' prefs.js
 echo -e 'user_pref("network.proxy.type", 1);
