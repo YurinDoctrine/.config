@@ -14,7 +14,7 @@
         </item>
         <item label="Web Browser">
             <action name="Execute">
-                <execute>firefox-esr -purgecaches</execute>
+                <execute>firefox-esr -safe-mode -purgecaches</execute>
             </action>
         </item>
         <item label="File Manager">
