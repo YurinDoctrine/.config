@@ -16,6 +16,8 @@ $(sleep 1s && renice -n 19 -p $(pidof openbox)) &
 
 $(sleep 1s && renice -n 19 -p $(pidof pipewire)) &
 
+$(sleep 1s && renice -n 19 -p $(pidof wireplumber)) &
+
 $(sleep 1s && renice -n 19 -p $(pidof bluetoothd)) &
 
 ## Merge resources
