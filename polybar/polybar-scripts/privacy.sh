@@ -21,8 +21,10 @@ toggle_modules() {
     for module in "${MODULES[@]}"; do
         if is_module_loaded "$module"; then
             doas rmmod -f "$module" >/dev/null
+            amixer set Capture nocap
         else
             doas modprobe -f "$module" >/dev/null
+            amixer set Capture cap
         fi
     done
 }
