@@ -10,7 +10,7 @@ print_status() {
     for module in "${MODULES[@]}"; do
         if is_module_loaded "$module"; then
             echo -e "\uf06e"
-			break
+            break
         else
             echo -e "\uf070"
         fi
@@ -28,10 +28,10 @@ toggle_modules() {
 }
 
 case "$1" in
-	--toggle)
-		toggle_modules
-		;;
-	*)
-		print_status
-		;;
+    --toggle)
+        toggle_modules
+        ;;
+    *)
+        print_status
+        ;;
 esac
