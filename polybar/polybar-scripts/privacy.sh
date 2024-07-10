@@ -8,7 +8,7 @@ is_module_loaded() {
 
 print_status() {
     for module in "${MODULES[@]}"; do
-        if is_module_loaded "$module"; then
+        if is_module_loaded "$module" || pactl get-source-mute @DEFAULT_SOURCE@ | grep "Mute: no"; then
             echo -e "\uf06e"
             break
         else
@@ -21,9 +21,11 @@ toggle_modules() {
     for module in "${MODULES[@]}"; do
         if is_module_loaded "$module"; then
             doas rmmod -f "$module" >/dev/null
+            amixer set Capture 0%
             amixer set Capture nocap >/dev/null
         else
             doas modprobe -f "$module" >/dev/null
+            amixer set Capture 50%
             amixer set Capture cap >/dev/null
         fi
     done
