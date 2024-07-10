@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-MODULES=("snd_hda_intel" "snd_usb_audio" "uvcvideo" "gspca_main")
+MODULES=("snd_usb_audio" "uvcvideo" "gspca_main")
 
 is_module_loaded() {
     lsmod | grep -q "^${1//-/_}\b"
