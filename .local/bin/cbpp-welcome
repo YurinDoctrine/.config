@@ -148,6 +148,8 @@ gtk-update-icon-cache
 
 fc-cache -rfv
 
+for dir in $HOME $HOME/*/; do touch "$dir/.noindex" "$dir/.nomedia" "$dir/.trackerignore"; done
+
 doas rm -rfd /usr/share/xsessions/openbox-kde.desktop
 
 doas flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
