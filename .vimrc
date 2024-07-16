@@ -89,6 +89,13 @@
 	inoremap <C-Backspace> <C-w>
 	inoremap <M-Backspace> <C-w>
 
+" Set CTRL-Delete or ALT-Delete act as delete words forwards in command mode
+	cnoremap <C-Delete> <C-Right><C-w>
+	cnoremap <M-Delete> <C-Right><C-w>
+" Set CTRL-Backspace or ALT-Backspace act as delete words backwards in command mode
+	cnoremap <C-Backspace> <C-w>
+	cnoremap <M-Backspace> <C-w>
+
 " Undo/Redo are aliased to CTRL+z
 	inoremap <C-z> <Esc>Ui
 
