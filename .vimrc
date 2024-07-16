@@ -187,7 +187,7 @@
 	function! SearchCount()
 	  if v:hlsearch
 		let sc = searchcount()
-		return sc.total . '/' . sc.current
+		return sc.current . '/' . sc.total
 	  endif
 	  return ''
 	endfunction
