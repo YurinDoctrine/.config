@@ -19,7 +19,7 @@ print_status() {
 
 toggle_modules() {
     for module in "${MODULES[@]}"; do
-        if is_module_loaded "$module" || pactl get-source-mute @DEFAULT_SOURCE@ | grep "Mute: no"; then
+        if is_module_loaded "$module"; then
             doas rmmod -f "$module" >/dev/null
             amixer set Capture 0% >/dev/null
             amixer set Capture nocap >/dev/null
