@@ -8,11 +8,11 @@ AlwaysInTerm = bash ssh ftp git less more vi vim cat nano tail top info xdotool 
 
 History = 5
 
-URL_http = firefox-esr %u
-URL_https = firefox-esr %u
+URL_http = xdg-open '%u'
+URL_https = xdg-open '%u'
 URL_file = pcmanfm-qt %s
 
-URL_s = firefox-esr 'https://duckduckgo.com/%s'
+URL_s = xdg-open 'https://duckduckgo.com/%s'
 URL_sh = bash -c '%s'
 
 EXT:desktop = xdg-open %s
