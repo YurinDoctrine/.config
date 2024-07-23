@@ -154,7 +154,6 @@
 	inoremap <C-s> <Esc>:w<Enter>
 " Map CTRL+q in insert mode to quit file
 	inoremap <C-q> <Esc>:q<Enter>
-	inoremap <C-z> <Esc>:q<Enter>
 	inoremap <C-x> <Esc>:q<Enter>
 " Map CTRL+c in insert mode to force quit file
 	inoremap <C-c> <Esc>:q!<Enter>
