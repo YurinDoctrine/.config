@@ -150,6 +150,15 @@
 " Map CTRL+c in normal mode to force quit file
 	nnoremap <C-c> :q!<Enter>
 
+" Map CTRL+s in insert mode to write file
+	inoremap <C-s> <Esc>:w<Enter>
+" Map CTRL+q in insert mode to quit file
+	inoremap <C-q> <Esc>:q<Enter>
+	inoremap <C-z> <Esc>:q<Enter>
+	inoremap <C-x> <Esc>:q<Enter>
+" Map CTRL+c in insert mode to force quit file
+	inoremap <C-c> <Esc>:q!<Enter>
+
 " Map CTRL+F in normal mode to find in files
 	nnoremap <C-F> :vimgrep //g **/*<Left><Left><Left><Left><Left><Left><Left>
 " Map CTRL+n and CTRL+p in normal mode to navigate in files
