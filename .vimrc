@@ -186,6 +186,11 @@
 	vnoremap <M-Up> <C-b>
 	vnoremap <M-Down> <C-f>
 
+" Set some netrw options
+	let g:netrw_banner=0       " Disable the banner
+	let g:netrw_liststyle=3    " Tree view
+	let g:netrw_browse_split=3 " Open files in a new tab
+
 " Status Line
 	function! BufferList()
 	  let buf_list = []
