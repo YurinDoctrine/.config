@@ -169,7 +169,7 @@
 	nnoremap <C-r> :%s///gc<Left><Left><Left><Left>
 
 " Map CTRL+r in insert mode to replace all
-	nnoremap <C-r> <Esc>:%s///gc<Left><Left><Left><Left>
+	inoremap <C-r> <Esc>:%s///gc<Left><Left><Left><Left>
 
 " Map CTRL+Backspace to go to top
 	noremap <C-Backspace> GVgg
