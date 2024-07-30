@@ -206,11 +206,13 @@
 	  return join(buf_list, ' ')
 	endfunction
 
-	" Function to get search count
+" Function to get search count
 	function! SearchCount()
 	  if v:hlsearch
-		let sc = searchcount()
-		return sc.current . '/' . sc.total
+	    let sc = searchcount()
+	    if has_key(sc, 'current') && has_key(sc, 'total')
+	      return sc.current . '/' . sc.total
+	    endif
 	  endif
 	  return ''
 	endfunction
