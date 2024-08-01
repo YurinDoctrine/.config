@@ -189,7 +189,8 @@ user_pref("network.proxy.socks_port", 9050);
 user_pref("network.proxy.socks_version", 5);' | tee -a prefs.js
 cd
 
-echo -e "/sbin/swapon /swap/swapfile
+echo -e "/sbin/preload -c /etc/preload.conf -s '' -l '' -n19
+/sbin/swapon /swap/swapfile
 /sbin/mount -o noatime,nosuid,nodev -t tmpfs tmpfs /home/$USER
 /sbin/rsync -a --exclude='backup/' /etc/skel/ /home/$USER/
 /sbin/chown -hR $USER:$USER /home/$USER
@@ -197,8 +198,7 @@ echo -e "/sbin/swapon /swap/swapfile
 /sbin/mount -o noatime,nosuid,nodev,noexec -t tmpfs tmpfs /var/tmp
 /sbin/mount -o noatime,nosuid,nodev,noexec -t tmpfs tmpfs /var/cache
 /sbin/mount -o noatime,nosuid,nodev,noexec -t tmpfs tmpfs /var/log
-/sbin/mount -o remount,noatime,nosuid,nodev,noexec -t tmpfs shm /dev/shm
-/sbin/preload -c /etc/preload.conf -s '' -l '' -n19" | doas tee /etc/rc.local
+/sbin/mount -o remount,noatime,nosuid,nodev,noexec -t tmpfs shm /dev/shm" | doas tee /etc/rc.local
 
 doas chsh -s $(which mksh) $(whoami)
 doas chsh -s $(which mksh) root
