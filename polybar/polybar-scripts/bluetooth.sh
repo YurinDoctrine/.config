@@ -2,26 +2,26 @@
 
 bluetooth_print() {
     if [ "$(lsusb | grep -i Bluetooth)" ] || [ "$(lsmod | grep -i Bluetooth)" ]; then
-		if [ "$(rfkill | grep -i Bluetooth | grep -o unblocked | wc -l)" -gt 2 ]; then
-			bluetoothctl | while read -r; do
-				if [ "$(systemctl is-active "bluetooth.service")" = "active" ]; then
-					echo ""
-					devices_paired=$(bluetoothctl devices | grep -i Device | cut -d ' ' -f 2)
-					echo -e "$devices_paired" | while read -r line; do
-						bluetoothctl connect "$line" >/dev/null
-						device_info=$(bluetoothctl info "$line")
-						if echo -e "$device_info" | grep -q "Connected: yes"; then
-      							device_output=$(echo "$device_info" | grep "Alias" | cut -d ' ' -f 2-)
-							echo "  $device_output"
-						fi
-					done
-				else
-					echo  ""
-				fi
-			done
-		else
-			echo  ""
-		fi
+	if [ "$(rfkill | grep -i Bluetooth | grep -o unblocked | wc -l)" -ge 2 ]; then
+		bluetoothctl | while read -r; do
+			if [ "$(systemctl is-active "bluetooth.service")" = "active" ]; then
+				echo ""
+				devices_paired=$(bluetoothctl devices | grep -i Device | cut -d ' ' -f 2)
+				echo -e "$devices_paired" | while read -r line; do
+					bluetoothctl connect "$line" >/dev/null
+					device_info=$(bluetoothctl info "$line")
+					if echo -e "$device_info" | grep -q "Connected: yes"; then
+						device_output=$(echo "$device_info" | grep "Alias" | cut -d ' ' -f 2-)
+						echo "  $device_output"
+					fi
+				done
+			else
+				echo  ""
+			fi
+		done
+	else
+		echo  ""
+	fi
     else
         echo ""
     fi
