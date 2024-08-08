@@ -23,6 +23,7 @@ export XDG_SESSION_TYPE=wayland
 export XDG_CURRENT_SESSION=openbox
 export XDG_CURRENT_DESKTOP=LXDE
 export XLIB_SKIP_ARGB_VISUALS=1
+export XVideoTextureSyncToVBlank=1
 export WL_OUTPUT_SUBPIXEL_NONE=none
 export WLR_DRM_NO_ATOMIC=1
 export WLR_DRM_NO_MODIFIERS=1
