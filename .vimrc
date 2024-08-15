@@ -36,7 +36,7 @@
 	set wildmode=longest,list,full
 	set wildchar=<Tab>
 	set laststatus=2
-	set scrolloff=8
+	set scrolloff=4
 	set showcmd
 	set showmode
 	set ttyfast
