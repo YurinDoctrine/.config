@@ -13,7 +13,7 @@ if [[ $(ip link | grep 'UP mode' | wc -l) -gt 0 ]]; then
 else
 	iface=$(cat ~/.config/polybar/polybar-scripts/iface)
 	doas macchanger -a $iface >/dev/null
-	doas sv restart wpa_supplicant
+	doas sv restart wpa_supplicant && doas sv restart dhcpcd
 	rm ~/.config/polybar/polybar-scripts/iface
 	echo ''
 fi
