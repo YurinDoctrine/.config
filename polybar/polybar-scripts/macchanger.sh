@@ -13,7 +13,7 @@ fi
 
 blocked_count=$(rfkill list | grep -c "blocked: yes")
 
-if [ "$blocked_count" -gt 2 ]; then
+if [ "$blocked_count" -ge 2 ]; then
 	echo "\uf072"
 else
 	echo ''
