@@ -3,7 +3,7 @@
 MODULES=("snd_usb_audio" "uvcvideo" "gspca_main")
 
 is_module_loaded() {
-    lsmod | grep -q "^${1//-/_}\b"
+    lsmod | grep -q "^${1//-/_}[^ ]*"
 }
 
 print_status() {
