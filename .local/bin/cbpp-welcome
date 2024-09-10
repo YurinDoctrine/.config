@@ -158,7 +158,7 @@ doas flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 
 doas rm -rfd /var/lib/pacman/db.lck
 
-doas pacman -S --noconfirm --needed jq which xclip xmlstarlet
+doas pacman -S --needed --noconfirm --disable-download-timeout jq which xclip xmlstarlet
 
 doas cp -rfd /etc/pacman.conf.bak /etc/pacman.conf
 
