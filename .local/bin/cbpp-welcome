@@ -176,6 +176,9 @@ echo -e "
 
 yes | doas pacman -Scc
 
+echo '#!/bin/sh
+LD_PRELOAD= exec /usr/lib/firefox-esr/firefox-esr -safe-mode -purgecaches "$@"' | tee /bin/firefox-esr
+
 echo -e "export LD_PRELOAD=/usr/lib/libtcmalloc_minimal.so" | tee -a /home/$USER/.config/openbox/environment
 echo -e "export LD_PRELOAD=/usr/lib/libtcmalloc_minimal.so" | tee -a /root/.config/openbox/environment
 
