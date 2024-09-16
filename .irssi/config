@@ -1,0 +1,6 @@
+servers = ({ address = "irc.oftc.net"; chatnet = "OFTC"; port = "6697"; use_ssl = "yes"; autoconnect = "yes"; });
+chatnets = { OFTC = { type = "IRC"; }; };
+channels = ({ name = "#daft-8"; chatnet = "OFTC"; autojoin = "yes"; });
+settings = { core = { real_name = "Unknown"; user_name = "artix"; nick = "artix"; }; "fe-common/core" = { use_status_window = "no"; autocreate_windows = "yes"; autoclose_windows = "no"; reuse_unused_windows = "yes"; }; };
+windows = { 1 = { items = ({ type = "CHANNEL"; chat_type = "IRC"; name = "#daft-8"; }); }; };
+logs = { };
