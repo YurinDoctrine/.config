@@ -5,7 +5,7 @@ use Irssi;
 sub sig_message_public {
     my ($server, $msg, $nick, $address, $target) = @_;
 
-    my $notification_msg = "$nick from $target: $msg";
+    my $notification_msg = "[$target] $nick: $msg";
 
     system("notify-send '$notification_msg' -u normal -i notification-message-im");
 }
