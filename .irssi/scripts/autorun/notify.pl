@@ -10,4 +10,11 @@ sub sig_message_public {
     system("notify-send '$notification_msg' -u normal -i notification-message-im");
 }
 
+sub sig_message_private {
+    my ($server, $msg, $nick, $address) = @_;
+
+    system("notify-send -t 0 '$nick' '$msg' -u normal -i notification-message-im");
+}
+
 Irssi::signal_add('message public', 'sig_message_public');
+Irssi::signal_add('message private', 'sig_message_private');
