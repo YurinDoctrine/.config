@@ -86,7 +86,7 @@
             </item>
             <item label="IRC client">
                 <action name="Execute">
-                    <execute>xterm -e irssi</execute>
+                    <execute>xterm -e torsocks irssi</execute>
                 </action>
             </item>
             <item label="VNC Viewer">
