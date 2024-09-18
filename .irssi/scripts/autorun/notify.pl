@@ -13,7 +13,7 @@ sub sig_message_public {
 sub sig_message_private {
     my ($server, $msg, $nick, $address) = @_;
 
-    system("notify-send -t 0 '$nick' '$msg' -u normal -i notification-message-im");
+    system("notify-send '$nick' '$msg' -u critical -i notification-message-im");
 }
 
 Irssi::signal_add('message public', 'sig_message_public');
