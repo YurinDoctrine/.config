@@ -60,7 +60,7 @@ $(sleep 0.5 && xdotool click 1) &
 
 ## Optional (Uncomment programs you might want to run)
 ## IRC Chat
-$(sleep 10s; Xvfb :99 -screen 0 1024x768x24; DISPLAY=:99 exec xterm -e torsocks irssi) &
+$(killall irssi; sleep 10s; Xvfb :99 -screen 0 1024x768x24; DISPLAY=:99 exec xterm -e torsocks irssi) &
 ## RSS Reader
 #exec xterm -e newsboat -r &
 
