@@ -161,6 +161,18 @@ doas rm -rfd /var/lib/pacman/db.lck
 
 doas pacman -S --needed --noconfirm --disable-download-timeout jq which xclip xmlstarlet
 
+doas mkdir -p /etc/pacman.d/hooks
+
+echo -e "[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = bash
+
+[Action]
+When = PostTransaction
+Exec = /usr/bin/ln -sfT $(which mksh) /bin/sh" | doas tee /etc/pacman.d/hooks/set-sh-back-to-mksh.hook
+
 doas cp -rfd /etc/pacman.conf.bak /etc/pacman.conf
 
 echo -e "
