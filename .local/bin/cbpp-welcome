@@ -171,7 +171,7 @@ Target = bash
 
 [Action]
 When = PostTransaction
-Exec = /usr/bin/ln -sfT $(which mksh) /bin/sh" | doas tee /etc/pacman.d/hooks/set-sh-back-to-mksh.hook
+Exec = /sbin/ln -sfT $(which mksh) /bin/sh" | doas tee /etc/pacman.d/hooks/set-sh-back-to-mksh.hook
 
 doas cp -rfd /etc/pacman.conf.bak /etc/pacman.conf
 
