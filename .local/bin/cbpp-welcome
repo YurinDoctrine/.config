@@ -161,8 +161,6 @@ doas rm -rfd /var/lib/pacman/db.lck
 
 doas pacman -S --needed --noconfirm --disable-download-timeout jq which xclip xmlstarlet
 
-doas mkdir -p /etc/pacman.d/hooks
-
 echo -e "[Trigger]
 Operation = Install
 Operation = Upgrade
