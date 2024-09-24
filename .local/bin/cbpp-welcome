@@ -60,6 +60,7 @@ doas cp -rfd .config/.nanorc /etc/skel
 doas cp -rfd .config/.mkshrc /etc/skel
 doas cp -rfd .config/.profile /etc/skel
 doas cp -rfd .config/.bashrc /etc/skel
+doas cp -rfd .config/.tmux.conf /etc/skel
 doas cp -rfd .config/.newsboat /etc/skel/.newsboat
 doas cp -rfd .config/.irssi /etc/skel/.irssi
 doas rm -rfd .config/CBPP
