@@ -188,11 +188,13 @@ echo -e "
 
 yes | doas pacman -Scc
 
+doas sed -i -e '2i export LD_PRELOAD=/path/to/library' /bin/xdg-open
+
 echo '#!/bin/sh
 LD_PRELOAD= exec /usr/lib/firefox-esr/firefox-esr -safe-mode -purgecaches "$@"' | doas tee /bin/firefox-esr
 
 echo -e "export LD_PRELOAD=/usr/lib/libtcmalloc_minimal.so" | tee -a /home/$USER/.config/openbox/environment
-echo -e "export LD_PRELOAD=/usr/lib/libtcmalloc_minimal.so" | tee -a /root/.config/openbox/environment
+echo -e "export LD_PRELOAD=/usr/lib/libtcmalloc_minimal.so" | doas tee -a /root/.config/openbox/environment
 
 echo -e "nameserver 9.9.9.11
 nameserver 149.112.112.11
