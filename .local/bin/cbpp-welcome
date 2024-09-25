@@ -211,9 +211,7 @@ user_pref("network.proxy.socks_port", 9050);
 user_pref("network.proxy.socks_version", 5);' | tee -a prefs.js
 cd
 
-echo -e "/sbin/echo -n balance_power /sys/devices/system/cpu/cpufreq/policy?/energy_performance_preference
-/sbin/echo -n powersupersave /sys/module/pcie_aspm/parameters/policy
-/sbin/preload -c /etc/preload.conf -s '' -l '' -n19
+echo -e "/sbin/preload -c /etc/preload.conf -s '' -l '' -n19
 /sbin/swapon /swap/swapfile
 /sbin/mount -o noatime,nosuid,nodev -t tmpfs tmpfs /home/$USER
 /sbin/rsync -a --exclude='backup/' /etc/skel/ /home/$USER/
