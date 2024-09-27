@@ -60,7 +60,7 @@ $(sleep 0.5 && xdotool click 1) &
 
 ## Optional (Uncomment programs you might want to run)
 ## IRC Chat
-$(sleep 10s && exec tmux new -s irc -d "torsocks irssi") &
+$(sleep 10s && exec tmux new -s irc -d torsocks irssi) &
 ## RSS Reader
 #exec xterm -e newsboat -r &
 
