@@ -94,6 +94,11 @@
                     <execute>vncviewer</execute>
                 </action>
             </item>
+            <item label="RSS Reader">
+                <action name="Execute">
+                    <execute>xterm -e newsboat -r</execute>
+                </action>
+            </item>
         </menu>
         <menu id="office" label="Office">
             <item label="Archive Manager">
