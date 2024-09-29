@@ -89,7 +89,7 @@
                     <execute>xterm -e torsocks irssi</execute>
                 </action>
             </item>
-            <item label="VNC Viewer">
+            <item label="VNC client">
                 <action name="Execute">
                     <execute>vncviewer</execute>
                 </action>
