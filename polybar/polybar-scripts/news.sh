@@ -10,7 +10,7 @@ do
 	news_description=$(echo "$news_feed" | xmlstarlet sel -t -m '//item' -v 'description' -n | awk 'NR=='$counter'')
 	news_link=$(echo "$news_feed" | xmlstarlet sel -t -m '//item' -v 'link' -n | awk 'NR=='$counter'')
 
-	notify=$(notify-send -t 0 -u normal -i notification-message-im -A "open=Open URL" "$news_title" "$news_description") && [[ $notify == "open" ]] && xdg-open "$news_link" &
+	notify=$(notify-send -u critical -i notification-message-im -A "open=Open URL" "$news_title" "$news_description") && [[ $notify == "open" ]] && xdg-open "$news_link" &
 
 	echo ""
 
