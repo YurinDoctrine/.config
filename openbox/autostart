@@ -52,7 +52,7 @@ $(exec nice -n 19 lxpolkit) &
 ## Group start:
 ## 1. dunst - start
 ## 2. polybar - start
-$(exec nice -n 19 dunst -show_indicators -sort -word_wrap | exec polyrestart) &
+$(exec nice -n 19 dunst -word_wrap | exec polyrestart) &
 
 ## Fix monitor
 $(for output in $(xrandr --prop | grep -E -o -i "^[A-Z\-]+-[0-9]+"); do xrandr --output "$output" --set "scaling mode" "Full aspect"; done) &
