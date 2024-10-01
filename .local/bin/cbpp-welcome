@@ -211,7 +211,9 @@ user_pref("network.proxy.socks_port", 9050);
 user_pref("network.proxy.socks_version", 5);' | tee -a prefs.js
 cd
 
-echo -e "/sbin/echo -n power | tee /sys/devices/system/cpu/cpufreq/policy?/energy_performance_preference
+echo -e "/sbin/echo -n guided | tee /sys/devices/system/cpu/amd_pstate/status
+/sbin/echo -n guided | tee /sys/devices/system/cpu/intel_pstate/status
+/sbin/echo -n power | tee /sys/devices/system/cpu/cpufreq/policy?/energy_performance_preference
 /sbin/echo -n powersupersave | tee /sys/module/pcie_aspm/parameters/policy
 /sbin/preload -c /etc/preload.conf -s '' -l '' -n19
 /sbin/swapon /swap/swapfile
