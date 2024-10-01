@@ -16,9 +16,11 @@ $(sleep 1s && doas renice -n 19 -p $(pidof openbox)) &
 
 $(sleep 1s && doas renice -n 19 -p $(pidof dbus-launch)) &
 
+$(sleep 1s && doas renice -n 19 -p $(pidof flatpak-session-helper)) &
 $(sleep 1s && doas renice -n 19 -p $(pidof flatpak-portal)) &
 $(sleep 1s && doas renice -n 19 -p $(pidof xdg-desktop-portal)) &
 $(sleep 1s && doas renice -n 19 -p $(pidof xdg-desktop-portal-gtk)) &
+$(sleep 1s && doas renice -n 19 -p $(pidof xdg-document-portal)) &
 
 $(sleep 1s && doas renice -n 19 -p $(pidof pipewire)) &
 $(exec nice -n 19 pipewire-pulse) &
