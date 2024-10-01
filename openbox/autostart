@@ -16,6 +16,7 @@ $(sleep 1s && doas renice -n 19 -p $(pidof openbox)) &
 
 $(sleep 1s && doas renice -n 19 -p $(pidof dbus-launch)) &
 
+$(sleep 1s && doas renice -n 19 -p $(pidof xdg-desktop-portal)) &
 $(sleep 1s && doas renice -n 19 -p $(pidof xdg-desktop-portal-gtk)) &
 
 $(sleep 1s && doas renice -n 19 -p $(pidof pipewire)) &
