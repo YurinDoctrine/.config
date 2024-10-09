@@ -450,6 +450,15 @@
                 <command>kitty top</command>
             </action>
         </keybind>
+        <keybind key="W-n">
+            <action name="Execute">
+                <startupnotify>
+                    <enabled>true</enabled>
+                    <name>featherpad</name>
+                </startupnotify>
+                <command>featherpad</command>
+            </action>
+        </keybind>
         <keybind key="W-x">
             <action name="Execute">
                 <startupnotify>
