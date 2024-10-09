@@ -233,4 +233,6 @@ doas ln -sfT $(which mksh) /bin/sh
 
 doas rm -rfd /boot/grub/themes && doas update-grub
 
+tmux kill-server
+
 openbox --exit && exit
