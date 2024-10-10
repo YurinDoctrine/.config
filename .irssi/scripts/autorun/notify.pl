@@ -7,7 +7,7 @@ sub sig_message_public {
 
     my $notification_msg = "[$target] $nick: $msg";
 
-    system("xdotool getwindowgeometry \$(xdotool getactivewindow) | grep -q \$(xdpyinfo | grep dimensions | awk '{print \$2}') || notify=\$(notify-send -u normal -i notification-message-im -A 'open=Open IRC' '$notification_msg') && [[ \$notify == 'open' ]] && [[ \$(tmux list-sessions -F '#{session_name} #{session_attached}' | grep '^irc 0\$') ]] && exec xterm -e tmux attach -t irc >/dev/null 2>&1 &");
+    system("notify=\$(notify-send -u normal -i notification-message-im -A 'open=Open IRC' '$notification_msg') && [[ \$notify == 'open' ]] && [[ \$(tmux list-sessions -F '#{session_name} #{session_attached}' | grep '^irc 0\$') ]] && exec xterm -e tmux attach -t irc >/dev/null 2>&1 &");
 }
 
 sub sig_message_private {
