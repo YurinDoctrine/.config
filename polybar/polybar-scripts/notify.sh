@@ -16,7 +16,6 @@ case "$1" in
                 grep -q "$(xdpyinfo | grep dimensions | awk '{print $2}')" || \
                 dunstctl set-paused toggle
             fi
-            dunstctl history-pop
             echo "\uf0a2"
         else
             if [[ ! -e "$HOME/.config/polybar/polybar-scripts/dnd" ]]; then
