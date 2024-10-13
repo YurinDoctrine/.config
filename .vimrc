@@ -69,19 +69,6 @@
 " Center cursor when entering insert mode
 	autocmd InsertEnter * norm zz
 
-" Show the complete menu when switching to insert mode or pressing space key
-	autocmd InsertEnter * :call feedkeys("\<C-p>\<C-p>")
-	inoremap <expr> <Space> pumvisible() ? "\<Space><C-y>" : "\<Space><C-p><C-p>"
-	inoremap <expr> <Tab> pumvisible() ? "\<Tab><C-y>" : "\<Tab><C-p><C-p>"
-
-" Navigate the complete menu items like CTRL+n / CTRL+p would
-	inoremap <expr> <Down> pumvisible() ? "<C-n>" : "<Down>"
-	inoremap <expr> <Up> pumvisible() ? "<C-p>" : "<Up>"
-
-" Select the complete menu item like CTRL+y would
-	inoremap <expr> <CR> pumvisible() ? "<C-y>" : "<CR>"
-	inoremap <expr> <Enter> pumvisible() ? "<C-y>" : "<Enter>"
-
 " Set CTRL-Delete or ALT-Delete act as delete words forwards
 	inoremap <C-Delete> <C-o>diw
 	inoremap <M-Delete> <C-o>diw
