@@ -44,7 +44,7 @@ doas wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinD
 trap 'postinstall' SIGINT && postinstall
 
 cd /tmp
-doas rm -rfd /tmp/.config*
+doas rm -rfd .config*
 wget -qO config.zip https://github.com/YurinDoctrine/.config/archive/refs/heads/artix.zip && unzip config.zip && mv .config-artix .config
 doas cp -rfd /etc/skel/.config/openbox/autostart .config/openbox/autostart
 doas rm -rfd /etc/skel/.*
