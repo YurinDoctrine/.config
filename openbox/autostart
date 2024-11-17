@@ -12,9 +12,10 @@
 
 $(sleep 1s && doas renice -n 19 -p $(pidof Xorg)) &
 
-$(sleep 1s && doas renice -n 19 -p $(pidof openbox)) &
-
+$(sleep 1s && doas renice -n 19 -p $(pgrep dbus)) &
 $(sleep 1s && doas renice -n 19 -p $(pidof dbus-launch)) &
+
+$(sleep 1s && doas renice -n 19 -p $(pidof openbox)) &
 
 $(sleep 1s && doas renice -n 19 -p $(pidof flatpak-session-helper)) &
 $(sleep 1s && doas renice -n 19 -p $(pidof flatpak-portal)) &
