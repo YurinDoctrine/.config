@@ -224,6 +224,7 @@ echo -e "/sbin/iptables -A INPUT -m conntrack --ctstate INVALID -j DROP
 /sbin/scx_flash &
 /sbin/preload -c /etc/preload.conf -s '' -l '' -n19
 /sbin/swapon /swap/swapfile
+/sbin/echo -n 3 | tee /proc/sys/vm/drop_caches
 /sbin/mount -o noatime,nosuid,nodev -t tmpfs tmpfs /home/$USER
 /sbin/rsync -a --exclude='backup/' /etc/skel/ /home/$USER/
 /sbin/chown -hR $USER:$USER /home/$USER
