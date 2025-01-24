@@ -153,7 +153,7 @@ gtk-update-icon-cache
 
 fc-cache -rfv
 
-for dir in $HOME $HOME/*/; do touch "$dir/.metadata_never_index" "$dir/.noindex" "$dir/.nomedia" "$dir/.trackerignore"; done
+for dir in $HOME $HOME/*/; do doas touch "$dir/.metadata_never_index" "$dir/.noindex" "$dir/.nomedia" "$dir/.trackerignore"; done
 
 doas rm -rfd /usr/share/xsessions/openbox-kde.desktop
 
