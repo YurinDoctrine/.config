@@ -11,6 +11,7 @@ say() {
 }
 
 connectiontest() {
+    for IFACE in $(ip -o link show | awk -F': ' '{print $2}' | grep -v 'lo'); do ip link set dev $IFACE down && doas macchanger -a $IFACE && ip link set dev $IFACE up; done
     rfkill unblock wifi
     local TEXT_CHECKING='Checking internet connection...'
     local TEXT_FAILED='Internet connection test failed!'
