@@ -210,7 +210,7 @@ cd /home/$USER/.mozilla/firefox-esr/*default-release*/ && wget -q https://raw.gi
 echo -e 'user_pref("network.proxy.type", 1);
 user_pref("network.proxy.socks", "127.0.0.1");
 user_pref("network.proxy.socks_port", 9050);
-user_pref("network.proxy.socks_version", 5);' | tee -a prefs.js
+user_pref("network.proxy.socks_version", 5);' | tee -a user.js
 cd
 
 echo -e "/sbin/iptables -A INPUT -m conntrack --ctstate INVALID -j DROP
