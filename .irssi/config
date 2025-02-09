@@ -1,6 +1,6 @@
 servers = ({ address = "irc.oftc.net"; chatnet = "OFTC"; port = "9999"; socks_proxy = "127.0.0.1"; socks_port = "9050"; use_ssl = "yes"; ssl_verify = "yes"; autoconnect = "yes"; });
 chatnets = { OFTC = { type = "IRC"; }; };
-channels = ({ name = "#daft-8"; chatnet = "OFTC"; autojoin = "yes"; });
+channels = ({ name = "#daft-8"; chatnet = "OFTC"; autojoin = "yes"; }, { name = "#shebang"; chatnet = "OFTC"; autojoin = "yes"; });
 settings = { core = { real_name = "Unknown"; user_name = "artix"; nick = "artix"; }; "fe-common/core" = { use_status_window = "no"; autocreate_windows = "yes"; autoclose_windows = "no"; reuse_unused_windows = "yes"; }; };
-windows = { 1 = { items = ({ type = "CHANNEL"; chat_type = "IRC"; name = "#daft-8"; }); }; };
+windows = { 1 = { items = ({ type = "CHANNEL"; chat_type = "IRC"; name = "#daft-8"; }); }; 2 = { items = ({ type = "CHANNEL"; chat_type = "IRC"; name = "#shebang"; }); }; };
 logs = { };
