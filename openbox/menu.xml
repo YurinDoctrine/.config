@@ -86,7 +86,7 @@
             </item>
             <item label="IRC client">
                 <action name="Execute">
-                    <execute>xterm -e torsocks irssi</execute>
+                    <execute>xterm -e tmux attach -t irc</execute>
                 </action>
             </item>
             <item label="VNC client">
