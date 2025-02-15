@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-news_feed=$(curl -s https://www.cnbc.com/id/100727362/device/rss/rss.html)
+news_feed=$(curl -s -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36' https://www.cnbc.com/id/100727362/device/rss/rss.html)
 
 counter=1
 
