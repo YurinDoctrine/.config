@@ -213,7 +213,9 @@ user_pref("network.proxy.socks_port", 9050);
 user_pref("network.proxy.socks_version", 5);' | tee -a user.js
 cd
 
-echo -e "/sbin/iptables -A INPUT -m conntrack --ctstate INVALID -j DROP
+echo -e "/sbin/iptables -A INPUT -m state --state INVALID -j DROP
+/sbin/iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+/sbin/iptables -A INPUT -m conntrack --ctstate INVALID -j DROP
 /sbin/iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 /sbin/echo -n guided | tee /sys/devices/system/cpu/amd_pstate/status
 /sbin/echo -n guided | tee /sys/devices/system/cpu/intel_pstate/status
