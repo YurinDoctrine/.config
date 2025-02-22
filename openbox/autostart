@@ -32,6 +32,8 @@ $(sleep 1s && doas renice -n 19 -p $(pidof bluetoothd)) &
 
 $(sleep 1s && doas renice -n 19 -p $(pgrep scx_flash)) &
 
+$(sleep 1s && doas renice -n 19 -p $(pgrep tor)) &
+
 ## Set keyboard
 setxkbmap replaceme &
 ## Set keyboard settings - 500 ms delay and 10 cps (characters per second) repeat rate.
@@ -72,5 +74,7 @@ $(sleep 0.5 && xdotool click 1) &
 $(sleep 10s && exec tmux new -s irc -d torsocks irssi) &
 ## RSS Reader
 #exec xterm -e newsboat -r &
+## Tor Router
+exec doas /root/.local/bin/tor-router start &
 
 exit
