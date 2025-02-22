@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 if [ "$(pidof polybar)" ]; then
-    (killall -HUP polybar && exec polybar -q main -c ~/.config/polybar/config.ini) &
+    (killall polybar && exec polybar -q main -c ~/.config/polybar/config.ini) &
     renice -n 19 -p $(pidof polybar)
 else
     exec polybar -q main -c ~/.config/polybar/config.ini &
