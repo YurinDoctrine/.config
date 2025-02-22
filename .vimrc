@@ -14,9 +14,6 @@
 	set mouse=a
 	set hlsearch
 	set clipboard+=unnamedplus
-	set tabstop=2
-	set softtabstop=2
-	set shiftwidth=2
 	set fileformat=unix
 	set splitbelow splitright
 	set wrap
