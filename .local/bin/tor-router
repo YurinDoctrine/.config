@@ -1,24 +1,44 @@
-#!/usr/bin/sh
+#!/bin/bash
 
-_switch() {
-	if [[ "$(ip link | grep 'UP mode' | wc -l)" -gt 0 ]] && [[ "$(curl -s https://check.torproject.org/api/ip | grep -e 'True' -e 'true')" ]]; then
-		doas tor-router stop
-	elif [[ "$(ip link | grep 'UP mode' | wc -l)" -gt 0 ]] && [[ "$(curl -s https://check.torproject.org/api/ip | grep -e 'False' -e 'false')" ]]; then
-		doas tor-router start
-	fi
+if [ "$(id -u)" -ne 0 ]; then
+  echo "This script must be run as root, use 'sudo' or run it as root."
+  exit 1
+fi
+
+command -v tor > /dev/null 2>&1 || { echo >&2 "I require tor but it's not installed. Install it. Aborting."; exit 1; }
+
+usage() {
+  echo "Usage: $0 start|stop"
+  echo "Example: $0 start"
+  exit 1
+}
+
+if [ "$#" -ne 1 ]; then
+  usage
+fi
+
+_start() {
+  cp /etc/tor/torrc /etc/tor/torrc.bak >/dev/null 2>&1
+  echo -e "TransPort 127.0.0.1:9051 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr\nDNSPort 9053\nAutomapHostsOnResolve 1" | tee -a /etc/tor/torrc >/dev/null 2>&1
+  iptables -t nat -A OUTPUT -p udp --dport 53 -j REDIRECT --to-ports 9053 >/dev/null 2>&1
+  iptables -t nat -A OUTPUT -p tcp --dport 53 -j REDIRECT --to-ports 9053 >/dev/null 2>&1
+  iptables -t nat -A OUTPUT -p udp -j REDIRECT --to-ports 9051 >/dev/null 2>&1
+  iptables -t nat -A OUTPUT -p tcp --syn -j REDIRECT --to-ports 9051 >/dev/null 2>&1
+  iptables -t nat -A OUTPUT -p icmp -j REDIRECT --to-ports 9051 >/dev/null 2>&1
+  killall -HUP tor >/dev/null 2>&1
+}
+
+_stop() {
+  mv /etc/tor/torrc.bak /etc/tor/torrc >/dev/null 2>&1
+  iptables -t nat -F >/dev/null 2>&1
+  killall -HUP tor >/dev/null 2>&1
 }
 
 case "$1" in
-	switch)
-		_switch
-		;;
-	*)
-		if [[ "$(ip link | grep 'UP mode' | wc -l)" -gt 0 ]] && [[ "$(curl -s https://check.torproject.org/api/ip | grep -e 'True' -e 'true')" ]]; then
-			echo -e "\uf023"
-		elif [[ "$(ip link | grep 'UP mode' | wc -l)" -gt 0 ]] && [[ "$(curl -s https://check.torproject.org/api/ip | grep -e 'False' -e 'false')" ]]; then
-			echo -e "\uf13e"
-		else
-			echo ''
-		fi
-		;;
+  start)
+    _start
+    ;;
+  stop)
+    _stop
+    ;;
 esac
