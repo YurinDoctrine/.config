@@ -18,7 +18,7 @@ if [ "$#" -ne 1 ]; then
 fi
 
 _start() {
-  cp /etc/tor/torrc /etc/tor/torrc.bak >/dev/null 2>&1
+  [[ ! -d /etc/tor/torrc.bak ]] && cp /etc/tor/torrc /etc/tor/torrc.bak >/dev/null 2>&1
   echo -e "TransPort 127.0.0.1:9051 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr\nDNSPort 9053\nAutomapHostsOnResolve 1" | tee -a /etc/tor/torrc >/dev/null 2>&1
   iptables -t nat -A OUTPUT -p udp --dport 53 -j REDIRECT --to-ports 9053 >/dev/null 2>&1
   iptables -t nat -A OUTPUT -p tcp --dport 53 -j REDIRECT --to-ports 9053 >/dev/null 2>&1
@@ -31,6 +31,7 @@ _start() {
 _stop() {
   mv /etc/tor/torrc.bak /etc/tor/torrc >/dev/null 2>&1
   iptables -t nat -F >/dev/null 2>&1
+  iptables -t nat -X >/dev/null 2>&1
   killall -HUP tor >/dev/null 2>&1
 }
 
