@@ -1,7 +1,7 @@
 #define ICON_SIZE 10
 Xft.dpi: 80
 
-Xft.antialias: true
+Xft.antialias: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
