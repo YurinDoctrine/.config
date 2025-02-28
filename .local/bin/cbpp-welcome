@@ -202,6 +202,18 @@ echo -e "nameserver 9.9.9.11
 nameserver 149.112.112.11
 options timeout:1 attempts:3 trust-ad single-request bogus-priv stop-dns-rebind domain-needed" | doas tee /etc/resolv.conf && doas chattr +i /etc/resolv.conf
 
+echo -e 'NAME="Shebang Linux"
+PRETTY_NAME="Shebang"
+ID=shebang
+ID_LIKE=artix
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://shebang-linux.github.io/"
+DOCUMENTATION_URL="https://github.com/shebang-linux/shebang/"
+SUPPORT_URL="irc://irc.oftc.net/shebang/"
+BUG_REPORT_URL="https://github.com/shebang-linux/shebang/issues/"
+LOGO=shebang-og-logo' | doas tee /etc/os-release && doas chattr +i /etc/os-release
+
 wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-include.cfg
 
 firefox-esr -headless &
