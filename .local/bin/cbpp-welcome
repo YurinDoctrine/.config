@@ -210,7 +210,7 @@ BUILD_ID=rolling
 ANSI_COLOR="38;2;23;147;209"
 HOME_URL="https://shebang-linux.github.io/"
 DOCUMENTATION_URL="https://github.com/shebang-linux/shebang/"
-SUPPORT_URL="irc://irc.oftc.net/shebang/"
+SUPPORT_URL="https://github.com/orgs/shebang-linux/discussions/"
 BUG_REPORT_URL="https://github.com/shebang-linux/shebang/issues/"
 LOGO=shebang-og-logo' | doas tee /etc/os-release && doas chattr +i /etc/os-release
 
