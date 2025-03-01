@@ -1,32 +1,4 @@
 #!/usr/bin/sh
-#    cb-places-pipemenu - a places openbox pipe menu
-#    Copyright (C) 2010  John Crawley
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
-#    Version 2012/09/27-cb
-
-# Ported to #!++ <https://crunchbangplusplus.org>
-# by Ben Young <computermouth@crunchbangplusplus.org>
-
-#    NB The shell, not bash, is invoked in the hope that
-#    dash will be used, as it is much faster.
-
-# Usage: add
-# <menu id="places" label="Places" execute="/path/to/cbpp-places-pipemenu ~/" />
-# to your .config/openbox/menu.xml
-
-# or, if you want the "recent files" menu incorporated at the top, use:
-# <menu id="places" label="Places" execute="/path/to/cbpp-places-pipemenu --recent ~/" />
-# make sure you have cbpp-recent-files-pipemenu somewhere, and enter its path below.
-
 # path to your "recent files" script, if you want to incorporate it:
 recent_script=/usr/bin/cbpp-recent-files-pipemenu
 
