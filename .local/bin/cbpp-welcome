@@ -42,6 +42,19 @@ doas wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinD
         echo '  Failed to locate cbpp-include.cfg in PATH' >&2
         exit 1
     fi
+
+release=$(curl -s https://www.debian.org/releases/stable/ | grep -oP 'Debian [0-9]+' | cut -d " " -f2 | head -n 1)
+doas pacman -Syy &&
+clear
+say "Wanna upgrade the system? Highly recommended ($(pacman -Qu | wc -l) packages upgradeable)"
+read -p $'yes/no >_: ' noc
+if [[ "$noc" == "yes" ]]; then
+    doas pacman -Syyu --needed --noconfirm --disable-download-timeout
+    sleep 10s
+else
+    say "Not upgrading"
+fi
+
 trap 'postinstall' SIGINT && postinstall
 
 cd /tmp
