@@ -4,9 +4,9 @@ updates() {
         doas pacman -Syw >/dev/null
         list_upgradeable=$(pacman -Qu | wc -l)
         if [ "$list_upgradeable" -gt "0" ]; then
-            echo -e "[$list_upgradeable]"
+            echo "[u]"
         else
-            echo ""
+            echo ''
         fi
 }
 
