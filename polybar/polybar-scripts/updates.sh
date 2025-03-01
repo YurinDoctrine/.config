@@ -3,9 +3,9 @@
 updates() {
         list_upgradeable=$(apt-get dist-upgrade -s | grep '[0-9] upgraded' | grep -o '[0-9]' | head -n1)
         if [ "$list_upgradeable" -gt "0" ]; then
-            echo -e "[$list_upgradeable]"
+            echo "[u]"
         else
-            echo ""
+            echo ''
         fi
 }
 
