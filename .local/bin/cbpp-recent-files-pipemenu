@@ -1,29 +1,6 @@
 #!/usr/bin/sh
-#    cb-recent-files-pipemenu - a script to parse .recently-used.xbel
-#    and generate openbox pipe menu
-#    Copyright (C) 2010  John Crawley
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
-#    version 2012/07/01-cb
-
-# Ported to #!++ <https://crunchbangplusplus.org>
-# by Ben Young <computermouth@crunchbangplusplus.org>
-
-# Usage: add
-# <menu id="recent" label="Recent Files" execute="/path/to/cbpp-recent-files-pipemenu" />
-# to your .config/openbox/menu.xml, or use with cbpp-places-pipemenu (see comments there)
 
 maximum_entries=15 # max. number of entries in menu
-
-#######################################################################
 
 # look for recently-used.xbel
 if [ $XDG_DATA_HOME ] && [ -r "${XDG_DATA_HOME}/recently-used.xbel" ]; then
