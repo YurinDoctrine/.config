@@ -12,7 +12,7 @@ say() {
 
 connectiontest() {
     for IFACE in $(ip -o link show | awk -F': ' '{print $2}' | grep -v 'lo'); do doas ip link set dev $IFACE down >/dev/null && doas macchanger -a $IFACE >/dev/null 2>&1 && doas ip link set dev $IFACE up >/dev/null; done
-    rfkill unblock wifi
+    rfkill unblock wifi >/dev/null 2>&1
     local TEXT_CHECKING='Checking internet connection...'
     local TEXT_FAILED='Internet connection test failed!'
     local TEXT_ABORT='Please connect to an Internet first.'
@@ -53,6 +53,12 @@ This is a post-installation script designed to help you configure and get the mo
 You will now be presented with a series of dialogs and you are going to need your superuser password on this.
 "
 
+doas wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/cbpp-include.cfg
+if ! . cbpp-include.cfg 2>/dev/null; then
+    say "Failed to locate cbpp-include.cfg in PATH" >&2
+    exit 1
+fi
+
 if cat /proc/cmdline | grep -i "label"; then
     echo -e "Load keymap (default: us)" && read -p $"> " kbd && setxkbmap $kbd
     echo -e "Install Shebang (y/n)" && read -p $"> " yn
@@ -69,12 +75,6 @@ if [[ "$yn" == "y" ]]; then
     sleep 10s
 else
     say "Not upgrading"
-fi
-
-doas wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/cbpp-include.cfg
-if ! . cbpp-include.cfg 2>/dev/null; then
-    say "Failed to locate cbpp-include.cfg in PATH" >&2
-    exit 1
 fi
 
 trap 'postinstall' SIGINT && postinstall
