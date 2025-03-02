@@ -29,11 +29,10 @@ connectiontest() {
         say "$TEXT_FAILED" 1
         if ((i == attempts)); then # if last attempt
             say "$TEXT_ABORT"
-            doas sv restart wpa_supplicant
-            doas sv restart dhcpcd
-            sleep 10s
             ((attempts == 1)) && return 1
         fi
+        doas sv restart wpa_supplicant >/dev/null 2>&1 && doas sv restart dhcpcd >/dev/null 2>&1
+        sleep 10s
     done
 }
 
