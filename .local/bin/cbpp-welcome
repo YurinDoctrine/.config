@@ -54,7 +54,7 @@ You will now be presented with a series of dialogs and you are going to need you
 "
 
 if cat /proc/cmdline | grep -i "label"; then
-    echo -e "Load keymap (default: us)" && read -p $"> " kbd && setxkbmap kbd
+    echo -e "Load keymap (default: us)" && read -p $"> " kbd && setxkbmap $kbd
     echo -e "Install Shebang (y/n)" && read -p $"> " yn
     if [[ "$yn" == "y" ]]; then
         doas /usr/local/bin/setup-shebang
