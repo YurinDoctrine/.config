@@ -1,9 +1,3 @@
-!! Theme: CBPP
-!! Description: A default theme for CBPP
-!! Author: Ben Young <computermouth@crunchbangplusplus.org>
-!! Web: https://crunchbangplusplus.org/
-!! -------------------------------------------------------
-
 !! Menu settings
 
 menu.title.bg: flat gradient vertical bevel1
