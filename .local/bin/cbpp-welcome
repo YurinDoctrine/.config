@@ -247,7 +247,7 @@ HOME_URL="https://shebang-linux.github.io/"
 DOCUMENTATION_URL="https://github.com/shebang-linux/shebang/"
 SUPPORT_URL="https://github.com/orgs/shebang-linux/discussions/"
 BUG_REPORT_URL="https://github.com/shebang-linux/shebang/issues/"
-LOGO=shebang-og-logo' | doas tee /etc/os-release && doas chattr +i /etc/os-release
+LOGO=shebang-og-logo' | doas tee /etc/os-release
 
 wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-include.cfg
 
