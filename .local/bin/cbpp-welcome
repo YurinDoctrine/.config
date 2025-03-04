@@ -199,9 +199,15 @@ doas rm -rfd /usr/share/xsessions/openbox-kde.desktop
 
 doas flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-doas rm -rfd /var/lib/pacman/db.lck
+echo -e "[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = *
 
-doas pacman -S --needed --noconfirm --disable-download-timeout jq which xclip xmlstarlet
+[Action]
+When = PostTransaction
+Exec = /sbin/rm /tmp/*tar.zst*" | doas tee /etc/pacman.d/hooks/cleanup.hook
 
 echo -e "[Trigger]
 Operation = Install
@@ -212,6 +218,10 @@ Target = bash
 [Action]
 When = PostTransaction
 Exec = /sbin/ln -sfT $(which mksh) /bin/sh" | doas tee /etc/pacman.d/hooks/set-sh-back-to-mksh.hook
+
+doas rm -rfd /var/lib/pacman/db.lck
+
+doas pacman -S --needed --noconfirm --disable-download-timeout jq which xclip xmlstarlet
 
 doas cp -rfd /etc/pacman.conf.bak /etc/pacman.conf
 
