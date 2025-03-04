@@ -199,7 +199,7 @@ doas rm -rfd /usr/share/xsessions/openbox-kde.desktop
 
 doas flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-echo -e "[Trigger]
+echo -e '[Trigger]
 Operation = Install
 Operation = Upgrade
 Type = Package
@@ -207,7 +207,7 @@ Target = *
 
 [Action]
 When = PostTransaction
-Exec = /sbin/rm /tmp/*tar.zst*" | doas tee /etc/pacman.d/hooks/cleanup.hook
+Exec = /sbin/sh -c "rm /tmp/*tar.zst*"' | doas tee /etc/pacman.d/hooks/cleanup.hook
 
 echo -e "[Trigger]
 Operation = Install
