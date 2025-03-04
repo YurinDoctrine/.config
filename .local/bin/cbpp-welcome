@@ -241,7 +241,7 @@ yes | doas pacman -Scc
 
 doas sed -i -e '2c export LD_PRELOAD=' /bin/xdg-open
 
-echo '#!/bin/sh
+echo -e '#!/bin/sh
 export LD_PRELOAD= && exec /usr/lib/firefox-esr/firefox-esr -safe-mode -purgecaches `$@`' | doas tee /bin/firefox-esr
 
 echo -e "export LD_PRELOAD=/usr/lib/libtcmalloc_minimal.so" | tee -a /home/$USER/.config/openbox/environment
